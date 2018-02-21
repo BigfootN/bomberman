@@ -1,1 +1,0 @@
-/usr/bin/gcc -fPIC -Wall -Werror -Wextra -g -g  -shared -Wl,-soname,libipchoice.so -o libipchoice.so CMakeFiles/ipchoice.dir/choiceiploop.c.o CMakeFiles/ipchoice.dir/choiceipwindow.c.o CMakeFiles/ipchoice.dir/choicepviews.c.o 
