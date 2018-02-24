@@ -1,13 +1,13 @@
-#include "struct.h"
+#include "linked_list.h"
 
-int checkPions(t_pions* list) {
+int check_pieces(t_pions* list) {
 	if (list == NULL)
 		return 1;
 	else
 		return 0;
 }
 
-t_pions* addItemPions(t_etat* etat, SDL_Rect mappos) {
+t_pions* add_pieces(t_etat* etat, SDL_Rect mappos) {
 	t_pions* tmp;
 
 	if ((tmp = (t_pions*) malloc(sizeof (t_pions))) == NULL)
@@ -37,7 +37,7 @@ t_pions* addItemPions(t_etat* etat, SDL_Rect mappos) {
 
 // mettre un & pour la list quand sollicité
 
-t_pions* readUnitPions(t_pions* list, int* tab) {
+t_piece* read_unit_piece(t_piece* list, int* tab) {
 	if (list != NULL) {
 		tab[0] = list->id;
 		tab[2] = list->life;
@@ -46,7 +46,7 @@ t_pions* readUnitPions(t_pions* list, int* tab) {
 	return (list);
 }
 
-t_pions* deleteListChevron(t_pions* tmp) {
+t_piece* delete_list_chevron(t_piece* tmp) {
 	if (tmp == NULL)
 		return (NULL);
 	if (tmp->next == NULL && tmp->prev != NULL)
