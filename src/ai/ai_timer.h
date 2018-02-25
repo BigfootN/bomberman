@@ -4,7 +4,7 @@
 #include "types.h"
 #include <time.h>
 
-void time_start(t_state* state);
-void time_diff(t_state* state);
+void time_start(state_t* state);
+void time_diff(state_t* state);
 
 #endif

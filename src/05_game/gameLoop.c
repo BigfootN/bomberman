@@ -6,28 +6,28 @@ int area_button(t_control *control, SDL_Event event)
     {
         if (event.motion.x >= 150 && event.motion.x <= 300)
         {
-            if (control->etatsend == 1)
-                prepare_requetClient(control, control->network->idClient, 12, 12, 0);
-            if (control->network->srvorclt == 1)
+            if (control->send_state == 1)
+                prepare_requetClient(control, control->network->client_id, 12, 12, 0);
+            if (control->network->net_clt_srv_state == 1)
             {
-                prepare_requetClient(control, control->network->idClient, 50, 0, 0);
-                control->etatsend = 0;
+                prepare_requetClient(control, control->network->client_id, 50, 0, 0);
+                control->send_state = 0;
                 return (1);
             }
-            control->etatsend = 0;
+            control->send_state = 0;
             return (2);
         }
-        else if (event.motion.x >= 350 && event.motion.x <= 500 && control->network->srvorclt == 1)
+        else if (event.motion.x >= 350 && event.motion.x <= 500 && control->network->net_clt_srv_state == 1)
         {
-            if (control->etatsend == 1)
+            if (control->send_state == 1)
                 startGame(control);
         }
         else if (event.motion.x >= 550 && event.motion.x <= 700)
         {
-            if (control->etatsend == 1)
+            if (control->send_state == 1)
             {
-                prepare_requetClient(control, control->network->idClient, 12, 12, 0);
-                control->etatsend = 0;
+                prepare_requetClient(control, control->network->client_id, 12, 12, 0);
+                control->send_state = 0;
             }
             return 0;
         }
@@ -40,7 +40,7 @@ void gameLoop(t_control *control, int *menuSelect)
     int CurrentClickTicks = 0;
     int LastClickTicks = 0;
     SDL_Event event;
-    Input in;
+    input_t in;
 
     memset(&in, 0, sizeof (in));
 
@@ -55,31 +55,31 @@ void gameLoop(t_control *control, int *menuSelect)
                 in.quit = 1;
                 break;
             case SDL_MOUSEMOTION:
-                in.mousex = event.motion.x;
-                in.mousey = event.motion.y;
-                in.mousexrel = event.motion.xrel;
-                in.mouseyrel = event.motion.yrel;
+                in.mouse_x = event.motion.x;
+                in.mouse_y = event.motion.y;
+                in.mouse_xrel = event.motion.xrel;
+                in.mouse_yrel = event.motion.yrel;
                 break;
             case SDL_KEYDOWN:
                 switch (event.key.keysym.sym)
                 {
                 case SDLK_LEFT:
-                    prepare_requetClient(control, control->network->idClient, 2, 2, 0);
+                    prepare_requetClient(control, control->network->client_id, 2, 2, 0);
                     break;
                 case SDLK_RIGHT:
-                    prepare_requetClient(control, control->network->idClient, 2, 2, 1);
+                    prepare_requetClient(control, control->network->client_id, 2, 2, 1);
                     break;
                 case SDLK_UP:
-                    prepare_requetClient(control, control->network->idClient, 2, 3, 0);
+                    prepare_requetClient(control, control->network->client_id, 2, 3, 0);
                     break;
                 case SDLK_DOWN:
-                    prepare_requetClient(control, control->network->idClient, 2, 3, 1);
+                    prepare_requetClient(control, control->network->client_id, 2, 3, 1);
                     break;
                 case SDLK_b:
-                    prepare_requetClient(control, control->network->idClient, 2, 4, -1);
+                    prepare_requetClient(control, control->network->client_id, 2, 4, -1);
                     break;
                 case SDLK_s:
-                    prepare_requetClient(control, control->network->idClient, 2, 5, -1);
+                    prepare_requetClient(control, control->network->client_id, 2, 5, -1);
                     break;
                 default:
                     break;

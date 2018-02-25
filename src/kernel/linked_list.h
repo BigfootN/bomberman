@@ -4,8 +4,9 @@
 #include "types.h"
 
 int check_pieces(piece_t*);
-t_piece* add_pieces(state_t*, SDL_Rect);
-t_piece* read_unit_piece(t_piece*, int*);
-t_piece* delete_list_chevron(t_piece*);
+piece_t* add_pieces(state_t*, SDL_Rect);
+piece_t* read_unipiece_t(piece_t*, int*);
+piece_t* delete_list_chevron(piece_t*);
+player_t* deleteListPlayer(player_t* tmp);
 
 #endif

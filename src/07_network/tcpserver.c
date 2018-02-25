@@ -1,21 +1,22 @@
 #include "headers.h"
+#include "../ai/ai_piece.h"
 
 /*
  * requete des clients
  */
-int dispatchRequete(t_etat *etat, t_cltSd *tab)
+int dispatchRequete(state_t *state, client_t *tab)
 {
-    t_player *lplayer;
+    player_t *lplayer;
 
-    lplayer = etat->players;
+    lplayer = state->players;
     while (lplayer != NULL)
     {
-        if (lplayer->etat_requete == 0 &&
-                tab->idClient == lplayer->id_connexion)
+        if (lplayer->requesstate_t == 0 &&
+                tab->client_id == lplayer->conn_id)
         {
-            lplayer->etat_requete = 1;
-            lplayer->requete_1 = tab->requete_1;
-            lplayer->requete_2 = tab->requete_2;
+            lplayer->requesstate_t = 1;
+            lplayer->request_1 = tab->request_1;
+            lplayer->request_2 = tab->request_2;
             return (0);
         }
         lplayer = lplayer->next;
@@ -23,18 +24,18 @@ int dispatchRequete(t_etat *etat, t_cltSd *tab)
     return (1);
 }
 
-void deletePlayerDeconnect(t_etat *etat, int sock)
+void deletePlayerDeconnect(state_t *state, int sock)
 {
-    t_player *lplayer;
-    lplayer = etat->players;
+    player_t *lplayer;
+    lplayer = state->players;
     while (lplayer != NULL)
     {
-        if (lplayer->socket_player == sock)
+        if (lplayer->socked_player == sock)
         {
-            etat->nbrePlayers--; // enleve le joueur
-            lplayer->socket_player = -1;
-            lplayer->id_connexion = -1;
-            deadPion(etat, lplayer->player);
+            state->nb_players--; // enleve le joueur
+            lplayer->socked_player = -1;
+            lplayer->conn_id = -1;
+            kill_piece(state, lplayer->player);
             return;
         }
         lplayer = lplayer->next;
@@ -47,32 +48,32 @@ void deletePlayerDeconnect(t_etat *etat, int sock)
 
 void *server_receive_from_client(void *tmp)
 {
-    t_cltSd *requete;
-    t_etat *etat;
+    client_t *requete;
+    state_t *state;
     int sock;
     int read_size;
     int stopServer;
 
-    etat = (t_etat*) tmp;
-    sock = etat->sock_tmp;
+    state = (state_t*) tmp;
+    sock = state->sock_tmp;
     stopServer = 1;
 
     if (sock == -1)
         return (NULL);
-    if ((requete = (t_cltSd*) malloc(sizeof (t_cltSd))) == NULL)
+    if ((requete = (client_t*) malloc(sizeof (client_t))) == NULL)
         return (NULL);
 
-    while (stopServer && ((read_size = recv(sock, requete, sizeof (t_cltSd), 0)) > 0))
+    while (stopServer && ((read_size = recv(sock, requete, sizeof (client_t), 0)) > 0))
     {
-        if (requete->commandService == 1 && stopServer == 1)
-            addClient(etat, requete, sock);
-        else if (requete->commandService == 50)
+        if (requete->cmd_service == 1 && stopServer == 1)
+            addClient(state, requete, sock);
+        else if (requete->cmd_service == 50)
         {
             shutdown(sock, 2);
             close(sock);
         }
         else if (stopServer == 1)
-            dispatchRequete(etat, requete);
+            dispatchRequete(state, requete);
     }
     if (read_size == -1)
         perror("recv failed");
@@ -83,13 +84,13 @@ void *server_receive_from_client(void *tmp)
 /*
  *  envoi un message pour un player specifique 
  */
-int sendRequeteForUniqPlayer(t_etat *etat, int socket, int action, int message)
+int sendRequeteForUniqPlayer(state_t *state, int socket, int action, int message)
 {
-    etat->msg->commandService = action; /* envoi de son id*/
-    etat->msg->reponse = message;
-    etat->msg->idClient = message;
-    etat->msg->departTime = etat->tdepart;
-    write(socket, etat->msg, sizeof (t_svrSd));
+    state->msg->cmd_service = action; /* envoi de son id*/
+    state->msg->response = message;
+    state->msg->client_id = message;
+    state->msg->start_time = state->start_time;
+    write(socket, state->msg, sizeof (server_t));
     return (1);
 }
 
@@ -99,12 +100,12 @@ int sendRequeteForUniqPlayer(t_etat *etat, int socket, int action, int message)
 void *server_to_client(void *tmp)
 {
     pthread_detach(pthread_self());
-    t_etat *etat;
-    etat = (t_etat*) tmp;
+    state_t *state;
+    state = (state_t*) tmp;
 
-    if (etat->msg->pos[0] == 0)
+    if (state->msg->pos[0] == 0)
         my_putstr("serveur envoi vide\n");
-    write(etat->socket_send, etat->msg, sizeof (t_svrSd));
+    write(state->socket_send, state->msg, sizeof (server_t));
     pthread_exit(NULL);
 }
 /*
@@ -116,32 +117,32 @@ void *tcpServer(void *tmp)
     int client_sock;
     struct sockaddr_in server;
     struct sockaddr_in client;
-    t_etat *etat = (t_etat*) tmp;
+    state_t *state = (state_t*) tmp;
 
-    etat->sock_server = socket(AF_INET, SOCK_STREAM, 0);
-    if (etat->sock_server == -1)
+    state->sock_server = socket(AF_INET, SOCK_STREAM, 0);
+    if (state->sock_server == -1)
         return (0);
     server.sin_family = AF_INET;
     server.sin_addr.s_addr = INADDR_ANY;
     server.sin_port = htons(8888);
 
-    if (bind(etat->sock_server, (struct sockaddr *) &server, sizeof (server)) < 0)
+    if (bind(state->sock_server, (struct sockaddr *) &server, sizeof (server)) < 0)
     {
         perror("bind failed. Error\n");
-        close(etat->sock_server);
-        shutdown(etat->sock_server, 2);
+        close(state->sock_server);
+        shutdown(state->sock_server, 2);
         return (NULL);
     }
     puts("bind done\n");
 
-    listen(etat->sock_server, 10);
+    listen(state->sock_server, 10);
     puts("en attentes pour les connexions entrantes...");
     c = sizeof (struct sockaddr_in);
-    while ((client_sock = accept(etat->sock_server, (struct sockaddr *) &client, (socklen_t*) & c)))
+    while ((client_sock = accept(state->sock_server, (struct sockaddr *) &client, (socklen_t*) & c)))
     {
         pthread_t p_thread;
-        etat->sock_tmp = client_sock;
-        if (pthread_create(&p_thread, NULL, server_receive_from_client, (void*) etat) < 0)
+        state->sock_tmp = client_sock;
+        if (pthread_create(&p_thread, NULL, server_receive_from_client, (void*) state) < 0)
         {
             perror("could not create thread");
             return  (NULL);

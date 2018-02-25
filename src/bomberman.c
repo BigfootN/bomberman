@@ -11,7 +11,7 @@ int main()
     {
         index = 0;
         choixpage = 1;
-        control->network->srvorclt = 1;
+        control->network->net_clt_srv_state = 1;
         while (l_bib[index].number != 0)
         {
             if (l_bib[index].number == choixpage)

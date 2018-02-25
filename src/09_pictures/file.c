@@ -10,33 +10,33 @@ char filtre(char c)
         return '\0';
 }
 
-int writeConfigMap(t_etat *etat, int *list)
+int writeConfigMap(state_t *state, int *list)
 {
     int index;
 
-    etat->dataMap = (t_clmap*) malloc(sizeof (t_clmap));
-    etat->dataMap->nbreTiles.x = list[0];
-    etat->dataMap->nbreTiles.y = list[1];
-    etat->dataMap->nbreTiles.w = list[2];
-    etat->dataMap->pos.x = list[3];
-    etat->dataMap->pos.y = list[4];
+    state->map_info = (clmap_t*) malloc(sizeof (clmap_t));
+    state->map_info->nbreTiles.x = list[0];
+    state->map_info->nbreTiles.y = list[1];
+    state->map_info->nbreTiles.w = list[2];
+    state->map_info->pos.x = list[3];
+    state->map_info->pos.y = list[4];
 
-    etat->dataMap->pos.h = HEIGHT_TILE * etat->dataMap->pos.x;
-    etat->dataMap->pos.w = WIDTH_TILE * etat->dataMap->pos.y;
-    etat->dataMap->wall = (int*) malloc(sizeof (int) * list[2]);
+    state->map_info->pos.h = HEIGHT_TILE * state->map_info->pos.x;
+    state->map_info->pos.w = WIDTH_TILE * state->map_info->pos.y;
+    state->map_info->wall = (int*) malloc(sizeof (int) * list[2]);
     index = 0;
     while (index < list[2])
     {
-        etat->dataMap->wall[index] = 0;
+        state->map_info->wall[index] = 0;
         index++;
     }
-    etat->dataMap->wall[list[5]] = 1;
-    etat->dataMap->wall[list[6]] = 1;
-    etat->dataMap->wall[list[7]] = 1;
+    state->map_info->wall[list[5]] = 1;
+    state->map_info->wall[list[6]] = 1;
+    state->map_info->wall[list[7]] = 1;
     return (1);
 }
 
-int gestionData(t_etat *etat, char *name)
+int gestionData(state_t *state, char *name)
 {
     char *title_brut;
     int index;
@@ -45,11 +45,11 @@ int gestionData(t_etat *etat, char *name)
 
     if ((fp = openFile(name)) != NULL)
     {
-        etat->dataMap = (t_clmap*) malloc(sizeof (t_clmap));
+        state->map_info = (clmap_t*) malloc(sizeof (clmap_t));
 
-        etat->dataMap->namefile = (char*) malloc(sizeof (char) * 64);
-        etat->dataMap->namesprite = (char*) malloc(sizeof (char) * 64);
-        etat->dataMap->title = (char*) malloc(sizeof (char) * 64);
+        state->map_info->file_name = (char*) malloc(sizeof (char) * 64);
+        state->map_info->sprite_name = (char*) malloc(sizeof (char) * 64);
+        state->map_info->title = (char*) malloc(sizeof (char) * 64);
 
         title_brut = (char*) malloc(sizeof (char) * 64);
         list = (int*) malloc(sizeof (int) * 8);
@@ -58,21 +58,21 @@ int gestionData(t_etat *etat, char *name)
         index = 0;
         while (title_brut[index] != '\0')
         {
-            etat->dataMap->title[index] = filtre(title_brut[index]);
+            state->map_info->title[index] = filtre(title_brut[index]);
             index++;
         }
 
-        fscanf(fp, "%s", etat->dataMap->namefile);
-        fscanf(fp, "%s", etat->dataMap->namesprite);
+        fscanf(fp, "%s", state->map_info->file_name);
+        fscanf(fp, "%s", state->map_info->sprite_name);
         fscanf(fp, "%d %d %d", &list[0], &list[1], &list[2]);
         fscanf(fp, "%d %d", &list[3], &list[4]);
         fscanf(fp, "%d %d %d", &list[5], &list[6], &list[7]);
 
         if (list[0] != 0 && list[1] != 0 && list[2] != 0 && list[3] != 0 && list[4] != 0)
         {
-            writeConfigMap(etat, list);
-            initiMap(etat, fp);
-            initsort(etat); 
+            writeConfigMap(state, list);
+            initiMap(state, fp);
+            initsort(state);
             fclose(fp);
             return (1);
         }
@@ -104,44 +104,44 @@ FILE *openFile(char *name)
 
 // les maps map et hidebonus
 
-void initiMap(t_etat *etat, FILE *fp)
+void initiMap(state_t *state, FILE *fp)
 {
     int indexX;
     int indexY;
  
     indexX = 0;
-    etat->dataMap->realmap = (int**) malloc(sizeof (int*) * etat->dataMap->pos.x); //11
-    etat->dataMap->mapaction = (int**) malloc(sizeof (int*) * etat->dataMap->pos.x);
-    while (indexX < etat->dataMap->pos.x)
+    state->map_info->real_map = (int**) malloc(sizeof (int*) * state->map_info->pos.x); //11
+    state->map_info->action_map = (int**) malloc(sizeof (int*) * state->map_info->pos.x);
+    while (indexX < state->map_info->pos.x)
     {
-        etat->dataMap->realmap[indexX] = (int*) malloc(sizeof (int) * etat->dataMap->pos.y); //15
-        etat->dataMap->mapaction[indexX] = (int*) malloc(sizeof (int) * etat->dataMap->pos.y);
+        state->map_info->real_map[indexX] = (int*) malloc(sizeof (int) * state->map_info->pos.y); //15
+        state->map_info->action_map[indexX] = (int*) malloc(sizeof (int) * state->map_info->pos.y);
         indexY = 0;
-        while (indexY < etat->dataMap->pos.y)
+        while (indexY < state->map_info->pos.y)
         {
-            etat->dataMap->realmap[indexX][indexY] = 0;
-            etat->dataMap->mapaction[indexX][indexY] = -1;
-            fscanf(fp, "%d", &etat->dataMap->realmap[indexX][indexY]);
+            state->map_info->real_map[indexX][indexY] = 0;
+            state->map_info->action_map[indexX][indexY] = -1;
+            fscanf(fp, "%d", &state->map_info->real_map[indexX][indexY]);
             indexY++;
         }
         indexX++;
     }
 }
 
-void initsort(t_etat *etat)
+void initsort(state_t *state)
 {
     int indexX;
     int indexY;
 
     indexX = 0;
-    etat->dataMap->bmmap = (int**) malloc(sizeof (int*) * etat->dataMap->pos.x);
-    while (indexX < etat->dataMap->pos.x)
+    state->map_info->penalty_bonus_map = (int**) malloc(sizeof (int*) * state->map_info->pos.x);
+    while (indexX < state->map_info->pos.x)
     {
-        etat->dataMap->bmmap[indexX] = (int*) malloc(sizeof (int) * etat->dataMap->pos.y);
+        state->map_info->penalty_bonus_map[indexX] = (int*) malloc(sizeof (int) * state->map_info->pos.y);
         indexY = 0;
-        while (indexY < etat->dataMap->pos.y)
+        while (indexY < state->map_info->pos.y)
         {
-            etat->dataMap->bmmap[indexX][indexY] = -1;
+            state->map_info->penalty_bonus_map[indexX][indexY] = -1;
             indexY++;
         }
         indexX++;

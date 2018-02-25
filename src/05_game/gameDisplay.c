@@ -17,21 +17,21 @@ int receiveSignal(const int signal, void *ptr)
 
 void ckeckAnswerSrv(t_control *control)
 {
-    t_svrSd *requete;
+    server_t *requete;
 
-    if (control->mesgenbale == 1)
+    if (control->mesg_enbale == 1)
     {
-        requete = control->receiveMap;
-        if (requete->commandService == 1)
+        requete = control->map_recv;
+        if (requete->cmd_service == 1)
         {
             displayScreenGame(control);
-            control->network->idClient = requete->idClient;
+            control->network->client_id = requete->client_id;
         }
-        if (requete->commandService == 3)
-            control->etatsend = 0;
-        else if (requete->commandService == 5)
+        if (requete->cmd_service == 3)
+            control->send_state = 0;
+        else if (requete->cmd_service == 5)
         {
-            control->network->idClient = requete->idClient;
+            control->network->client_id = requete->client_id;
             displayScreenGame(control);
             DisplayMap(control, requete);
             displayTime(control);
@@ -39,7 +39,7 @@ void ckeckAnswerSrv(t_control *control)
                 createPanelResult(control, requete);
             writePanetScore(control, requete);
         }
-        control->mesgenbale = 0;
+        control->mesg_enbale = 0;
     }
     SDL_Delay(5);
 }
@@ -48,10 +48,10 @@ void startGame(t_control *control)
 {
     SDL_Rect dest = {350,
         (WINDOW_HEIGHT - 62),
-        control->sprites->cmenu[4].img.w,
-        control->sprites->cmenu[4].img.h};
+        control->sprites->menu_coord[4].img.w,
+        control->sprites->menu_coord[4].img.h};
 
     displayBackgroundButton(control, dest);
-    SDL_RenderPresent(control->Main_Renderer);
-    prepare_requetClient(control, control->network->idClient, 11, 11, 0);
+    SDL_RenderPresent(control->main_renderer);
+    prepare_requetClient(control, control->network->client_id, 11, 11, 0);
 }

@@ -1,70 +1,70 @@
 #include "headers.h"
 
-void addPion(t_etat *etat, int counter, int socket)
+void addPion(state_t *state, int counter, int socket)
 {
-    t_pions *tmp;
-    SDL_Rect mappos;
-    t_player *lplayer;
+    piece_t *tmp;
+    SDL_Rect map_pos;
+    player_t *lplayer;
 
-    etat->flageStop = 1;
+    state->flag_stop = 1;
 
-    // on cree le joueur dans la liste des pions
-    lplayer = addItemPlayer(etat);
-    lplayer->active = 0;
-    lplayer->socket_player = socket;
+    // on cree le joueur dans la liste des pieces
+    lplayer = addItemPlayer(state);
+    lplayer->is_activ = 0;
+    lplayer->socked_player = socket;
     /* done un id unique */
-    lplayer->id_connexion = counter;
+    lplayer->conn_id = counter;
     /* on incremente le nbre de players*/
-    etat->nbrePlayers++;
+    state->nb_players++;
     /* ici on l'ajoute au dernier */
-    mappos.x = 0;
-    mappos.y = 0;
-    tmp = addItemPions(etat, mappos);
+    map_pos.x = 0;
+    map_pos.y = 0;
+    tmp = addItemPions(state, map_pos);
     /*init value player */
     tmp->bomb = 5;
     tmp->life = 20;
     tmp->speed = 1;
     tmp->score = 0;
-    tmp->active = 1;
+    tmp->is_activ = 1;
     /* pour ne pas le cherche inutilement */
     lplayer->player = tmp;
-    lplayer->player->id = lplayer->id_connexion;
+    lplayer->player->id = lplayer->conn_id;
     lplayer->player->type = 1;
     lplayer->player->life = 20;
     /* prend le numero du joueur courant*/
-    initGamers(etat, lplayer->player);
-    lplayer->player->active = 1;
-    /* active le player */
-    lplayer->active = 1;
+    init_gamers(state, lplayer->player);
+    lplayer->player->is_activ = 1;
+    /* is_activ le player */
+    lplayer->is_activ = 1;
 
-    etat->flageStop = 0;
+    state->flag_stop = 0;
     /* ici on envoi un mail de confirmation avec son id */
-    sendRequeteForUniqPlayer(etat, lplayer->socket_player, 1, lplayer->id_connexion);
+    sendRequeteForUniqPlayer(state, lplayer->socked_player, 1, lplayer->conn_id);
 }
 
-int checkFirstRecord(t_etat *etat, int socket)
+int checkFirstRecord(state_t *state, int socket)
 {
-    t_player *player;
+    player_t *player;
     // si debut car aucun joueur donc liste vide
-    player = etat->players;
+    player = state->players;
     if (player == NULL)
     {
-        addPion(etat, 1, socket);
+        addPion(state, 1, socket);
         return (1);
     }
     return (0);
 }
 
-int ReconnectPlayer(t_etat *etat, t_cltSd *requete, int socket)
+int ReconnectPlayer(state_t *state, client_t *requete, int socket)
 {
-    t_player *player;
+    player_t *player;
     // on verifie qu'il ne s'agit pas d'une déconnexion
-    player = etat->players;
+    player = state->players;
     while (player != NULL)
     {
-        if (player->id_connexion == requete->idClient && requete->idClient != 0)
+        if (player->conn_id == requete->client_id && requete->client_id != 0)
         {
-            player->socket_player = socket;
+            player->socked_player = socket;
             return (1);
         }
         player = player->next;
@@ -91,31 +91,31 @@ int *initArrayCheckPlayer()
     return (tab);
 }
 
-int addClient(t_etat *etat, t_cltSd *requete, int socket)
+int addClient(state_t *state, client_t *requete, int socket)
 {
-    if (etat->nbrePlayers < 4)
+    if (state->nb_players < 4)
     {
-        t_player *player;
+        player_t *player;
         int *tabl;
         int index;
 
         tabl = initArrayCheckPlayer();
-        if (checkFirstRecord(etat, socket))
+        if (checkFirstRecord(state, socket))
             return (0);
         /* ici rupture le serveur n'as pas compris que le client est parti */
-        if (ReconnectPlayer(etat, requete, socket))
+        if (ReconnectPlayer(state, requete, socket))
             return (0);
 
         // on selectionne les emplacements libre
-        player = etat->players;
+        player = state->players;
         while (player != NULL)
         {
-            if (player->id_connexion <= 4 && player->id_connexion >= 1)
-                tabl[player->id_connexion] = 1;
+            if (player->conn_id <= 4 && player->conn_id >= 1)
+                tabl[player->conn_id] = 1;
             player = player->next;
         }
         // on ajoute le player au premier  chiffre manquant
-        player = etat->players;
+        player = state->players;
         while (player != NULL)
         {
             index = 1;
@@ -123,7 +123,7 @@ int addClient(t_etat *etat, t_cltSd *requete, int socket)
             {
                 if (tabl[index] == 0)
                 {
-                    addPion(etat, index, socket);
+                    addPion(state, index, socket);
                     return (0);
                 }
                 index++;

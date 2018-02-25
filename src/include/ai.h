@@ -2,56 +2,56 @@
 #define IA_H
 
 #include "game.h"
-#include "struct.h"
+#include "types.h"
 
 //iasendmsg
-void checkPlayerActif(t_etat* etat);
-void sendEmail(t_etat* etat);
-void CentralSend(t_etat* etat);
+void checkPlayerActif(state_t* state);
+void sendEmail(state_t* state);
+void CentralSend(state_t* state);
 
 // ia.c
 int IALooop();
 void* centralIA();
-// iapions.c
-int checkRequete(t_etat* etat);
-void movePions(t_etat* etat, t_pions* player, int type, int value);
-void deadPion(t_etat* etat, t_pions* tmp);
-void desactivePlayers(t_etat* etat, int numberPlayer);
-void sendEndParty(t_etat* etat);
-t_pions* searchPlayer(t_etat* etat, int numberPlayer);
-int collision_BM(t_etat* etat, t_pions* player, int dx, int dy);
-int checkAllPions(t_etat* etat);
-int checkRequetePlayer(t_etat* etat);
+// iapieces.c
+int checkRequete(state_t* state);
+void move_piece(state_t* state, piece_t* player, int type, int value);
+void kill_piece(state_t* state, piece_t* tmp);
+void deactivate_players(state_t* state, int numberPlayer);
+void send_end_game(state_t* state);
+piece_t* search_player(state_t* state, int numberPlayer);
+int collision_bitmap(state_t* state, piece_t* player, int dx, int dy);
+int check_all_pieces(state_t* state);
+int check_requesplayer_t(state_t* state);
 
 // iamap
-int serializeMap(t_etat* etat);
+int serializeMap(state_t* state);
 // iabomb.c
-void initBomb(t_etat* etat, t_pions* player);
-void etatBomb(t_etat* etat, t_pions* player);
+void bomb_init(state_t* state, piece_t* player);
+void bomb_state(state_t* state, piece_t* player);
 //ia explosion.c
-void prepaBombMap(t_etat* etat);
-void displayFire(t_etat* etat, SDL_Rect lposition, int** tab);
+void prepaBombMap(state_t* state);
+void displayFire(state_t* state, SDL_Rect lposition, int** tab);
 void displayBombMap(t_control* control);
 int** checkArray();
-int checktuple(t_etat* etat, int tuile);
-int** prepaGridFire(t_etat* etat, SDL_Rect position);
-void explosionClean(t_etat* etat, int row, int col);
+int checktuple(state_t* state, int tuile);
+int** prepaGridFire(state_t* state, SDL_Rect position);
+void explosionClean(state_t* state, int row, int col);
 //iamonster
 int checkWay(int** tab);
-void monsterChoice(t_etat* etat, t_pions* tmp, int** tab);
-int** prepaGridBonusMalus(t_etat* etat, SDL_Rect position);
-t_pions* searchMonster(t_etat* etat, int numberMonster, SDL_Rect position);
-void IAMonster(t_etat* etat, t_pions* tmp);
-void deleteMonster(t_etat* etat, int numberMonster, SDL_Rect position);
+void monsterChoice(state_t* state, piece_t* tmp, int** tab);
+int** prepaGridBonusMalus(state_t* state, SDL_Rect position);
+piece_t* search_monster(state_t* state, int numberMonster, SDL_Rect position);
+void IAMonster(state_t* state, piece_t* tmp);
+void del_monster(state_t* state, int numberMonster, SDL_Rect position);
 // iagame.c
 void* centralIA(void* tmp);
 //iaTime
-void startTime(t_etat* etat);
-void difference(t_etat* etat);
+void time_start(state_t* state);
+void difference(state_t* state);
 //iacounter
-void prepaCounterPlayer(t_etat* etat, t_player* player);
-int checkCounter(t_etat* etat);
+void counter_player_init(state_t* state, player_t* player);
+int checkCounter(state_t* state);
 //iabonusmalus
-int createBonusMalus();
+int bonus_penalty_init();
 
 #endif

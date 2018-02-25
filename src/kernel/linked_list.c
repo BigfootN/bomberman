@@ -1,21 +1,22 @@
 #include "linked_list.h"
 
-int check_pieces(t_pions* list) {
+
+int check_pieces(piece_t* list) {
 	if (list == NULL)
 		return 1;
 	else
 		return 0;
 }
 
-t_pions* add_pieces(t_etat* etat, SDL_Rect mappos) {
-	t_pions* tmp;
+piece_t* add_pieces(state_t* state, SDL_Rect map_pos) {
+	piece_t* tmp;
 
-	if ((tmp = (t_pions*) malloc(sizeof (t_pions))) == NULL)
+	if ((tmp = (piece_t*) malloc(sizeof (piece_t))) == NULL)
 		return (NULL);
 
 	tmp->id = 0;
-	tmp->active = 0;
-	tmp->mappos = mappos;
+	tmp->is_activ = 0;
+	tmp->map_pos = map_pos;
 	tmp->life = 0;
 	tmp->bomb = 5;
 	tmp->life = 5;
@@ -24,20 +25,20 @@ t_pions* add_pieces(t_etat* etat, SDL_Rect mappos) {
 	tmp->next = NULL;
 	tmp->prev = NULL;
 
-	if (etat->lastpions == NULL && etat->pion == NULL) {
-		etat->lastpions = tmp;
-		etat->pion = tmp;
-	} else if (etat->lastpions != NULL) {
-		etat->lastpions->next = tmp;
-		tmp->prev = etat->lastpions;
-		etat->lastpions = tmp;
+	if (state->last_piece == NULL && state->piece == NULL) {
+		state->last_piece = tmp;
+		state->piece = tmp;
+	} else if (state->last_piece != NULL) {
+		state->last_piece->next = tmp;
+		tmp->prev = state->last_piece;
+		state->last_piece = tmp;
 	}
 	return (tmp);
 }
 
 // mettre un & pour la list quand sollicité
 
-t_piece* read_unit_piece(t_piece* list, int* tab) {
+piece_t* read_unipiece_t(piece_t* list, int* tab) {
 	if (list != NULL) {
 		tab[0] = list->id;
 		tab[2] = list->life;
@@ -46,7 +47,7 @@ t_piece* read_unit_piece(t_piece* list, int* tab) {
 	return (list);
 }
 
-t_piece* delete_list_chevron(t_piece* tmp) {
+piece_t* delete_list_chevron(piece_t* tmp) {
 	if (tmp == NULL)
 		return (NULL);
 	if (tmp->next == NULL && tmp->prev != NULL)
@@ -63,27 +64,27 @@ t_piece* delete_list_chevron(t_piece* tmp) {
 		return (NULL);
 }
 
-t_player* addItemPlayer(t_etat* etat) {
-	t_player* tmp;
+player_t* addItemPlayer(state_t* state) {
+	player_t* tmp;
 
-	if ((tmp = (t_player*) malloc(sizeof (t_player))) == NULL)
+	if ((tmp = (player_t*) malloc(sizeof (player_t))) == NULL)
 		return (NULL);
-	tmp->id_connexion = 0;
+	tmp->conn_id = 0;
 	tmp->next = NULL;
 	tmp->prev = NULL;
-	tmp->active = 1;
-	if (etat->lastplayer == NULL && etat->players == NULL) {
-		etat->players = tmp;
-		etat->lastplayer = tmp;
-	} else if (etat->lastplayer != NULL) {
-		etat->lastplayer->next = tmp;
-		tmp->prev = etat->lastplayer;
-		etat->lastplayer = tmp;
+	tmp->is_activ = 1;
+	if (state->last_player == NULL && state->players == NULL) {
+		state->players = tmp;
+		state->last_player = tmp;
+	} else if (state->last_player != NULL) {
+		state->last_player->next = tmp;
+		tmp->prev = state->last_player;
+		state->last_player = tmp;
 	}
 	return (tmp);
 }
 
-t_player* deleteListPlayer(t_player* tmp) {
+player_t* deleteListPlayer(player_t* tmp) {
 	if (tmp == NULL)
 		return (NULL);
 	if (tmp->next == NULL && tmp->prev != NULL)

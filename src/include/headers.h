@@ -48,8 +48,8 @@
 #include "annexe.h"
 #include "define.h"
 #include "game.h"
-#include "IA.h"
-#include "struct.h"
+//#include "ai.h"
+#include "types.h"
 
 //noyeau.c
 void window_init(t_control* control);
@@ -71,13 +71,13 @@ int initSprites(t_control* control);
 int initMenu(t_control* control);
 int initBandeau(t_control* control);
 int initIntro(t_control* control);
-int initPolice(t_control* control);
+int initfont(t_control* control);
 int initAttente(t_control* control);
 int initPanneauResultat(t_control* control);
 
 //inits.c
 t_control* init_control();
-t_etat* initEtat(t_etat* etat);
+state_t* initEtat(state_t* state);
 void killProcess(int pid);
 
 // introviews.c
@@ -102,21 +102,21 @@ int scoresCentral(t_control* control);
 void buttonMenuScores(t_control* control);
 
 // listechainée.c
-int checkPions(t_pions* list);
-t_pions* addItemPions(t_etat* etat, SDL_Rect mappos);
-t_pions* readUnitPions(t_pions* list, int* tab);
-t_pions* deleteListChevron(t_pions* tmp);
-t_player* addItemPlayer(t_etat* etat);
-t_player* deleteListPlayer(t_player* tmp);
+int checkPions(piece_t* list);
+piece_t* addItemPions(state_t* state, SDL_Rect map_pos);
+piece_t* readUnitPions(piece_t* list, int* tab);
+piece_t* delete_list_chevron(piece_t* tmp);
+player_t* addItemPlayer(state_t* state);
+player_t* deleteListPlayer(player_t* tmp);
 
 // gameDisplay.c
 void ckeckAnswerSrv(t_control* control);
 
 // addNetworkPlayer.c
-void addPion(t_etat* etat, int counter, int socket);
-int checkFirstRecord(t_etat* etat, int socket);
-int ReconnectPlayer(t_etat* etat, t_cltSd* requete, int socket);
-int addClient(t_etat* etat, t_cltSd* requete, int socket);
+void addPion(state_t* state, int counter, int socket);
+int checkFirstRecord(state_t* state, int socket);
+int ReconnectPlayer(state_t* state, client_t* requete, int socket);
+int addClient(state_t* state, client_t* requete, int socket);
 
 typedef int (* p_fib)(t_control*);
 

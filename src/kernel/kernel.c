@@ -1,7 +1,7 @@
 #include "headers.h"
 
 /*
- *  init la fenetre et le renderer
+ *  init la win et le renderer
  */
 
 void window_init(t_control *control)
@@ -12,13 +12,13 @@ void window_init(t_control *control)
         return;
     }
 
-    if (control->fenetre == NULL)
-        control->fenetre = SDL_CreateWindow("Bomberman",
+    if (control->win == NULL)
+        control->win = SDL_CreateWindow("Bomberman",
                                             SDL_WINDOWPOS_CENTERED,
                                             SDL_WINDOWPOS_CENTERED,
                                             WINDOW_WIDTH, WINDOW_HEIGHT,
                                             SDL_WINDOW_SHOWN);
-    control->Main_Renderer = SDL_CreateRenderer(control->fenetre, -1, SDL_RENDERER_ACCELERATED);
+    control->main_renderer = SDL_CreateRenderer(control->win, -1, SDL_RENDERER_ACCELERATED);
 }
 
 /* 
@@ -32,17 +32,17 @@ void encartClair(t_control* control)
     position.h = 50;
     position.x = 200;
     position.y = 300;
-    if (control->writeLoop == 0)
-        SDL_SetRenderDrawColor(control->Main_Renderer, 236, 236, 186, 255);
-    else if (control->writeLoop == 1)
-        SDL_SetRenderDrawColor(control->Main_Renderer, 210, 210, 150, 255);
-    SDL_RenderFillRect(control->Main_Renderer, &position);
+    if (control->write_loop == 0)
+        SDL_SetRenderDrawColor(control->main_renderer, 236, 236, 186, 255);
+    else if (control->write_loop == 1)
+        SDL_SetRenderDrawColor(control->main_renderer, 210, 210, 150, 255);
+    SDL_RenderFillRect(control->main_renderer, &position);
     writeText(control);
-    SDL_RenderPresent(control->Main_Renderer);
+    SDL_RenderPresent(control->main_renderer);
 }
 
 /*
- *  cree un encart blanc pour couvrir le fenetre
+ *  cree un encart blanc pour couvrir le win
  */
 
 void createPanelWhite(t_control *control)
@@ -52,11 +52,11 @@ void createPanelWhite(t_control *control)
     SrcR.h = WINDOW_HEIGHT - 64;
     SrcR.x = 0;
     SrcR.y = 0;
-    SDL_SetRenderDrawColor(control->Main_Renderer, 255, 255, 255, 255);
-    SDL_RenderFillRect(control->Main_Renderer, &SrcR);
+    SDL_SetRenderDrawColor(control->main_renderer, 255, 255, 255, 255);
+    SDL_RenderFillRect(control->main_renderer, &SrcR);
 }
 
-// encart de fond jaune qui occupe toute la surface de la fenetre meme des buttons
+// encart de fond jaune qui occupe toute la surface de la win meme des buttons
 
 void createPanel(t_control *control)
 {
@@ -65,11 +65,11 @@ void createPanel(t_control *control)
     SrcR.h = WINDOW_HEIGHT;
     SrcR.x = 0;
     SrcR.y = 0;
-    SDL_SetRenderDrawColor(control->Main_Renderer, 255, 242, 1, 255);
-    SDL_RenderFillRect(control->Main_Renderer, &SrcR);
+    SDL_SetRenderDrawColor(control->main_renderer, 255, 242, 1, 255);
+    SDL_RenderFillRect(control->main_renderer, &SrcR);
 }
 
-// du haut de la fenetre
+// du haut de la win
 
 void createBanderole(t_control *control)
 {
@@ -79,54 +79,54 @@ void createBanderole(t_control *control)
     SrcR.h = 100;
     SrcR.y = 0;
     SrcR.x = 0;
-    SDL_Texture* logo = SDL_CreateTextureFromSurface(control->Main_Renderer, control->sprites->dbandeau);
-    SDL_RenderCopy(control->Main_Renderer, logo, &(control->sprites->clogo->img), &SrcR);
+    SDL_Texture* logo = SDL_CreateTextureFromSurface(control->main_renderer, control->sprites->banner_surf);
+    SDL_RenderCopy(control->main_renderer, logo, &(control->sprites->logo_coord->img), &SrcR);
     SDL_DestroyTexture(logo);
 }
 
 void writeString(t_control *control, SDL_Rect renderQuad, char* string)
 {
-    SDL_Color couleurNoire = {0, 0, 0, 255};
-    TTF_Font *police = NULL;
+    SDL_Color colorNoire = {0, 0, 0, 255};
+    TTF_Font *font = NULL;
 
     TTF_Init();
-    police = TTF_OpenFont("roboto/Roboto-Black.ttf", 24);
-    SDL_Surface* textSurface = TTF_RenderText_Solid(police, string, couleurNoire);
-    SDL_Texture* text = SDL_CreateTextureFromSurface(control->Main_Renderer, textSurface);
+    font = TTF_OpenFont("roboto/Roboto-Black.ttf", 24);
+    SDL_Surface* textSurface = TTF_RenderText_Solid(font, string, colorNoire);
+    SDL_Texture* text = SDL_CreateTextureFromSurface(control->main_renderer, textSurface);
     SDL_FreeSurface(textSurface);
-    SDL_RenderCopy(control->Main_Renderer, text, NULL, &renderQuad);
+    SDL_RenderCopy(control->main_renderer, text, NULL, &renderQuad);
     SDL_DestroyTexture(text);
-    TTF_CloseFont(police);
+    TTF_CloseFont(font);
     TTF_Quit();
 }
 
 void writeText_51(t_control* control, SDL_Rect renderQuad, char *string)
 {
-    SDL_Color couleurNoire = {255, 255, 255, 255};
-    TTF_Font *police = NULL;
+    SDL_Color colorNoire = {255, 255, 255, 255};
+    TTF_Font *font = NULL;
     
     TTF_Init();
-    police = TTF_OpenFont("roboto/Roboto-Black.ttf", 24);
-    SDL_Surface* textSurface = TTF_RenderText_Blended(police, string, couleurNoire);
-    SDL_Texture* text = SDL_CreateTextureFromSurface(control->Main_Renderer, textSurface);
+    font = TTF_OpenFont("roboto/Roboto-Black.ttf", 24);
+    SDL_Surface* textSurface = TTF_RenderText_Blended(font, string, colorNoire);
+    SDL_Texture* text = SDL_CreateTextureFromSurface(control->main_renderer, textSurface);
     SDL_FreeSurface(textSurface);
-    SDL_RenderCopy(control->Main_Renderer, text, NULL, &renderQuad);
+    SDL_RenderCopy(control->main_renderer, text, NULL, &renderQuad);
     SDL_DestroyTexture(text);
-    TTF_CloseFont(police);
+    TTF_CloseFont(font);
     TTF_Quit();
 }
 
 void displayButton(t_control* control, SDL_Rect posdest)
 {
-    SDL_Texture* pTexture = SDL_CreateTextureFromSurface(control->Main_Renderer, control->sprites->dmenu);
-    SDL_RenderCopy(control->Main_Renderer, pTexture, &(control->sprites->cmenu[4].img), &posdest);
+    SDL_Texture* pTexture = SDL_CreateTextureFromSurface(control->main_renderer, control->sprites->menu_surf);
+    SDL_RenderCopy(control->main_renderer, pTexture, &(control->sprites->menu_coord[4].img), &posdest);
     SDL_DestroyTexture(pTexture);
 }
 
 void displayBackgroundButton(t_control* control, SDL_Rect posdest)
 {
-    SDL_Texture* pTexture = SDL_CreateTextureFromSurface(control->Main_Renderer, control->sprites->dmenu);
-    SDL_RenderCopy(control->Main_Renderer, pTexture, &(control->sprites->cmenu[18].img), &posdest);
+    SDL_Texture* pTexture = SDL_CreateTextureFromSurface(control->main_renderer, control->sprites->menu_surf);
+    SDL_RenderCopy(control->main_renderer, pTexture, &(control->sprites->menu_coord[18].img), &posdest);
     SDL_DestroyTexture(pTexture);
 }
 
@@ -139,8 +139,8 @@ void createPanelWait(t_control *control)
     SrcR.y = 100;
     SrcR.x = 220;
 
-    SDL_Texture* pTexture = SDL_CreateTextureFromSurface(control->Main_Renderer, control->sprites->dattente);
-    SDL_RenderCopy(control->Main_Renderer, pTexture, &(control->sprites->cattente->img), &SrcR);
+    SDL_Texture* pTexture = SDL_CreateTextureFromSurface(control->main_renderer, control->sprites->wait_surf);
+    SDL_RenderCopy(control->main_renderer, pTexture, &(control->sprites->wait_coord->img), &SrcR);
     SDL_DestroyTexture(pTexture);
 }
 

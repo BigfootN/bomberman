@@ -1,7 +1,7 @@
 CC = gcc
 NAME = bomberman
 SRCDIR1 = 01_main
-SRCDIR2 = 02_noyeau
+SRCDIR2 = 02_kernel
 SRCDIR3 = 03_introduction
 SRCDIR4 = 04_ipchoice
 SRCDIR5 = 05_game

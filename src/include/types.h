@@ -24,23 +24,23 @@ typedef struct player_s {
 	// id de connexion
 	int conn_id;
 	// socket
-	int sockfd_player;
+	int socked_player;
 	// requete
-	int request_state;
-	int requete_1;
-	int requete_2;
+	int requesstate_t;
+	int request_1;
+	int request_2;
 
 	// liste double chainées
 	struct player_s* next;
 	struct player_s* prev;
 
 	// emplacement dans la liste du joueur pour eviter de chercher
-	struct s_pions* player;
+	struct piece_s* player;
 } player_t;
 
 typedef struct player_info_s {
 	// time
-	int ptime;
+	int game_time;
 	// scores
 	int score;
 	// leur vie
@@ -57,8 +57,8 @@ typedef struct piece_s {
 	// player give
 	int proprio;
 	// actif ou occupé
-	int active;
-	// type pour connaitre le type d epions dan sle jeux
+	int is_activ;
+	// type pour connaitre le type d epieces dan sle jeux
 	int type;
 	// id
 	int id;
@@ -66,7 +66,7 @@ typedef struct piece_s {
 	SDL_Rect real_pos;
 	// Emplacement carte
 	SDL_Rect map_pos;
-	// sens pour les monstres
+	// clock_direction pour les monstres
 	char* clock_direction;
 	// la vie
 	int life;
@@ -80,7 +80,7 @@ typedef struct piece_s {
 	int bomb;
 	int score;
 	// requete
-	int request_state;
+	int requesstate_t;
 	int request_1;
 	int request_2;
 	// liste double chainées
@@ -94,7 +94,7 @@ typedef struct server_s {
 	struct player_info_s player_state;
 	int pos[4];
 	int map_scenery[20][20];
-	int map_action[20][20];
+	int action_map[20][20];
 	int map_bitmap[20][20];
 	int cmd_service;
 	int response;
@@ -120,7 +120,7 @@ typedef struct clmap_s {
 	int* wall;
 } clmap_t;
 
-/* structure des etats du jeux */
+/* structure des states du jeux */
 typedef struct s_state {
 	// flag qui bloque lors de la creation d'un user
 	int flag_stop;
@@ -133,14 +133,14 @@ typedef struct s_state {
 	char* ip_addr;
 	// chrono du jeux
 	int game_time;
-	// etat jeux
+	// state jeux
 	int game_state;
 	// listes des joueurs pour envoyer les données
 	int nb_players;
 	struct player_s* last_player;
 	struct player_s* players;
 	// les joueurs actifs
-	int active_players[5];
+	int is_activ_players[5];
 	// listes des  joueurs et des monstres
 	struct piece_s* piece;
 	struct piece_s* last_piece;
@@ -195,7 +195,7 @@ typedef struct coord_s {
 
 typedef struct network_s {
 	char* sever_addr;
-	// etat serveur ou client
+	// state serveur ou client
 	int net_clt_srv_state;
 	// permet de connaitre quel user vous êtes
 	int client_id;
@@ -203,14 +203,14 @@ typedef struct network_s {
 	int socket_client;
 } network_t;
 
-// pour envoyer a chaque joueur leur etat
+// pour envoyer a chaque joueur leur state
 
 /* structure d'envoi reseau */
 typedef struct client_s {
 	int client_id;
 	int request_1;
 	int request_2;
-	int cmdd_service;
+	int cmd_service;
 } client_t;
 
 typedef struct surface_s {

@@ -1,6 +1,6 @@
 #include "headers.h"
 
-int serializeMap(t_etat *etat)
+int serializeMap(state_t *state)
 {
     int row;
     int col;
@@ -8,31 +8,31 @@ int serializeMap(t_etat *etat)
     int bm;
     int action;
 
-    // if ((etat->msg = (t_svrSd*) malloc(sizeof (t_svrSd))) != NULL)
+    // if ((state->msg = (server_t*) malloc(sizeof (server_t))) != NULL)
     // {
-    etat->msg->pos[0] = etat->dataMap->pos.x;
-    etat->msg->pos[1] = etat->dataMap->pos.y;
+    state->msg->pos[0] = state->map_info->pos.x;
+    state->msg->pos[1] = state->map_info->pos.y;
     row = 0;
-    while (row < etat->dataMap->pos.x)
+    while (row < state->map_info->pos.x)
     {
         col = 0;
-        while (col < etat->dataMap->pos.y)
+        while (col < state->map_info->pos.y)
         {
-            decor = etat->dataMap->realmap[row][col]; // code des murs et autres
-            action = etat->dataMap->mapaction[row][col];
-            bm = etat->dataMap->bmmap[row][col];
+            decor = state->map_info->real_map[row][col]; // code des murs et autres
+            action = state->map_info->action_map[row][col];
+            bm = state->map_info->penalty_bonus_map[row][col];
 
-            if (etat->dataMap->wall[decor] != 1)
+            if (state->map_info->wall[decor] != 1)
             {
-                etat->msg->mapAction[row][col] = action;
-                etat->msg->mapBM[row][col] = bm;
+                state->msg->action_map[row][col] = action;
+                state->msg->map_bitmap[row][col] = bm;
             }
             else
             {
-                etat->msg->mapAction[row][col] = -1;
-                etat->msg->mapBM[row][col] = -1;
+                state->msg->action_map[row][col] = -1;
+                state->msg->map_bitmap[row][col] = -1;
             }
-            etat->msg->mapDecor[row][col] = decor;
+            state->msg->map_scenery[row][col] = decor;
             col++;
         }
         row++;

@@ -4,7 +4,7 @@ static int rand_max(const int max) {
 	time_t t;
 	int ret;
 
-	srand((unsigned int) &t);
+	srand(time(&t));
 	ret = rand() % max;
 
 	return ret;

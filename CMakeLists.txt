@@ -23,37 +23,36 @@ pkg_check_modules(SDL sdl2 sdl)
 set(SDL_HEADERS ${SDL_INCLUDE_DIRS})
 set(SDL_LIB ${SDL_LIBRARIES})
 
-add_subdirectory(${CMAKE_SOURCE_DIR}/02_noyeau)
-add_subdirectory(${CMAKE_SOURCE_DIR}/03_introduction)
-add_subdirectory(${CMAKE_SOURCE_DIR}/04_ipchoice)
-add_subdirectory(${CMAKE_SOURCE_DIR}/05_game)
-add_subdirectory(${CMAKE_SOURCE_DIR}/06_score)
-add_subdirectory(${CMAKE_SOURCE_DIR}/07_network)
-add_subdirectory(${CMAKE_SOURCE_DIR}/08_IA)
-add_subdirectory(${CMAKE_SOURCE_DIR}/09_pictures)
-add_subdirectory(${CMAKE_SOURCE_DIR}/10_lib)
+add_subdirectory(${CMAKE_SOURCE_DIR}/src/03_introduction)
+add_subdirectory(${CMAKE_SOURCE_DIR}/src/04_ipchoice)
+add_subdirectory(${CMAKE_SOURCE_DIR}/src/05_game)
+add_subdirectory(${CMAKE_SOURCE_DIR}/src/06_score)
+add_subdirectory(${CMAKE_SOURCE_DIR}/src/07_network)
+add_subdirectory(${CMAKE_SOURCE_DIR}/src/09_pictures)
+add_subdirectory(${CMAKE_SOURCE_DIR}/src/ai)
+#add_subdirectory(${CMAKE_SOURCE_DIR}/src/include)
+add_subdirectory(${CMAKE_SOURCE_DIR}/src/kernel)
 
 message(STATUS ${SDL_INCLUDE_DIRS})
 
 #include_directories(${SDL_INCLUDE_DIRS})
 
 add_executable(bomberman
-	${CMAKE_SOURCE_DIR}/01_main/start.c
+	${CMAKE_SOURCE_DIR}/src/bomberman.c
 	)
 
 target_include_directories(bomberman PUBLIC
-	${CMAKE_SOURCE_DIR}/00_headers
+	${CMAKE_SOURCE_DIR}/src/include/
 	${SDL_HEADERS}
 	)
 
 target_link_libraries(bomberman
-	noyeau
+	kernel
+	ia
 	introduction
 	ipchoice
 	game
 	score
 	network
-	IA
 	pictures
-	lib
 	)

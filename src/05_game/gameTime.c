@@ -20,10 +20,10 @@ int convert(int temps, int number, int flag)
 void displayTime(t_control *control)
 {
     time_t arrivee;
-    if (control->receiveMap->departTime > 0)
+    if (control->map_recv->start_time > 0)
     {
         time(&arrivee);
-        if (difftime(arrivee, control->receiveMap->departTime) > 240)
+        if (difftime(arrivee, control->map_recv->start_time) > 240)
         {
 
         }
@@ -37,7 +37,7 @@ void displayTime(t_control *control)
             int seconde1;
             int seconde2;
 
-            change = arrivee - control->receiveMap->departTime;
+            change = arrivee - control->map_recv->start_time;
             if (change > 0)
             {
                 pminute = convert(change, 60, 1); // 3 minutes si inferieur 0 minutes

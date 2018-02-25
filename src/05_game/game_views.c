@@ -1,4 +1,5 @@
 #include "headers.h"
+#include "game_views.h"
 
 int centralGame(t_control *control)
 {
@@ -6,16 +7,16 @@ int centralGame(t_control *control)
     window_init(control);
 
     menuSelect = 0;
-    control->network->idClient = -1;
+    control->network->client_id = -1;
 
     displayScreenWait(control);
-    SDL_RenderPresent(control->Main_Renderer);
-    if (control->network->srvorclt == 1)
+    SDL_RenderPresent(control->main_renderer);
+    if (control->network->net_clt_srv_state == 1)
         threadIA();
     SDL_Delay(500);
     tcpthreadClient(control);
     gameLoop(control, &menuSelect);
-    SDL_DestroyRenderer(control->Main_Renderer);
+    SDL_DestroyRenderer(control->main_renderer);
     return (menuSelect);
 }
 
@@ -35,10 +36,10 @@ void displaySprite(t_control *control)
             if (number < 31)
             {
                 SDL_Rect dest1 = {indexY * WIDTH_TILE, indexX * WIDTH_TILE, WIDTH_TILE, WIDTH_TILE};
-                SDL_Texture* pTexture1 = SDL_CreateTextureFromSurface(control->Main_Renderer, control->sprites->dsprites);
-                SDL_RenderCopy(control->Main_Renderer, pTexture1, &(control->sprites->csprites[number].img), &dest1);
+                SDL_Texture* pTexture1 = SDL_CreateTextureFromSurface(control->main_renderer, control->sprites->sprite_surf);
+                SDL_RenderCopy(control->main_renderer, pTexture1, &(control->sprites->sprite_coord[number].img), &dest1);
                 SDL_DestroyTexture(pTexture1);
-                SDL_RenderPresent(control->Main_Renderer);
+                SDL_RenderPresent(control->main_renderer);
             }
             number++;
             indexY++;
@@ -81,18 +82,18 @@ void buttonGame(t_control* control)
 {
     SDL_Rect dest = {150,
         (WINDOW_HEIGHT - 62),
-        control->sprites->cmenu[4].img.w,
-        control->sprites->cmenu[4].img.h};
+        control->sprites->menu_coord[4].img.w,
+        control->sprites->menu_coord[4].img.h};
     displayButton(control, dest);
     dest.x = 350;
-    if (control->network->srvorclt == 1)
+    if (control->network->net_clt_srv_state == 1)
         displayButton(control, dest);
     dest.x = 550;
     displayButton(control, dest);
 
     SDL_Rect renderQuad = {160, WINDOW_HEIGHT - 61, my_strlen("Return") * 18, 50};
     writeText_51(control, renderQuad, "Return");
-    if (control->network->srvorclt == 1)
+    if (control->network->net_clt_srv_state == 1)
     {
         renderQuad.x = 370;
         renderQuad.w = my_strlen("Start") * 18;

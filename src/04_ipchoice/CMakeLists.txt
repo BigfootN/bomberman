@@ -3,4 +3,4 @@ add_library(ipchoice SHARED
 	choiceipwindow.c
 	choicepviews.c)
 
-target_include_directories(introduction PUBLIC ${CMAKE_SOURCE_DIR}/00_headers)
+target_include_directories(ipchoice PUBLIC ${CMAKE_SOURCE_DIR}/src/include/)

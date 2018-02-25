@@ -6,7 +6,7 @@ int choiceMenu(t_control *control, SDL_Event event)
     {
         if (event.motion.x >= 150 && event.motion.x <= 300)
         {
-            control->network->srvorclt = 1;
+            control->network->net_clt_srv_state = 1;
             return 3;
         }
         else if (event.motion.x >= 350 && event.motion.x <= 500)
@@ -19,7 +19,7 @@ int choiceMenu(t_control *control, SDL_Event event)
 
 int eventsLoopIntroduction(t_control *control, int *menuSelect)
 {
-    Input in;
+    input_t in;
     SDL_Event event;
     int CurrentClickTicks = 0, LastClickTicks = 0;
 
@@ -34,10 +34,10 @@ int eventsLoopIntroduction(t_control *control, int *menuSelect)
             in.quit = 1;
             break;
         case SDL_MOUSEMOTION:
-            in.mousex = event.motion.x;
-            in.mousey = event.motion.y;
-            in.mousexrel = event.motion.xrel;
-            in.mouseyrel = event.motion.yrel;
+            in.mouse_x = event.motion.x;
+            in.mouse_y = event.motion.y;
+            in.mouse_xrel = event.motion.xrel;
+            in.mouse_yrel = event.motion.yrel;
             break;
         case SDL_MOUSEBUTTONDOWN:
             LastClickTicks = dblClick(CurrentClickTicks, LastClickTicks);

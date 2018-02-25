@@ -6,7 +6,7 @@ int choiceMenuChoiceIp(t_control* control, SDL_Event event) {
 		if (event.motion.x >= 150 && event.motion.x <= 300)
 			return 1;
 		else if (event.motion.x >= 350 && event.motion.x <= 500) {
-			control->network->srvorclt = 0;
+			control->network->net_clt_srv_state = 0;
 			return 3;
 		} else if (event.motion.x >= 550 && event.motion.x <= 700)
 			return 0;
@@ -15,12 +15,12 @@ int choiceMenuChoiceIp(t_control* control, SDL_Event event) {
 	/* ici les encart du nom et de l'adresse server IP 200, 298 */
 	if (event.motion.x >= 200 && event.motion.x <= 600) {
 		if (event.motion.y >= 300 && event.motion.y <= 350) {
-			if (control->writeLoop == 0)
-				control->writeLoop = 1;
+			if (control->write_loop == 0)
+				control->write_loop = 1;
 			else
-				control->writeLoop = 0;
+				control->write_loop = 0;
 
-			if (control->writeLoop == 1)
+			if (control->write_loop == 1)
 				encartClair(control);
 		}
 	}
@@ -32,13 +32,13 @@ void selectData(t_control* control) {
 	tmp = (char*) malloc(sizeof (char*) * 16);
 	bzero(tmp, 16);
 
-	tmp = control->network->ipserveur;
-	//control->network->ipserveur = writeData(event, tmp);
+	tmp = control->network->sever_addr;
+	//control->network->sever_addr = writeData(event, tmp);
 	encartClair(control);
 }
 
 void eventsLoopipchoice(t_control* control, int* menuSelect) {
-	Input in;
+	input_t in;
 	SDL_Event event;
 	SDL_StartTextInput();
 	int CurrentClickTicks = 0, LastClickTicks = 0;
@@ -55,18 +55,18 @@ void eventsLoopipchoice(t_control* control, int* menuSelect) {
 				in.quit = 1;
 				break;
 			case SDL_MOUSEMOTION:
-				in.mousex = event.motion.x;
-				in.mousey = event.motion.y;
-				in.mousexrel = event.motion.xrel;
-				in.mouseyrel = event.motion.yrel;
+				in.mouse_x = event.motion.x;
+				in.mouse_y = event.motion.y;
+				in.mouse_xrel = event.motion.xrel;
+				in.mouse_yrel = event.motion.yrel;
 				break;
 			case SDL_TEXTINPUT:
-				if (control->writeLoop == 1)
+				if (control->write_loop == 1)
 					//strcat(text, event.text.text);
 					selectData(control);
 				break;
 			case SDL_KEYDOWN:
-				if (control->writeLoop == 1)
+				if (control->write_loop == 1)
 					deleteData(control, event);
 				//    selectData(control, event);
 				break;

@@ -3,6 +3,6 @@
 
 #include "types.h"
 
-int del_inactive_piece(state_t* state);
+int del_inis_activ_piece(state_t* state);
 
 #endif

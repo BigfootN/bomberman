@@ -1,33 +1,38 @@
 #include "headers.h"
+#include "ai_map.h"
+#include "ai_msg.h"
+#include "ai_counter.h"
 
-void CentralSend(t_etat *etat)
+//??
+void central_send(state_t *state)
 {
-    sendEmail(etat);
+    send_email(state);
 }
 
-void sendEmail(t_etat *etat)
+//changer nom ?
+void send_email(state_t *state)
 {
-    t_player *player;
+    player_t *player;
     pthread_t p_thread;
 
-    player = etat->players;
-    etat->msg->commandService = 5;
-    etat->msg->reponse = 0;
-    if (etat->partie == 2)
-        etat->msg->pos[2] = 1;
+    player = state->players;
+    state->msg->cmd_service = 5;
+    state->msg->response = 0;
+    if (state->partie == 2)
+        state->msg->pos[2] = 1;
 
     while (player != NULL)
     {
-        if (player->socket_player >= 0)
+        if (player->socked_player >= 0)
         {
-            etat->socket_send = player->socket_player;
-            etat->msg->idClient = player->id_connexion;
-            etat->msg->departTime = etat->tdepart;
-            prepaCounterPlayer(etat, player);
-            etat->msg->pos[3] = 0;
-            if (player->active == 0 || player->player->active == 0)
-                etat->msg->pos[3] = 1;
-            if (pthread_create(&p_thread, NULL, server_to_client, (void*) etat) < 0)
+            state->socket_send = player->socked_player;
+            state->msg->client_id = player->conn_id;
+            state->msg->start_time = state->start_time;
+            counter_player_init(state, player);
+            state->msg->pos[3] = 0;
+            if (player->is_activ == 0 || player->player->is_activ == 0)
+                state->msg->pos[3] = 1;
+            if (pthread_create(&p_thread, NULL, server_to_client, (void*) state) < 0)
             {
                 perror("could not create thread");
                 return;
@@ -42,15 +47,15 @@ void sendEmail(t_etat *etat)
  *  prend en compte les joueurs encore present
  */
 
-void checkPlayerActif(t_etat* etat)
+void check_player_active(state_t* state)
 {
-    t_player *player;
+    player_t *player;
 
-    player = etat->players;
+    player = state->players;
     while (player != NULL)
     {
-        if (player->active)
-            etat->pactif[player->id_connexion] = 1;
+        if (player->is_activ)
+            state->is_activ_players[player->conn_id] = 1;
         player = player->next;
     }
 }
