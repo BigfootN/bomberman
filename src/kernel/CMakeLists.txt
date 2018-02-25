@@ -5,4 +5,7 @@ add_library(kernel SHARED
 	kernel.c
 	)
 
-target_include_directories(kernel PUBLIC ${CMAKE_SOURCE_DIR}/src/include/)
+target_include_directories(kernel PUBLIC
+	${CMAKE_SOURCE_DIR}/src/include/
+	${CMAKE_SOURCE_DIR}/src/ipchoice
+	)

@@ -1,4 +1,4 @@
-add_library(ia SHARED
+add_library(ai SHARED
 	ai.c
 	ai_bomb.c
 	ai_blast.c
@@ -9,7 +9,12 @@ add_library(ia SHARED
 	ai_monster.c
 	ai_piece.c
 	ai_msg.c
-	ai_timer.c ai_msg.h)
+	ai_timer.c
+	)
 
-target_include_directories(ia PUBLIC ${CMAKE_SOURCE_DIR}/src/include/)
-target_include_directories(ia PUBLIC ${CMAKE_SOURCE_DIR}/src/kernel/)
+target_include_directories(ai PUBLIC
+	${CMAKE_SOURCE_DIR}/src/include/
+	${CMAKE_SOURCE_DIR}/src/kernel/
+	${CMAKE_SOURCE_DIR}/src/pictures/
+	${CMAKE_SOURCE_DIR}/src/network/
+	)

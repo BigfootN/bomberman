@@ -1,8 +1,4 @@
-#include "headers.h"
 #include "ai_blast.h"
-#include "linked_list.h"
-#include "ai_piece.h"
-
 
 static int check_wall(int answer, int tile, int piece) {
 	int choice;
@@ -34,7 +30,6 @@ void init_bomb_map(state_t* state) {
 	int** tab;
 
 	idx_x = 0;
-	idx_y = 0;
 	while (idx_x < state->map_info->pos.x) {
 		pos.x = idx_x;
 		idx_y = 0;
@@ -101,7 +96,7 @@ void blast_clean(state_t* state, int row, int col) {
 							// pour la suppression chercher aussi les emplacements x y lorsque un est trouvé
 							piece->is_activ = 1;
 							piece->life = 5;
-							piece->requesstate_t = 1;
+							piece->request_state = 1;
 							if (sort >= 27 && sort <= 30)
 								piece->request_1 = 3;
 							else
@@ -130,13 +125,10 @@ void display_fire(state_t* state, SDL_Rect lpos, int** arr) {
 	int col, row;
 
 	indexX = 0;
-	flag = 0;
 	while (indexX < 5) {
 		indexY = 0;
 		while (indexY < 5) {
 			if (arr[indexX][indexY] != 1) {
-				col = 0;
-				row = 0;
 				flag = -1;
 				pos = lpos;
 
@@ -197,7 +189,7 @@ void display_fire(state_t* state, SDL_Rect lpos, int** arr) {
 						piece->is_activ = 0;
 						piece->life = 0;
 					} else if ((arr[indexX][indexY] >= 27 && arr[indexX][indexY] <= 30) ||
-							   (arr[indexX][indexY] >= 0 && arr[indexX][indexY] <= 8)) {
+							(arr[indexX][indexY] >= 0 && arr[indexX][indexY] <= 8)) {
 						int player = state->map_info->action_map[row][col];
 						// supprimer immediatement
 						state->map_info->action_map[row][col] = flag;

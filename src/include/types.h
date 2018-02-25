@@ -6,6 +6,7 @@
 #include <SDL2/SDL_scancode.h>
 #include <SDL2/SDL_surface.h>
 #include <SDL2/SDL_ttf.h>
+#include <SDL2/SDL_image.h>
 #include <time.h>
 
 struct player_s;
@@ -17,6 +18,10 @@ struct clmap_s;
 struct network_s;
 struct surface_s;
 struct input_s;
+struct point_s;
+struct client_state_s;
+struct window_s;
+struct control_s;
 
 typedef struct player_s {
 	// actif ou occupé
@@ -24,9 +29,9 @@ typedef struct player_s {
 	// id de connexion
 	int conn_id;
 	// socket
-	int socked_player;
+	int sockfd_player;
 	// requete
-	int requesstate_t;
+	int request_state;
 	int request_1;
 	int request_2;
 
@@ -40,7 +45,7 @@ typedef struct player_s {
 
 typedef struct player_info_s {
 	// time
-	int game_time;
+	int ptime;
 	// scores
 	int score;
 	// leur vie
@@ -58,7 +63,7 @@ typedef struct piece_s {
 	int proprio;
 	// actif ou occupé
 	int is_activ;
-	// type pour connaitre le type d epieces dan sle jeux
+	// type pour connaitre le type d epions dan sle jeux
 	int type;
 	// id
 	int id;
@@ -66,7 +71,7 @@ typedef struct piece_s {
 	SDL_Rect real_pos;
 	// Emplacement carte
 	SDL_Rect map_pos;
-	// clock_direction pour les monstres
+	// sens pour les monstres
 	char* clock_direction;
 	// la vie
 	int life;
@@ -80,7 +85,7 @@ typedef struct piece_s {
 	int bomb;
 	int score;
 	// requete
-	int requesstate_t;
+	int request_state;
 	int request_1;
 	int request_2;
 	// liste double chainées
@@ -94,7 +99,7 @@ typedef struct server_s {
 	struct player_info_s player_state;
 	int pos[4];
 	int map_scenery[20][20];
-	int action_map[20][20];
+	int map_action[20][20];
 	int map_bitmap[20][20];
 	int cmd_service;
 	int response;
@@ -120,8 +125,8 @@ typedef struct clmap_s {
 	int* wall;
 } clmap_t;
 
-/* structure des states du jeux */
-typedef struct s_state {
+/* structure des etats du jeux */
+typedef struct state_s {
 	// flag qui bloque lors de la creation d'un user
 	int flag_stop;
 	// heure de demarrage
@@ -133,14 +138,14 @@ typedef struct s_state {
 	char* ip_addr;
 	// chrono du jeux
 	int game_time;
-	// state jeux
+	// etat jeux
 	int game_state;
 	// listes des joueurs pour envoyer les données
 	int nb_players;
 	struct player_s* last_player;
 	struct player_s* players;
 	// les joueurs actifs
-	int is_activ_players[5];
+	int active_players[5];
 	// listes des  joueurs et des monstres
 	struct piece_s* piece;
 	struct piece_s* last_piece;
@@ -153,7 +158,7 @@ typedef struct s_state {
 	int partie;
 } state_t;
 
-typedef struct s_control {
+typedef struct control_s {
 	// fenetre
 	SDL_Window* win;
 	SDL_Renderer* main_renderer;
@@ -170,13 +175,13 @@ typedef struct s_control {
 	// gestion ecriture adresse ip ou nom carte
 	int write_loop;
 	// pour envoyer des messages
-	int mesg_enbale;
+	int msg_enable;
 	struct client_s* msg;
 	// reception des messages
 	struct server_s* map_recv;
 	// l'emplacement du thread d'envoi de requete
 	int send_state;
-} t_control;
+} control_t;
 
 typedef struct input_s {
 	char key[SDL_NUM_SCANCODES];
@@ -194,8 +199,8 @@ typedef struct coord_s {
 } coord_t;
 
 typedef struct network_s {
-	char* sever_addr;
-	// state serveur ou client
+	char* server_addr;
+	// etat serveur ou client
 	int net_clt_srv_state;
 	// permet de connaitre quel user vous êtes
 	int client_id;
@@ -203,7 +208,7 @@ typedef struct network_s {
 	int socket_client;
 } network_t;
 
-// pour envoyer a chaque joueur leur state
+// pour envoyer a chaque joueur leur etat
 
 /* structure d'envoi reseau */
 typedef struct client_s {
@@ -235,5 +240,48 @@ typedef struct surface_s {
 	TTF_Font* font;
 	SDL_Color color;
 } surface_t;
+
+
+typedef struct event_s {
+	// time
+	int ptime;
+	// type evement
+	int typeevent;
+	// vie evenement compteur decroissant
+	int evlife;
+} event_t;
+
+typedef struct point_s {
+	SDL_Rect pos;
+	int nSprite;
+} point_t;
+
+typedef struct client_state_s {
+	// map d'affichage calcul des emplacements
+	struct point_s** realmap;
+	// map de reception
+	int** nitMap;
+} client_state_t;
+
+typedef int (* p_fib)(control_t*);
+
+typedef struct window_s {
+	int number;
+	p_fib pfunc;
+} window_t;
+
+
+int introduction_central(control_t*);
+int ip_choice_ip_central(control_t*);
+int central_game(control_t*);
+int scores_central(control_t*);
+
+static const window_t l_bib[] = {
+	{1, &introduction_central},
+	{2, &ip_choice_ip_central},
+	{3, &central_game},
+	{4, &scores_central},
+	{0, NULL}
+};
 
 #endif
