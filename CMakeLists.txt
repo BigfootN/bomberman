@@ -8,6 +8,8 @@ if (NOT CMAKE_BUILD_TYPE)
 	SET(CMAKE_BUILD_TYPE "Debug")
 endif (NOT CMAKE_BUILD_TYPE)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 string(TOUPPER ${CMAKE_BUILD_TYPE} CMAKE_BUILD_TYPE)
 
 set(CMAKE_C_FLAGS "-Wall -Werror -Wextra")
@@ -23,22 +25,22 @@ pkg_check_modules(SDL sdl2 sdl)
 set(SDL_HEADERS ${SDL_INCLUDE_DIRS})
 set(SDL_LIB ${SDL_LIBRARIES})
 
-add_subdirectory(${CMAKE_SOURCE_DIR}/02_noyeau)
-add_subdirectory(${CMAKE_SOURCE_DIR}/03_introduction)
-add_subdirectory(${CMAKE_SOURCE_DIR}/04_ipchoice)
-add_subdirectory(${CMAKE_SOURCE_DIR}/05_game)
-add_subdirectory(${CMAKE_SOURCE_DIR}/06_score)
-add_subdirectory(${CMAKE_SOURCE_DIR}/07_network)
-add_subdirectory(${CMAKE_SOURCE_DIR}/08_IA)
-add_subdirectory(${CMAKE_SOURCE_DIR}/09_pictures)
-add_subdirectory(${CMAKE_SOURCE_DIR}/10_lib)
+add_subdirectory(${CMAKE_SOURCE_DIR}/src/kernel)
+add_subdirectory(${CMAKE_SOURCE_DIR}/src/introduction)
+add_subdirectory(${CMAKE_SOURCE_DIR}/src/ipchoice)
+add_subdirectory(${CMAKE_SOURCE_DIR}/src/game)
+add_subdirectory(${CMAKE_SOURCE_DIR}/src/score)
+add_subdirectory(${CMAKE_SOURCE_DIR}/src/network)
+add_subdirectory(${CMAKE_SOURCE_DIR}/src/ai)
+add_subdirectory(${CMAKE_SOURCE_DIR}/src/pictures)
+add_subdirectory(${CMAKE_SOURCE_DIR}/src/lib)
 
 message(STATUS ${SDL_INCLUDE_DIRS})
 
 #include_directories(${SDL_INCLUDE_DIRS})
 
 add_executable(bomberman
-	${CMAKE_SOURCE_DIR}/01_main/start.c
+	${CMAKE_SOURCE_DIR}/src/bomberman.c
 	)
 
 target_include_directories(bomberman PUBLIC
@@ -47,13 +49,12 @@ target_include_directories(bomberman PUBLIC
 	)
 
 target_link_libraries(bomberman
-	noyeau
+	kernel
 	introduction
 	ipchoice
 	game
 	score
 	network
-	IA
+	ai
 	pictures
-	lib
 	)

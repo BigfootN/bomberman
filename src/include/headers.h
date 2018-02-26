@@ -20,14 +20,14 @@
 #include <strings.h>
 
 /*#if defined (WIN32)
-   //pour les sockets
- #include <winsock2.h>
-   typedef int socklen_t;
-   //pour les threads
- #include <windows.h>
- #define psleep(sec) Sleep ((sec) * 1000)
+//pour les sockets
+#include <winsock2.h>
+typedef int socklen_t;
+//pour les threads
+#include <windows.h>
+#define psleep(sec) Sleep ((sec) * 1000)
 
- #elif defined (linux)*/
+#elif defined (linux)*/
 // annexe
 #include <time.h>
 #include <unistd.h>
@@ -118,19 +118,6 @@ int checkFirstRecord(t_etat* etat, int socket);
 int ReconnectPlayer(t_etat* etat, t_cltSd* requete, int socket);
 int addClient(t_etat* etat, t_cltSd* requete, int socket);
 
-typedef int (* p_fib)(t_control*);
 
-typedef struct s_window {
-	int number;
-	p_fib pfunc;
-} t_window;
-
-static const t_window l_bib[] = {
-	{1, &introductionCentral},
-	{2, &ipChoiceCentral},
-	{3, &centralGame},
-	{4, &scoresCentral},
-	{0, NULL}
-};
 
 #endif

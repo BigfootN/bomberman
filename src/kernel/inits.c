@@ -1,67 +1,67 @@
-#include "headers.h"
+#include "inits.h"
 
-t_control *init_control()
+control_t* init_control()
 {
-    t_control *control;
+	control_t *control;
 
-    if ((control = (t_control*) malloc(sizeof (t_control))) == NULL)
-        return NULL;
-    /* parametres reseaux */
-    if ((control->network = (t_network*) malloc(sizeof (t_network))) == NULL)
-        return NULL;
-    // contient les emplacements des images du jeux dans leur fichier
-    if ((control->sprites = (t_surface*) malloc(sizeof (t_surface))) == NULL)
-        return NULL;
+	if ((control = (control_t*) malloc(sizeof (control_t))) == NULL)
+		return NULL;
+	/* parametres reseaux */
+	if ((control->network = (network_t*) malloc(sizeof (network_t))) == NULL)
+		return NULL;
+	// contient les emplacements des images du jeux dans leur fichier
+	if ((control->sprites = (surface_t*) malloc(sizeof (surface_t))) == NULL)
+		return NULL;
 
-    control->Main_Renderer = NULL;
-    control->fenetre = NULL;
-    control->map = NULL;
-    control->realmap = NULL;
-    control->network ->idClient = 0;
-    control->network->ipserveur = (char*) malloc(sizeof (char) * my_strlen("127.0.0.1"));
-    control->network->ipserveur = "127.0.0.1";
-    control->network->srvorclt = 1; // serveur par default
-    control->mesgenbale = 0; // pour les receptions de paquet
-    control->menuSelect = 0; // pour le smenus
-    control->msg = (t_cltSd*) malloc(sizeof (t_cltSd));
+	control->main_renderer = NULL;
+	control->win = NULL;
+	control->map = NULL;
+	control->real_map = NULL;
+	control->network->client_id = 0;
+	control->network->server_addr = (char*) malloc(sizeof (char) * strlen("127.0.0.1"));
+	control->network->server_addr = "127.0.0.1";
+	control->network->net_clt_srv_state = 1; // serveur par default
+	control->msg_enable = 0; // pour les receptions de paquet
+	control->menu_select = 0; // pour le smenus
+	control->msg = (client_t*) malloc(sizeof (client_t));
 
-    return (control);
+	return (control);
 }
 
-t_etat *initEtat(t_etat *etat)
+state_t *init_state(state_t *state)
 {
-    if ((etat = (t_etat*) malloc(sizeof (t_etat))) == NULL)
-        return NULL;
+	if ((state = (state_t*) malloc(sizeof (state_t))) == NULL)
+		return NULL;
 
-    etat->lastpions = NULL;
-    etat->lastplayer = NULL;
-    etat->pion = NULL;
-    etat->players = NULL;
-    etat->ipAdress = my_strdup("");
-    etat->ptime = 0;
-    etat->sock_server = 0;
-    etat->nbrePlayers = 0;
-    etat->partie = 0;
-    etat->msg = (t_svrSd*) malloc(sizeof (t_svrSd));
-    //etat->msg->statePlayer = (t_Sendplayers*) malloc(sizeof (t_Sendplayers));
+	state->last_piece = NULL;
+	state->last_player = NULL;
+	state->piece = NULL;
+	state->players = NULL;
+	state->ip_addr = strdup("");
+	state->cur_time = 0;
+	state->sock_server = 0;
+	state->nb_players = 0;
+	state->partie = 0;
+	state->msg = (server_t*) malloc(sizeof (server_t));
+	//state->msg->statePlayer = (t_Sendplayers*) malloc(sizeof (t_Sendplayers));
 
-    return (etat);
+	return (state);
 }
 
 /*void killProcess(int pid)
-{
-    int result;
-    int status;
+  {
+  int result;
+  int status;
 
-    printf("hello");
+  printf("hello");
 
-    while ((result = waitpid(-1, &status, WNOHANG)) > 0)
-    {
-        ;
-    }
-    if (result == -1)
-    {
-        perror("waitpid");
-        exit(1);
-    }
-}*/
+  while ((result = waitpid(-1, &status, WNOHANG)) > 0)
+  {
+  ;
+  }
+  if (result == -1)
+  {
+  perror("waitpid");
+  exit(1);
+  }
+  }*/

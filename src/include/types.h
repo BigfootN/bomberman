@@ -17,6 +17,11 @@ struct clmap_s;
 struct network_s;
 struct surface_s;
 struct input_s;
+struct point_s;
+struct client_state_s;
+struct window_s;
+struct control_s;
+
 
 typedef struct player_s {
 	// actif ou occupé
@@ -57,7 +62,7 @@ typedef struct piece_s {
 	// player give
 	int proprio;
 	// actif ou occupé
-	int active;
+	int is_activ;
 	// type pour connaitre le type d epions dan sle jeux
 	int type;
 	// id
@@ -121,7 +126,7 @@ typedef struct clmap_s {
 } clmap_t;
 
 /* structure des etats du jeux */
-typedef struct s_state {
+typedef struct state_s {
 	// flag qui bloque lors de la creation d'un user
 	int flag_stop;
 	// heure de demarrage
@@ -153,7 +158,7 @@ typedef struct s_state {
 	int partie;
 } state_t;
 
-typedef struct s_control {
+typedef struct control_s {
 	// fenetre
 	SDL_Window* win;
 	SDL_Renderer* main_renderer;
@@ -170,13 +175,13 @@ typedef struct s_control {
 	// gestion ecriture adresse ip ou nom carte
 	int write_loop;
 	// pour envoyer des messages
-	int mesg_enbale;
+	int msg_enable;
 	struct client_s* msg;
 	// reception des messages
 	struct server_s* map_recv;
 	// l'emplacement du thread d'envoi de requete
 	int send_state;
-} t_control;
+} control_t;
 
 typedef struct input_s {
 	char key[SDL_NUM_SCANCODES];
@@ -194,7 +199,7 @@ typedef struct coord_s {
 } coord_t;
 
 typedef struct network_s {
-	char* sever_addr;
+	char* server_addr;
 	// etat serveur ou client
 	int net_clt_srv_state;
 	// permet de connaitre quel user vous êtes
@@ -235,5 +240,48 @@ typedef struct surface_s {
 	TTF_Font* font;
 	SDL_Color color;
 } surface_t;
+
+
+typedef struct event_s {
+	// time
+	int ptime;
+	// type evement
+	int typeevent;
+	// vie evenement compteur decroissant
+	int evlife;
+} event_t;
+
+typedef struct point_s {
+	SDL_Rect pos;
+	int nSprite;
+} point_t;
+
+typedef struct client_state_s {
+	// map d'affichage calcul des emplacements
+	struct point_s** realmap;
+	// map de reception
+	int** nitMap;
+} client_state_t;
+
+typedef int (* p_fib)(control_t*);
+
+typedef struct window_s {
+	int number;
+	p_fib pfunc;
+} window_t;
+
+
+int introduction_central(control_t*);
+int ip_choice_ip_central(control_t*);
+int central_game(control_t*);
+int scores_central(control_t*);
+
+static const window_t l_bib[] = {
+	{1, &introduction_central},
+	{2, &ip_choice_ip_central},
+	{3, &central_game},
+	{4, &scores_central},
+	{0, NULL}
+};
 
 #endif

@@ -93,7 +93,7 @@ void blast_clean(state_t* state, int row, int col) {
 							//t_pieces *addItemPions(state_t *state, int type, SDL_Rect realpos,   SDL_Rect mappos)
 							pos.x = idx_x;
 							pos.y = idx_y;
-							t_pieces* piece = addItemPions(state,  pos);
+							t_pieces* piece = add_piece(state,  pos);
 							// pour la suppression chercher aussi les emplacements x y lorsque un est trouvé
 							piece->active = 1;
 							piece->life = 5;
@@ -193,7 +193,7 @@ void display_fire(state_t* state, SDL_Rect lpos, int** arr) {
 						piece->active = 0;
 						piece->life = 0;
 					} else if ((arr[indexX][indexY] >= 27 && arr[indexX][indexY] <= 30) ||
-							   (arr[indexX][indexY] >= 0 && arr[indexX][indexY] <= 8)) {
+							(arr[indexX][indexY] >= 0 && arr[indexX][indexY] <= 8)) {
 						int player = state->dataMap->mapaction[row][col];
 						// supprimer immediatement
 						state->dataMap->mapaction[row][col] = flag;

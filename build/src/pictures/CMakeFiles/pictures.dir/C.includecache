@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../src/include/define.h
+
+../src/include/types.h
+SDL2/SDL.h
+-
+SDL2/SDL_rect.h
+-
+SDL2/SDL_scancode.h
+-
+SDL2/SDL_surface.h
+-
+SDL2/SDL_ttf.h
+-
+time.h
+-
+
+/home/bigfoot/bomberman/src/pictures/file.c
+file.h
+/home/bigfoot/bomberman/src/pictures/file.h
+
+/home/bigfoot/bomberman/src/pictures/file.h
+types.h
+/home/bigfoot/bomberman/src/pictures/types.h
+define.h
+/home/bigfoot/bomberman/src/pictures/define.h
+

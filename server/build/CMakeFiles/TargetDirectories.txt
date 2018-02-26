@@ -1,0 +1,5 @@
+/home/bigfoot/bomberman/server/build/CMakeFiles/rebuild_cache.dir
+/home/bigfoot/bomberman/server/build/CMakeFiles/edit_cache.dir
+/home/bigfoot/bomberman/server/build/src/CMakeFiles/rebuild_cache.dir
+/home/bigfoot/bomberman/server/build/src/CMakeFiles/bmanserver.dir
+/home/bigfoot/bomberman/server/build/src/CMakeFiles/edit_cache.dir
