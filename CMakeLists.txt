@@ -34,6 +34,7 @@ add_subdirectory(${CMAKE_SOURCE_DIR}/src/network)
 add_subdirectory(${CMAKE_SOURCE_DIR}/src/ai)
 add_subdirectory(${CMAKE_SOURCE_DIR}/src/pictures)
 add_subdirectory(${CMAKE_SOURCE_DIR}/src/lib)
+add_subdirectory(${CMAKE_SOURCE_DIR}/src/memory)
 
 message(STATUS ${SDL_INCLUDE_DIRS})
 
@@ -41,11 +42,6 @@ message(STATUS ${SDL_INCLUDE_DIRS})
 
 add_executable(bomberman
 	${CMAKE_SOURCE_DIR}/src/bomberman.c
-	)
-
-target_include_directories(bomberman PUBLIC
-	${CMAKE_SOURCE_DIR}/00_headers
-	${SDL_HEADERS}
 	)
 
 target_link_libraries(bomberman
@@ -57,4 +53,5 @@ target_link_libraries(bomberman
 	network
 	ai
 	pictures
+	memory
 	)
