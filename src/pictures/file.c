@@ -88,22 +88,13 @@ int write_config_map(state_t *state, int *list)
 FILE *open_file(char *name)
 {
 	FILE *fp;
-	char *text;
-	size_t total_size;
 
-	total_size = strlen("map/") + strlen(name) + 1;
-	text = malloc(sizeof(*text) * total_size);
-	memcpy(text, "map/", 4*sizeof(*text));
-	memcpy(text+4, name, strlen(name)*sizeof(char));
-
-	if ((fp = fopen(text, "r")) == NULL)
+	if ((fp = fopen(name, "r")) == NULL)
 	{
-		free(text);
 		printf("fichier %s manquant!", name);
 		SDL_Quit();
 		return NULL;
 	}
-	free(text);
 
 	return (fp);
 }

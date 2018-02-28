@@ -58,7 +58,7 @@ int init_menu(control_t *control)
 	int indexX;
 
 
-	control->sprites->menu_surf = IMG_Load("sprites/menu1.png"); // charge l'image dans image_ram en RAM
+	control->sprites->menu_surf = IMG_Load("../res/sprites/menu1.png"); // charge l'image dans image_ram en RAM
 	if (control->sprites->menu_surf == NULL)
 	{
 		printf("menu.png image introuvable !! \n");
@@ -118,7 +118,7 @@ int init_menu(control_t *control)
 
 int init_banner(control_t *control)
 {
-	control->sprites->logo_surf = IMG_Load("sprites/SuperBombermanR.jpg");
+	control->sprites->logo_surf = IMG_Load("../res/sprites/SuperBombermanR.jpg");
 	if (control->sprites->logo_surf == NULL)
 	{
 		SDL_Quit();
@@ -135,7 +135,7 @@ int init_banner(control_t *control)
 
 int init_intro(control_t *control)
 {
-	control->sprites->banner_surf = IMG_Load("sprites/banderole.png");
+	control->sprites->banner_surf = IMG_Load("../res/sprites/banderole.png");
 	if (control->sprites->banner_surf == NULL)
 	{
 		SDL_Quit();
@@ -156,7 +156,7 @@ int init_font(control_t *control)
 	control->sprites->color.g = 0;
 	control->sprites->color.r = 255;
 
-	control->sprites->font = TTF_OpenFont("roboto/Roboto-Black.ttf", 45);
+	control->sprites->font = TTF_OpenFont("../res/roboto/Roboto-Black.ttf", 45);
 	if (control->sprites->font == NULL)
 	{
 		SDL_Quit();
@@ -168,7 +168,7 @@ int init_font(control_t *control)
 
 int init_wait(control_t *control)
 {
-	control->sprites->wait_surf = IMG_Load("sprites/attente1.png");
+	control->sprites->wait_surf = IMG_Load("../res/sprites/attente1.png");
 	if (control->sprites->wait_surf == NULL)
 	{
 		SDL_Quit();
@@ -184,7 +184,7 @@ int init_wait(control_t *control)
 
 int init_pannel_res(control_t *control)
 {
-	control->sprites->res_surf = IMG_Load("sprites/panneau_final.png");
+	control->sprites->res_surf = IMG_Load("../res/sprites/panneau_final.png");
 	if (control->sprites->res_surf == NULL)
 	{
 		printf("menu.png image introuvable !! \n");

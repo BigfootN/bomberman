@@ -14,7 +14,7 @@ void *central_ai(void *tmp)
 	if ((state = (state_t*) malloc(sizeof (state_t))) == NULL)
 		return NULL;
 	state = init_state(state);
-	manage_data(state, "carte1.lvl");
+	manage_data(state, "/home/bigfoot/bomberman/res/map/carte1.lvl");
 	tcp_thread_server(state);
 	ai_loop(state);
 	send_end_game(state);

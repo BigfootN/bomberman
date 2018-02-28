@@ -94,7 +94,7 @@ void write_str(control_t *control, SDL_Rect renderQuad, char* string)
 	TTF_Font *font = NULL;
 
 	TTF_Init();
-	font = TTF_OpenFont("roboto/Roboto-Black.ttf", 24);
+	font = TTF_OpenFont("../res/roboto/Roboto-Black.ttf", 24);
 	SDL_Surface* textSurface = TTF_RenderText_Solid(font, string, colorNoire);
 	SDL_Texture* text = SDL_CreateTextureFromSurface(control->main_renderer, textSurface);
 	SDL_FreeSurface(textSurface);

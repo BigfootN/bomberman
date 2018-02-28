@@ -12,7 +12,7 @@
 #include "network.h"
 
 void* central_ai(void*);
-int ai_loop();
+int ai_loop(state_t*);
 void* ai_main();
 
 #endif	/* ifndef AI_H */
