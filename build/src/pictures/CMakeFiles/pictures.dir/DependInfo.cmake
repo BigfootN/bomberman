@@ -4,14 +4,15 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/bigfoot/bomberman/src/pictures/file.c" "/home/bigfoot/bomberman/build/src/pictures/CMakeFiles/pictures.dir/file.c.o"
+  "/home/bigfoot/bomberman_tmp2/src/pictures/file.c" "/home/bigfoot/bomberman_tmp2/build/src/pictures/CMakeFiles/pictures.dir/file.c.o"
+  "/home/bigfoot/bomberman_tmp2/src/pictures/sprites.c" "/home/bigfoot/bomberman_tmp2/build/src/pictures/CMakeFiles/pictures.dir/sprites.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
   "../src/include"
-  "../src/introduction"
+  "../src/intro"
   )
 
 # Targets to which this target links.

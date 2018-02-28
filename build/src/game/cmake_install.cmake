@@ -1,4 +1,4 @@
-# Install script for directory: /home/bigfoot/bomberman/src/game
+# Install script for directory: /home/bigfoot/bomberman_tmp2/src/game
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

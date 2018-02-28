@@ -1,5 +1,6 @@
 #include "linked_list.h"
 
+
 int check_pieces(piece_t* list) {
 	if (list == NULL)
 		return 1;
@@ -63,7 +64,7 @@ piece_t* delete_list_chevron(piece_t* tmp) {
 		return (NULL);
 }
 
-player_t* addItemPlayer(state_t* state) {
+player_t* add_item_player(state_t* state) {
 	player_t* tmp;
 
 	if ((tmp = (player_t*) malloc(sizeof (player_t))) == NULL)
@@ -83,7 +84,7 @@ player_t* addItemPlayer(state_t* state) {
 	return (tmp);
 }
 
-player_t* deleteListPlayer(player_t* tmp) {
+player_t* delete_list_player(player_t* tmp) {
 	if (tmp == NULL)
 		return (NULL);
 	if (tmp->next == NULL && tmp->prev != NULL)

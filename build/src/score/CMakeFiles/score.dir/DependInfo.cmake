@@ -4,13 +4,16 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/bigfoot/bomberman/src/score/scrviews.c" "/home/bigfoot/bomberman/build/src/score/CMakeFiles/score.dir/scrviews.c.o"
-  "/home/bigfoot/bomberman/src/score/srcloop.c" "/home/bigfoot/bomberman/build/src/score/CMakeFiles/score.dir/srcloop.c.o"
+  "/home/bigfoot/bomberman_tmp2/src/score/score_loop.c" "/home/bigfoot/bomberman_tmp2/build/src/score/CMakeFiles/score.dir/score_loop.c.o"
+  "/home/bigfoot/bomberman_tmp2/src/score/score_views.c" "/home/bigfoot/bomberman_tmp2/build/src/score/CMakeFiles/score.dir/score_views.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
+  "../src/include"
+  "../src/game"
+  "../src/kernel"
   )
 
 # Targets to which this target links.

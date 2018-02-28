@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bigfoot/bomberman
+CMAKE_SOURCE_DIR = /home/bigfoot/bomberman_tmp2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bigfoot/bomberman/build
+CMAKE_BINARY_DIR = /home/bigfoot/bomberman_tmp2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/bigfoot/bomberman/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/bigfoot/bomberman/build/CMakeFiles /home/bigfoot/bomberman/build/src/ai/CMakeFiles/progress.marks
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/ai/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigfoot/bomberman/build/CMakeFiles 0
+	cd /home/bigfoot/bomberman_tmp2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/bigfoot/bomberman_tmp2/build/CMakeFiles /home/bigfoot/bomberman_tmp2/build/src/ai/CMakeFiles/progress.marks
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/ai/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigfoot/bomberman_tmp2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/ai/clean
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/ai/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/ai/preinstall
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/ai/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/ai/preinstall
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/ai/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/bigfoot/bomberman/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/bigfoot/bomberman_tmp2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/ai/CMakeFiles/ai.dir/rule:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/ai/CMakeFiles/ai.dir/rule
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/ai/CMakeFiles/ai.dir/rule
 .PHONY : src/ai/CMakeFiles/ai.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ ai: src/ai/CMakeFiles/ai.dir/rule
 
 # fast build rule for target.
 ai/fast:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/build
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/build
 .PHONY : ai/fast
 
 ai.o: ai.c.o
@@ -131,7 +131,7 @@ ai.o: ai.c.o
 
 # target to build an object file
 ai.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai.c.o
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai.c.o
 .PHONY : ai.c.o
 
 ai.i: ai.c.i
@@ -140,7 +140,7 @@ ai.i: ai.c.i
 
 # target to preprocess a source file
 ai.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai.c.i
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai.c.i
 .PHONY : ai.c.i
 
 ai.s: ai.c.s
@@ -149,7 +149,7 @@ ai.s: ai.c.s
 
 # target to generate assembly for a file
 ai.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai.c.s
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai.c.s
 .PHONY : ai.c.s
 
 ai_blast.o: ai_blast.c.o
@@ -158,7 +158,7 @@ ai_blast.o: ai_blast.c.o
 
 # target to build an object file
 ai_blast.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_blast.c.o
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_blast.c.o
 .PHONY : ai_blast.c.o
 
 ai_blast.i: ai_blast.c.i
@@ -167,7 +167,7 @@ ai_blast.i: ai_blast.c.i
 
 # target to preprocess a source file
 ai_blast.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_blast.c.i
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_blast.c.i
 .PHONY : ai_blast.c.i
 
 ai_blast.s: ai_blast.c.s
@@ -176,7 +176,7 @@ ai_blast.s: ai_blast.c.s
 
 # target to generate assembly for a file
 ai_blast.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_blast.c.s
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_blast.c.s
 .PHONY : ai_blast.c.s
 
 ai_bomb.o: ai_bomb.c.o
@@ -185,7 +185,7 @@ ai_bomb.o: ai_bomb.c.o
 
 # target to build an object file
 ai_bomb.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_bomb.c.o
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_bomb.c.o
 .PHONY : ai_bomb.c.o
 
 ai_bomb.i: ai_bomb.c.i
@@ -194,7 +194,7 @@ ai_bomb.i: ai_bomb.c.i
 
 # target to preprocess a source file
 ai_bomb.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_bomb.c.i
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_bomb.c.i
 .PHONY : ai_bomb.c.i
 
 ai_bomb.s: ai_bomb.c.s
@@ -203,7 +203,7 @@ ai_bomb.s: ai_bomb.c.s
 
 # target to generate assembly for a file
 ai_bomb.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_bomb.c.s
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_bomb.c.s
 .PHONY : ai_bomb.c.s
 
 ai_bonus_penalty.o: ai_bonus_penalty.c.o
@@ -212,7 +212,7 @@ ai_bonus_penalty.o: ai_bonus_penalty.c.o
 
 # target to build an object file
 ai_bonus_penalty.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_bonus_penalty.c.o
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_bonus_penalty.c.o
 .PHONY : ai_bonus_penalty.c.o
 
 ai_bonus_penalty.i: ai_bonus_penalty.c.i
@@ -221,7 +221,7 @@ ai_bonus_penalty.i: ai_bonus_penalty.c.i
 
 # target to preprocess a source file
 ai_bonus_penalty.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_bonus_penalty.c.i
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_bonus_penalty.c.i
 .PHONY : ai_bonus_penalty.c.i
 
 ai_bonus_penalty.s: ai_bonus_penalty.c.s
@@ -230,7 +230,7 @@ ai_bonus_penalty.s: ai_bonus_penalty.c.s
 
 # target to generate assembly for a file
 ai_bonus_penalty.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_bonus_penalty.c.s
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_bonus_penalty.c.s
 .PHONY : ai_bonus_penalty.c.s
 
 ai_counter.o: ai_counter.c.o
@@ -239,7 +239,7 @@ ai_counter.o: ai_counter.c.o
 
 # target to build an object file
 ai_counter.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_counter.c.o
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_counter.c.o
 .PHONY : ai_counter.c.o
 
 ai_counter.i: ai_counter.c.i
@@ -248,7 +248,7 @@ ai_counter.i: ai_counter.c.i
 
 # target to preprocess a source file
 ai_counter.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_counter.c.i
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_counter.c.i
 .PHONY : ai_counter.c.i
 
 ai_counter.s: ai_counter.c.s
@@ -257,7 +257,7 @@ ai_counter.s: ai_counter.c.s
 
 # target to generate assembly for a file
 ai_counter.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_counter.c.s
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_counter.c.s
 .PHONY : ai_counter.c.s
 
 ai_dead.o: ai_dead.c.o
@@ -266,7 +266,7 @@ ai_dead.o: ai_dead.c.o
 
 # target to build an object file
 ai_dead.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_dead.c.o
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_dead.c.o
 .PHONY : ai_dead.c.o
 
 ai_dead.i: ai_dead.c.i
@@ -275,7 +275,7 @@ ai_dead.i: ai_dead.c.i
 
 # target to preprocess a source file
 ai_dead.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_dead.c.i
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_dead.c.i
 .PHONY : ai_dead.c.i
 
 ai_dead.s: ai_dead.c.s
@@ -284,7 +284,7 @@ ai_dead.s: ai_dead.c.s
 
 # target to generate assembly for a file
 ai_dead.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_dead.c.s
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_dead.c.s
 .PHONY : ai_dead.c.s
 
 ai_map.o: ai_map.c.o
@@ -293,7 +293,7 @@ ai_map.o: ai_map.c.o
 
 # target to build an object file
 ai_map.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_map.c.o
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_map.c.o
 .PHONY : ai_map.c.o
 
 ai_map.i: ai_map.c.i
@@ -302,7 +302,7 @@ ai_map.i: ai_map.c.i
 
 # target to preprocess a source file
 ai_map.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_map.c.i
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_map.c.i
 .PHONY : ai_map.c.i
 
 ai_map.s: ai_map.c.s
@@ -311,7 +311,7 @@ ai_map.s: ai_map.c.s
 
 # target to generate assembly for a file
 ai_map.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_map.c.s
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_map.c.s
 .PHONY : ai_map.c.s
 
 ai_monster.o: ai_monster.c.o
@@ -320,7 +320,7 @@ ai_monster.o: ai_monster.c.o
 
 # target to build an object file
 ai_monster.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_monster.c.o
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_monster.c.o
 .PHONY : ai_monster.c.o
 
 ai_monster.i: ai_monster.c.i
@@ -329,7 +329,7 @@ ai_monster.i: ai_monster.c.i
 
 # target to preprocess a source file
 ai_monster.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_monster.c.i
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_monster.c.i
 .PHONY : ai_monster.c.i
 
 ai_monster.s: ai_monster.c.s
@@ -338,7 +338,7 @@ ai_monster.s: ai_monster.c.s
 
 # target to generate assembly for a file
 ai_monster.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_monster.c.s
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_monster.c.s
 .PHONY : ai_monster.c.s
 
 ai_msg.o: ai_msg.c.o
@@ -347,7 +347,7 @@ ai_msg.o: ai_msg.c.o
 
 # target to build an object file
 ai_msg.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_msg.c.o
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_msg.c.o
 .PHONY : ai_msg.c.o
 
 ai_msg.i: ai_msg.c.i
@@ -356,7 +356,7 @@ ai_msg.i: ai_msg.c.i
 
 # target to preprocess a source file
 ai_msg.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_msg.c.i
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_msg.c.i
 .PHONY : ai_msg.c.i
 
 ai_msg.s: ai_msg.c.s
@@ -365,7 +365,7 @@ ai_msg.s: ai_msg.c.s
 
 # target to generate assembly for a file
 ai_msg.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_msg.c.s
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_msg.c.s
 .PHONY : ai_msg.c.s
 
 ai_piece.o: ai_piece.c.o
@@ -374,7 +374,7 @@ ai_piece.o: ai_piece.c.o
 
 # target to build an object file
 ai_piece.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_piece.c.o
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_piece.c.o
 .PHONY : ai_piece.c.o
 
 ai_piece.i: ai_piece.c.i
@@ -383,7 +383,7 @@ ai_piece.i: ai_piece.c.i
 
 # target to preprocess a source file
 ai_piece.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_piece.c.i
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_piece.c.i
 .PHONY : ai_piece.c.i
 
 ai_piece.s: ai_piece.c.s
@@ -392,7 +392,7 @@ ai_piece.s: ai_piece.c.s
 
 # target to generate assembly for a file
 ai_piece.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_piece.c.s
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_piece.c.s
 .PHONY : ai_piece.c.s
 
 ai_timer.o: ai_timer.c.o
@@ -401,7 +401,7 @@ ai_timer.o: ai_timer.c.o
 
 # target to build an object file
 ai_timer.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_timer.c.o
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_timer.c.o
 .PHONY : ai_timer.c.o
 
 ai_timer.i: ai_timer.c.i
@@ -410,7 +410,7 @@ ai_timer.i: ai_timer.c.i
 
 # target to preprocess a source file
 ai_timer.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_timer.c.i
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_timer.c.i
 .PHONY : ai_timer.c.i
 
 ai_timer.s: ai_timer.c.s
@@ -419,35 +419,8 @@ ai_timer.s: ai_timer.c.s
 
 # target to generate assembly for a file
 ai_timer.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_timer.c.s
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/ai_timer.c.s
 .PHONY : ai_timer.c.s
-
-sprites.o: sprites.c.o
-
-.PHONY : sprites.o
-
-# target to build an object file
-sprites.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/sprites.c.o
-.PHONY : sprites.c.o
-
-sprites.i: sprites.c.i
-
-.PHONY : sprites.i
-
-# target to preprocess a source file
-sprites.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/sprites.c.i
-.PHONY : sprites.c.i
-
-sprites.s: sprites.c.s
-
-.PHONY : sprites.s
-
-# target to generate assembly for a file
-sprites.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ai/CMakeFiles/ai.dir/build.make src/ai/CMakeFiles/ai.dir/sprites.c.s
-.PHONY : sprites.c.s
 
 # Help Target
 help:
@@ -491,9 +464,6 @@ help:
 	@echo "... ai_timer.o"
 	@echo "... ai_timer.i"
 	@echo "... ai_timer.s"
-	@echo "... sprites.o"
-	@echo "... sprites.i"
-	@echo "... sprites.s"
 .PHONY : help
 
 
@@ -505,6 +475,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/bigfoot/bomberman/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/bigfoot/bomberman_tmp2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

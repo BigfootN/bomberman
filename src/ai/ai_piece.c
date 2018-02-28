@@ -1,22 +1,23 @@
 #include "ai_piece.h"
+#include "tcp_server.h"
 
-int checkAllPions(t_etat *etat)
+int check_all_pieces(state_t *state)
 {
-	t_pions *tmp;
+	piece_t *tmp;
 
-	tmp = etat->pion;
+	tmp = state->piece;
 	while (tmp != NULL)
 	{
-		if (tmp->active == 1 && etat->partie == 1)
+		if (tmp->is_activ == 1 && state->partie == 1)
 		{
-			if (tmp->etat_requete == 1)
+			if (tmp->request_state == 1)
 			{
-				if (tmp->requete_1 == 2)
-					etatBomb(etat, tmp);
-				else if (tmp->requete_1 == 3)
+				if (tmp->request_1 == 2)
+					bomb_state(state, tmp);
+				else if (tmp->request_1 == 3)
 				{
 					if (tmp->type >= 27 && tmp->type <= 30)
-						IAMonster(etat, tmp);
+						ai_monster(state, tmp);
 				}
 			}
 
@@ -26,92 +27,92 @@ int checkAllPions(t_etat *etat)
 	return (1);
 }
 
-void desactivePlayers(t_etat *etat, int numberPlayer)
+void deactivate_players(state_t *state, int numberPlayer)
 {
-	t_pions *tmp;
+	piece_t *tmp;
 
-	tmp = etat->pion;
+	tmp = state->piece;
 
 	while (tmp != NULL)
 	{
 		if (tmp->id == numberPlayer || tmp->type == numberPlayer)
 		{
-			if (tmp->active == 1)
+			if (tmp->is_activ == 1)
 			{
-				tmp->active = 0;
+				tmp->is_activ = 0;
 				if (tmp->type != 1)
-					deadPion(etat, tmp);
+					kill_piece(state, tmp);
 				return;
 			}
 		}
 	}
 }
 
-t_pions *searchPlayer(t_etat *etat, int numberPlayer)
+piece_t *search_player(state_t *state, int numberPlayer)
 {
-	t_pions *pion;
+	piece_t *piece;
 
-	pion = etat->pion;
-	while (pion != NULL)
+	piece = state->piece;
+	while (piece != NULL)
 	{
-		if (pion->id == numberPlayer)
-			return (pion);
-		else if (pion->type == numberPlayer)
-			return (pion);
+		if (piece->id == numberPlayer)
+			return (piece);
+		else if (piece->type == numberPlayer)
+			return (piece);
 
-		pion = pion->next;
+		piece = piece->next;
 	}
 	return (NULL);
 }
 
-void deadPion(t_etat *etat, t_pions *tmp)
+void kill_piece(state_t *state, piece_t *tmp)
 {
-	tmp->active = 0;
-	etat->dataMap->bmmap[tmp->mappos.x][tmp->mappos.y] = -1;
-	etat->dataMap->mapaction[tmp->mappos.x][tmp->mappos.y] = -1;
-	deleteListChevron(tmp);
+	tmp->is_activ = 0;
+	state->map_info->penalty_bonus_map[tmp->map_pos.x][tmp->map_pos.y] = -1;
+	state->map_info->action_map[tmp->map_pos.x][tmp->map_pos.y] = -1;
+	delete_list_chevron(tmp);
 }
 
-int checkRequetePlayer(t_etat *etat)
+int check_requesplayer_t(state_t *state)
 {
-	t_player *player;
-	t_pions *tmp;
+	player_t *player;
+	piece_t *tmp;
 
-	player = etat->players;
+	player = state->players;
 
 	while (player != NULL)
 	{
-		if (player->player->active == 1)
+		if (player->player->is_activ == 1)
 		{
 			tmp = player->player;
-			tmp->requete_1 = player->requete_1;
-			tmp->requete_2 = player->requete_2;
-			if (player->etat_requete == 1)
+			tmp->request_1 = player->request_1;
+			tmp->request_2 = player->request_2;
+			if (player->request_state == 1)
 			{
-				if (player->requete_1 == 2 && etat->partie == 1)
-					movePions(etat, tmp, 0, tmp->requete_2);
-				else if (player->requete_1 == 3 && etat->partie == 1)
-					movePions(etat, tmp, 1, tmp->requete_2);
-				else if (player->requete_1 == 4 && etat->partie == 1)
-					initBomb(etat, tmp);
-				else if (player->requete_1 == 6 && etat->partie == 1)
+				if (player->request_1 == 2 && state->partie == 1)
+					move_piece(state, tmp, 0, tmp->request_2);
+				else if (player->request_1 == 3 && state->partie == 1)
+					move_piece(state, tmp, 1, tmp->request_2);
+				else if (player->request_1 == 4 && state->partie == 1)
+					bomb_init(state, tmp);
+				else if (player->request_1 == 6 && state->partie == 1)
 				{
 
 				}
-				else if (player->requete_1 == 10)
-					initGamers(etat, tmp);
-				else if (player->requete_1 == 11)
+				else if (player->request_1 == 10)
+					init_gamers(state, tmp);
+				else if (player->request_1 == 11)
 				{
-					if (etat->partie == 0)
-						startTime(etat);
-					etat->partie = 1;
+					if (state->partie == 0)
+						time_start(state);
+					state->partie = 1;
 				}
-				else if (player->requete_1 == 12)
-					etat->partie = 2;
+				else if (player->request_1 == 12)
+					state->partie = 2;
 			}
-			player->etat_requete = 0;
-			player->requete_1 = 0;
-			player->requete_2 = 0;
+			player->request_state = 0;
+			player->request_1 = 0;
+			player->request_2 = 0;
 		}
 		player = player->next;
 	}
@@ -119,48 +120,48 @@ int checkRequetePlayer(t_etat *etat)
 }
 // init gamer
 
-void initGamers(t_etat *etat, t_pions *player)
+void init_gamers(state_t *state, piece_t *player)
 {
 	if (player->id == 1)
 	{
-		player->mappos.x = 1;
-		player->mappos.y = 1;
+		player->map_pos.x = 1;
+		player->map_pos.y = 1;
 		player->type = 23;
-		etat->dataMap->mapaction[1][1] = 23;
+		state->map_info->action_map[1][1] = 23;
 	}
 	else if (player->id == 2)
 	{
-		player->mappos.x = 1;
-		player->mappos.y = 13;
+		player->map_pos.x = 1;
+		player->map_pos.y = 13;
 		player->type = 24;
-		etat->dataMap->mapaction[1][13] = 24;
+		state->map_info->action_map[1][13] = 24;
 	}
 	else if (player->id == 3)
 	{
-		player->mappos.x = 9;
-		player->mappos.y = 13;
+		player->map_pos.x = 9;
+		player->map_pos.y = 13;
 		player->type = 25;
-		etat->dataMap->mapaction[9][13] = 25;
+		state->map_info->action_map[9][13] = 25;
 	}
 	else if (player->id == 4)
 	{
-		player->mappos.x = 9;
-		player->mappos.y = 1;
+		player->map_pos.x = 9;
+		player->map_pos.y = 1;
 		player->type = 26;
-		etat->dataMap->mapaction[9][1] = 26;
+		state->map_info->action_map[9][1] = 26;
 	}
 }
 
-int collision_details(t_etat* etat, int dx, int dy)
+int collision_details(state_t* state, int dx, int dy)
 {
-	int etatX = (0 <= dx && (etat->dataMap->pos.x) >= dx);
-	int etatY = (0 <= dy && (etat->dataMap->pos.y) >= dy);
+	int stateX = (0 <= dx && (state->map_info->pos.x) >= dx);
+	int stateY = (0 <= dy && (state->map_info->pos.y) >= dy);
 
-	if (etatX && etatY)
+	if (stateX && stateY)
 	{
-		int tuile = etat->dataMap->realmap[dx][dy];
+		int tuile = state->map_info->real_map[dx][dy];
 		//printf("%d\n", tuile);
-		if (etat->dataMap->wall[tuile] == 1)
+		if (state->map_info->wall[tuile] == 1)
 			return 0;
 		else
 			return 1;
@@ -168,16 +169,16 @@ int collision_details(t_etat* etat, int dx, int dy)
 	return 0;
 }
 
-int collision_BM(t_etat* etat, t_pions *player, int dx, int dy)
+int collision_bitmap(state_t* state, piece_t *player, int dx, int dy)
 {
-	t_pions *pion;
+	piece_t *piece;
 
-	int etatX = (0 <= dx && (etat->dataMap->pos.x) >= dx);
-	int etatY = (0 <= dy && (etat->dataMap->pos.y) >= dy);
+	int stateX = (0 <= dx && (state->map_info->pos.x) >= dx);
+	int stateY = (0 <= dy && (state->map_info->pos.y) >= dy);
 
-	if (etatX && etatY)
+	if (stateX && stateY)
 	{
-		int bm = etat->dataMap->bmmap[dx][dy];
+		int bm = state->map_info->penalty_bonus_map[dx][dy];
 
 		if (bm == 4)
 			player->bomb += 1;
@@ -192,51 +193,51 @@ int collision_BM(t_etat* etat, t_pions *player, int dx, int dy)
 			player->speed = 2;
 		else if (bm == 8)
 		{
-			player->active = 0;
+			player->is_activ = 0;
 			player->life = 0;
-			etat->dataMap->mapaction[dx][dy] = -1;
+			state->map_info->action_map[dx][dy] = -1;
 		}
 		// retire le BM
 		if (bm != -1)
-			etat->dataMap->bmmap[dx][dy] = -1;
+			state->map_info->penalty_bonus_map[dx][dy] = -1;
 
-		int monster = etat->dataMap->mapaction[dx][dy];
+		int monster = state->map_info->action_map[dx][dy];
 		if (monster >= 27 && monster <= 30)
 		{
 			SDL_Rect empl;
 			empl.x = dx;
 			empl.y = dy;
-			t_pions *tmp = searchMonster(etat, monster, empl);
+			piece_t *tmp = search_monster(state, monster, empl);
 			if (player->life > tmp->life)
 			{
-				deleteMonster(etat, tmp->type, empl);
+				del_monster(state, tmp->type, empl);
 				player->score += 1;
-				etat->dataMap->mapaction[dx][dy] = player->id;
+				state->map_info->action_map[dx][dy] = player->id;
 			}
 			else
 			{
-				player->active = 0;
+				player->is_activ = 0;
 				player->life = 0;
 			}
 		}
 
 		// rencontre entre players le plus fort l'emporte
-		int otherPlayer = etat->dataMap->mapaction[dx][dy];
+		int otherPlayer = state->map_info->action_map[dx][dy];
 		if (otherPlayer >= 23 && otherPlayer <= 26)
 		{
-			pion = searchPlayer(etat, otherPlayer);
-			if (pion->life > player->life)
+			piece = search_player(state, otherPlayer);
+			if (piece->life > player->life)
 			{
-				pion->life -= player->life;
+				piece->life -= player->life;
 				player->life = 0;
-				player->active = 0;
+				player->is_activ = 0;
 			}
-			else if (pion->life < player->life)
+			else if (piece->life < player->life)
 			{
-				player->life -= pion->life;
-				pion->life = 0;
-				pion->active = 0;
-				etat->dataMap->mapaction[dx][dy] = player->id;
+				player->life -= piece->life;
+				piece->life = 0;
+				piece->is_activ = 0;
+				state->map_info->action_map[dx][dy] = player->id;
 				player->score += 1;
 			}
 		}
@@ -246,7 +247,7 @@ int collision_BM(t_etat* etat, t_pions *player, int dx, int dy)
 	return 0;
 }
 
-void movePions(t_etat* etat, t_pions *player, int type, int value)
+void move_piece(state_t* state, piece_t *player, int type, int value)
 {
 	int col;
 	int row;
@@ -257,8 +258,8 @@ void movePions(t_etat* etat, t_pions *player, int type, int value)
 	index = 0;
 	while (index < 1)
 	{
-		dx = player->mappos.x;
-		dy = player->mappos.y;
+		dx = player->map_pos.x;
+		dy = player->map_pos.y;
 		col = dy;
 		row = dx;
 
@@ -267,24 +268,24 @@ void movePions(t_etat* etat, t_pions *player, int type, int value)
 		// prend en compte de maniere provisoire
 		// pour le test collision
 		if (type == 1 && value < 0)// left
-			dx = player->mappos.x + value;
+			dx = player->map_pos.x + value;
 		else if (type == 1 && value > 0) // right
-			dx = player->mappos.x + value;
+			dx = player->map_pos.x + value;
 		else if (type == 0 && value < 0) // up
-			dy = player->mappos.y + value;
+			dy = player->map_pos.y + value;
 		else if (type == 0 && value > 0) /// bottom
-			dy = player->mappos.y + value;
+			dy = player->map_pos.y + value;
 
-		if (collision_details(etat, dx, dy))
+		if (collision_details(state, dx, dy))
 		{
 			int type;
 			// mets a jour le joueur
-			type = etat->dataMap->mapaction[row][col];
-			etat->dataMap->mapaction[row][col] = -1;
-			player->mappos.x = dx;
-			player->mappos.y = dy;
-			if (collision_BM(etat, player, dx, dy))/* verifie que l'emplacement est libre ou sinon fait le combat */
-				etat->dataMap->mapaction[dx][dy] = type;
+			type = state->map_info->action_map[row][col];
+			state->map_info->action_map[row][col] = -1;
+			player->map_pos.x = dx;
+			player->map_pos.y = dy;
+			if (collision_bitmap(state, player, dx, dy))/* verifie que l'emplacement est libre ou sinon fait le combat */
+				state->map_info->action_map[dx][dy] = type;
 		}
 		else
 			return;
@@ -292,36 +293,36 @@ void movePions(t_etat* etat, t_pions *player, int type, int value)
 	}
 }
 // envoi du message de fin de rencontre et destruction des players
-//int sendRequeteForUniqPlayer(t_etat *etat, int socket, int action, int message)
+//int sendRequeteForUniqPlayer(state_t *state, int socket, int action, int message)
 
-void deletePlayers(t_etat* etat)
+void deletePlayers(state_t* state)
 {
-	t_player *player;
+	player_t *player;
 
-	player = etat->players; // utilisateur
+	player = state->players; // utilisateur
 	while (player != NULL)
 	{
-		sendRequeteForUniqPlayer(etat, player->socket_player, 3, 5);
+		send_request_for_unique_player(state, player->sockfd_player, 3, 5);
 		SDL_Delay(100);
-		player = deleteListPlayer(player);
+		player = delete_list_player(player);
 	}
 	//free(player);
 }
 
-void deletePions(t_etat* etat)
+void deletePions(state_t* state)
 {
-	t_pions *pions;
+	piece_t *pieces;
 
-	pions = etat->pion; // utilisateur
-	while (pions != NULL)
+	pieces = state->piece; // utilisateur
+	while (pieces != NULL)
 	{
-		pions = deleteListChevron(pions);
+		pieces = delete_list_chevron(pieces);
 	}
-	//free(pions);
+	//free(pieces);
 }
 
-void sendEndParty(t_etat* etat)
+void send_end_game(state_t* state)
 {
-	deletePions(etat);
-	deletePions(etat);
+	deletePions(state);
+	deletePions(state);
 }

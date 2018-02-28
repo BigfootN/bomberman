@@ -3,10 +3,12 @@
 
 #include "ai_bonus_penalty.h"
 #include "types.h"
+#include "linked_list.h"
+#include "ai_piece.h"
 
 void init_bomb_map(state_t* state);
 void display_fire(state_t* state, SDL_Rect lpos, int** tab);
-void display_bomb_map(t_control* control);
+void display_bomb_map(control_t* control);
 int** check_array();
 int check_tuple(state_t* state, int tuile);
 int** init_grid_fire(state_t* state, SDL_Rect pos);

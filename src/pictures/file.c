@@ -1,42 +1,6 @@
 #include "file.h"
 
-char filter(char c)
-{
-	if ((c >= 97 && 122 <= c) || (c >= 65 && 90 <= c))
-		return c;
-	else if (c == 95)
-		return ' ';
-	else
-		return '\0';
-}
-
-int write_config_map(state_t* state, int *list)
-{
-	int index;
-
-	state->map_info = (clmap_t*) malloc(sizeof (clmap_t));
-	state->map_info->nbreTiles.x = list[0];
-	state->map_info->nbreTiles.y = list[1];
-	state->map_info->nbreTiles.w = list[2];
-	state->map_info->pos.x = list[3];
-	state->map_info->pos.y = list[4];
-
-	state->map_info->pos.h = HEIGHT_TILE * state->map_info->pos.x;
-	state->map_info->pos.w = WIDTH_TILE * state->map_info->pos.y;
-	state->map_info->wall = (int*) malloc(sizeof (int) * list[2]);
-	index = 0;
-	while (index < list[2])
-	{
-		state->map_info->wall[index] = 0;
-		index++;
-	}
-	state->map_info->wall[list[5]] = 1;
-	state->map_info->wall[list[6]] = 1;
-	state->map_info->wall[list[7]] = 1;
-	return (1);
-}
-
-int manage_data(state_t* state, char* name)
+int manage_data(state_t *state, char *name)
 {
 	char *title_brut;
 	int index;
@@ -62,6 +26,8 @@ int manage_data(state_t* state, char* name)
 			index++;
 		}
 
+		free(title_brut);
+
 		fscanf(fp, "%s", state->map_info->file_name);
 		fscanf(fp, "%s", state->map_info->sprite_name);
 		fscanf(fp, "%d %d %d", &list[0], &list[1], &list[2]);
@@ -81,24 +47,64 @@ int manage_data(state_t* state, char* name)
 	return (0);
 }
 
+char filter(char c)
+{
+	if ((c >= 97 && 122 <= c) || (c >= 65 && 90 <= c))
+		return c;
+	else if (c == 95)
+		return ' ';
+	else
+		return '\0';
+}
+
+int write_config_map(state_t *state, int *list)
+{
+	int index;
+
+	state->map_info = (clmap_t*) malloc(sizeof (clmap_t));
+	state->map_info->nbreTiles.x = list[0];
+	state->map_info->nbreTiles.y = list[1];
+	state->map_info->nbreTiles.w = list[2];
+	state->map_info->pos.x = list[3];
+	state->map_info->pos.y = list[4];
+
+	state->map_info->pos.h = HEIGHT_TILE * state->map_info->pos.x;
+	state->map_info->pos.w = WIDTH_TILE * state->map_info->pos.y;
+	state->map_info->wall = (int*) malloc(sizeof (int) * list[2]);
+	index = 0;
+	while (index < list[2])
+	{
+		state->map_info->wall[index] = 0;
+		index++;
+	}
+	state->map_info->wall[list[5]] = 1;
+	state->map_info->wall[list[6]] = 1;
+	state->map_info->wall[list[7]] = 1;
+	return (1);
+}
+
+
+
 FILE *open_file(char *name)
 {
 	FILE *fp;
 	char *text;
+	size_t total_size;
 
-	text = (char*) malloc(sizeof (char) * strlen("map/"));
-	bzero(text, strlen("map/"));
-	text = strcat(text, "map/");
-	text = strcat(text, name);
+	total_size = strlen("map/") + strlen(name) + 1;
+	text = malloc(sizeof(*text) * total_size);
+	memcpy(text, "map/", 4*sizeof(*text));
+	memcpy(text+4, name, strlen(name)*sizeof(char));
 
 	if ((fp = fopen(text, "r")) == NULL)
 	{
-		printf("fichier ");
-		printf("%s", name);
-		printf(" maquant !\n");
+		free(text);
+		printf("fichier %s manquant!", name);
 		SDL_Quit();
 		return NULL;
 	}
+	free(text);
+
 	return (fp);
 }
 

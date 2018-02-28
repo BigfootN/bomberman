@@ -4,16 +4,18 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/bigfoot/bomberman/src/network/addNetworkPlayer.c" "/home/bigfoot/bomberman/build/src/network/CMakeFiles/network.dir/addNetworkPlayer.c.o"
-  "/home/bigfoot/bomberman/src/network/network.c" "/home/bigfoot/bomberman/build/src/network/CMakeFiles/network.dir/network.c.o"
-  "/home/bigfoot/bomberman/src/network/tcpclient.c" "/home/bigfoot/bomberman/build/src/network/CMakeFiles/network.dir/tcpclient.c.o"
-  "/home/bigfoot/bomberman/src/network/tcpserver.c" "/home/bigfoot/bomberman/build/src/network/CMakeFiles/network.dir/tcpserver.c.o"
+  "/home/bigfoot/bomberman_tmp2/src/network/add_network_player.c" "/home/bigfoot/bomberman_tmp2/build/src/network/CMakeFiles/network.dir/add_network_player.c.o"
+  "/home/bigfoot/bomberman_tmp2/src/network/network.c" "/home/bigfoot/bomberman_tmp2/build/src/network/CMakeFiles/network.dir/network.c.o"
+  "/home/bigfoot/bomberman_tmp2/src/network/tcp_client.c" "/home/bigfoot/bomberman_tmp2/build/src/network/CMakeFiles/network.dir/tcp_client.c.o"
+  "/home/bigfoot/bomberman_tmp2/src/network/tcp_server.c" "/home/bigfoot/bomberman_tmp2/build/src/network/CMakeFiles/network.dir/tcp_server.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
   "../src/include"
+  "../src/kernel"
+  "../src/ai"
   )
 
 # Targets to which this target links.

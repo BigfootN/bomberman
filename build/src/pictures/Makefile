@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bigfoot/bomberman
+CMAKE_SOURCE_DIR = /home/bigfoot/bomberman_tmp2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bigfoot/bomberman/build
+CMAKE_BINARY_DIR = /home/bigfoot/bomberman_tmp2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/bigfoot/bomberman/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/bigfoot/bomberman/build/CMakeFiles /home/bigfoot/bomberman/build/src/pictures/CMakeFiles/progress.marks
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/pictures/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigfoot/bomberman/build/CMakeFiles 0
+	cd /home/bigfoot/bomberman_tmp2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/bigfoot/bomberman_tmp2/build/CMakeFiles /home/bigfoot/bomberman_tmp2/build/src/pictures/CMakeFiles/progress.marks
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/pictures/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigfoot/bomberman_tmp2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/pictures/clean
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/pictures/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/pictures/preinstall
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/pictures/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/pictures/preinstall
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/pictures/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/bigfoot/bomberman/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/bigfoot/bomberman_tmp2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/pictures/CMakeFiles/pictures.dir/rule:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/pictures/CMakeFiles/pictures.dir/rule
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/pictures/CMakeFiles/pictures.dir/rule
 .PHONY : src/pictures/CMakeFiles/pictures.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ pictures: src/pictures/CMakeFiles/pictures.dir/rule
 
 # fast build rule for target.
 pictures/fast:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/pictures/CMakeFiles/pictures.dir/build.make src/pictures/CMakeFiles/pictures.dir/build
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/pictures/CMakeFiles/pictures.dir/build.make src/pictures/CMakeFiles/pictures.dir/build
 .PHONY : pictures/fast
 
 file.o: file.c.o
@@ -131,7 +131,7 @@ file.o: file.c.o
 
 # target to build an object file
 file.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/pictures/CMakeFiles/pictures.dir/build.make src/pictures/CMakeFiles/pictures.dir/file.c.o
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/pictures/CMakeFiles/pictures.dir/build.make src/pictures/CMakeFiles/pictures.dir/file.c.o
 .PHONY : file.c.o
 
 file.i: file.c.i
@@ -140,7 +140,7 @@ file.i: file.c.i
 
 # target to preprocess a source file
 file.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/pictures/CMakeFiles/pictures.dir/build.make src/pictures/CMakeFiles/pictures.dir/file.c.i
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/pictures/CMakeFiles/pictures.dir/build.make src/pictures/CMakeFiles/pictures.dir/file.c.i
 .PHONY : file.c.i
 
 file.s: file.c.s
@@ -149,8 +149,35 @@ file.s: file.c.s
 
 # target to generate assembly for a file
 file.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/pictures/CMakeFiles/pictures.dir/build.make src/pictures/CMakeFiles/pictures.dir/file.c.s
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/pictures/CMakeFiles/pictures.dir/build.make src/pictures/CMakeFiles/pictures.dir/file.c.s
 .PHONY : file.c.s
+
+sprites.o: sprites.c.o
+
+.PHONY : sprites.o
+
+# target to build an object file
+sprites.c.o:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/pictures/CMakeFiles/pictures.dir/build.make src/pictures/CMakeFiles/pictures.dir/sprites.c.o
+.PHONY : sprites.c.o
+
+sprites.i: sprites.c.i
+
+.PHONY : sprites.i
+
+# target to preprocess a source file
+sprites.c.i:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/pictures/CMakeFiles/pictures.dir/build.make src/pictures/CMakeFiles/pictures.dir/sprites.c.i
+.PHONY : sprites.c.i
+
+sprites.s: sprites.c.s
+
+.PHONY : sprites.s
+
+# target to generate assembly for a file
+sprites.c.s:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/pictures/CMakeFiles/pictures.dir/build.make src/pictures/CMakeFiles/pictures.dir/sprites.c.s
+.PHONY : sprites.c.s
 
 # Help Target
 help:
@@ -164,6 +191,9 @@ help:
 	@echo "... file.o"
 	@echo "... file.i"
 	@echo "... file.s"
+	@echo "... sprites.o"
+	@echo "... sprites.i"
+	@echo "... sprites.s"
 .PHONY : help
 
 
@@ -175,6 +205,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/bigfoot/bomberman/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/bigfoot/bomberman_tmp2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

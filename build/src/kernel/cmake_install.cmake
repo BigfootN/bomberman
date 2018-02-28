@@ -1,4 +1,4 @@
-# Install script for directory: /home/bigfoot/bomberman/src/kernel
+# Install script for directory: /home/bigfoot/bomberman_tmp2/src/kernel
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

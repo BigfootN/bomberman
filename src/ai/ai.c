@@ -1,44 +1,47 @@
-#include "headers.h"
+#include "ai.h"
+#include "file.h"
+
+
 /*
  * initilaise la partie
  */
 
-void *centralIA(void *tmp)
+void *central_ai(void *tmp)
 {
-    t_etat *etat;
-    pthread_detach(pthread_self());
+	state_t *state;
+	pthread_detach(pthread_self());
 
-    if ((etat = (t_etat*) malloc(sizeof (t_etat))) == NULL)
-        return NULL;
-    etat = initEtat(etat);
-    gestionData(etat, "carte1.lvl");
-    tcpthreadServer(etat);
-    IALooop(etat);
-    sendEndParty(etat);
-    pthread_exit((void*) tmp);
+	if ((state = (state_t*) malloc(sizeof (state_t))) == NULL)
+		return NULL;
+	state = init_state(state);
+	manage_data(state, "carte1.lvl");
+	tcp_thread_server(state);
+	ai_loop(state);
+	send_end_game(state);
+	pthread_exit((void*) tmp);
 }
 
 /*
  * boucle de la IA
  */
-int IALooop(t_etat *etat)
+int ai_loop(state_t *state)
 {
-    int pause;
+	int pause;
 
-    pause = 1;
-    while (pause)
-    {
-        SDL_Delay(100);
-        checkRequetePlayer(etat);
-        checkAllPions(etat);
-        prepaBombMap(etat);
-        checkCounter(etat);
-        if (serializeMap(etat))
-            CentralSend(etat);
+	pause = 1;
+	while (pause)
+	{
+		SDL_Delay(100);
+		check_requesplayer_t(state);
+		check_all_pieces(state);
+		init_bomb_map(state);
+		check_counter(state);
+		if (serialize_map(state))
+			central_send(state);
 
-        if (etat->partie == 2)
-            pause = 0;
-        SDL_Delay(100);
-    }
-    return (1);
+		if (state->partie == 2)
+			pause = 0;
+		SDL_Delay(100);
+	}
+	return (1);
 }

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bigfoot/bomberman
+CMAKE_SOURCE_DIR = /home/bigfoot/bomberman_tmp2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bigfoot/bomberman/build
+CMAKE_BINARY_DIR = /home/bigfoot/bomberman_tmp2/build
 
 # Include any dependencies generated for this target.
 include src/network/CMakeFiles/network.dir/depend.make
@@ -57,42 +57,42 @@ include src/network/CMakeFiles/network.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/network/CMakeFiles/network.dir/flags.make
 
-src/network/CMakeFiles/network.dir/addNetworkPlayer.c.o: src/network/CMakeFiles/network.dir/flags.make
-src/network/CMakeFiles/network.dir/addNetworkPlayer.c.o: ../src/network/addNetworkPlayer.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/network/CMakeFiles/network.dir/addNetworkPlayer.c.o"
-	cd /home/bigfoot/bomberman/build/src/network && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/network.dir/addNetworkPlayer.c.o   -c /home/bigfoot/bomberman/src/network/addNetworkPlayer.c
+src/network/CMakeFiles/network.dir/add_network_player.c.o: src/network/CMakeFiles/network.dir/flags.make
+src/network/CMakeFiles/network.dir/add_network_player.c.o: ../src/network/add_network_player.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/network/CMakeFiles/network.dir/add_network_player.c.o"
+	cd /home/bigfoot/bomberman_tmp2/build/src/network && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/network.dir/add_network_player.c.o   -c /home/bigfoot/bomberman_tmp2/src/network/add_network_player.c
 
-src/network/CMakeFiles/network.dir/addNetworkPlayer.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/network.dir/addNetworkPlayer.c.i"
-	cd /home/bigfoot/bomberman/build/src/network && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman/src/network/addNetworkPlayer.c > CMakeFiles/network.dir/addNetworkPlayer.c.i
+src/network/CMakeFiles/network.dir/add_network_player.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/network.dir/add_network_player.c.i"
+	cd /home/bigfoot/bomberman_tmp2/build/src/network && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman_tmp2/src/network/add_network_player.c > CMakeFiles/network.dir/add_network_player.c.i
 
-src/network/CMakeFiles/network.dir/addNetworkPlayer.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/network.dir/addNetworkPlayer.c.s"
-	cd /home/bigfoot/bomberman/build/src/network && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman/src/network/addNetworkPlayer.c -o CMakeFiles/network.dir/addNetworkPlayer.c.s
+src/network/CMakeFiles/network.dir/add_network_player.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/network.dir/add_network_player.c.s"
+	cd /home/bigfoot/bomberman_tmp2/build/src/network && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman_tmp2/src/network/add_network_player.c -o CMakeFiles/network.dir/add_network_player.c.s
 
-src/network/CMakeFiles/network.dir/addNetworkPlayer.c.o.requires:
+src/network/CMakeFiles/network.dir/add_network_player.c.o.requires:
 
-.PHONY : src/network/CMakeFiles/network.dir/addNetworkPlayer.c.o.requires
+.PHONY : src/network/CMakeFiles/network.dir/add_network_player.c.o.requires
 
-src/network/CMakeFiles/network.dir/addNetworkPlayer.c.o.provides: src/network/CMakeFiles/network.dir/addNetworkPlayer.c.o.requires
-	$(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/addNetworkPlayer.c.o.provides.build
-.PHONY : src/network/CMakeFiles/network.dir/addNetworkPlayer.c.o.provides
+src/network/CMakeFiles/network.dir/add_network_player.c.o.provides: src/network/CMakeFiles/network.dir/add_network_player.c.o.requires
+	$(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/add_network_player.c.o.provides.build
+.PHONY : src/network/CMakeFiles/network.dir/add_network_player.c.o.provides
 
-src/network/CMakeFiles/network.dir/addNetworkPlayer.c.o.provides.build: src/network/CMakeFiles/network.dir/addNetworkPlayer.c.o
+src/network/CMakeFiles/network.dir/add_network_player.c.o.provides.build: src/network/CMakeFiles/network.dir/add_network_player.c.o
 
 
 src/network/CMakeFiles/network.dir/network.c.o: src/network/CMakeFiles/network.dir/flags.make
 src/network/CMakeFiles/network.dir/network.c.o: ../src/network/network.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/network/CMakeFiles/network.dir/network.c.o"
-	cd /home/bigfoot/bomberman/build/src/network && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/network.dir/network.c.o   -c /home/bigfoot/bomberman/src/network/network.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/network/CMakeFiles/network.dir/network.c.o"
+	cd /home/bigfoot/bomberman_tmp2/build/src/network && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/network.dir/network.c.o   -c /home/bigfoot/bomberman_tmp2/src/network/network.c
 
 src/network/CMakeFiles/network.dir/network.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/network.dir/network.c.i"
-	cd /home/bigfoot/bomberman/build/src/network && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman/src/network/network.c > CMakeFiles/network.dir/network.c.i
+	cd /home/bigfoot/bomberman_tmp2/build/src/network && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman_tmp2/src/network/network.c > CMakeFiles/network.dir/network.c.i
 
 src/network/CMakeFiles/network.dir/network.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/network.dir/network.c.s"
-	cd /home/bigfoot/bomberman/build/src/network && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman/src/network/network.c -o CMakeFiles/network.dir/network.c.s
+	cd /home/bigfoot/bomberman_tmp2/build/src/network && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman_tmp2/src/network/network.c -o CMakeFiles/network.dir/network.c.s
 
 src/network/CMakeFiles/network.dir/network.c.o.requires:
 
@@ -105,90 +105,90 @@ src/network/CMakeFiles/network.dir/network.c.o.provides: src/network/CMakeFiles/
 src/network/CMakeFiles/network.dir/network.c.o.provides.build: src/network/CMakeFiles/network.dir/network.c.o
 
 
-src/network/CMakeFiles/network.dir/tcpclient.c.o: src/network/CMakeFiles/network.dir/flags.make
-src/network/CMakeFiles/network.dir/tcpclient.c.o: ../src/network/tcpclient.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object src/network/CMakeFiles/network.dir/tcpclient.c.o"
-	cd /home/bigfoot/bomberman/build/src/network && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/network.dir/tcpclient.c.o   -c /home/bigfoot/bomberman/src/network/tcpclient.c
+src/network/CMakeFiles/network.dir/tcp_client.c.o: src/network/CMakeFiles/network.dir/flags.make
+src/network/CMakeFiles/network.dir/tcp_client.c.o: ../src/network/tcp_client.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object src/network/CMakeFiles/network.dir/tcp_client.c.o"
+	cd /home/bigfoot/bomberman_tmp2/build/src/network && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/network.dir/tcp_client.c.o   -c /home/bigfoot/bomberman_tmp2/src/network/tcp_client.c
 
-src/network/CMakeFiles/network.dir/tcpclient.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/network.dir/tcpclient.c.i"
-	cd /home/bigfoot/bomberman/build/src/network && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman/src/network/tcpclient.c > CMakeFiles/network.dir/tcpclient.c.i
+src/network/CMakeFiles/network.dir/tcp_client.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/network.dir/tcp_client.c.i"
+	cd /home/bigfoot/bomberman_tmp2/build/src/network && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman_tmp2/src/network/tcp_client.c > CMakeFiles/network.dir/tcp_client.c.i
 
-src/network/CMakeFiles/network.dir/tcpclient.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/network.dir/tcpclient.c.s"
-	cd /home/bigfoot/bomberman/build/src/network && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman/src/network/tcpclient.c -o CMakeFiles/network.dir/tcpclient.c.s
+src/network/CMakeFiles/network.dir/tcp_client.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/network.dir/tcp_client.c.s"
+	cd /home/bigfoot/bomberman_tmp2/build/src/network && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman_tmp2/src/network/tcp_client.c -o CMakeFiles/network.dir/tcp_client.c.s
 
-src/network/CMakeFiles/network.dir/tcpclient.c.o.requires:
+src/network/CMakeFiles/network.dir/tcp_client.c.o.requires:
 
-.PHONY : src/network/CMakeFiles/network.dir/tcpclient.c.o.requires
+.PHONY : src/network/CMakeFiles/network.dir/tcp_client.c.o.requires
 
-src/network/CMakeFiles/network.dir/tcpclient.c.o.provides: src/network/CMakeFiles/network.dir/tcpclient.c.o.requires
-	$(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/tcpclient.c.o.provides.build
-.PHONY : src/network/CMakeFiles/network.dir/tcpclient.c.o.provides
+src/network/CMakeFiles/network.dir/tcp_client.c.o.provides: src/network/CMakeFiles/network.dir/tcp_client.c.o.requires
+	$(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/tcp_client.c.o.provides.build
+.PHONY : src/network/CMakeFiles/network.dir/tcp_client.c.o.provides
 
-src/network/CMakeFiles/network.dir/tcpclient.c.o.provides.build: src/network/CMakeFiles/network.dir/tcpclient.c.o
+src/network/CMakeFiles/network.dir/tcp_client.c.o.provides.build: src/network/CMakeFiles/network.dir/tcp_client.c.o
 
 
-src/network/CMakeFiles/network.dir/tcpserver.c.o: src/network/CMakeFiles/network.dir/flags.make
-src/network/CMakeFiles/network.dir/tcpserver.c.o: ../src/network/tcpserver.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object src/network/CMakeFiles/network.dir/tcpserver.c.o"
-	cd /home/bigfoot/bomberman/build/src/network && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/network.dir/tcpserver.c.o   -c /home/bigfoot/bomberman/src/network/tcpserver.c
+src/network/CMakeFiles/network.dir/tcp_server.c.o: src/network/CMakeFiles/network.dir/flags.make
+src/network/CMakeFiles/network.dir/tcp_server.c.o: ../src/network/tcp_server.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object src/network/CMakeFiles/network.dir/tcp_server.c.o"
+	cd /home/bigfoot/bomberman_tmp2/build/src/network && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/network.dir/tcp_server.c.o   -c /home/bigfoot/bomberman_tmp2/src/network/tcp_server.c
 
-src/network/CMakeFiles/network.dir/tcpserver.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/network.dir/tcpserver.c.i"
-	cd /home/bigfoot/bomberman/build/src/network && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman/src/network/tcpserver.c > CMakeFiles/network.dir/tcpserver.c.i
+src/network/CMakeFiles/network.dir/tcp_server.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/network.dir/tcp_server.c.i"
+	cd /home/bigfoot/bomberman_tmp2/build/src/network && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman_tmp2/src/network/tcp_server.c > CMakeFiles/network.dir/tcp_server.c.i
 
-src/network/CMakeFiles/network.dir/tcpserver.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/network.dir/tcpserver.c.s"
-	cd /home/bigfoot/bomberman/build/src/network && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman/src/network/tcpserver.c -o CMakeFiles/network.dir/tcpserver.c.s
+src/network/CMakeFiles/network.dir/tcp_server.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/network.dir/tcp_server.c.s"
+	cd /home/bigfoot/bomberman_tmp2/build/src/network && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman_tmp2/src/network/tcp_server.c -o CMakeFiles/network.dir/tcp_server.c.s
 
-src/network/CMakeFiles/network.dir/tcpserver.c.o.requires:
+src/network/CMakeFiles/network.dir/tcp_server.c.o.requires:
 
-.PHONY : src/network/CMakeFiles/network.dir/tcpserver.c.o.requires
+.PHONY : src/network/CMakeFiles/network.dir/tcp_server.c.o.requires
 
-src/network/CMakeFiles/network.dir/tcpserver.c.o.provides: src/network/CMakeFiles/network.dir/tcpserver.c.o.requires
-	$(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/tcpserver.c.o.provides.build
-.PHONY : src/network/CMakeFiles/network.dir/tcpserver.c.o.provides
+src/network/CMakeFiles/network.dir/tcp_server.c.o.provides: src/network/CMakeFiles/network.dir/tcp_server.c.o.requires
+	$(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/tcp_server.c.o.provides.build
+.PHONY : src/network/CMakeFiles/network.dir/tcp_server.c.o.provides
 
-src/network/CMakeFiles/network.dir/tcpserver.c.o.provides.build: src/network/CMakeFiles/network.dir/tcpserver.c.o
+src/network/CMakeFiles/network.dir/tcp_server.c.o.provides.build: src/network/CMakeFiles/network.dir/tcp_server.c.o
 
 
 # Object files for target network
 network_OBJECTS = \
-"CMakeFiles/network.dir/addNetworkPlayer.c.o" \
+"CMakeFiles/network.dir/add_network_player.c.o" \
 "CMakeFiles/network.dir/network.c.o" \
-"CMakeFiles/network.dir/tcpclient.c.o" \
-"CMakeFiles/network.dir/tcpserver.c.o"
+"CMakeFiles/network.dir/tcp_client.c.o" \
+"CMakeFiles/network.dir/tcp_server.c.o"
 
 # External object files for target network
 network_EXTERNAL_OBJECTS =
 
-src/network/libnetwork.so: src/network/CMakeFiles/network.dir/addNetworkPlayer.c.o
+src/network/libnetwork.so: src/network/CMakeFiles/network.dir/add_network_player.c.o
 src/network/libnetwork.so: src/network/CMakeFiles/network.dir/network.c.o
-src/network/libnetwork.so: src/network/CMakeFiles/network.dir/tcpclient.c.o
-src/network/libnetwork.so: src/network/CMakeFiles/network.dir/tcpserver.c.o
+src/network/libnetwork.so: src/network/CMakeFiles/network.dir/tcp_client.c.o
+src/network/libnetwork.so: src/network/CMakeFiles/network.dir/tcp_server.c.o
 src/network/libnetwork.so: src/network/CMakeFiles/network.dir/build.make
 src/network/libnetwork.so: src/network/CMakeFiles/network.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bigfoot/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C shared library libnetwork.so"
-	cd /home/bigfoot/bomberman/build/src/network && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/network.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C shared library libnetwork.so"
+	cd /home/bigfoot/bomberman_tmp2/build/src/network && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/network.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/network/CMakeFiles/network.dir/build: src/network/libnetwork.so
 
 .PHONY : src/network/CMakeFiles/network.dir/build
 
-src/network/CMakeFiles/network.dir/requires: src/network/CMakeFiles/network.dir/addNetworkPlayer.c.o.requires
+src/network/CMakeFiles/network.dir/requires: src/network/CMakeFiles/network.dir/add_network_player.c.o.requires
 src/network/CMakeFiles/network.dir/requires: src/network/CMakeFiles/network.dir/network.c.o.requires
-src/network/CMakeFiles/network.dir/requires: src/network/CMakeFiles/network.dir/tcpclient.c.o.requires
-src/network/CMakeFiles/network.dir/requires: src/network/CMakeFiles/network.dir/tcpserver.c.o.requires
+src/network/CMakeFiles/network.dir/requires: src/network/CMakeFiles/network.dir/tcp_client.c.o.requires
+src/network/CMakeFiles/network.dir/requires: src/network/CMakeFiles/network.dir/tcp_server.c.o.requires
 
 .PHONY : src/network/CMakeFiles/network.dir/requires
 
 src/network/CMakeFiles/network.dir/clean:
-	cd /home/bigfoot/bomberman/build/src/network && $(CMAKE_COMMAND) -P CMakeFiles/network.dir/cmake_clean.cmake
+	cd /home/bigfoot/bomberman_tmp2/build/src/network && $(CMAKE_COMMAND) -P CMakeFiles/network.dir/cmake_clean.cmake
 .PHONY : src/network/CMakeFiles/network.dir/clean
 
 src/network/CMakeFiles/network.dir/depend:
-	cd /home/bigfoot/bomberman/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bigfoot/bomberman /home/bigfoot/bomberman/src/network /home/bigfoot/bomberman/build /home/bigfoot/bomberman/build/src/network /home/bigfoot/bomberman/build/src/network/CMakeFiles/network.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bigfoot/bomberman_tmp2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bigfoot/bomberman_tmp2 /home/bigfoot/bomberman_tmp2/src/network /home/bigfoot/bomberman_tmp2/build /home/bigfoot/bomberman_tmp2/build/src/network /home/bigfoot/bomberman_tmp2/build/src/network/CMakeFiles/network.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/network/CMakeFiles/network.dir/depend
 

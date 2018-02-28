@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bigfoot/bomberman
+CMAKE_SOURCE_DIR = /home/bigfoot/bomberman_tmp2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bigfoot/bomberman/build
+CMAKE_BINARY_DIR = /home/bigfoot/bomberman_tmp2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/bigfoot/bomberman/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/bigfoot/bomberman/build/CMakeFiles /home/bigfoot/bomberman/build/src/network/CMakeFiles/progress.marks
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/network/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigfoot/bomberman/build/CMakeFiles 0
+	cd /home/bigfoot/bomberman_tmp2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/bigfoot/bomberman_tmp2/build/CMakeFiles /home/bigfoot/bomberman_tmp2/build/src/network/CMakeFiles/progress.marks
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/network/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigfoot/bomberman_tmp2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/network/clean
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/network/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/network/preinstall
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/network/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/network/preinstall
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/network/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/bigfoot/bomberman/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/bigfoot/bomberman_tmp2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/network/CMakeFiles/network.dir/rule:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/network/CMakeFiles/network.dir/rule
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/network/CMakeFiles/network.dir/rule
 .PHONY : src/network/CMakeFiles/network.dir/rule
 
 # Convenience name for target.
@@ -122,35 +122,35 @@ network: src/network/CMakeFiles/network.dir/rule
 
 # fast build rule for target.
 network/fast:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/build
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/build
 .PHONY : network/fast
 
-addNetworkPlayer.o: addNetworkPlayer.c.o
+add_network_player.o: add_network_player.c.o
 
-.PHONY : addNetworkPlayer.o
+.PHONY : add_network_player.o
 
 # target to build an object file
-addNetworkPlayer.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/addNetworkPlayer.c.o
-.PHONY : addNetworkPlayer.c.o
+add_network_player.c.o:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/add_network_player.c.o
+.PHONY : add_network_player.c.o
 
-addNetworkPlayer.i: addNetworkPlayer.c.i
+add_network_player.i: add_network_player.c.i
 
-.PHONY : addNetworkPlayer.i
+.PHONY : add_network_player.i
 
 # target to preprocess a source file
-addNetworkPlayer.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/addNetworkPlayer.c.i
-.PHONY : addNetworkPlayer.c.i
+add_network_player.c.i:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/add_network_player.c.i
+.PHONY : add_network_player.c.i
 
-addNetworkPlayer.s: addNetworkPlayer.c.s
+add_network_player.s: add_network_player.c.s
 
-.PHONY : addNetworkPlayer.s
+.PHONY : add_network_player.s
 
 # target to generate assembly for a file
-addNetworkPlayer.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/addNetworkPlayer.c.s
-.PHONY : addNetworkPlayer.c.s
+add_network_player.c.s:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/add_network_player.c.s
+.PHONY : add_network_player.c.s
 
 network.o: network.c.o
 
@@ -158,7 +158,7 @@ network.o: network.c.o
 
 # target to build an object file
 network.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/network.c.o
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/network.c.o
 .PHONY : network.c.o
 
 network.i: network.c.i
@@ -167,7 +167,7 @@ network.i: network.c.i
 
 # target to preprocess a source file
 network.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/network.c.i
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/network.c.i
 .PHONY : network.c.i
 
 network.s: network.c.s
@@ -176,62 +176,62 @@ network.s: network.c.s
 
 # target to generate assembly for a file
 network.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/network.c.s
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/network.c.s
 .PHONY : network.c.s
 
-tcpclient.o: tcpclient.c.o
+tcp_client.o: tcp_client.c.o
 
-.PHONY : tcpclient.o
-
-# target to build an object file
-tcpclient.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/tcpclient.c.o
-.PHONY : tcpclient.c.o
-
-tcpclient.i: tcpclient.c.i
-
-.PHONY : tcpclient.i
-
-# target to preprocess a source file
-tcpclient.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/tcpclient.c.i
-.PHONY : tcpclient.c.i
-
-tcpclient.s: tcpclient.c.s
-
-.PHONY : tcpclient.s
-
-# target to generate assembly for a file
-tcpclient.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/tcpclient.c.s
-.PHONY : tcpclient.c.s
-
-tcpserver.o: tcpserver.c.o
-
-.PHONY : tcpserver.o
+.PHONY : tcp_client.o
 
 # target to build an object file
-tcpserver.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/tcpserver.c.o
-.PHONY : tcpserver.c.o
+tcp_client.c.o:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/tcp_client.c.o
+.PHONY : tcp_client.c.o
 
-tcpserver.i: tcpserver.c.i
+tcp_client.i: tcp_client.c.i
 
-.PHONY : tcpserver.i
+.PHONY : tcp_client.i
 
 # target to preprocess a source file
-tcpserver.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/tcpserver.c.i
-.PHONY : tcpserver.c.i
+tcp_client.c.i:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/tcp_client.c.i
+.PHONY : tcp_client.c.i
 
-tcpserver.s: tcpserver.c.s
+tcp_client.s: tcp_client.c.s
 
-.PHONY : tcpserver.s
+.PHONY : tcp_client.s
 
 # target to generate assembly for a file
-tcpserver.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/tcpserver.c.s
-.PHONY : tcpserver.c.s
+tcp_client.c.s:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/tcp_client.c.s
+.PHONY : tcp_client.c.s
+
+tcp_server.o: tcp_server.c.o
+
+.PHONY : tcp_server.o
+
+# target to build an object file
+tcp_server.c.o:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/tcp_server.c.o
+.PHONY : tcp_server.c.o
+
+tcp_server.i: tcp_server.c.i
+
+.PHONY : tcp_server.i
+
+# target to preprocess a source file
+tcp_server.c.i:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/tcp_server.c.i
+.PHONY : tcp_server.c.i
+
+tcp_server.s: tcp_server.c.s
+
+.PHONY : tcp_server.s
+
+# target to generate assembly for a file
+tcp_server.c.s:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/tcp_server.c.s
+.PHONY : tcp_server.c.s
 
 # Help Target
 help:
@@ -242,18 +242,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... network"
 	@echo "... edit_cache"
-	@echo "... addNetworkPlayer.o"
-	@echo "... addNetworkPlayer.i"
-	@echo "... addNetworkPlayer.s"
+	@echo "... add_network_player.o"
+	@echo "... add_network_player.i"
+	@echo "... add_network_player.s"
 	@echo "... network.o"
 	@echo "... network.i"
 	@echo "... network.s"
-	@echo "... tcpclient.o"
-	@echo "... tcpclient.i"
-	@echo "... tcpclient.s"
-	@echo "... tcpserver.o"
-	@echo "... tcpserver.i"
-	@echo "... tcpserver.s"
+	@echo "... tcp_client.o"
+	@echo "... tcp_client.i"
+	@echo "... tcp_client.s"
+	@echo "... tcp_server.o"
+	@echo "... tcp_server.i"
+	@echo "... tcp_server.s"
 .PHONY : help
 
 
@@ -265,6 +265,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/bigfoot/bomberman/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/bigfoot/bomberman_tmp2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

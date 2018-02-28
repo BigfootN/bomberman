@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bigfoot/bomberman
+CMAKE_SOURCE_DIR = /home/bigfoot/bomberman_tmp2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bigfoot/bomberman/build
+CMAKE_BINARY_DIR = /home/bigfoot/bomberman_tmp2/build
 
 # Include any dependencies generated for this target.
 include src/ipchoice/CMakeFiles/ipchoice.dir/depend.make
@@ -57,111 +57,111 @@ include src/ipchoice/CMakeFiles/ipchoice.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/ipchoice/CMakeFiles/ipchoice.dir/flags.make
 
-src/ipchoice/CMakeFiles/ipchoice.dir/choiceiploop.c.o: src/ipchoice/CMakeFiles/ipchoice.dir/flags.make
-src/ipchoice/CMakeFiles/ipchoice.dir/choiceiploop.c.o: ../src/ipchoice/choiceiploop.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/ipchoice/CMakeFiles/ipchoice.dir/choiceiploop.c.o"
-	cd /home/bigfoot/bomberman/build/src/ipchoice && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ipchoice.dir/choiceiploop.c.o   -c /home/bigfoot/bomberman/src/ipchoice/choiceiploop.c
+src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_loop.c.o: src/ipchoice/CMakeFiles/ipchoice.dir/flags.make
+src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_loop.c.o: ../src/ipchoice/choice_ip_loop.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_loop.c.o"
+	cd /home/bigfoot/bomberman_tmp2/build/src/ipchoice && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ipchoice.dir/choice_ip_loop.c.o   -c /home/bigfoot/bomberman_tmp2/src/ipchoice/choice_ip_loop.c
 
-src/ipchoice/CMakeFiles/ipchoice.dir/choiceiploop.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ipchoice.dir/choiceiploop.c.i"
-	cd /home/bigfoot/bomberman/build/src/ipchoice && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman/src/ipchoice/choiceiploop.c > CMakeFiles/ipchoice.dir/choiceiploop.c.i
+src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_loop.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ipchoice.dir/choice_ip_loop.c.i"
+	cd /home/bigfoot/bomberman_tmp2/build/src/ipchoice && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman_tmp2/src/ipchoice/choice_ip_loop.c > CMakeFiles/ipchoice.dir/choice_ip_loop.c.i
 
-src/ipchoice/CMakeFiles/ipchoice.dir/choiceiploop.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ipchoice.dir/choiceiploop.c.s"
-	cd /home/bigfoot/bomberman/build/src/ipchoice && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman/src/ipchoice/choiceiploop.c -o CMakeFiles/ipchoice.dir/choiceiploop.c.s
+src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_loop.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ipchoice.dir/choice_ip_loop.c.s"
+	cd /home/bigfoot/bomberman_tmp2/build/src/ipchoice && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman_tmp2/src/ipchoice/choice_ip_loop.c -o CMakeFiles/ipchoice.dir/choice_ip_loop.c.s
 
-src/ipchoice/CMakeFiles/ipchoice.dir/choiceiploop.c.o.requires:
+src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_loop.c.o.requires:
 
-.PHONY : src/ipchoice/CMakeFiles/ipchoice.dir/choiceiploop.c.o.requires
+.PHONY : src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_loop.c.o.requires
 
-src/ipchoice/CMakeFiles/ipchoice.dir/choiceiploop.c.o.provides: src/ipchoice/CMakeFiles/ipchoice.dir/choiceiploop.c.o.requires
-	$(MAKE) -f src/ipchoice/CMakeFiles/ipchoice.dir/build.make src/ipchoice/CMakeFiles/ipchoice.dir/choiceiploop.c.o.provides.build
-.PHONY : src/ipchoice/CMakeFiles/ipchoice.dir/choiceiploop.c.o.provides
+src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_loop.c.o.provides: src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_loop.c.o.requires
+	$(MAKE) -f src/ipchoice/CMakeFiles/ipchoice.dir/build.make src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_loop.c.o.provides.build
+.PHONY : src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_loop.c.o.provides
 
-src/ipchoice/CMakeFiles/ipchoice.dir/choiceiploop.c.o.provides.build: src/ipchoice/CMakeFiles/ipchoice.dir/choiceiploop.c.o
-
-
-src/ipchoice/CMakeFiles/ipchoice.dir/choiceipwindow.c.o: src/ipchoice/CMakeFiles/ipchoice.dir/flags.make
-src/ipchoice/CMakeFiles/ipchoice.dir/choiceipwindow.c.o: ../src/ipchoice/choiceipwindow.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/ipchoice/CMakeFiles/ipchoice.dir/choiceipwindow.c.o"
-	cd /home/bigfoot/bomberman/build/src/ipchoice && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ipchoice.dir/choiceipwindow.c.o   -c /home/bigfoot/bomberman/src/ipchoice/choiceipwindow.c
-
-src/ipchoice/CMakeFiles/ipchoice.dir/choiceipwindow.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ipchoice.dir/choiceipwindow.c.i"
-	cd /home/bigfoot/bomberman/build/src/ipchoice && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman/src/ipchoice/choiceipwindow.c > CMakeFiles/ipchoice.dir/choiceipwindow.c.i
-
-src/ipchoice/CMakeFiles/ipchoice.dir/choiceipwindow.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ipchoice.dir/choiceipwindow.c.s"
-	cd /home/bigfoot/bomberman/build/src/ipchoice && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman/src/ipchoice/choiceipwindow.c -o CMakeFiles/ipchoice.dir/choiceipwindow.c.s
-
-src/ipchoice/CMakeFiles/ipchoice.dir/choiceipwindow.c.o.requires:
-
-.PHONY : src/ipchoice/CMakeFiles/ipchoice.dir/choiceipwindow.c.o.requires
-
-src/ipchoice/CMakeFiles/ipchoice.dir/choiceipwindow.c.o.provides: src/ipchoice/CMakeFiles/ipchoice.dir/choiceipwindow.c.o.requires
-	$(MAKE) -f src/ipchoice/CMakeFiles/ipchoice.dir/build.make src/ipchoice/CMakeFiles/ipchoice.dir/choiceipwindow.c.o.provides.build
-.PHONY : src/ipchoice/CMakeFiles/ipchoice.dir/choiceipwindow.c.o.provides
-
-src/ipchoice/CMakeFiles/ipchoice.dir/choiceipwindow.c.o.provides.build: src/ipchoice/CMakeFiles/ipchoice.dir/choiceipwindow.c.o
+src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_loop.c.o.provides.build: src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_loop.c.o
 
 
-src/ipchoice/CMakeFiles/ipchoice.dir/choicepviews.c.o: src/ipchoice/CMakeFiles/ipchoice.dir/flags.make
-src/ipchoice/CMakeFiles/ipchoice.dir/choicepviews.c.o: ../src/ipchoice/choicepviews.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object src/ipchoice/CMakeFiles/ipchoice.dir/choicepviews.c.o"
-	cd /home/bigfoot/bomberman/build/src/ipchoice && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ipchoice.dir/choicepviews.c.o   -c /home/bigfoot/bomberman/src/ipchoice/choicepviews.c
+src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_window.c.o: src/ipchoice/CMakeFiles/ipchoice.dir/flags.make
+src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_window.c.o: ../src/ipchoice/choice_ip_window.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_window.c.o"
+	cd /home/bigfoot/bomberman_tmp2/build/src/ipchoice && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ipchoice.dir/choice_ip_window.c.o   -c /home/bigfoot/bomberman_tmp2/src/ipchoice/choice_ip_window.c
 
-src/ipchoice/CMakeFiles/ipchoice.dir/choicepviews.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ipchoice.dir/choicepviews.c.i"
-	cd /home/bigfoot/bomberman/build/src/ipchoice && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman/src/ipchoice/choicepviews.c > CMakeFiles/ipchoice.dir/choicepviews.c.i
+src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_window.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ipchoice.dir/choice_ip_window.c.i"
+	cd /home/bigfoot/bomberman_tmp2/build/src/ipchoice && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman_tmp2/src/ipchoice/choice_ip_window.c > CMakeFiles/ipchoice.dir/choice_ip_window.c.i
 
-src/ipchoice/CMakeFiles/ipchoice.dir/choicepviews.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ipchoice.dir/choicepviews.c.s"
-	cd /home/bigfoot/bomberman/build/src/ipchoice && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman/src/ipchoice/choicepviews.c -o CMakeFiles/ipchoice.dir/choicepviews.c.s
+src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_window.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ipchoice.dir/choice_ip_window.c.s"
+	cd /home/bigfoot/bomberman_tmp2/build/src/ipchoice && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman_tmp2/src/ipchoice/choice_ip_window.c -o CMakeFiles/ipchoice.dir/choice_ip_window.c.s
 
-src/ipchoice/CMakeFiles/ipchoice.dir/choicepviews.c.o.requires:
+src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_window.c.o.requires:
 
-.PHONY : src/ipchoice/CMakeFiles/ipchoice.dir/choicepviews.c.o.requires
+.PHONY : src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_window.c.o.requires
 
-src/ipchoice/CMakeFiles/ipchoice.dir/choicepviews.c.o.provides: src/ipchoice/CMakeFiles/ipchoice.dir/choicepviews.c.o.requires
-	$(MAKE) -f src/ipchoice/CMakeFiles/ipchoice.dir/build.make src/ipchoice/CMakeFiles/ipchoice.dir/choicepviews.c.o.provides.build
-.PHONY : src/ipchoice/CMakeFiles/ipchoice.dir/choicepviews.c.o.provides
+src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_window.c.o.provides: src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_window.c.o.requires
+	$(MAKE) -f src/ipchoice/CMakeFiles/ipchoice.dir/build.make src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_window.c.o.provides.build
+.PHONY : src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_window.c.o.provides
 
-src/ipchoice/CMakeFiles/ipchoice.dir/choicepviews.c.o.provides.build: src/ipchoice/CMakeFiles/ipchoice.dir/choicepviews.c.o
+src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_window.c.o.provides.build: src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_window.c.o
+
+
+src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_views.c.o: src/ipchoice/CMakeFiles/ipchoice.dir/flags.make
+src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_views.c.o: ../src/ipchoice/choice_ip_views.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_views.c.o"
+	cd /home/bigfoot/bomberman_tmp2/build/src/ipchoice && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ipchoice.dir/choice_ip_views.c.o   -c /home/bigfoot/bomberman_tmp2/src/ipchoice/choice_ip_views.c
+
+src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_views.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ipchoice.dir/choice_ip_views.c.i"
+	cd /home/bigfoot/bomberman_tmp2/build/src/ipchoice && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman_tmp2/src/ipchoice/choice_ip_views.c > CMakeFiles/ipchoice.dir/choice_ip_views.c.i
+
+src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_views.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ipchoice.dir/choice_ip_views.c.s"
+	cd /home/bigfoot/bomberman_tmp2/build/src/ipchoice && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman_tmp2/src/ipchoice/choice_ip_views.c -o CMakeFiles/ipchoice.dir/choice_ip_views.c.s
+
+src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_views.c.o.requires:
+
+.PHONY : src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_views.c.o.requires
+
+src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_views.c.o.provides: src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_views.c.o.requires
+	$(MAKE) -f src/ipchoice/CMakeFiles/ipchoice.dir/build.make src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_views.c.o.provides.build
+.PHONY : src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_views.c.o.provides
+
+src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_views.c.o.provides.build: src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_views.c.o
 
 
 # Object files for target ipchoice
 ipchoice_OBJECTS = \
-"CMakeFiles/ipchoice.dir/choiceiploop.c.o" \
-"CMakeFiles/ipchoice.dir/choiceipwindow.c.o" \
-"CMakeFiles/ipchoice.dir/choicepviews.c.o"
+"CMakeFiles/ipchoice.dir/choice_ip_loop.c.o" \
+"CMakeFiles/ipchoice.dir/choice_ip_window.c.o" \
+"CMakeFiles/ipchoice.dir/choice_ip_views.c.o"
 
 # External object files for target ipchoice
 ipchoice_EXTERNAL_OBJECTS =
 
-src/ipchoice/libipchoice.so: src/ipchoice/CMakeFiles/ipchoice.dir/choiceiploop.c.o
-src/ipchoice/libipchoice.so: src/ipchoice/CMakeFiles/ipchoice.dir/choiceipwindow.c.o
-src/ipchoice/libipchoice.so: src/ipchoice/CMakeFiles/ipchoice.dir/choicepviews.c.o
+src/ipchoice/libipchoice.so: src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_loop.c.o
+src/ipchoice/libipchoice.so: src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_window.c.o
+src/ipchoice/libipchoice.so: src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_views.c.o
 src/ipchoice/libipchoice.so: src/ipchoice/CMakeFiles/ipchoice.dir/build.make
 src/ipchoice/libipchoice.so: src/ipchoice/CMakeFiles/ipchoice.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bigfoot/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C shared library libipchoice.so"
-	cd /home/bigfoot/bomberman/build/src/ipchoice && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ipchoice.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C shared library libipchoice.so"
+	cd /home/bigfoot/bomberman_tmp2/build/src/ipchoice && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ipchoice.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/ipchoice/CMakeFiles/ipchoice.dir/build: src/ipchoice/libipchoice.so
 
 .PHONY : src/ipchoice/CMakeFiles/ipchoice.dir/build
 
-src/ipchoice/CMakeFiles/ipchoice.dir/requires: src/ipchoice/CMakeFiles/ipchoice.dir/choiceiploop.c.o.requires
-src/ipchoice/CMakeFiles/ipchoice.dir/requires: src/ipchoice/CMakeFiles/ipchoice.dir/choiceipwindow.c.o.requires
-src/ipchoice/CMakeFiles/ipchoice.dir/requires: src/ipchoice/CMakeFiles/ipchoice.dir/choicepviews.c.o.requires
+src/ipchoice/CMakeFiles/ipchoice.dir/requires: src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_loop.c.o.requires
+src/ipchoice/CMakeFiles/ipchoice.dir/requires: src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_window.c.o.requires
+src/ipchoice/CMakeFiles/ipchoice.dir/requires: src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_views.c.o.requires
 
 .PHONY : src/ipchoice/CMakeFiles/ipchoice.dir/requires
 
 src/ipchoice/CMakeFiles/ipchoice.dir/clean:
-	cd /home/bigfoot/bomberman/build/src/ipchoice && $(CMAKE_COMMAND) -P CMakeFiles/ipchoice.dir/cmake_clean.cmake
+	cd /home/bigfoot/bomberman_tmp2/build/src/ipchoice && $(CMAKE_COMMAND) -P CMakeFiles/ipchoice.dir/cmake_clean.cmake
 .PHONY : src/ipchoice/CMakeFiles/ipchoice.dir/clean
 
 src/ipchoice/CMakeFiles/ipchoice.dir/depend:
-	cd /home/bigfoot/bomberman/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bigfoot/bomberman /home/bigfoot/bomberman/src/ipchoice /home/bigfoot/bomberman/build /home/bigfoot/bomberman/build/src/ipchoice /home/bigfoot/bomberman/build/src/ipchoice/CMakeFiles/ipchoice.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bigfoot/bomberman_tmp2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bigfoot/bomberman_tmp2 /home/bigfoot/bomberman_tmp2/src/ipchoice /home/bigfoot/bomberman_tmp2/build /home/bigfoot/bomberman_tmp2/build/src/ipchoice /home/bigfoot/bomberman_tmp2/build/src/ipchoice/CMakeFiles/ipchoice.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/ipchoice/CMakeFiles/ipchoice.dir/depend
 

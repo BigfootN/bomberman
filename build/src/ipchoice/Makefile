@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bigfoot/bomberman
+CMAKE_SOURCE_DIR = /home/bigfoot/bomberman_tmp2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bigfoot/bomberman/build
+CMAKE_BINARY_DIR = /home/bigfoot/bomberman_tmp2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/bigfoot/bomberman/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/bigfoot/bomberman/build/CMakeFiles /home/bigfoot/bomberman/build/src/ipchoice/CMakeFiles/progress.marks
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/ipchoice/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigfoot/bomberman/build/CMakeFiles 0
+	cd /home/bigfoot/bomberman_tmp2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/bigfoot/bomberman_tmp2/build/CMakeFiles /home/bigfoot/bomberman_tmp2/build/src/ipchoice/CMakeFiles/progress.marks
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/ipchoice/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigfoot/bomberman_tmp2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/ipchoice/clean
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/ipchoice/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/ipchoice/preinstall
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/ipchoice/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/ipchoice/preinstall
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/ipchoice/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/bigfoot/bomberman/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/bigfoot/bomberman_tmp2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/ipchoice/CMakeFiles/ipchoice.dir/rule:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/ipchoice/CMakeFiles/ipchoice.dir/rule
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/ipchoice/CMakeFiles/ipchoice.dir/rule
 .PHONY : src/ipchoice/CMakeFiles/ipchoice.dir/rule
 
 # Convenience name for target.
@@ -122,89 +122,89 @@ ipchoice: src/ipchoice/CMakeFiles/ipchoice.dir/rule
 
 # fast build rule for target.
 ipchoice/fast:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ipchoice/CMakeFiles/ipchoice.dir/build.make src/ipchoice/CMakeFiles/ipchoice.dir/build
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ipchoice/CMakeFiles/ipchoice.dir/build.make src/ipchoice/CMakeFiles/ipchoice.dir/build
 .PHONY : ipchoice/fast
 
-choiceiploop.o: choiceiploop.c.o
+choice_ip_loop.o: choice_ip_loop.c.o
 
-.PHONY : choiceiploop.o
-
-# target to build an object file
-choiceiploop.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ipchoice/CMakeFiles/ipchoice.dir/build.make src/ipchoice/CMakeFiles/ipchoice.dir/choiceiploop.c.o
-.PHONY : choiceiploop.c.o
-
-choiceiploop.i: choiceiploop.c.i
-
-.PHONY : choiceiploop.i
-
-# target to preprocess a source file
-choiceiploop.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ipchoice/CMakeFiles/ipchoice.dir/build.make src/ipchoice/CMakeFiles/ipchoice.dir/choiceiploop.c.i
-.PHONY : choiceiploop.c.i
-
-choiceiploop.s: choiceiploop.c.s
-
-.PHONY : choiceiploop.s
-
-# target to generate assembly for a file
-choiceiploop.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ipchoice/CMakeFiles/ipchoice.dir/build.make src/ipchoice/CMakeFiles/ipchoice.dir/choiceiploop.c.s
-.PHONY : choiceiploop.c.s
-
-choiceipwindow.o: choiceipwindow.c.o
-
-.PHONY : choiceipwindow.o
+.PHONY : choice_ip_loop.o
 
 # target to build an object file
-choiceipwindow.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ipchoice/CMakeFiles/ipchoice.dir/build.make src/ipchoice/CMakeFiles/ipchoice.dir/choiceipwindow.c.o
-.PHONY : choiceipwindow.c.o
+choice_ip_loop.c.o:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ipchoice/CMakeFiles/ipchoice.dir/build.make src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_loop.c.o
+.PHONY : choice_ip_loop.c.o
 
-choiceipwindow.i: choiceipwindow.c.i
+choice_ip_loop.i: choice_ip_loop.c.i
 
-.PHONY : choiceipwindow.i
+.PHONY : choice_ip_loop.i
 
 # target to preprocess a source file
-choiceipwindow.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ipchoice/CMakeFiles/ipchoice.dir/build.make src/ipchoice/CMakeFiles/ipchoice.dir/choiceipwindow.c.i
-.PHONY : choiceipwindow.c.i
+choice_ip_loop.c.i:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ipchoice/CMakeFiles/ipchoice.dir/build.make src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_loop.c.i
+.PHONY : choice_ip_loop.c.i
 
-choiceipwindow.s: choiceipwindow.c.s
+choice_ip_loop.s: choice_ip_loop.c.s
 
-.PHONY : choiceipwindow.s
+.PHONY : choice_ip_loop.s
 
 # target to generate assembly for a file
-choiceipwindow.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ipchoice/CMakeFiles/ipchoice.dir/build.make src/ipchoice/CMakeFiles/ipchoice.dir/choiceipwindow.c.s
-.PHONY : choiceipwindow.c.s
+choice_ip_loop.c.s:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ipchoice/CMakeFiles/ipchoice.dir/build.make src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_loop.c.s
+.PHONY : choice_ip_loop.c.s
 
-choicepviews.o: choicepviews.c.o
+choice_ip_views.o: choice_ip_views.c.o
 
-.PHONY : choicepviews.o
+.PHONY : choice_ip_views.o
 
 # target to build an object file
-choicepviews.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ipchoice/CMakeFiles/ipchoice.dir/build.make src/ipchoice/CMakeFiles/ipchoice.dir/choicepviews.c.o
-.PHONY : choicepviews.c.o
+choice_ip_views.c.o:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ipchoice/CMakeFiles/ipchoice.dir/build.make src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_views.c.o
+.PHONY : choice_ip_views.c.o
 
-choicepviews.i: choicepviews.c.i
+choice_ip_views.i: choice_ip_views.c.i
 
-.PHONY : choicepviews.i
+.PHONY : choice_ip_views.i
 
 # target to preprocess a source file
-choicepviews.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ipchoice/CMakeFiles/ipchoice.dir/build.make src/ipchoice/CMakeFiles/ipchoice.dir/choicepviews.c.i
-.PHONY : choicepviews.c.i
+choice_ip_views.c.i:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ipchoice/CMakeFiles/ipchoice.dir/build.make src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_views.c.i
+.PHONY : choice_ip_views.c.i
 
-choicepviews.s: choicepviews.c.s
+choice_ip_views.s: choice_ip_views.c.s
 
-.PHONY : choicepviews.s
+.PHONY : choice_ip_views.s
 
 # target to generate assembly for a file
-choicepviews.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/ipchoice/CMakeFiles/ipchoice.dir/build.make src/ipchoice/CMakeFiles/ipchoice.dir/choicepviews.c.s
-.PHONY : choicepviews.c.s
+choice_ip_views.c.s:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ipchoice/CMakeFiles/ipchoice.dir/build.make src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_views.c.s
+.PHONY : choice_ip_views.c.s
+
+choice_ip_window.o: choice_ip_window.c.o
+
+.PHONY : choice_ip_window.o
+
+# target to build an object file
+choice_ip_window.c.o:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ipchoice/CMakeFiles/ipchoice.dir/build.make src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_window.c.o
+.PHONY : choice_ip_window.c.o
+
+choice_ip_window.i: choice_ip_window.c.i
+
+.PHONY : choice_ip_window.i
+
+# target to preprocess a source file
+choice_ip_window.c.i:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ipchoice/CMakeFiles/ipchoice.dir/build.make src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_window.c.i
+.PHONY : choice_ip_window.c.i
+
+choice_ip_window.s: choice_ip_window.c.s
+
+.PHONY : choice_ip_window.s
+
+# target to generate assembly for a file
+choice_ip_window.c.s:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/ipchoice/CMakeFiles/ipchoice.dir/build.make src/ipchoice/CMakeFiles/ipchoice.dir/choice_ip_window.c.s
+.PHONY : choice_ip_window.c.s
 
 # Help Target
 help:
@@ -215,15 +215,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... ipchoice"
 	@echo "... edit_cache"
-	@echo "... choiceiploop.o"
-	@echo "... choiceiploop.i"
-	@echo "... choiceiploop.s"
-	@echo "... choiceipwindow.o"
-	@echo "... choiceipwindow.i"
-	@echo "... choiceipwindow.s"
-	@echo "... choicepviews.o"
-	@echo "... choicepviews.i"
-	@echo "... choicepviews.s"
+	@echo "... choice_ip_loop.o"
+	@echo "... choice_ip_loop.i"
+	@echo "... choice_ip_loop.s"
+	@echo "... choice_ip_views.o"
+	@echo "... choice_ip_views.i"
+	@echo "... choice_ip_views.s"
+	@echo "... choice_ip_window.o"
+	@echo "... choice_ip_window.i"
+	@echo "... choice_ip_window.s"
 .PHONY : help
 
 
@@ -235,6 +235,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/bigfoot/bomberman/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/bigfoot/bomberman_tmp2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

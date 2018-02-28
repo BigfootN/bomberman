@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bigfoot/bomberman
+CMAKE_SOURCE_DIR = /home/bigfoot/bomberman_tmp2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bigfoot/bomberman/build
+CMAKE_BINARY_DIR = /home/bigfoot/bomberman_tmp2/build
 
 # Include any dependencies generated for this target.
 include src/kernel/CMakeFiles/kernel.dir/depend.make
@@ -57,18 +57,42 @@ include src/kernel/CMakeFiles/kernel.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/kernel/CMakeFiles/kernel.dir/flags.make
 
+src/kernel/CMakeFiles/kernel.dir/cleaner.c.o: src/kernel/CMakeFiles/kernel.dir/flags.make
+src/kernel/CMakeFiles/kernel.dir/cleaner.c.o: ../src/kernel/cleaner.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/kernel/CMakeFiles/kernel.dir/cleaner.c.o"
+	cd /home/bigfoot/bomberman_tmp2/build/src/kernel && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/kernel.dir/cleaner.c.o   -c /home/bigfoot/bomberman_tmp2/src/kernel/cleaner.c
+
+src/kernel/CMakeFiles/kernel.dir/cleaner.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/kernel.dir/cleaner.c.i"
+	cd /home/bigfoot/bomberman_tmp2/build/src/kernel && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman_tmp2/src/kernel/cleaner.c > CMakeFiles/kernel.dir/cleaner.c.i
+
+src/kernel/CMakeFiles/kernel.dir/cleaner.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/kernel.dir/cleaner.c.s"
+	cd /home/bigfoot/bomberman_tmp2/build/src/kernel && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman_tmp2/src/kernel/cleaner.c -o CMakeFiles/kernel.dir/cleaner.c.s
+
+src/kernel/CMakeFiles/kernel.dir/cleaner.c.o.requires:
+
+.PHONY : src/kernel/CMakeFiles/kernel.dir/cleaner.c.o.requires
+
+src/kernel/CMakeFiles/kernel.dir/cleaner.c.o.provides: src/kernel/CMakeFiles/kernel.dir/cleaner.c.o.requires
+	$(MAKE) -f src/kernel/CMakeFiles/kernel.dir/build.make src/kernel/CMakeFiles/kernel.dir/cleaner.c.o.provides.build
+.PHONY : src/kernel/CMakeFiles/kernel.dir/cleaner.c.o.provides
+
+src/kernel/CMakeFiles/kernel.dir/cleaner.c.o.provides.build: src/kernel/CMakeFiles/kernel.dir/cleaner.c.o
+
+
 src/kernel/CMakeFiles/kernel.dir/inits.c.o: src/kernel/CMakeFiles/kernel.dir/flags.make
 src/kernel/CMakeFiles/kernel.dir/inits.c.o: ../src/kernel/inits.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/kernel/CMakeFiles/kernel.dir/inits.c.o"
-	cd /home/bigfoot/bomberman/build/src/kernel && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/kernel.dir/inits.c.o   -c /home/bigfoot/bomberman/src/kernel/inits.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/kernel/CMakeFiles/kernel.dir/inits.c.o"
+	cd /home/bigfoot/bomberman_tmp2/build/src/kernel && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/kernel.dir/inits.c.o   -c /home/bigfoot/bomberman_tmp2/src/kernel/inits.c
 
 src/kernel/CMakeFiles/kernel.dir/inits.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/kernel.dir/inits.c.i"
-	cd /home/bigfoot/bomberman/build/src/kernel && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman/src/kernel/inits.c > CMakeFiles/kernel.dir/inits.c.i
+	cd /home/bigfoot/bomberman_tmp2/build/src/kernel && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman_tmp2/src/kernel/inits.c > CMakeFiles/kernel.dir/inits.c.i
 
 src/kernel/CMakeFiles/kernel.dir/inits.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/kernel.dir/inits.c.s"
-	cd /home/bigfoot/bomberman/build/src/kernel && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman/src/kernel/inits.c -o CMakeFiles/kernel.dir/inits.c.s
+	cd /home/bigfoot/bomberman_tmp2/build/src/kernel && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman_tmp2/src/kernel/inits.c -o CMakeFiles/kernel.dir/inits.c.s
 
 src/kernel/CMakeFiles/kernel.dir/inits.c.o.requires:
 
@@ -83,16 +107,16 @@ src/kernel/CMakeFiles/kernel.dir/inits.c.o.provides.build: src/kernel/CMakeFiles
 
 src/kernel/CMakeFiles/kernel.dir/linked_list.c.o: src/kernel/CMakeFiles/kernel.dir/flags.make
 src/kernel/CMakeFiles/kernel.dir/linked_list.c.o: ../src/kernel/linked_list.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/kernel/CMakeFiles/kernel.dir/linked_list.c.o"
-	cd /home/bigfoot/bomberman/build/src/kernel && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/kernel.dir/linked_list.c.o   -c /home/bigfoot/bomberman/src/kernel/linked_list.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object src/kernel/CMakeFiles/kernel.dir/linked_list.c.o"
+	cd /home/bigfoot/bomberman_tmp2/build/src/kernel && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/kernel.dir/linked_list.c.o   -c /home/bigfoot/bomberman_tmp2/src/kernel/linked_list.c
 
 src/kernel/CMakeFiles/kernel.dir/linked_list.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/kernel.dir/linked_list.c.i"
-	cd /home/bigfoot/bomberman/build/src/kernel && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman/src/kernel/linked_list.c > CMakeFiles/kernel.dir/linked_list.c.i
+	cd /home/bigfoot/bomberman_tmp2/build/src/kernel && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman_tmp2/src/kernel/linked_list.c > CMakeFiles/kernel.dir/linked_list.c.i
 
 src/kernel/CMakeFiles/kernel.dir/linked_list.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/kernel.dir/linked_list.c.s"
-	cd /home/bigfoot/bomberman/build/src/kernel && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman/src/kernel/linked_list.c -o CMakeFiles/kernel.dir/linked_list.c.s
+	cd /home/bigfoot/bomberman_tmp2/build/src/kernel && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman_tmp2/src/kernel/linked_list.c -o CMakeFiles/kernel.dir/linked_list.c.s
 
 src/kernel/CMakeFiles/kernel.dir/linked_list.c.o.requires:
 
@@ -107,16 +131,16 @@ src/kernel/CMakeFiles/kernel.dir/linked_list.c.o.provides.build: src/kernel/CMak
 
 src/kernel/CMakeFiles/kernel.dir/kernel.c.o: src/kernel/CMakeFiles/kernel.dir/flags.make
 src/kernel/CMakeFiles/kernel.dir/kernel.c.o: ../src/kernel/kernel.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object src/kernel/CMakeFiles/kernel.dir/kernel.c.o"
-	cd /home/bigfoot/bomberman/build/src/kernel && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/kernel.dir/kernel.c.o   -c /home/bigfoot/bomberman/src/kernel/kernel.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object src/kernel/CMakeFiles/kernel.dir/kernel.c.o"
+	cd /home/bigfoot/bomberman_tmp2/build/src/kernel && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/kernel.dir/kernel.c.o   -c /home/bigfoot/bomberman_tmp2/src/kernel/kernel.c
 
 src/kernel/CMakeFiles/kernel.dir/kernel.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/kernel.dir/kernel.c.i"
-	cd /home/bigfoot/bomberman/build/src/kernel && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman/src/kernel/kernel.c > CMakeFiles/kernel.dir/kernel.c.i
+	cd /home/bigfoot/bomberman_tmp2/build/src/kernel && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman_tmp2/src/kernel/kernel.c > CMakeFiles/kernel.dir/kernel.c.i
 
 src/kernel/CMakeFiles/kernel.dir/kernel.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/kernel.dir/kernel.c.s"
-	cd /home/bigfoot/bomberman/build/src/kernel && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman/src/kernel/kernel.c -o CMakeFiles/kernel.dir/kernel.c.s
+	cd /home/bigfoot/bomberman_tmp2/build/src/kernel && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman_tmp2/src/kernel/kernel.c -o CMakeFiles/kernel.dir/kernel.c.s
 
 src/kernel/CMakeFiles/kernel.dir/kernel.c.o.requires:
 
@@ -131,6 +155,7 @@ src/kernel/CMakeFiles/kernel.dir/kernel.c.o.provides.build: src/kernel/CMakeFile
 
 # Object files for target kernel
 kernel_OBJECTS = \
+"CMakeFiles/kernel.dir/cleaner.c.o" \
 "CMakeFiles/kernel.dir/inits.c.o" \
 "CMakeFiles/kernel.dir/linked_list.c.o" \
 "CMakeFiles/kernel.dir/kernel.c.o"
@@ -138,19 +163,21 @@ kernel_OBJECTS = \
 # External object files for target kernel
 kernel_EXTERNAL_OBJECTS =
 
+src/kernel/libkernel.so: src/kernel/CMakeFiles/kernel.dir/cleaner.c.o
 src/kernel/libkernel.so: src/kernel/CMakeFiles/kernel.dir/inits.c.o
 src/kernel/libkernel.so: src/kernel/CMakeFiles/kernel.dir/linked_list.c.o
 src/kernel/libkernel.so: src/kernel/CMakeFiles/kernel.dir/kernel.c.o
 src/kernel/libkernel.so: src/kernel/CMakeFiles/kernel.dir/build.make
 src/kernel/libkernel.so: src/kernel/CMakeFiles/kernel.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bigfoot/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C shared library libkernel.so"
-	cd /home/bigfoot/bomberman/build/src/kernel && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/kernel.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C shared library libkernel.so"
+	cd /home/bigfoot/bomberman_tmp2/build/src/kernel && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/kernel.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/kernel/CMakeFiles/kernel.dir/build: src/kernel/libkernel.so
 
 .PHONY : src/kernel/CMakeFiles/kernel.dir/build
 
+src/kernel/CMakeFiles/kernel.dir/requires: src/kernel/CMakeFiles/kernel.dir/cleaner.c.o.requires
 src/kernel/CMakeFiles/kernel.dir/requires: src/kernel/CMakeFiles/kernel.dir/inits.c.o.requires
 src/kernel/CMakeFiles/kernel.dir/requires: src/kernel/CMakeFiles/kernel.dir/linked_list.c.o.requires
 src/kernel/CMakeFiles/kernel.dir/requires: src/kernel/CMakeFiles/kernel.dir/kernel.c.o.requires
@@ -158,10 +185,10 @@ src/kernel/CMakeFiles/kernel.dir/requires: src/kernel/CMakeFiles/kernel.dir/kern
 .PHONY : src/kernel/CMakeFiles/kernel.dir/requires
 
 src/kernel/CMakeFiles/kernel.dir/clean:
-	cd /home/bigfoot/bomberman/build/src/kernel && $(CMAKE_COMMAND) -P CMakeFiles/kernel.dir/cmake_clean.cmake
+	cd /home/bigfoot/bomberman_tmp2/build/src/kernel && $(CMAKE_COMMAND) -P CMakeFiles/kernel.dir/cmake_clean.cmake
 .PHONY : src/kernel/CMakeFiles/kernel.dir/clean
 
 src/kernel/CMakeFiles/kernel.dir/depend:
-	cd /home/bigfoot/bomberman/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bigfoot/bomberman /home/bigfoot/bomberman/src/kernel /home/bigfoot/bomberman/build /home/bigfoot/bomberman/build/src/kernel /home/bigfoot/bomberman/build/src/kernel/CMakeFiles/kernel.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bigfoot/bomberman_tmp2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bigfoot/bomberman_tmp2 /home/bigfoot/bomberman_tmp2/src/kernel /home/bigfoot/bomberman_tmp2/build /home/bigfoot/bomberman_tmp2/build/src/kernel /home/bigfoot/bomberman_tmp2/build/src/kernel/CMakeFiles/kernel.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/kernel/CMakeFiles/kernel.dir/depend
 

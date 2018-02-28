@@ -4,11 +4,11 @@
 #include "types.h"
 #include "define.h"
 
-char filter(char);
+char filter(char c);
 int write_config_map(state_t*, int*);
-int manage_data(state_t*, char*);
-FILE *open_file(char *name);
-void init_map(state_t *, FILE *);
+FILE* open_file(char*);
+void init_map(state_t*, FILE*);
 void init_spell(state_t*);
+int manage_data(state_t*, char*);
 
 #endif

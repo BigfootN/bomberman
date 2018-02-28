@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/ipchoice.dir/choiceiploop.c.o"
-  "CMakeFiles/ipchoice.dir/choiceipwindow.c.o"
-  "CMakeFiles/ipchoice.dir/choicepviews.c.o"
+  "CMakeFiles/ipchoice.dir/choice_ip_loop.c.o"
+  "CMakeFiles/ipchoice.dir/choice_ip_window.c.o"
+  "CMakeFiles/ipchoice.dir/choice_ip_views.c.o"
   "libipchoice.pdb"
   "libipchoice.so"
 )

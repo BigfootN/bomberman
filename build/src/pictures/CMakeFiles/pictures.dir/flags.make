@@ -6,5 +6,5 @@ C_FLAGS = -Wall -Werror -Wextra -g -g -fPIC
 
 C_DEFINES = -Dpictures_EXPORTS
 
-C_INCLUDES = -I/home/bigfoot/bomberman/src/include -I/home/bigfoot/bomberman/src/introduction 
+C_INCLUDES = -I/home/bigfoot/bomberman_tmp2/src/include -I/home/bigfoot/bomberman_tmp2/src/intro 
 

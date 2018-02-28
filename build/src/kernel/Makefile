@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bigfoot/bomberman
+CMAKE_SOURCE_DIR = /home/bigfoot/bomberman_tmp2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bigfoot/bomberman/build
+CMAKE_BINARY_DIR = /home/bigfoot/bomberman_tmp2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/bigfoot/bomberman/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/bigfoot/bomberman/build/CMakeFiles /home/bigfoot/bomberman/build/src/kernel/CMakeFiles/progress.marks
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/kernel/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigfoot/bomberman/build/CMakeFiles 0
+	cd /home/bigfoot/bomberman_tmp2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/bigfoot/bomberman_tmp2/build/CMakeFiles /home/bigfoot/bomberman_tmp2/build/src/kernel/CMakeFiles/progress.marks
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/kernel/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigfoot/bomberman_tmp2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/kernel/clean
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/kernel/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/kernel/preinstall
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/kernel/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/kernel/preinstall
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/kernel/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/bigfoot/bomberman/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/bigfoot/bomberman_tmp2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/kernel/CMakeFiles/kernel.dir/rule:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/kernel/CMakeFiles/kernel.dir/rule
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/kernel/CMakeFiles/kernel.dir/rule
 .PHONY : src/kernel/CMakeFiles/kernel.dir/rule
 
 # Convenience name for target.
@@ -122,8 +122,35 @@ kernel: src/kernel/CMakeFiles/kernel.dir/rule
 
 # fast build rule for target.
 kernel/fast:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/kernel/CMakeFiles/kernel.dir/build.make src/kernel/CMakeFiles/kernel.dir/build
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/kernel/CMakeFiles/kernel.dir/build.make src/kernel/CMakeFiles/kernel.dir/build
 .PHONY : kernel/fast
+
+cleaner.o: cleaner.c.o
+
+.PHONY : cleaner.o
+
+# target to build an object file
+cleaner.c.o:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/kernel/CMakeFiles/kernel.dir/build.make src/kernel/CMakeFiles/kernel.dir/cleaner.c.o
+.PHONY : cleaner.c.o
+
+cleaner.i: cleaner.c.i
+
+.PHONY : cleaner.i
+
+# target to preprocess a source file
+cleaner.c.i:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/kernel/CMakeFiles/kernel.dir/build.make src/kernel/CMakeFiles/kernel.dir/cleaner.c.i
+.PHONY : cleaner.c.i
+
+cleaner.s: cleaner.c.s
+
+.PHONY : cleaner.s
+
+# target to generate assembly for a file
+cleaner.c.s:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/kernel/CMakeFiles/kernel.dir/build.make src/kernel/CMakeFiles/kernel.dir/cleaner.c.s
+.PHONY : cleaner.c.s
 
 inits.o: inits.c.o
 
@@ -131,7 +158,7 @@ inits.o: inits.c.o
 
 # target to build an object file
 inits.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/kernel/CMakeFiles/kernel.dir/build.make src/kernel/CMakeFiles/kernel.dir/inits.c.o
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/kernel/CMakeFiles/kernel.dir/build.make src/kernel/CMakeFiles/kernel.dir/inits.c.o
 .PHONY : inits.c.o
 
 inits.i: inits.c.i
@@ -140,7 +167,7 @@ inits.i: inits.c.i
 
 # target to preprocess a source file
 inits.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/kernel/CMakeFiles/kernel.dir/build.make src/kernel/CMakeFiles/kernel.dir/inits.c.i
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/kernel/CMakeFiles/kernel.dir/build.make src/kernel/CMakeFiles/kernel.dir/inits.c.i
 .PHONY : inits.c.i
 
 inits.s: inits.c.s
@@ -149,7 +176,7 @@ inits.s: inits.c.s
 
 # target to generate assembly for a file
 inits.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/kernel/CMakeFiles/kernel.dir/build.make src/kernel/CMakeFiles/kernel.dir/inits.c.s
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/kernel/CMakeFiles/kernel.dir/build.make src/kernel/CMakeFiles/kernel.dir/inits.c.s
 .PHONY : inits.c.s
 
 kernel.o: kernel.c.o
@@ -158,7 +185,7 @@ kernel.o: kernel.c.o
 
 # target to build an object file
 kernel.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/kernel/CMakeFiles/kernel.dir/build.make src/kernel/CMakeFiles/kernel.dir/kernel.c.o
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/kernel/CMakeFiles/kernel.dir/build.make src/kernel/CMakeFiles/kernel.dir/kernel.c.o
 .PHONY : kernel.c.o
 
 kernel.i: kernel.c.i
@@ -167,7 +194,7 @@ kernel.i: kernel.c.i
 
 # target to preprocess a source file
 kernel.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/kernel/CMakeFiles/kernel.dir/build.make src/kernel/CMakeFiles/kernel.dir/kernel.c.i
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/kernel/CMakeFiles/kernel.dir/build.make src/kernel/CMakeFiles/kernel.dir/kernel.c.i
 .PHONY : kernel.c.i
 
 kernel.s: kernel.c.s
@@ -176,7 +203,7 @@ kernel.s: kernel.c.s
 
 # target to generate assembly for a file
 kernel.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/kernel/CMakeFiles/kernel.dir/build.make src/kernel/CMakeFiles/kernel.dir/kernel.c.s
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/kernel/CMakeFiles/kernel.dir/build.make src/kernel/CMakeFiles/kernel.dir/kernel.c.s
 .PHONY : kernel.c.s
 
 linked_list.o: linked_list.c.o
@@ -185,7 +212,7 @@ linked_list.o: linked_list.c.o
 
 # target to build an object file
 linked_list.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/kernel/CMakeFiles/kernel.dir/build.make src/kernel/CMakeFiles/kernel.dir/linked_list.c.o
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/kernel/CMakeFiles/kernel.dir/build.make src/kernel/CMakeFiles/kernel.dir/linked_list.c.o
 .PHONY : linked_list.c.o
 
 linked_list.i: linked_list.c.i
@@ -194,7 +221,7 @@ linked_list.i: linked_list.c.i
 
 # target to preprocess a source file
 linked_list.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/kernel/CMakeFiles/kernel.dir/build.make src/kernel/CMakeFiles/kernel.dir/linked_list.c.i
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/kernel/CMakeFiles/kernel.dir/build.make src/kernel/CMakeFiles/kernel.dir/linked_list.c.i
 .PHONY : linked_list.c.i
 
 linked_list.s: linked_list.c.s
@@ -203,7 +230,7 @@ linked_list.s: linked_list.c.s
 
 # target to generate assembly for a file
 linked_list.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/kernel/CMakeFiles/kernel.dir/build.make src/kernel/CMakeFiles/kernel.dir/linked_list.c.s
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/kernel/CMakeFiles/kernel.dir/build.make src/kernel/CMakeFiles/kernel.dir/linked_list.c.s
 .PHONY : linked_list.c.s
 
 # Help Target
@@ -215,6 +242,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... kernel"
 	@echo "... edit_cache"
+	@echo "... cleaner.o"
+	@echo "... cleaner.i"
+	@echo "... cleaner.s"
 	@echo "... inits.o"
 	@echo "... inits.i"
 	@echo "... inits.s"
@@ -235,6 +265,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/bigfoot/bomberman/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/bigfoot/bomberman_tmp2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

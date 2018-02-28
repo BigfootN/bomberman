@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bigfoot/bomberman
+CMAKE_SOURCE_DIR = /home/bigfoot/bomberman_tmp2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bigfoot/bomberman/build
+CMAKE_BINARY_DIR = /home/bigfoot/bomberman_tmp2/build
 
 # Include any dependencies generated for this target.
 include src/pictures/CMakeFiles/pictures.dir/depend.make
@@ -59,16 +59,16 @@ include src/pictures/CMakeFiles/pictures.dir/flags.make
 
 src/pictures/CMakeFiles/pictures.dir/file.c.o: src/pictures/CMakeFiles/pictures.dir/flags.make
 src/pictures/CMakeFiles/pictures.dir/file.c.o: ../src/pictures/file.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/pictures/CMakeFiles/pictures.dir/file.c.o"
-	cd /home/bigfoot/bomberman/build/src/pictures && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pictures.dir/file.c.o   -c /home/bigfoot/bomberman/src/pictures/file.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/pictures/CMakeFiles/pictures.dir/file.c.o"
+	cd /home/bigfoot/bomberman_tmp2/build/src/pictures && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pictures.dir/file.c.o   -c /home/bigfoot/bomberman_tmp2/src/pictures/file.c
 
 src/pictures/CMakeFiles/pictures.dir/file.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pictures.dir/file.c.i"
-	cd /home/bigfoot/bomberman/build/src/pictures && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman/src/pictures/file.c > CMakeFiles/pictures.dir/file.c.i
+	cd /home/bigfoot/bomberman_tmp2/build/src/pictures && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman_tmp2/src/pictures/file.c > CMakeFiles/pictures.dir/file.c.i
 
 src/pictures/CMakeFiles/pictures.dir/file.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pictures.dir/file.c.s"
-	cd /home/bigfoot/bomberman/build/src/pictures && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman/src/pictures/file.c -o CMakeFiles/pictures.dir/file.c.s
+	cd /home/bigfoot/bomberman_tmp2/build/src/pictures && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman_tmp2/src/pictures/file.c -o CMakeFiles/pictures.dir/file.c.s
 
 src/pictures/CMakeFiles/pictures.dir/file.c.o.requires:
 
@@ -81,18 +81,44 @@ src/pictures/CMakeFiles/pictures.dir/file.c.o.provides: src/pictures/CMakeFiles/
 src/pictures/CMakeFiles/pictures.dir/file.c.o.provides.build: src/pictures/CMakeFiles/pictures.dir/file.c.o
 
 
+src/pictures/CMakeFiles/pictures.dir/sprites.c.o: src/pictures/CMakeFiles/pictures.dir/flags.make
+src/pictures/CMakeFiles/pictures.dir/sprites.c.o: ../src/pictures/sprites.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/pictures/CMakeFiles/pictures.dir/sprites.c.o"
+	cd /home/bigfoot/bomberman_tmp2/build/src/pictures && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pictures.dir/sprites.c.o   -c /home/bigfoot/bomberman_tmp2/src/pictures/sprites.c
+
+src/pictures/CMakeFiles/pictures.dir/sprites.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pictures.dir/sprites.c.i"
+	cd /home/bigfoot/bomberman_tmp2/build/src/pictures && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman_tmp2/src/pictures/sprites.c > CMakeFiles/pictures.dir/sprites.c.i
+
+src/pictures/CMakeFiles/pictures.dir/sprites.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pictures.dir/sprites.c.s"
+	cd /home/bigfoot/bomberman_tmp2/build/src/pictures && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman_tmp2/src/pictures/sprites.c -o CMakeFiles/pictures.dir/sprites.c.s
+
+src/pictures/CMakeFiles/pictures.dir/sprites.c.o.requires:
+
+.PHONY : src/pictures/CMakeFiles/pictures.dir/sprites.c.o.requires
+
+src/pictures/CMakeFiles/pictures.dir/sprites.c.o.provides: src/pictures/CMakeFiles/pictures.dir/sprites.c.o.requires
+	$(MAKE) -f src/pictures/CMakeFiles/pictures.dir/build.make src/pictures/CMakeFiles/pictures.dir/sprites.c.o.provides.build
+.PHONY : src/pictures/CMakeFiles/pictures.dir/sprites.c.o.provides
+
+src/pictures/CMakeFiles/pictures.dir/sprites.c.o.provides.build: src/pictures/CMakeFiles/pictures.dir/sprites.c.o
+
+
 # Object files for target pictures
 pictures_OBJECTS = \
-"CMakeFiles/pictures.dir/file.c.o"
+"CMakeFiles/pictures.dir/file.c.o" \
+"CMakeFiles/pictures.dir/sprites.c.o"
 
 # External object files for target pictures
 pictures_EXTERNAL_OBJECTS =
 
 src/pictures/libpictures.so: src/pictures/CMakeFiles/pictures.dir/file.c.o
+src/pictures/libpictures.so: src/pictures/CMakeFiles/pictures.dir/sprites.c.o
 src/pictures/libpictures.so: src/pictures/CMakeFiles/pictures.dir/build.make
 src/pictures/libpictures.so: src/pictures/CMakeFiles/pictures.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bigfoot/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C shared library libpictures.so"
-	cd /home/bigfoot/bomberman/build/src/pictures && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pictures.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C shared library libpictures.so"
+	cd /home/bigfoot/bomberman_tmp2/build/src/pictures && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pictures.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/pictures/CMakeFiles/pictures.dir/build: src/pictures/libpictures.so
@@ -100,14 +126,15 @@ src/pictures/CMakeFiles/pictures.dir/build: src/pictures/libpictures.so
 .PHONY : src/pictures/CMakeFiles/pictures.dir/build
 
 src/pictures/CMakeFiles/pictures.dir/requires: src/pictures/CMakeFiles/pictures.dir/file.c.o.requires
+src/pictures/CMakeFiles/pictures.dir/requires: src/pictures/CMakeFiles/pictures.dir/sprites.c.o.requires
 
 .PHONY : src/pictures/CMakeFiles/pictures.dir/requires
 
 src/pictures/CMakeFiles/pictures.dir/clean:
-	cd /home/bigfoot/bomberman/build/src/pictures && $(CMAKE_COMMAND) -P CMakeFiles/pictures.dir/cmake_clean.cmake
+	cd /home/bigfoot/bomberman_tmp2/build/src/pictures && $(CMAKE_COMMAND) -P CMakeFiles/pictures.dir/cmake_clean.cmake
 .PHONY : src/pictures/CMakeFiles/pictures.dir/clean
 
 src/pictures/CMakeFiles/pictures.dir/depend:
-	cd /home/bigfoot/bomberman/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bigfoot/bomberman /home/bigfoot/bomberman/src/pictures /home/bigfoot/bomberman/build /home/bigfoot/bomberman/build/src/pictures /home/bigfoot/bomberman/build/src/pictures/CMakeFiles/pictures.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bigfoot/bomberman_tmp2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bigfoot/bomberman_tmp2 /home/bigfoot/bomberman_tmp2/src/pictures /home/bigfoot/bomberman_tmp2/build /home/bigfoot/bomberman_tmp2/build/src/pictures /home/bigfoot/bomberman_tmp2/build/src/pictures/CMakeFiles/pictures.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/pictures/CMakeFiles/pictures.dir/depend
 

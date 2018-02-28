@@ -6,3 +6,8 @@ src/pictures/CMakeFiles/pictures.dir/file.c.o: ../src/include/types.h
 src/pictures/CMakeFiles/pictures.dir/file.c.o: ../src/pictures/file.c
 src/pictures/CMakeFiles/pictures.dir/file.c.o: ../src/pictures/file.h
 
+src/pictures/CMakeFiles/pictures.dir/sprites.c.o: ../src/include/define.h
+src/pictures/CMakeFiles/pictures.dir/sprites.c.o: ../src/include/types.h
+src/pictures/CMakeFiles/pictures.dir/sprites.c.o: ../src/pictures/sprites.c
+src/pictures/CMakeFiles/pictures.dir/sprites.c.o: ../src/pictures/sprites.h
+

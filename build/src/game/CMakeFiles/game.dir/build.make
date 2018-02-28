@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bigfoot/bomberman
+CMAKE_SOURCE_DIR = /home/bigfoot/bomberman_tmp2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bigfoot/bomberman/build
+CMAKE_BINARY_DIR = /home/bigfoot/bomberman_tmp2/build
 
 # Include any dependencies generated for this target.
 include src/game/CMakeFiles/game.dir/depend.make
@@ -57,165 +57,165 @@ include src/game/CMakeFiles/game.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/game/CMakeFiles/game.dir/flags.make
 
-src/game/CMakeFiles/game.dir/gameDisplay.c.o: src/game/CMakeFiles/game.dir/flags.make
-src/game/CMakeFiles/game.dir/gameDisplay.c.o: ../src/game/gameDisplay.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/game/CMakeFiles/game.dir/gameDisplay.c.o"
-	cd /home/bigfoot/bomberman/build/src/game && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/game.dir/gameDisplay.c.o   -c /home/bigfoot/bomberman/src/game/gameDisplay.c
+src/game/CMakeFiles/game.dir/game_display.c.o: src/game/CMakeFiles/game.dir/flags.make
+src/game/CMakeFiles/game.dir/game_display.c.o: ../src/game/game_display.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/game/CMakeFiles/game.dir/game_display.c.o"
+	cd /home/bigfoot/bomberman_tmp2/build/src/game && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/game.dir/game_display.c.o   -c /home/bigfoot/bomberman_tmp2/src/game/game_display.c
 
-src/game/CMakeFiles/game.dir/gameDisplay.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/game.dir/gameDisplay.c.i"
-	cd /home/bigfoot/bomberman/build/src/game && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman/src/game/gameDisplay.c > CMakeFiles/game.dir/gameDisplay.c.i
+src/game/CMakeFiles/game.dir/game_display.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/game.dir/game_display.c.i"
+	cd /home/bigfoot/bomberman_tmp2/build/src/game && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman_tmp2/src/game/game_display.c > CMakeFiles/game.dir/game_display.c.i
 
-src/game/CMakeFiles/game.dir/gameDisplay.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/game.dir/gameDisplay.c.s"
-	cd /home/bigfoot/bomberman/build/src/game && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman/src/game/gameDisplay.c -o CMakeFiles/game.dir/gameDisplay.c.s
+src/game/CMakeFiles/game.dir/game_display.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/game.dir/game_display.c.s"
+	cd /home/bigfoot/bomberman_tmp2/build/src/game && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman_tmp2/src/game/game_display.c -o CMakeFiles/game.dir/game_display.c.s
 
-src/game/CMakeFiles/game.dir/gameDisplay.c.o.requires:
+src/game/CMakeFiles/game.dir/game_display.c.o.requires:
 
-.PHONY : src/game/CMakeFiles/game.dir/gameDisplay.c.o.requires
+.PHONY : src/game/CMakeFiles/game.dir/game_display.c.o.requires
 
-src/game/CMakeFiles/game.dir/gameDisplay.c.o.provides: src/game/CMakeFiles/game.dir/gameDisplay.c.o.requires
-	$(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/gameDisplay.c.o.provides.build
-.PHONY : src/game/CMakeFiles/game.dir/gameDisplay.c.o.provides
+src/game/CMakeFiles/game.dir/game_display.c.o.provides: src/game/CMakeFiles/game.dir/game_display.c.o.requires
+	$(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/game_display.c.o.provides.build
+.PHONY : src/game/CMakeFiles/game.dir/game_display.c.o.provides
 
-src/game/CMakeFiles/game.dir/gameDisplay.c.o.provides.build: src/game/CMakeFiles/game.dir/gameDisplay.c.o
-
-
-src/game/CMakeFiles/game.dir/gameLoop.c.o: src/game/CMakeFiles/game.dir/flags.make
-src/game/CMakeFiles/game.dir/gameLoop.c.o: ../src/game/gameLoop.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/game/CMakeFiles/game.dir/gameLoop.c.o"
-	cd /home/bigfoot/bomberman/build/src/game && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/game.dir/gameLoop.c.o   -c /home/bigfoot/bomberman/src/game/gameLoop.c
-
-src/game/CMakeFiles/game.dir/gameLoop.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/game.dir/gameLoop.c.i"
-	cd /home/bigfoot/bomberman/build/src/game && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman/src/game/gameLoop.c > CMakeFiles/game.dir/gameLoop.c.i
-
-src/game/CMakeFiles/game.dir/gameLoop.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/game.dir/gameLoop.c.s"
-	cd /home/bigfoot/bomberman/build/src/game && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman/src/game/gameLoop.c -o CMakeFiles/game.dir/gameLoop.c.s
-
-src/game/CMakeFiles/game.dir/gameLoop.c.o.requires:
-
-.PHONY : src/game/CMakeFiles/game.dir/gameLoop.c.o.requires
-
-src/game/CMakeFiles/game.dir/gameLoop.c.o.provides: src/game/CMakeFiles/game.dir/gameLoop.c.o.requires
-	$(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/gameLoop.c.o.provides.build
-.PHONY : src/game/CMakeFiles/game.dir/gameLoop.c.o.provides
-
-src/game/CMakeFiles/game.dir/gameLoop.c.o.provides.build: src/game/CMakeFiles/game.dir/gameLoop.c.o
+src/game/CMakeFiles/game.dir/game_display.c.o.provides.build: src/game/CMakeFiles/game.dir/game_display.c.o
 
 
-src/game/CMakeFiles/game.dir/gamePanels.c.o: src/game/CMakeFiles/game.dir/flags.make
-src/game/CMakeFiles/game.dir/gamePanels.c.o: ../src/game/gamePanels.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object src/game/CMakeFiles/game.dir/gamePanels.c.o"
-	cd /home/bigfoot/bomberman/build/src/game && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/game.dir/gamePanels.c.o   -c /home/bigfoot/bomberman/src/game/gamePanels.c
+src/game/CMakeFiles/game.dir/game_loop.c.o: src/game/CMakeFiles/game.dir/flags.make
+src/game/CMakeFiles/game.dir/game_loop.c.o: ../src/game/game_loop.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/game/CMakeFiles/game.dir/game_loop.c.o"
+	cd /home/bigfoot/bomberman_tmp2/build/src/game && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/game.dir/game_loop.c.o   -c /home/bigfoot/bomberman_tmp2/src/game/game_loop.c
 
-src/game/CMakeFiles/game.dir/gamePanels.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/game.dir/gamePanels.c.i"
-	cd /home/bigfoot/bomberman/build/src/game && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman/src/game/gamePanels.c > CMakeFiles/game.dir/gamePanels.c.i
+src/game/CMakeFiles/game.dir/game_loop.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/game.dir/game_loop.c.i"
+	cd /home/bigfoot/bomberman_tmp2/build/src/game && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman_tmp2/src/game/game_loop.c > CMakeFiles/game.dir/game_loop.c.i
 
-src/game/CMakeFiles/game.dir/gamePanels.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/game.dir/gamePanels.c.s"
-	cd /home/bigfoot/bomberman/build/src/game && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman/src/game/gamePanels.c -o CMakeFiles/game.dir/gamePanels.c.s
+src/game/CMakeFiles/game.dir/game_loop.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/game.dir/game_loop.c.s"
+	cd /home/bigfoot/bomberman_tmp2/build/src/game && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman_tmp2/src/game/game_loop.c -o CMakeFiles/game.dir/game_loop.c.s
 
-src/game/CMakeFiles/game.dir/gamePanels.c.o.requires:
+src/game/CMakeFiles/game.dir/game_loop.c.o.requires:
 
-.PHONY : src/game/CMakeFiles/game.dir/gamePanels.c.o.requires
+.PHONY : src/game/CMakeFiles/game.dir/game_loop.c.o.requires
 
-src/game/CMakeFiles/game.dir/gamePanels.c.o.provides: src/game/CMakeFiles/game.dir/gamePanels.c.o.requires
-	$(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/gamePanels.c.o.provides.build
-.PHONY : src/game/CMakeFiles/game.dir/gamePanels.c.o.provides
+src/game/CMakeFiles/game.dir/game_loop.c.o.provides: src/game/CMakeFiles/game.dir/game_loop.c.o.requires
+	$(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/game_loop.c.o.provides.build
+.PHONY : src/game/CMakeFiles/game.dir/game_loop.c.o.provides
 
-src/game/CMakeFiles/game.dir/gamePanels.c.o.provides.build: src/game/CMakeFiles/game.dir/gamePanels.c.o
-
-
-src/game/CMakeFiles/game.dir/gameTime.c.o: src/game/CMakeFiles/game.dir/flags.make
-src/game/CMakeFiles/game.dir/gameTime.c.o: ../src/game/gameTime.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object src/game/CMakeFiles/game.dir/gameTime.c.o"
-	cd /home/bigfoot/bomberman/build/src/game && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/game.dir/gameTime.c.o   -c /home/bigfoot/bomberman/src/game/gameTime.c
-
-src/game/CMakeFiles/game.dir/gameTime.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/game.dir/gameTime.c.i"
-	cd /home/bigfoot/bomberman/build/src/game && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman/src/game/gameTime.c > CMakeFiles/game.dir/gameTime.c.i
-
-src/game/CMakeFiles/game.dir/gameTime.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/game.dir/gameTime.c.s"
-	cd /home/bigfoot/bomberman/build/src/game && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman/src/game/gameTime.c -o CMakeFiles/game.dir/gameTime.c.s
-
-src/game/CMakeFiles/game.dir/gameTime.c.o.requires:
-
-.PHONY : src/game/CMakeFiles/game.dir/gameTime.c.o.requires
-
-src/game/CMakeFiles/game.dir/gameTime.c.o.provides: src/game/CMakeFiles/game.dir/gameTime.c.o.requires
-	$(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/gameTime.c.o.provides.build
-.PHONY : src/game/CMakeFiles/game.dir/gameTime.c.o.provides
-
-src/game/CMakeFiles/game.dir/gameTime.c.o.provides.build: src/game/CMakeFiles/game.dir/gameTime.c.o
+src/game/CMakeFiles/game.dir/game_loop.c.o.provides.build: src/game/CMakeFiles/game.dir/game_loop.c.o
 
 
-src/game/CMakeFiles/game.dir/gameviews.c.o: src/game/CMakeFiles/game.dir/flags.make
-src/game/CMakeFiles/game.dir/gameviews.c.o: ../src/game/gameviews.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object src/game/CMakeFiles/game.dir/gameviews.c.o"
-	cd /home/bigfoot/bomberman/build/src/game && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/game.dir/gameviews.c.o   -c /home/bigfoot/bomberman/src/game/gameviews.c
+src/game/CMakeFiles/game.dir/game_panels.c.o: src/game/CMakeFiles/game.dir/flags.make
+src/game/CMakeFiles/game.dir/game_panels.c.o: ../src/game/game_panels.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object src/game/CMakeFiles/game.dir/game_panels.c.o"
+	cd /home/bigfoot/bomberman_tmp2/build/src/game && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/game.dir/game_panels.c.o   -c /home/bigfoot/bomberman_tmp2/src/game/game_panels.c
 
-src/game/CMakeFiles/game.dir/gameviews.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/game.dir/gameviews.c.i"
-	cd /home/bigfoot/bomberman/build/src/game && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman/src/game/gameviews.c > CMakeFiles/game.dir/gameviews.c.i
+src/game/CMakeFiles/game.dir/game_panels.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/game.dir/game_panels.c.i"
+	cd /home/bigfoot/bomberman_tmp2/build/src/game && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman_tmp2/src/game/game_panels.c > CMakeFiles/game.dir/game_panels.c.i
 
-src/game/CMakeFiles/game.dir/gameviews.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/game.dir/gameviews.c.s"
-	cd /home/bigfoot/bomberman/build/src/game && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman/src/game/gameviews.c -o CMakeFiles/game.dir/gameviews.c.s
+src/game/CMakeFiles/game.dir/game_panels.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/game.dir/game_panels.c.s"
+	cd /home/bigfoot/bomberman_tmp2/build/src/game && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman_tmp2/src/game/game_panels.c -o CMakeFiles/game.dir/game_panels.c.s
 
-src/game/CMakeFiles/game.dir/gameviews.c.o.requires:
+src/game/CMakeFiles/game.dir/game_panels.c.o.requires:
 
-.PHONY : src/game/CMakeFiles/game.dir/gameviews.c.o.requires
+.PHONY : src/game/CMakeFiles/game.dir/game_panels.c.o.requires
 
-src/game/CMakeFiles/game.dir/gameviews.c.o.provides: src/game/CMakeFiles/game.dir/gameviews.c.o.requires
-	$(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/gameviews.c.o.provides.build
-.PHONY : src/game/CMakeFiles/game.dir/gameviews.c.o.provides
+src/game/CMakeFiles/game.dir/game_panels.c.o.provides: src/game/CMakeFiles/game.dir/game_panels.c.o.requires
+	$(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/game_panels.c.o.provides.build
+.PHONY : src/game/CMakeFiles/game.dir/game_panels.c.o.provides
 
-src/game/CMakeFiles/game.dir/gameviews.c.o.provides.build: src/game/CMakeFiles/game.dir/gameviews.c.o
+src/game/CMakeFiles/game.dir/game_panels.c.o.provides.build: src/game/CMakeFiles/game.dir/game_panels.c.o
+
+
+src/game/CMakeFiles/game.dir/game_time.c.o: src/game/CMakeFiles/game.dir/flags.make
+src/game/CMakeFiles/game.dir/game_time.c.o: ../src/game/game_time.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object src/game/CMakeFiles/game.dir/game_time.c.o"
+	cd /home/bigfoot/bomberman_tmp2/build/src/game && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/game.dir/game_time.c.o   -c /home/bigfoot/bomberman_tmp2/src/game/game_time.c
+
+src/game/CMakeFiles/game.dir/game_time.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/game.dir/game_time.c.i"
+	cd /home/bigfoot/bomberman_tmp2/build/src/game && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman_tmp2/src/game/game_time.c > CMakeFiles/game.dir/game_time.c.i
+
+src/game/CMakeFiles/game.dir/game_time.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/game.dir/game_time.c.s"
+	cd /home/bigfoot/bomberman_tmp2/build/src/game && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman_tmp2/src/game/game_time.c -o CMakeFiles/game.dir/game_time.c.s
+
+src/game/CMakeFiles/game.dir/game_time.c.o.requires:
+
+.PHONY : src/game/CMakeFiles/game.dir/game_time.c.o.requires
+
+src/game/CMakeFiles/game.dir/game_time.c.o.provides: src/game/CMakeFiles/game.dir/game_time.c.o.requires
+	$(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/game_time.c.o.provides.build
+.PHONY : src/game/CMakeFiles/game.dir/game_time.c.o.provides
+
+src/game/CMakeFiles/game.dir/game_time.c.o.provides.build: src/game/CMakeFiles/game.dir/game_time.c.o
+
+
+src/game/CMakeFiles/game.dir/game_views.c.o: src/game/CMakeFiles/game.dir/flags.make
+src/game/CMakeFiles/game.dir/game_views.c.o: ../src/game/game_views.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object src/game/CMakeFiles/game.dir/game_views.c.o"
+	cd /home/bigfoot/bomberman_tmp2/build/src/game && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/game.dir/game_views.c.o   -c /home/bigfoot/bomberman_tmp2/src/game/game_views.c
+
+src/game/CMakeFiles/game.dir/game_views.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/game.dir/game_views.c.i"
+	cd /home/bigfoot/bomberman_tmp2/build/src/game && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman_tmp2/src/game/game_views.c > CMakeFiles/game.dir/game_views.c.i
+
+src/game/CMakeFiles/game.dir/game_views.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/game.dir/game_views.c.s"
+	cd /home/bigfoot/bomberman_tmp2/build/src/game && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman_tmp2/src/game/game_views.c -o CMakeFiles/game.dir/game_views.c.s
+
+src/game/CMakeFiles/game.dir/game_views.c.o.requires:
+
+.PHONY : src/game/CMakeFiles/game.dir/game_views.c.o.requires
+
+src/game/CMakeFiles/game.dir/game_views.c.o.provides: src/game/CMakeFiles/game.dir/game_views.c.o.requires
+	$(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/game_views.c.o.provides.build
+.PHONY : src/game/CMakeFiles/game.dir/game_views.c.o.provides
+
+src/game/CMakeFiles/game.dir/game_views.c.o.provides.build: src/game/CMakeFiles/game.dir/game_views.c.o
 
 
 # Object files for target game
 game_OBJECTS = \
-"CMakeFiles/game.dir/gameDisplay.c.o" \
-"CMakeFiles/game.dir/gameLoop.c.o" \
-"CMakeFiles/game.dir/gamePanels.c.o" \
-"CMakeFiles/game.dir/gameTime.c.o" \
-"CMakeFiles/game.dir/gameviews.c.o"
+"CMakeFiles/game.dir/game_display.c.o" \
+"CMakeFiles/game.dir/game_loop.c.o" \
+"CMakeFiles/game.dir/game_panels.c.o" \
+"CMakeFiles/game.dir/game_time.c.o" \
+"CMakeFiles/game.dir/game_views.c.o"
 
 # External object files for target game
 game_EXTERNAL_OBJECTS =
 
-src/game/libgame.so: src/game/CMakeFiles/game.dir/gameDisplay.c.o
-src/game/libgame.so: src/game/CMakeFiles/game.dir/gameLoop.c.o
-src/game/libgame.so: src/game/CMakeFiles/game.dir/gamePanels.c.o
-src/game/libgame.so: src/game/CMakeFiles/game.dir/gameTime.c.o
-src/game/libgame.so: src/game/CMakeFiles/game.dir/gameviews.c.o
+src/game/libgame.so: src/game/CMakeFiles/game.dir/game_display.c.o
+src/game/libgame.so: src/game/CMakeFiles/game.dir/game_loop.c.o
+src/game/libgame.so: src/game/CMakeFiles/game.dir/game_panels.c.o
+src/game/libgame.so: src/game/CMakeFiles/game.dir/game_time.c.o
+src/game/libgame.so: src/game/CMakeFiles/game.dir/game_views.c.o
 src/game/libgame.so: src/game/CMakeFiles/game.dir/build.make
 src/game/libgame.so: src/game/CMakeFiles/game.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bigfoot/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C shared library libgame.so"
-	cd /home/bigfoot/bomberman/build/src/game && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/game.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C shared library libgame.so"
+	cd /home/bigfoot/bomberman_tmp2/build/src/game && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/game.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/game/CMakeFiles/game.dir/build: src/game/libgame.so
 
 .PHONY : src/game/CMakeFiles/game.dir/build
 
-src/game/CMakeFiles/game.dir/requires: src/game/CMakeFiles/game.dir/gameDisplay.c.o.requires
-src/game/CMakeFiles/game.dir/requires: src/game/CMakeFiles/game.dir/gameLoop.c.o.requires
-src/game/CMakeFiles/game.dir/requires: src/game/CMakeFiles/game.dir/gamePanels.c.o.requires
-src/game/CMakeFiles/game.dir/requires: src/game/CMakeFiles/game.dir/gameTime.c.o.requires
-src/game/CMakeFiles/game.dir/requires: src/game/CMakeFiles/game.dir/gameviews.c.o.requires
+src/game/CMakeFiles/game.dir/requires: src/game/CMakeFiles/game.dir/game_display.c.o.requires
+src/game/CMakeFiles/game.dir/requires: src/game/CMakeFiles/game.dir/game_loop.c.o.requires
+src/game/CMakeFiles/game.dir/requires: src/game/CMakeFiles/game.dir/game_panels.c.o.requires
+src/game/CMakeFiles/game.dir/requires: src/game/CMakeFiles/game.dir/game_time.c.o.requires
+src/game/CMakeFiles/game.dir/requires: src/game/CMakeFiles/game.dir/game_views.c.o.requires
 
 .PHONY : src/game/CMakeFiles/game.dir/requires
 
 src/game/CMakeFiles/game.dir/clean:
-	cd /home/bigfoot/bomberman/build/src/game && $(CMAKE_COMMAND) -P CMakeFiles/game.dir/cmake_clean.cmake
+	cd /home/bigfoot/bomberman_tmp2/build/src/game && $(CMAKE_COMMAND) -P CMakeFiles/game.dir/cmake_clean.cmake
 .PHONY : src/game/CMakeFiles/game.dir/clean
 
 src/game/CMakeFiles/game.dir/depend:
-	cd /home/bigfoot/bomberman/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bigfoot/bomberman /home/bigfoot/bomberman/src/game /home/bigfoot/bomberman/build /home/bigfoot/bomberman/build/src/game /home/bigfoot/bomberman/build/src/game/CMakeFiles/game.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bigfoot/bomberman_tmp2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bigfoot/bomberman_tmp2 /home/bigfoot/bomberman_tmp2/src/game /home/bigfoot/bomberman_tmp2/build /home/bigfoot/bomberman_tmp2/build/src/game /home/bigfoot/bomberman_tmp2/build/src/game/CMakeFiles/game.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/game/CMakeFiles/game.dir/depend
 

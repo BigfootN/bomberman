@@ -1,4 +1,7 @@
+#include <linked_list.h>
 #include "ai_monster.h"
+#include "ai_piece.h"
+#include "ai_blast.h"
 
 // determine qui reste ou meurt lors d'une rencontre avec un monstre
 // valable pour les players les sorts et autres monstres
@@ -7,36 +10,36 @@ static int monster_action(state_t* state, SDL_Rect posOther, SDL_Rect posMonster
 	int monster;
 	int next;
 
-	monster = state->dataMap->mapaction[posOther.x][posOther.y];
-	next = state->dataMap->mapaction[posMonster.x][posMonster.y];
+	monster = state->map_info->action_map[posOther.x][posOther.y];
+	next = state->map_info->action_map[posMonster.x][posMonster.y];
 
-	if ((suivant >= 23 && suivant <= 26)) {
+	if ((next >= 23 && next <= 26)) {
 		// si un joueur sur sa route il le tue
-		piece_t* piece = searchPlayer(state, suivant);
-		//piece->elist->active = 0;
-		piece->active = 0;
+		piece_t* piece = search_player(state, next);
+		//piece->elist->is_activ = 0;
+		piece->is_activ = 0;
 		piece->life = 0;
-		//desactivePlayers(state, suivant);
-	} else if (suivant >= 27 && suivant <= 30)
+		//deactivate_players(state, next);
+	} else if (next >= 27 && next <= 30)
 		// les autres monstres
-		if (suivant > monster) {
+		if (next > monster) {
 			// le monstre meurt
-			deleteMonster(state, monster, posMonster);
+			del_monster(state, monster, posMonster);
 			return (0);
 			// mort
 		} else
 			// le monstre vie et l'autre monstre meurt
-			del_monster(state, suivant, posOther);
-	else if (suivant >= 4 && suivant <= 8)
-		// les malus bonus il ne sont pas sensible et les détruisent
-		deleteMonster(state, suivant, posOther);
+			del_monster(state, next, posOther);
+	else if (next >= 4 && next <= 8)
+		// les malus bonus il ne sont pas clock_directionible et les détruisent
+		del_monster(state, next, posOther);
 
 	return (1);
 	// vivant
 }
 
 static int check_area(const state_t* state, const int x, const int y) {
-	const int wall = state->dataMap->realmap[x][y];
+	const int wall = state->map_info->real_map[x][y];
 
 	if (wall != 1 && wall != 20)
 		return 1;
@@ -45,7 +48,7 @@ static int check_area(const state_t* state, const int x, const int y) {
 }
 
 static int move_condition(int arr, int nb_way) {
-	if ((arr != 1 && arr != 20) && (rand(30) >= 15 || nb_way <= 1))
+	if ((arr != 1 && arr != 20) && (rand() >= 15 || nb_way <= 1))
 		return 1;
 	else
 		return 0;
@@ -67,7 +70,7 @@ static int check_item_detect(int answer, int piece) {
 		// les bonus malus
 		choice = piece;
 	if (answer == 1)
-		// si mur on desactive
+		// si mur on desis_activ
 		choice = 1;
 
 	return (choice);
@@ -81,8 +84,8 @@ void ai_monster(state_t* state, piece_t* tmp) {
 	else{
 		tmp->life = 10;
 		// determiner les objects qui l'entoure
-		tab = init_grid_bonus_penalty(state, tmp->mappos);
-		// determiner son sens
+		tab = init_grid_bonus_penalty(state, tmp->map_pos);
+		// determiner son clock_direction
 		monster_choice(state, tmp, tab);
 	}
 }
@@ -92,9 +95,9 @@ piece_t* search_monster(state_t* state, int nb_monster, SDL_Rect pos) {
 
 	tmp = state->piece;
 	while (tmp != NULL) {
-		if (tmp->active == 1)
+		if (tmp->is_activ == 1)
 			if (tmp->type == nb_monster)
-				if ((pos.x == tmp->mappos.x) && (pos.y == tmp->mappos.y))
+				if ((pos.x == tmp->map_pos.x) && (pos.y == tmp->map_pos.y))
 					return (tmp);
 		tmp = tmp->next;
 	}
@@ -107,16 +110,16 @@ void del_monster(state_t* state, int nb_monster, SDL_Rect pos) {
 	tmp = state->piece;
 
 	while (tmp != NULL) {
-		if (tmp->active == 1) {
+		if (tmp->is_activ == 1) {
 			if (tmp->type == nb_monster) {
-				tmp->active = 0;
-				if ((pos.x == tmp->mappos.x) && (pos.y == tmp->mappos.y)) {
-					tmp->active = 0;
+				tmp->is_activ = 0;
+				if ((pos.x == tmp->map_pos.x) && (pos.y == tmp->map_pos.y)) {
+					tmp->is_activ = 0;
 					//réinitialise a zero un bonnus ou un player monstre
-					state->dataMap->bmmap[tmp->mappos.x][tmp->mappos.y] = -1;
-					state->dataMap->mapaction[tmp->mappos.x][tmp->mappos.y] = -1;
+					state->map_info->penalty_bonus_map[tmp->map_pos.x][tmp->map_pos.y] = -1;
+					state->map_info->action_map[tmp->map_pos.x][tmp->map_pos.y] = -1;
 					// detruit le monstre
-					deleteListChevron(tmp);
+					delete_list_chevron(tmp);
 					return;
 				}
 			}
@@ -149,23 +152,23 @@ void monster_choice(state_t* state, piece_t* tmp, int** tab) {
 	int nb_way;
 	SDL_Rect posother;
 
-	posother = tmp->mappos;
+	posother = tmp->map_pos;
 	nb_way = check_way(tab);
 	// remonter d'une ligne
 	if (move_condition(tab[1][2], nb_way)) {
 		// monte
-		if (strcmp(tmp->sens, "BOTTOM") != 0 || nb_way <= 1) {
+		if (strcmp(tmp->clock_direction, "BOTTOM") != 0 || nb_way <= 1) {
 			// si il existe une seule voie les conditions s'annule
-			pos = tmp->mappos.x - 1;
-			if ((0 <= pos && (state->dataMap->pos.x) > pos)) {
+			pos = tmp->map_pos.x - 1;
+			if ((0 <= pos && (state->map_info->pos.x) > pos)) {
 				posother.x = pos;
-				if (action_monster(state, tmp->mappos, posother) &&
-					check_area(state, pos, tmp->mappos.y)) {
+				if (monster_action(state, tmp->map_pos, posother) &&
+					check_area(state, pos, tmp->map_pos.y)) {
 					// ici mettre le depart du monstre effacer sa presence sur la carte
-					state->dataMap->mapaction[tmp->mappos.x][tmp->mappos.y] = -1;
-					tmp->mappos.x -= 1;
-					tmp->sens = strdup("UP");
-					state->dataMap->mapaction[tmp->mappos.x][tmp->mappos.y] = tmp->type;
+					state->map_info->action_map[tmp->map_pos.x][tmp->map_pos.y] = -1;
+					tmp->map_pos.x -= 1;
+					tmp->clock_direction = strdup("UP");
+					state->map_info->action_map[tmp->map_pos.x][tmp->map_pos.y] = tmp->type;
 					return;
 				}
 			}
@@ -174,18 +177,18 @@ void monster_choice(state_t* state, piece_t* tmp, int** tab) {
 	// descendre d'une ligne
 	if (move_condition(tab[3][2], nb_way)) {
 		// descend
-		if (strcmp(tmp->sens, "UP") != 0 || nb_way <= 1) {
+		if (strcmp(tmp->clock_direction, "UP") != 0 || nb_way <= 1) {
 			// si il existe une seule voie les conditions s'annule
-			pos = tmp->mappos.x + 1;
-			if ((0 <= pos && (state->dataMap->pos.x) > pos)) {
+			pos = tmp->map_pos.x + 1;
+			if ((0 <= pos && (state->map_info->pos.x) > pos)) {
 				posother.x = pos;
-				if (action_monster(state, tmp->mappos, posother) &&
-					check_area(state, pos, tmp->mappos.y)) {
+				if (monster_action(state, tmp->map_pos, posother) &&
+					check_area(state, pos, tmp->map_pos.y)) {
 					// ici mettre le depart du monstre effacer sa presence sur la carte
-					state->dataMap->mapaction[tmp->mappos.x][tmp->mappos.y] = -1;
-					tmp->mappos.x += 1;
-					tmp->sens = strdup("BOTTOM");
-					state->dataMap->mapaction[tmp->mappos.x][tmp->mappos.y] = tmp->type;
+					state->map_info->action_map[tmp->map_pos.x][tmp->map_pos.y] = -1;
+					tmp->map_pos.x += 1;
+					tmp->clock_direction = strdup("BOTTOM");
+					state->map_info->action_map[tmp->map_pos.x][tmp->map_pos.y] = tmp->type;
 					return;
 				}
 			}
@@ -194,18 +197,18 @@ void monster_choice(state_t* state, piece_t* tmp, int** tab) {
 	if (move_condition(tab[2][1], nb_way)) {
 		// vers la gauche
 		//reculer d'une colonne
-		if (strcmp(tmp->sens, "RIGHT") != 0 || nb_way <= 1) {
+		if (strcmp(tmp->clock_direction, "RIGHT") != 0 || nb_way <= 1) {
 			// si il existe une seule voie les conditions s'annule
-			pos = tmp->mappos.y - 1;
-			if ((0 <= pos && (state->dataMap->pos.y) > pos)) {
+			pos = tmp->map_pos.y - 1;
+			if ((0 <= pos && (state->map_info->pos.y) > pos)) {
 				posother.y = pos;
-				if (monster_action(state, tmp->mappos, posother) &&
-					check_area(state, tmp->mappos.x, pos)) {
+				if (monster_action(state, tmp->map_pos, posother) &&
+					check_area(state, tmp->map_pos.x, pos)) {
 					// ici mettre le depart du monstre effacer sa presence sur la carte
-					state->dataMap->mapaction[tmp->mappos.x][tmp->mappos.y] = -1;
-					tmp->mappos.y -= 1;
-					tmp->sens = strdup("LEFT");
-					state->dataMap->mapaction[tmp->mappos.x][tmp->mappos.y] = tmp->type;
+					state->map_info->action_map[tmp->map_pos.x][tmp->map_pos.y] = -1;
+					tmp->map_pos.y -= 1;
+					tmp->clock_direction = strdup("LEFT");
+					state->map_info->action_map[tmp->map_pos.x][tmp->map_pos.y] = tmp->type;
 					return;
 				}
 			}
@@ -214,18 +217,18 @@ void monster_choice(state_t* state, piece_t* tmp, int** tab) {
 	if (move_condition(tab[2][3], nb_way)) {
 		// vers la droite
 		// avancer d'une colonne
-		if (strcmp(tmp->sens, "LEFT") != 0 || nb_way <= 1) {
+		if (strcmp(tmp->clock_direction, "LEFT") != 0 || nb_way <= 1) {
 			// si il existe une seule voie les conditions s'annule
-			pos = tmp->mappos.y + 1;
-			if ((0 <= pos && (state->dataMap->pos.y) > pos)) {
+			pos = tmp->map_pos.y + 1;
+			if ((0 <= pos && (state->map_info->pos.y) > pos)) {
 				posother.y = pos;
-				if (monster_action(state, tmp->mappos, posother) &&
-					check_area(state, tmp->mappos.x, pos)) {
+				if (monster_action(state, tmp->map_pos, posother) &&
+					check_area(state, tmp->map_pos.x, pos)) {
 					// ici mettre le depart du monstre effacer sa presence sur la carte
-					state->dataMap->mapaction[tmp->mappos.x][tmp->mappos.y] = -1;
-					tmp->mappos.y += 1;
-					tmp->sens = strdup("RIGHT");
-					state->dataMap->mapaction[tmp->mappos.x][tmp->mappos.y] = tmp->type;
+					state->map_info->action_map[tmp->map_pos.x][tmp->map_pos.y] = -1;
+					tmp->map_pos.y += 1;
+					tmp->clock_direction = strdup("RIGHT");
+					state->map_info->action_map[tmp->map_pos.x][tmp->map_pos.y] = tmp->type;
 
 					return;
 				}
@@ -238,7 +241,7 @@ void monster_choice(state_t* state, piece_t* tmp, int** tab) {
 
 int** init_grid_bonus_penalty(state_t* state, SDL_Rect pos) {
 	//                             row col
-	// control->dataMap->hidebonus[10][14] limite du tableau
+	// control->map_info->hidebonus[10][14] limite du tableau
 	int index;
 	int** tab;
 	int answer;
@@ -249,11 +252,11 @@ int** init_grid_bonus_penalty(state_t* state, SDL_Rect pos) {
 	index = pos.x;
 	// bas
 	while (index < pos.x + 3) {
-		if ((0 <= index && (state->dataMap->pos.x) > index)) {
+		if ((0 <= index && (state->map_info->pos.x) > index)) {
 			/* repaire les joueurs */
-			int piece = state->dataMap->mapaction[index][pos.y];
+			int piece = state->map_info->action_map[index][pos.y];
 			/* collision avec les murs */
-			int tile = state->dataMap->realmap[index][pos.y];
+			int tile = state->map_info->real_map[index][pos.y];
 			// check area
 			if (check_tuple(state, tile))
 				answer = 1;
@@ -267,11 +270,11 @@ int** init_grid_bonus_penalty(state_t* state, SDL_Rect pos) {
 	index = pos.x;
 	// haut
 	while (index > pos.x - 3) {
-		if ((0 <= index && (state->dataMap->pos.x) > index) &&
-			(0 <= pos.y && (state->dataMap->pos.y) > pos.y)) {
+		if ((0 <= index && (state->map_info->pos.x) > index) &&
+			(0 <= pos.y && (state->map_info->pos.y) > pos.y)) {
 			/* repaire les joueurs */
-			int piece = state->dataMap->mapaction[index][pos.y];
-			int tile = state->dataMap->realmap[index][pos.y];
+			int piece = state->map_info->action_map[index][pos.y];
+			int tile = state->map_info->real_map[index][pos.y];
 			if (check_tuple(state, tile))
 				answer = 1;
 			// garde la meme colone et monte
@@ -284,11 +287,11 @@ int** init_grid_bonus_penalty(state_t* state, SDL_Rect pos) {
 	index = pos.y;
 	// vers la droite
 	while (index < pos.y + 3) {
-		if ((0 <= index && (state->dataMap->pos.y) > index) &&
-			(0 <= pos.x && (state->dataMap->pos.x) > pos.x)) {
+		if ((0 <= index && (state->map_info->pos.y) > index) &&
+			(0 <= pos.x && (state->map_info->pos.x) > pos.x)) {
 			/* repaire les joueurs */
-			int piece = state->dataMap->mapaction[pos.x][index];
-			int tile = state->dataMap->realmap[pos.x][index];
+			int piece = state->map_info->action_map[pos.x][index];
+			int tile = state->map_info->real_map[pos.x][index];
 			if (check_tuple(state, tile))
 				answer = 1;
 			// on garde la meme row et on incremente
@@ -301,11 +304,11 @@ int** init_grid_bonus_penalty(state_t* state, SDL_Rect pos) {
 	index = pos.y;
 	// vers la gauche
 	while (index > pos.y - 3) {
-		if ((0 <= index && (state->dataMap->pos.y) > index) &&
-			(0 <= pos.x && (state->dataMap->pos.x) > pos.x)) {
+		if ((0 <= index && (state->map_info->pos.y) > index) &&
+			(0 <= pos.x && (state->map_info->pos.x) > pos.x)) {
 			/* repaire les joueurs */
-			int piece = state->dataMap->mapaction[pos.x][index];
-			int tile = state->dataMap->realmap[pos.x][index];
+			int piece = state->map_info->action_map[pos.x][index];
+			int tile = state->map_info->real_map[pos.x][index];
 			if (check_tuple(state, tile))
 				answer = 1;
 			tab[2][(index + 2) - pos.y] = check_item_detect(answer, piece);

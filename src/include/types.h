@@ -6,6 +6,7 @@
 #include <SDL2/SDL_scancode.h>
 #include <SDL2/SDL_surface.h>
 #include <SDL2/SDL_ttf.h>
+#include <SDL2/SDL_image.h>
 #include <time.h>
 
 struct player_s;
@@ -22,7 +23,6 @@ struct client_state_s;
 struct window_s;
 struct control_s;
 
-
 typedef struct player_s {
 	// actif ou occupé
 	int is_activ;
@@ -32,15 +32,15 @@ typedef struct player_s {
 	int sockfd_player;
 	// requete
 	int request_state;
-	int requete_1;
-	int requete_2;
+	int request_1;
+	int request_2;
 
 	// liste double chainées
 	struct player_s* next;
 	struct player_s* prev;
 
 	// emplacement dans la liste du joueur pour eviter de chercher
-	struct s_pions* player;
+	struct piece_s* player;
 } player_t;
 
 typedef struct player_info_s {
@@ -215,7 +215,7 @@ typedef struct client_s {
 	int client_id;
 	int request_1;
 	int request_2;
-	int cmdd_service;
+	int cmd_service;
 } client_t;
 
 typedef struct surface_s {
@@ -270,14 +270,15 @@ typedef struct window_s {
 	p_fib pfunc;
 } window_t;
 
-int introduction_central(control_t*);
-int ip_choice_ip_central(control_t*);
-int central_game(control_t*);
-int scores_central(control_t*);
 
+/*int intro_central(control_t*);
+  int ip_choice_central(control_t*);
+  int central_game(control_t*);
+  int scores_central(control_t*);
+  */
 static const window_t l_bib[] = {
-	{1, &introduction_central},
-	{2, &ip_choice_ip_central},
+	{1, &intro_central},
+	{2, &ip_choice_central},
 	{3, &central_game},
 	{4, &scores_central},
 	{0, NULL}

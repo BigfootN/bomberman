@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bigfoot/bomberman
+CMAKE_SOURCE_DIR = /home/bigfoot/bomberman_tmp2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bigfoot/bomberman/build
+CMAKE_BINARY_DIR = /home/bigfoot/bomberman_tmp2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/bigfoot/bomberman/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/bigfoot/bomberman/build/CMakeFiles /home/bigfoot/bomberman/build/src/score/CMakeFiles/progress.marks
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/score/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigfoot/bomberman/build/CMakeFiles 0
+	cd /home/bigfoot/bomberman_tmp2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/bigfoot/bomberman_tmp2/build/CMakeFiles /home/bigfoot/bomberman_tmp2/build/src/score/CMakeFiles/progress.marks
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/score/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigfoot/bomberman_tmp2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/score/clean
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/score/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/score/preinstall
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/score/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/score/preinstall
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/score/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/bigfoot/bomberman/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/bigfoot/bomberman_tmp2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/score/CMakeFiles/score.dir/rule:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/score/CMakeFiles/score.dir/rule
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/score/CMakeFiles/score.dir/rule
 .PHONY : src/score/CMakeFiles/score.dir/rule
 
 # Convenience name for target.
@@ -122,62 +122,62 @@ score: src/score/CMakeFiles/score.dir/rule
 
 # fast build rule for target.
 score/fast:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/score/CMakeFiles/score.dir/build.make src/score/CMakeFiles/score.dir/build
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/score/CMakeFiles/score.dir/build.make src/score/CMakeFiles/score.dir/build
 .PHONY : score/fast
 
-scrviews.o: scrviews.c.o
+score_loop.o: score_loop.c.o
 
-.PHONY : scrviews.o
-
-# target to build an object file
-scrviews.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/score/CMakeFiles/score.dir/build.make src/score/CMakeFiles/score.dir/scrviews.c.o
-.PHONY : scrviews.c.o
-
-scrviews.i: scrviews.c.i
-
-.PHONY : scrviews.i
-
-# target to preprocess a source file
-scrviews.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/score/CMakeFiles/score.dir/build.make src/score/CMakeFiles/score.dir/scrviews.c.i
-.PHONY : scrviews.c.i
-
-scrviews.s: scrviews.c.s
-
-.PHONY : scrviews.s
-
-# target to generate assembly for a file
-scrviews.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/score/CMakeFiles/score.dir/build.make src/score/CMakeFiles/score.dir/scrviews.c.s
-.PHONY : scrviews.c.s
-
-srcloop.o: srcloop.c.o
-
-.PHONY : srcloop.o
+.PHONY : score_loop.o
 
 # target to build an object file
-srcloop.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/score/CMakeFiles/score.dir/build.make src/score/CMakeFiles/score.dir/srcloop.c.o
-.PHONY : srcloop.c.o
+score_loop.c.o:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/score/CMakeFiles/score.dir/build.make src/score/CMakeFiles/score.dir/score_loop.c.o
+.PHONY : score_loop.c.o
 
-srcloop.i: srcloop.c.i
+score_loop.i: score_loop.c.i
 
-.PHONY : srcloop.i
+.PHONY : score_loop.i
 
 # target to preprocess a source file
-srcloop.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/score/CMakeFiles/score.dir/build.make src/score/CMakeFiles/score.dir/srcloop.c.i
-.PHONY : srcloop.c.i
+score_loop.c.i:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/score/CMakeFiles/score.dir/build.make src/score/CMakeFiles/score.dir/score_loop.c.i
+.PHONY : score_loop.c.i
 
-srcloop.s: srcloop.c.s
+score_loop.s: score_loop.c.s
 
-.PHONY : srcloop.s
+.PHONY : score_loop.s
 
 # target to generate assembly for a file
-srcloop.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/score/CMakeFiles/score.dir/build.make src/score/CMakeFiles/score.dir/srcloop.c.s
-.PHONY : srcloop.c.s
+score_loop.c.s:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/score/CMakeFiles/score.dir/build.make src/score/CMakeFiles/score.dir/score_loop.c.s
+.PHONY : score_loop.c.s
+
+score_views.o: score_views.c.o
+
+.PHONY : score_views.o
+
+# target to build an object file
+score_views.c.o:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/score/CMakeFiles/score.dir/build.make src/score/CMakeFiles/score.dir/score_views.c.o
+.PHONY : score_views.c.o
+
+score_views.i: score_views.c.i
+
+.PHONY : score_views.i
+
+# target to preprocess a source file
+score_views.c.i:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/score/CMakeFiles/score.dir/build.make src/score/CMakeFiles/score.dir/score_views.c.i
+.PHONY : score_views.c.i
+
+score_views.s: score_views.c.s
+
+.PHONY : score_views.s
+
+# target to generate assembly for a file
+score_views.c.s:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/score/CMakeFiles/score.dir/build.make src/score/CMakeFiles/score.dir/score_views.c.s
+.PHONY : score_views.c.s
 
 # Help Target
 help:
@@ -188,12 +188,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... score"
 	@echo "... edit_cache"
-	@echo "... scrviews.o"
-	@echo "... scrviews.i"
-	@echo "... scrviews.s"
-	@echo "... srcloop.o"
-	@echo "... srcloop.i"
-	@echo "... srcloop.s"
+	@echo "... score_loop.o"
+	@echo "... score_loop.i"
+	@echo "... score_loop.s"
+	@echo "... score_views.o"
+	@echo "... score_views.i"
+	@echo "... score_views.s"
 .PHONY : help
 
 
@@ -205,6 +205,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/bigfoot/bomberman/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/bigfoot/bomberman_tmp2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

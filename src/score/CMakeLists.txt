@@ -1,5 +1,9 @@
 add_library(score SHARED
-	scrviews.c
-	srcloop.c)
+	score_views.c
+	score_loop.c)
 
-target_include_directories(introduction PUBLIC ${CMAKE_SOURCE_DIR}/src/include)
+target_include_directories(score PUBLIC
+	${CMAKE_SOURCE_DIR}/src/include/
+	${CMAKE_SOURCE_DIR}/src/game
+	${CMAKE_SOURCE_DIR}/src/kernel
+	)

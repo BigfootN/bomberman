@@ -10,33 +10,33 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/bigfoot/bomberman/build/CMakeFiles/3.10.2/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/bigfoot/bomberman_tmp2/build/CMakeFiles/3.10.2/CompilerIdC/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /home/bigfoot/bomberman/build/CMakeFiles/CMakeTmp
+Change Dir: /home/bigfoot/bomberman_tmp2/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_a5253/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a5253.dir/build.make CMakeFiles/cmTC_a5253.dir/build
-make[1] : on entre dans le répertoire « /home/bigfoot/bomberman/build/CMakeFiles/CMakeTmp »
-Building C object CMakeFiles/cmTC_a5253.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_a5253.dir/testCCompiler.c.o   -c /home/bigfoot/bomberman/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_a5253
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a5253.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_a5253.dir/testCCompiler.c.o  -o cmTC_a5253 
-make[1] : on quitte le répertoire « /home/bigfoot/bomberman/build/CMakeFiles/CMakeTmp »
+Run Build Command:"/usr/bin/make" "cmTC_327ee/fast"
+/usr/bin/make -f CMakeFiles/cmTC_327ee.dir/build.make CMakeFiles/cmTC_327ee.dir/build
+make[1] : on entre dans le répertoire « /home/bigfoot/bomberman_tmp2/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_327ee.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_327ee.dir/testCCompiler.c.o   -c /home/bigfoot/bomberman_tmp2/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_327ee
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_327ee.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_327ee.dir/testCCompiler.c.o  -o cmTC_327ee 
+make[1] : on quitte le répertoire « /home/bigfoot/bomberman_tmp2/build/CMakeFiles/CMakeTmp »
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/bigfoot/bomberman/build/CMakeFiles/CMakeTmp
+Change Dir: /home/bigfoot/bomberman_tmp2/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_91cb1/fast"
-/usr/bin/make -f CMakeFiles/cmTC_91cb1.dir/build.make CMakeFiles/cmTC_91cb1.dir/build
-make[1] : on entre dans le répertoire « /home/bigfoot/bomberman/build/CMakeFiles/CMakeTmp »
-Building C object CMakeFiles/cmTC_91cb1.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_91cb1.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_91cb1
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_91cb1.dir/link.txt --verbose=1
-/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_91cb1.dir/CMakeCCompilerABI.c.o  -o cmTC_91cb1 
+Run Build Command:"/usr/bin/make" "cmTC_b3f3e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b3f3e.dir/build.make CMakeFiles/cmTC_b3f3e.dir/build
+make[1] : on entre dans le répertoire « /home/bigfoot/bomberman_tmp2/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_b3f3e.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_b3f3e.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_b3f3e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b3f3e.dir/link.txt --verbose=1
+/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_b3f3e.dir/CMakeCCompilerABI.c.o  -o cmTC_b3f3e 
 Utilisation des specs internes.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/lto-wrapper
@@ -46,24 +46,24 @@ Modèle de thread: posix
 gcc version 7.3.0 (GCC) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_91cb1' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccOtFLs6.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_91cb1 /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0 -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../.. CMakeFiles/cmTC_91cb1.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_91cb1' '-mtune=generic' '-march=x86-64'
-make[1] : on quitte le répertoire « /home/bigfoot/bomberman/build/CMakeFiles/CMakeTmp »
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_b3f3e' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc907nOG.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_b3f3e /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0 -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../.. CMakeFiles/cmTC_b3f3e.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_b3f3e' '-mtune=generic' '-march=x86-64'
+make[1] : on quitte le répertoire « /home/bigfoot/bomberman_tmp2/build/CMakeFiles/CMakeTmp »
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/bigfoot/bomberman/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/bigfoot/bomberman_tmp2/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_91cb1/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_91cb1.dir/build.make CMakeFiles/cmTC_91cb1.dir/build]
-  ignore line: [make[1] : on entre dans le répertoire « /home/bigfoot/bomberman/build/CMakeFiles/CMakeTmp »]
-  ignore line: [Building C object CMakeFiles/cmTC_91cb1.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_91cb1.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_91cb1]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_91cb1.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_91cb1.dir/CMakeCCompilerABI.c.o  -o cmTC_91cb1 ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_b3f3e/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_b3f3e.dir/build.make CMakeFiles/cmTC_b3f3e.dir/build]
+  ignore line: [make[1] : on entre dans le répertoire « /home/bigfoot/bomberman_tmp2/build/CMakeFiles/CMakeTmp »]
+  ignore line: [Building C object CMakeFiles/cmTC_b3f3e.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_b3f3e.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_b3f3e]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b3f3e.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_b3f3e.dir/CMakeCCompilerABI.c.o  -o cmTC_b3f3e ]
   ignore line: [Utilisation des specs internes.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/lto-wrapper]
@@ -73,13 +73,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 7.3.0 (GCC) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_91cb1' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccOtFLs6.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_91cb1 /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0 -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../.. CMakeFiles/cmTC_91cb1.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_b3f3e' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc907nOG.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_b3f3e /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0 -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../.. CMakeFiles/cmTC_b3f3e.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib/crtn.o]
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccOtFLs6.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc907nOG.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -95,7 +95,7 @@ Parsed C implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-pie] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_91cb1] ==> ignore
+    arg [cmTC_b3f3e] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/crtbeginS.o] ==> ignore
@@ -104,7 +104,7 @@ Parsed C implicit link information from above output:
     arg [-L/lib/../lib] ==> dir [/lib/../lib]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../..] ==> dir [/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../..]
-    arg [CMakeFiles/cmTC_91cb1.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_b3f3e.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -129,17 +129,17 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /home/bigfoot/bomberman/build/CMakeFiles/CMakeTmp
+Change Dir: /home/bigfoot/bomberman_tmp2/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_6d145/fast"
-/usr/bin/make -f CMakeFiles/cmTC_6d145.dir/build.make CMakeFiles/cmTC_6d145.dir/build
-make[1] : on entre dans le répertoire « /home/bigfoot/bomberman/build/CMakeFiles/CMakeTmp »
-Building C object CMakeFiles/cmTC_6d145.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_6d145.dir/feature_tests.c.o   -c /home/bigfoot/bomberman/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_6d145
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6d145.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_6d145.dir/feature_tests.c.o  -o cmTC_6d145 
-make[1] : on quitte le répertoire « /home/bigfoot/bomberman/build/CMakeFiles/CMakeTmp »
+Run Build Command:"/usr/bin/make" "cmTC_0ecf1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0ecf1.dir/build.make CMakeFiles/cmTC_0ecf1.dir/build
+make[1] : on entre dans le répertoire « /home/bigfoot/bomberman_tmp2/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_0ecf1.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_0ecf1.dir/feature_tests.c.o   -c /home/bigfoot/bomberman_tmp2/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_0ecf1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0ecf1.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_0ecf1.dir/feature_tests.c.o  -o cmTC_0ecf1 
+make[1] : on quitte le répertoire « /home/bigfoot/bomberman_tmp2/build/CMakeFiles/CMakeTmp »
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -149,17 +149,17 @@ make[1] : on quitte le répertoire « /home/bigfoot/bomberman/build/CMakeFiles
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /home/bigfoot/bomberman/build/CMakeFiles/CMakeTmp
+Change Dir: /home/bigfoot/bomberman_tmp2/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_4d71a/fast"
-/usr/bin/make -f CMakeFiles/cmTC_4d71a.dir/build.make CMakeFiles/cmTC_4d71a.dir/build
-make[1] : on entre dans le répertoire « /home/bigfoot/bomberman/build/CMakeFiles/CMakeTmp »
-Building C object CMakeFiles/cmTC_4d71a.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_4d71a.dir/feature_tests.c.o   -c /home/bigfoot/bomberman/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_4d71a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4d71a.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_4d71a.dir/feature_tests.c.o  -o cmTC_4d71a 
-make[1] : on quitte le répertoire « /home/bigfoot/bomberman/build/CMakeFiles/CMakeTmp »
+Run Build Command:"/usr/bin/make" "cmTC_90bbd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_90bbd.dir/build.make CMakeFiles/cmTC_90bbd.dir/build
+make[1] : on entre dans le répertoire « /home/bigfoot/bomberman_tmp2/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_90bbd.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_90bbd.dir/feature_tests.c.o   -c /home/bigfoot/bomberman_tmp2/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_90bbd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_90bbd.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_90bbd.dir/feature_tests.c.o  -o cmTC_90bbd 
+make[1] : on quitte le répertoire « /home/bigfoot/bomberman_tmp2/build/CMakeFiles/CMakeTmp »
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -169,17 +169,17 @@ make[1] : on quitte le répertoire « /home/bigfoot/bomberman/build/CMakeFiles
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /home/bigfoot/bomberman/build/CMakeFiles/CMakeTmp
+Change Dir: /home/bigfoot/bomberman_tmp2/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_dfe34/fast"
-/usr/bin/make -f CMakeFiles/cmTC_dfe34.dir/build.make CMakeFiles/cmTC_dfe34.dir/build
-make[1] : on entre dans le répertoire « /home/bigfoot/bomberman/build/CMakeFiles/CMakeTmp »
-Building C object CMakeFiles/cmTC_dfe34.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_dfe34.dir/feature_tests.c.o   -c /home/bigfoot/bomberman/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_dfe34
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dfe34.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_dfe34.dir/feature_tests.c.o  -o cmTC_dfe34 
-make[1] : on quitte le répertoire « /home/bigfoot/bomberman/build/CMakeFiles/CMakeTmp »
+Run Build Command:"/usr/bin/make" "cmTC_39dde/fast"
+/usr/bin/make -f CMakeFiles/cmTC_39dde.dir/build.make CMakeFiles/cmTC_39dde.dir/build
+make[1] : on entre dans le répertoire « /home/bigfoot/bomberman_tmp2/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_39dde.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_39dde.dir/feature_tests.c.o   -c /home/bigfoot/bomberman_tmp2/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_39dde
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_39dde.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_39dde.dir/feature_tests.c.o  -o cmTC_39dde 
+make[1] : on quitte le répertoire « /home/bigfoot/bomberman_tmp2/build/CMakeFiles/CMakeTmp »
 
 
     Feature record: C_FEATURE:1c_function_prototypes

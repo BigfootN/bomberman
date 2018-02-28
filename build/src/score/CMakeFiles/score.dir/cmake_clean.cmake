@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/score.dir/scrviews.c.o"
-  "CMakeFiles/score.dir/srcloop.c.o"
+  "CMakeFiles/score.dir/score_views.c.o"
+  "CMakeFiles/score.dir/score_loop.c.o"
   "libscore.pdb"
   "libscore.so"
 )

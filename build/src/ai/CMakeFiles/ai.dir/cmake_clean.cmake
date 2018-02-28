@@ -1,16 +1,15 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ai.dir/ai.c.o"
   "CMakeFiles/ai.dir/ai_bomb.c.o"
+  "CMakeFiles/ai.dir/ai_blast.c.o"
   "CMakeFiles/ai.dir/ai_bonus_penalty.c.o"
   "CMakeFiles/ai.dir/ai_counter.c.o"
   "CMakeFiles/ai.dir/ai_dead.c.o"
-  "CMakeFiles/ai.dir/ai_blast.c.o"
   "CMakeFiles/ai.dir/ai_map.c.o"
   "CMakeFiles/ai.dir/ai_monster.c.o"
   "CMakeFiles/ai.dir/ai_piece.c.o"
   "CMakeFiles/ai.dir/ai_msg.c.o"
   "CMakeFiles/ai.dir/ai_timer.c.o"
-  "CMakeFiles/ai.dir/sprites.c.o"
   "libai.pdb"
   "libai.so"
 )

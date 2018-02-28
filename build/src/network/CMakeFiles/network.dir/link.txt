@@ -1,1 +1,1 @@
-/usr/bin/gcc -fPIC -Wall -Werror -Wextra -g -g  -shared -Wl,-soname,libnetwork.so -o libnetwork.so CMakeFiles/network.dir/addNetworkPlayer.c.o CMakeFiles/network.dir/network.c.o CMakeFiles/network.dir/tcpclient.c.o CMakeFiles/network.dir/tcpserver.c.o 
+/usr/bin/gcc -fPIC -Wall -Werror -Wextra -g -g  -shared -Wl,-soname,libnetwork.so -o libnetwork.so CMakeFiles/network.dir/add_network_player.c.o CMakeFiles/network.dir/network.c.o CMakeFiles/network.dir/tcp_client.c.o CMakeFiles/network.dir/tcp_server.c.o 

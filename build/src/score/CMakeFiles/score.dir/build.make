@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bigfoot/bomberman
+CMAKE_SOURCE_DIR = /home/bigfoot/bomberman_tmp2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bigfoot/bomberman/build
+CMAKE_BINARY_DIR = /home/bigfoot/bomberman_tmp2/build
 
 # Include any dependencies generated for this target.
 include src/score/CMakeFiles/score.dir/depend.make
@@ -57,84 +57,84 @@ include src/score/CMakeFiles/score.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/score/CMakeFiles/score.dir/flags.make
 
-src/score/CMakeFiles/score.dir/scrviews.c.o: src/score/CMakeFiles/score.dir/flags.make
-src/score/CMakeFiles/score.dir/scrviews.c.o: ../src/score/scrviews.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/score/CMakeFiles/score.dir/scrviews.c.o"
-	cd /home/bigfoot/bomberman/build/src/score && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/score.dir/scrviews.c.o   -c /home/bigfoot/bomberman/src/score/scrviews.c
+src/score/CMakeFiles/score.dir/score_views.c.o: src/score/CMakeFiles/score.dir/flags.make
+src/score/CMakeFiles/score.dir/score_views.c.o: ../src/score/score_views.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/score/CMakeFiles/score.dir/score_views.c.o"
+	cd /home/bigfoot/bomberman_tmp2/build/src/score && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/score.dir/score_views.c.o   -c /home/bigfoot/bomberman_tmp2/src/score/score_views.c
 
-src/score/CMakeFiles/score.dir/scrviews.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/score.dir/scrviews.c.i"
-	cd /home/bigfoot/bomberman/build/src/score && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman/src/score/scrviews.c > CMakeFiles/score.dir/scrviews.c.i
+src/score/CMakeFiles/score.dir/score_views.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/score.dir/score_views.c.i"
+	cd /home/bigfoot/bomberman_tmp2/build/src/score && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman_tmp2/src/score/score_views.c > CMakeFiles/score.dir/score_views.c.i
 
-src/score/CMakeFiles/score.dir/scrviews.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/score.dir/scrviews.c.s"
-	cd /home/bigfoot/bomberman/build/src/score && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman/src/score/scrviews.c -o CMakeFiles/score.dir/scrviews.c.s
+src/score/CMakeFiles/score.dir/score_views.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/score.dir/score_views.c.s"
+	cd /home/bigfoot/bomberman_tmp2/build/src/score && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman_tmp2/src/score/score_views.c -o CMakeFiles/score.dir/score_views.c.s
 
-src/score/CMakeFiles/score.dir/scrviews.c.o.requires:
+src/score/CMakeFiles/score.dir/score_views.c.o.requires:
 
-.PHONY : src/score/CMakeFiles/score.dir/scrviews.c.o.requires
+.PHONY : src/score/CMakeFiles/score.dir/score_views.c.o.requires
 
-src/score/CMakeFiles/score.dir/scrviews.c.o.provides: src/score/CMakeFiles/score.dir/scrviews.c.o.requires
-	$(MAKE) -f src/score/CMakeFiles/score.dir/build.make src/score/CMakeFiles/score.dir/scrviews.c.o.provides.build
-.PHONY : src/score/CMakeFiles/score.dir/scrviews.c.o.provides
+src/score/CMakeFiles/score.dir/score_views.c.o.provides: src/score/CMakeFiles/score.dir/score_views.c.o.requires
+	$(MAKE) -f src/score/CMakeFiles/score.dir/build.make src/score/CMakeFiles/score.dir/score_views.c.o.provides.build
+.PHONY : src/score/CMakeFiles/score.dir/score_views.c.o.provides
 
-src/score/CMakeFiles/score.dir/scrviews.c.o.provides.build: src/score/CMakeFiles/score.dir/scrviews.c.o
+src/score/CMakeFiles/score.dir/score_views.c.o.provides.build: src/score/CMakeFiles/score.dir/score_views.c.o
 
 
-src/score/CMakeFiles/score.dir/srcloop.c.o: src/score/CMakeFiles/score.dir/flags.make
-src/score/CMakeFiles/score.dir/srcloop.c.o: ../src/score/srcloop.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/score/CMakeFiles/score.dir/srcloop.c.o"
-	cd /home/bigfoot/bomberman/build/src/score && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/score.dir/srcloop.c.o   -c /home/bigfoot/bomberman/src/score/srcloop.c
+src/score/CMakeFiles/score.dir/score_loop.c.o: src/score/CMakeFiles/score.dir/flags.make
+src/score/CMakeFiles/score.dir/score_loop.c.o: ../src/score/score_loop.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/score/CMakeFiles/score.dir/score_loop.c.o"
+	cd /home/bigfoot/bomberman_tmp2/build/src/score && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/score.dir/score_loop.c.o   -c /home/bigfoot/bomberman_tmp2/src/score/score_loop.c
 
-src/score/CMakeFiles/score.dir/srcloop.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/score.dir/srcloop.c.i"
-	cd /home/bigfoot/bomberman/build/src/score && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman/src/score/srcloop.c > CMakeFiles/score.dir/srcloop.c.i
+src/score/CMakeFiles/score.dir/score_loop.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/score.dir/score_loop.c.i"
+	cd /home/bigfoot/bomberman_tmp2/build/src/score && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman_tmp2/src/score/score_loop.c > CMakeFiles/score.dir/score_loop.c.i
 
-src/score/CMakeFiles/score.dir/srcloop.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/score.dir/srcloop.c.s"
-	cd /home/bigfoot/bomberman/build/src/score && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman/src/score/srcloop.c -o CMakeFiles/score.dir/srcloop.c.s
+src/score/CMakeFiles/score.dir/score_loop.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/score.dir/score_loop.c.s"
+	cd /home/bigfoot/bomberman_tmp2/build/src/score && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman_tmp2/src/score/score_loop.c -o CMakeFiles/score.dir/score_loop.c.s
 
-src/score/CMakeFiles/score.dir/srcloop.c.o.requires:
+src/score/CMakeFiles/score.dir/score_loop.c.o.requires:
 
-.PHONY : src/score/CMakeFiles/score.dir/srcloop.c.o.requires
+.PHONY : src/score/CMakeFiles/score.dir/score_loop.c.o.requires
 
-src/score/CMakeFiles/score.dir/srcloop.c.o.provides: src/score/CMakeFiles/score.dir/srcloop.c.o.requires
-	$(MAKE) -f src/score/CMakeFiles/score.dir/build.make src/score/CMakeFiles/score.dir/srcloop.c.o.provides.build
-.PHONY : src/score/CMakeFiles/score.dir/srcloop.c.o.provides
+src/score/CMakeFiles/score.dir/score_loop.c.o.provides: src/score/CMakeFiles/score.dir/score_loop.c.o.requires
+	$(MAKE) -f src/score/CMakeFiles/score.dir/build.make src/score/CMakeFiles/score.dir/score_loop.c.o.provides.build
+.PHONY : src/score/CMakeFiles/score.dir/score_loop.c.o.provides
 
-src/score/CMakeFiles/score.dir/srcloop.c.o.provides.build: src/score/CMakeFiles/score.dir/srcloop.c.o
+src/score/CMakeFiles/score.dir/score_loop.c.o.provides.build: src/score/CMakeFiles/score.dir/score_loop.c.o
 
 
 # Object files for target score
 score_OBJECTS = \
-"CMakeFiles/score.dir/scrviews.c.o" \
-"CMakeFiles/score.dir/srcloop.c.o"
+"CMakeFiles/score.dir/score_views.c.o" \
+"CMakeFiles/score.dir/score_loop.c.o"
 
 # External object files for target score
 score_EXTERNAL_OBJECTS =
 
-src/score/libscore.so: src/score/CMakeFiles/score.dir/scrviews.c.o
-src/score/libscore.so: src/score/CMakeFiles/score.dir/srcloop.c.o
+src/score/libscore.so: src/score/CMakeFiles/score.dir/score_views.c.o
+src/score/libscore.so: src/score/CMakeFiles/score.dir/score_loop.c.o
 src/score/libscore.so: src/score/CMakeFiles/score.dir/build.make
 src/score/libscore.so: src/score/CMakeFiles/score.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bigfoot/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C shared library libscore.so"
-	cd /home/bigfoot/bomberman/build/src/score && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/score.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C shared library libscore.so"
+	cd /home/bigfoot/bomberman_tmp2/build/src/score && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/score.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/score/CMakeFiles/score.dir/build: src/score/libscore.so
 
 .PHONY : src/score/CMakeFiles/score.dir/build
 
-src/score/CMakeFiles/score.dir/requires: src/score/CMakeFiles/score.dir/scrviews.c.o.requires
-src/score/CMakeFiles/score.dir/requires: src/score/CMakeFiles/score.dir/srcloop.c.o.requires
+src/score/CMakeFiles/score.dir/requires: src/score/CMakeFiles/score.dir/score_views.c.o.requires
+src/score/CMakeFiles/score.dir/requires: src/score/CMakeFiles/score.dir/score_loop.c.o.requires
 
 .PHONY : src/score/CMakeFiles/score.dir/requires
 
 src/score/CMakeFiles/score.dir/clean:
-	cd /home/bigfoot/bomberman/build/src/score && $(CMAKE_COMMAND) -P CMakeFiles/score.dir/cmake_clean.cmake
+	cd /home/bigfoot/bomberman_tmp2/build/src/score && $(CMAKE_COMMAND) -P CMakeFiles/score.dir/cmake_clean.cmake
 .PHONY : src/score/CMakeFiles/score.dir/clean
 
 src/score/CMakeFiles/score.dir/depend:
-	cd /home/bigfoot/bomberman/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bigfoot/bomberman /home/bigfoot/bomberman/src/score /home/bigfoot/bomberman/build /home/bigfoot/bomberman/build/src/score /home/bigfoot/bomberman/build/src/score/CMakeFiles/score.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bigfoot/bomberman_tmp2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bigfoot/bomberman_tmp2 /home/bigfoot/bomberman_tmp2/src/score /home/bigfoot/bomberman_tmp2/build /home/bigfoot/bomberman_tmp2/build/src/score /home/bigfoot/bomberman_tmp2/build/src/score/CMakeFiles/score.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/score/CMakeFiles/score.dir/depend
 

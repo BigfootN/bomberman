@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bigfoot/bomberman
+CMAKE_SOURCE_DIR = /home/bigfoot/bomberman_tmp2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bigfoot/bomberman/build
+CMAKE_BINARY_DIR = /home/bigfoot/bomberman_tmp2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/bigfoot/bomberman/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/bigfoot/bomberman/build/CMakeFiles /home/bigfoot/bomberman/build/src/game/CMakeFiles/progress.marks
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/game/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigfoot/bomberman/build/CMakeFiles 0
+	cd /home/bigfoot/bomberman_tmp2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/bigfoot/bomberman_tmp2/build/CMakeFiles /home/bigfoot/bomberman_tmp2/build/src/game/CMakeFiles/progress.marks
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/game/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigfoot/bomberman_tmp2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/game/clean
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/game/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/game/preinstall
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/game/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/game/preinstall
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/game/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/bigfoot/bomberman/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/bigfoot/bomberman_tmp2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/game/CMakeFiles/game.dir/rule:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/game/CMakeFiles/game.dir/rule
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/game/CMakeFiles/game.dir/rule
 .PHONY : src/game/CMakeFiles/game.dir/rule
 
 # Convenience name for target.
@@ -122,143 +122,143 @@ game: src/game/CMakeFiles/game.dir/rule
 
 # fast build rule for target.
 game/fast:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/build
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/build
 .PHONY : game/fast
 
-gameDisplay.o: gameDisplay.c.o
+game_display.o: game_display.c.o
 
-.PHONY : gameDisplay.o
-
-# target to build an object file
-gameDisplay.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/gameDisplay.c.o
-.PHONY : gameDisplay.c.o
-
-gameDisplay.i: gameDisplay.c.i
-
-.PHONY : gameDisplay.i
-
-# target to preprocess a source file
-gameDisplay.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/gameDisplay.c.i
-.PHONY : gameDisplay.c.i
-
-gameDisplay.s: gameDisplay.c.s
-
-.PHONY : gameDisplay.s
-
-# target to generate assembly for a file
-gameDisplay.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/gameDisplay.c.s
-.PHONY : gameDisplay.c.s
-
-gameLoop.o: gameLoop.c.o
-
-.PHONY : gameLoop.o
+.PHONY : game_display.o
 
 # target to build an object file
-gameLoop.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/gameLoop.c.o
-.PHONY : gameLoop.c.o
+game_display.c.o:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/game_display.c.o
+.PHONY : game_display.c.o
 
-gameLoop.i: gameLoop.c.i
+game_display.i: game_display.c.i
 
-.PHONY : gameLoop.i
+.PHONY : game_display.i
 
 # target to preprocess a source file
-gameLoop.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/gameLoop.c.i
-.PHONY : gameLoop.c.i
+game_display.c.i:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/game_display.c.i
+.PHONY : game_display.c.i
 
-gameLoop.s: gameLoop.c.s
+game_display.s: game_display.c.s
 
-.PHONY : gameLoop.s
+.PHONY : game_display.s
 
 # target to generate assembly for a file
-gameLoop.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/gameLoop.c.s
-.PHONY : gameLoop.c.s
+game_display.c.s:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/game_display.c.s
+.PHONY : game_display.c.s
 
-gamePanels.o: gamePanels.c.o
+game_loop.o: game_loop.c.o
 
-.PHONY : gamePanels.o
+.PHONY : game_loop.o
 
 # target to build an object file
-gamePanels.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/gamePanels.c.o
-.PHONY : gamePanels.c.o
+game_loop.c.o:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/game_loop.c.o
+.PHONY : game_loop.c.o
 
-gamePanels.i: gamePanels.c.i
+game_loop.i: game_loop.c.i
 
-.PHONY : gamePanels.i
+.PHONY : game_loop.i
 
 # target to preprocess a source file
-gamePanels.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/gamePanels.c.i
-.PHONY : gamePanels.c.i
+game_loop.c.i:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/game_loop.c.i
+.PHONY : game_loop.c.i
 
-gamePanels.s: gamePanels.c.s
+game_loop.s: game_loop.c.s
 
-.PHONY : gamePanels.s
+.PHONY : game_loop.s
 
 # target to generate assembly for a file
-gamePanels.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/gamePanels.c.s
-.PHONY : gamePanels.c.s
+game_loop.c.s:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/game_loop.c.s
+.PHONY : game_loop.c.s
 
-gameTime.o: gameTime.c.o
+game_panels.o: game_panels.c.o
 
-.PHONY : gameTime.o
+.PHONY : game_panels.o
 
 # target to build an object file
-gameTime.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/gameTime.c.o
-.PHONY : gameTime.c.o
+game_panels.c.o:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/game_panels.c.o
+.PHONY : game_panels.c.o
 
-gameTime.i: gameTime.c.i
+game_panels.i: game_panels.c.i
 
-.PHONY : gameTime.i
+.PHONY : game_panels.i
 
 # target to preprocess a source file
-gameTime.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/gameTime.c.i
-.PHONY : gameTime.c.i
+game_panels.c.i:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/game_panels.c.i
+.PHONY : game_panels.c.i
 
-gameTime.s: gameTime.c.s
+game_panels.s: game_panels.c.s
 
-.PHONY : gameTime.s
+.PHONY : game_panels.s
 
 # target to generate assembly for a file
-gameTime.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/gameTime.c.s
-.PHONY : gameTime.c.s
+game_panels.c.s:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/game_panels.c.s
+.PHONY : game_panels.c.s
 
-gameviews.o: gameviews.c.o
+game_time.o: game_time.c.o
 
-.PHONY : gameviews.o
+.PHONY : game_time.o
 
 # target to build an object file
-gameviews.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/gameviews.c.o
-.PHONY : gameviews.c.o
+game_time.c.o:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/game_time.c.o
+.PHONY : game_time.c.o
 
-gameviews.i: gameviews.c.i
+game_time.i: game_time.c.i
 
-.PHONY : gameviews.i
+.PHONY : game_time.i
 
 # target to preprocess a source file
-gameviews.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/gameviews.c.i
-.PHONY : gameviews.c.i
+game_time.c.i:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/game_time.c.i
+.PHONY : game_time.c.i
 
-gameviews.s: gameviews.c.s
+game_time.s: game_time.c.s
 
-.PHONY : gameviews.s
+.PHONY : game_time.s
 
 # target to generate assembly for a file
-gameviews.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/gameviews.c.s
-.PHONY : gameviews.c.s
+game_time.c.s:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/game_time.c.s
+.PHONY : game_time.c.s
+
+game_views.o: game_views.c.o
+
+.PHONY : game_views.o
+
+# target to build an object file
+game_views.c.o:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/game_views.c.o
+.PHONY : game_views.c.o
+
+game_views.i: game_views.c.i
+
+.PHONY : game_views.i
+
+# target to preprocess a source file
+game_views.c.i:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/game_views.c.i
+.PHONY : game_views.c.i
+
+game_views.s: game_views.c.s
+
+.PHONY : game_views.s
+
+# target to generate assembly for a file
+game_views.c.s:
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/game/CMakeFiles/game.dir/build.make src/game/CMakeFiles/game.dir/game_views.c.s
+.PHONY : game_views.c.s
 
 # Help Target
 help:
@@ -269,21 +269,21 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... game"
 	@echo "... edit_cache"
-	@echo "... gameDisplay.o"
-	@echo "... gameDisplay.i"
-	@echo "... gameDisplay.s"
-	@echo "... gameLoop.o"
-	@echo "... gameLoop.i"
-	@echo "... gameLoop.s"
-	@echo "... gamePanels.o"
-	@echo "... gamePanels.i"
-	@echo "... gamePanels.s"
-	@echo "... gameTime.o"
-	@echo "... gameTime.i"
-	@echo "... gameTime.s"
-	@echo "... gameviews.o"
-	@echo "... gameviews.i"
-	@echo "... gameviews.s"
+	@echo "... game_display.o"
+	@echo "... game_display.i"
+	@echo "... game_display.s"
+	@echo "... game_loop.o"
+	@echo "... game_loop.i"
+	@echo "... game_loop.s"
+	@echo "... game_panels.o"
+	@echo "... game_panels.i"
+	@echo "... game_panels.s"
+	@echo "... game_time.o"
+	@echo "... game_time.i"
+	@echo "... game_time.s"
+	@echo "... game_views.o"
+	@echo "... game_views.i"
+	@echo "... game_views.s"
 .PHONY : help
 
 
@@ -295,6 +295,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/bigfoot/bomberman/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/bigfoot/bomberman_tmp2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

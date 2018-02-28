@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/game.dir/gameDisplay.c.o"
-  "CMakeFiles/game.dir/gameLoop.c.o"
-  "CMakeFiles/game.dir/gamePanels.c.o"
-  "CMakeFiles/game.dir/gameTime.c.o"
-  "CMakeFiles/game.dir/gameviews.c.o"
+  "CMakeFiles/game.dir/game_display.c.o"
+  "CMakeFiles/game.dir/game_loop.c.o"
+  "CMakeFiles/game.dir/game_panels.c.o"
+  "CMakeFiles/game.dir/game_time.c.o"
+  "CMakeFiles/game.dir/game_views.c.o"
   "libgame.pdb"
   "libgame.so"
 )

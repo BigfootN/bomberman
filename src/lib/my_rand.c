@@ -2,7 +2,7 @@
 
 /* 
  * permet de choisir la route (1-4) dans les routes dispo
- * continuer a marcher dans le meme sens (0-1)
+ * continuer a marcher dans le meme clock_direction (0-1)
  * cours après un joueur proche (0, 1)
  */
 int my_way_rand(int nbre)

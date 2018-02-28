@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bigfoot/bomberman
+CMAKE_SOURCE_DIR = /home/bigfoot/bomberman_tmp2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bigfoot/bomberman/build
+CMAKE_BINARY_DIR = /home/bigfoot/bomberman_tmp2/build
 
 # Include any dependencies generated for this target.
 include src/lib/CMakeFiles/lib.dir/depend.make
@@ -59,16 +59,16 @@ include src/lib/CMakeFiles/lib.dir/flags.make
 
 src/lib/CMakeFiles/lib.dir/my_put_nbr.c.o: src/lib/CMakeFiles/lib.dir/flags.make
 src/lib/CMakeFiles/lib.dir/my_put_nbr.c.o: ../src/lib/my_put_nbr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/lib/CMakeFiles/lib.dir/my_put_nbr.c.o"
-	cd /home/bigfoot/bomberman/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lib.dir/my_put_nbr.c.o   -c /home/bigfoot/bomberman/src/lib/my_put_nbr.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/lib/CMakeFiles/lib.dir/my_put_nbr.c.o"
+	cd /home/bigfoot/bomberman_tmp2/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lib.dir/my_put_nbr.c.o   -c /home/bigfoot/bomberman_tmp2/src/lib/my_put_nbr.c
 
 src/lib/CMakeFiles/lib.dir/my_put_nbr.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lib.dir/my_put_nbr.c.i"
-	cd /home/bigfoot/bomberman/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman/src/lib/my_put_nbr.c > CMakeFiles/lib.dir/my_put_nbr.c.i
+	cd /home/bigfoot/bomberman_tmp2/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman_tmp2/src/lib/my_put_nbr.c > CMakeFiles/lib.dir/my_put_nbr.c.i
 
 src/lib/CMakeFiles/lib.dir/my_put_nbr.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lib.dir/my_put_nbr.c.s"
-	cd /home/bigfoot/bomberman/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman/src/lib/my_put_nbr.c -o CMakeFiles/lib.dir/my_put_nbr.c.s
+	cd /home/bigfoot/bomberman_tmp2/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman_tmp2/src/lib/my_put_nbr.c -o CMakeFiles/lib.dir/my_put_nbr.c.s
 
 src/lib/CMakeFiles/lib.dir/my_put_nbr.c.o.requires:
 
@@ -83,16 +83,16 @@ src/lib/CMakeFiles/lib.dir/my_put_nbr.c.o.provides.build: src/lib/CMakeFiles/lib
 
 src/lib/CMakeFiles/lib.dir/my_putchar.c.o: src/lib/CMakeFiles/lib.dir/flags.make
 src/lib/CMakeFiles/lib.dir/my_putchar.c.o: ../src/lib/my_putchar.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/lib/CMakeFiles/lib.dir/my_putchar.c.o"
-	cd /home/bigfoot/bomberman/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lib.dir/my_putchar.c.o   -c /home/bigfoot/bomberman/src/lib/my_putchar.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object src/lib/CMakeFiles/lib.dir/my_putchar.c.o"
+	cd /home/bigfoot/bomberman_tmp2/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lib.dir/my_putchar.c.o   -c /home/bigfoot/bomberman_tmp2/src/lib/my_putchar.c
 
 src/lib/CMakeFiles/lib.dir/my_putchar.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lib.dir/my_putchar.c.i"
-	cd /home/bigfoot/bomberman/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman/src/lib/my_putchar.c > CMakeFiles/lib.dir/my_putchar.c.i
+	cd /home/bigfoot/bomberman_tmp2/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman_tmp2/src/lib/my_putchar.c > CMakeFiles/lib.dir/my_putchar.c.i
 
 src/lib/CMakeFiles/lib.dir/my_putchar.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lib.dir/my_putchar.c.s"
-	cd /home/bigfoot/bomberman/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman/src/lib/my_putchar.c -o CMakeFiles/lib.dir/my_putchar.c.s
+	cd /home/bigfoot/bomberman_tmp2/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman_tmp2/src/lib/my_putchar.c -o CMakeFiles/lib.dir/my_putchar.c.s
 
 src/lib/CMakeFiles/lib.dir/my_putchar.c.o.requires:
 
@@ -107,16 +107,16 @@ src/lib/CMakeFiles/lib.dir/my_putchar.c.o.provides.build: src/lib/CMakeFiles/lib
 
 src/lib/CMakeFiles/lib.dir/my_putstr.c.o: src/lib/CMakeFiles/lib.dir/flags.make
 src/lib/CMakeFiles/lib.dir/my_putstr.c.o: ../src/lib/my_putstr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object src/lib/CMakeFiles/lib.dir/my_putstr.c.o"
-	cd /home/bigfoot/bomberman/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lib.dir/my_putstr.c.o   -c /home/bigfoot/bomberman/src/lib/my_putstr.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object src/lib/CMakeFiles/lib.dir/my_putstr.c.o"
+	cd /home/bigfoot/bomberman_tmp2/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lib.dir/my_putstr.c.o   -c /home/bigfoot/bomberman_tmp2/src/lib/my_putstr.c
 
 src/lib/CMakeFiles/lib.dir/my_putstr.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lib.dir/my_putstr.c.i"
-	cd /home/bigfoot/bomberman/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman/src/lib/my_putstr.c > CMakeFiles/lib.dir/my_putstr.c.i
+	cd /home/bigfoot/bomberman_tmp2/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman_tmp2/src/lib/my_putstr.c > CMakeFiles/lib.dir/my_putstr.c.i
 
 src/lib/CMakeFiles/lib.dir/my_putstr.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lib.dir/my_putstr.c.s"
-	cd /home/bigfoot/bomberman/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman/src/lib/my_putstr.c -o CMakeFiles/lib.dir/my_putstr.c.s
+	cd /home/bigfoot/bomberman_tmp2/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman_tmp2/src/lib/my_putstr.c -o CMakeFiles/lib.dir/my_putstr.c.s
 
 src/lib/CMakeFiles/lib.dir/my_putstr.c.o.requires:
 
@@ -131,16 +131,16 @@ src/lib/CMakeFiles/lib.dir/my_putstr.c.o.provides.build: src/lib/CMakeFiles/lib.
 
 src/lib/CMakeFiles/lib.dir/my_rand.c.o: src/lib/CMakeFiles/lib.dir/flags.make
 src/lib/CMakeFiles/lib.dir/my_rand.c.o: ../src/lib/my_rand.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object src/lib/CMakeFiles/lib.dir/my_rand.c.o"
-	cd /home/bigfoot/bomberman/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lib.dir/my_rand.c.o   -c /home/bigfoot/bomberman/src/lib/my_rand.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object src/lib/CMakeFiles/lib.dir/my_rand.c.o"
+	cd /home/bigfoot/bomberman_tmp2/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lib.dir/my_rand.c.o   -c /home/bigfoot/bomberman_tmp2/src/lib/my_rand.c
 
 src/lib/CMakeFiles/lib.dir/my_rand.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lib.dir/my_rand.c.i"
-	cd /home/bigfoot/bomberman/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman/src/lib/my_rand.c > CMakeFiles/lib.dir/my_rand.c.i
+	cd /home/bigfoot/bomberman_tmp2/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman_tmp2/src/lib/my_rand.c > CMakeFiles/lib.dir/my_rand.c.i
 
 src/lib/CMakeFiles/lib.dir/my_rand.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lib.dir/my_rand.c.s"
-	cd /home/bigfoot/bomberman/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman/src/lib/my_rand.c -o CMakeFiles/lib.dir/my_rand.c.s
+	cd /home/bigfoot/bomberman_tmp2/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman_tmp2/src/lib/my_rand.c -o CMakeFiles/lib.dir/my_rand.c.s
 
 src/lib/CMakeFiles/lib.dir/my_rand.c.o.requires:
 
@@ -155,16 +155,16 @@ src/lib/CMakeFiles/lib.dir/my_rand.c.o.provides.build: src/lib/CMakeFiles/lib.di
 
 src/lib/CMakeFiles/lib.dir/my_strcat.c.o: src/lib/CMakeFiles/lib.dir/flags.make
 src/lib/CMakeFiles/lib.dir/my_strcat.c.o: ../src/lib/my_strcat.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object src/lib/CMakeFiles/lib.dir/my_strcat.c.o"
-	cd /home/bigfoot/bomberman/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lib.dir/my_strcat.c.o   -c /home/bigfoot/bomberman/src/lib/my_strcat.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object src/lib/CMakeFiles/lib.dir/my_strcat.c.o"
+	cd /home/bigfoot/bomberman_tmp2/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lib.dir/my_strcat.c.o   -c /home/bigfoot/bomberman_tmp2/src/lib/my_strcat.c
 
 src/lib/CMakeFiles/lib.dir/my_strcat.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lib.dir/my_strcat.c.i"
-	cd /home/bigfoot/bomberman/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman/src/lib/my_strcat.c > CMakeFiles/lib.dir/my_strcat.c.i
+	cd /home/bigfoot/bomberman_tmp2/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman_tmp2/src/lib/my_strcat.c > CMakeFiles/lib.dir/my_strcat.c.i
 
 src/lib/CMakeFiles/lib.dir/my_strcat.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lib.dir/my_strcat.c.s"
-	cd /home/bigfoot/bomberman/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman/src/lib/my_strcat.c -o CMakeFiles/lib.dir/my_strcat.c.s
+	cd /home/bigfoot/bomberman_tmp2/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman_tmp2/src/lib/my_strcat.c -o CMakeFiles/lib.dir/my_strcat.c.s
 
 src/lib/CMakeFiles/lib.dir/my_strcat.c.o.requires:
 
@@ -179,16 +179,16 @@ src/lib/CMakeFiles/lib.dir/my_strcat.c.o.provides.build: src/lib/CMakeFiles/lib.
 
 src/lib/CMakeFiles/lib.dir/my_strcmp.c.o: src/lib/CMakeFiles/lib.dir/flags.make
 src/lib/CMakeFiles/lib.dir/my_strcmp.c.o: ../src/lib/my_strcmp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object src/lib/CMakeFiles/lib.dir/my_strcmp.c.o"
-	cd /home/bigfoot/bomberman/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lib.dir/my_strcmp.c.o   -c /home/bigfoot/bomberman/src/lib/my_strcmp.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object src/lib/CMakeFiles/lib.dir/my_strcmp.c.o"
+	cd /home/bigfoot/bomberman_tmp2/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lib.dir/my_strcmp.c.o   -c /home/bigfoot/bomberman_tmp2/src/lib/my_strcmp.c
 
 src/lib/CMakeFiles/lib.dir/my_strcmp.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lib.dir/my_strcmp.c.i"
-	cd /home/bigfoot/bomberman/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman/src/lib/my_strcmp.c > CMakeFiles/lib.dir/my_strcmp.c.i
+	cd /home/bigfoot/bomberman_tmp2/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman_tmp2/src/lib/my_strcmp.c > CMakeFiles/lib.dir/my_strcmp.c.i
 
 src/lib/CMakeFiles/lib.dir/my_strcmp.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lib.dir/my_strcmp.c.s"
-	cd /home/bigfoot/bomberman/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman/src/lib/my_strcmp.c -o CMakeFiles/lib.dir/my_strcmp.c.s
+	cd /home/bigfoot/bomberman_tmp2/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman_tmp2/src/lib/my_strcmp.c -o CMakeFiles/lib.dir/my_strcmp.c.s
 
 src/lib/CMakeFiles/lib.dir/my_strcmp.c.o.requires:
 
@@ -203,16 +203,16 @@ src/lib/CMakeFiles/lib.dir/my_strcmp.c.o.provides.build: src/lib/CMakeFiles/lib.
 
 src/lib/CMakeFiles/lib.dir/my_strdup.c.o: src/lib/CMakeFiles/lib.dir/flags.make
 src/lib/CMakeFiles/lib.dir/my_strdup.c.o: ../src/lib/my_strdup.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object src/lib/CMakeFiles/lib.dir/my_strdup.c.o"
-	cd /home/bigfoot/bomberman/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lib.dir/my_strdup.c.o   -c /home/bigfoot/bomberman/src/lib/my_strdup.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object src/lib/CMakeFiles/lib.dir/my_strdup.c.o"
+	cd /home/bigfoot/bomberman_tmp2/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lib.dir/my_strdup.c.o   -c /home/bigfoot/bomberman_tmp2/src/lib/my_strdup.c
 
 src/lib/CMakeFiles/lib.dir/my_strdup.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lib.dir/my_strdup.c.i"
-	cd /home/bigfoot/bomberman/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman/src/lib/my_strdup.c > CMakeFiles/lib.dir/my_strdup.c.i
+	cd /home/bigfoot/bomberman_tmp2/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman_tmp2/src/lib/my_strdup.c > CMakeFiles/lib.dir/my_strdup.c.i
 
 src/lib/CMakeFiles/lib.dir/my_strdup.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lib.dir/my_strdup.c.s"
-	cd /home/bigfoot/bomberman/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman/src/lib/my_strdup.c -o CMakeFiles/lib.dir/my_strdup.c.s
+	cd /home/bigfoot/bomberman_tmp2/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman_tmp2/src/lib/my_strdup.c -o CMakeFiles/lib.dir/my_strdup.c.s
 
 src/lib/CMakeFiles/lib.dir/my_strdup.c.o.requires:
 
@@ -227,16 +227,16 @@ src/lib/CMakeFiles/lib.dir/my_strdup.c.o.provides.build: src/lib/CMakeFiles/lib.
 
 src/lib/CMakeFiles/lib.dir/my_string.c.o: src/lib/CMakeFiles/lib.dir/flags.make
 src/lib/CMakeFiles/lib.dir/my_string.c.o: ../src/lib/my_string.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object src/lib/CMakeFiles/lib.dir/my_string.c.o"
-	cd /home/bigfoot/bomberman/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lib.dir/my_string.c.o   -c /home/bigfoot/bomberman/src/lib/my_string.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object src/lib/CMakeFiles/lib.dir/my_string.c.o"
+	cd /home/bigfoot/bomberman_tmp2/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lib.dir/my_string.c.o   -c /home/bigfoot/bomberman_tmp2/src/lib/my_string.c
 
 src/lib/CMakeFiles/lib.dir/my_string.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lib.dir/my_string.c.i"
-	cd /home/bigfoot/bomberman/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman/src/lib/my_string.c > CMakeFiles/lib.dir/my_string.c.i
+	cd /home/bigfoot/bomberman_tmp2/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman_tmp2/src/lib/my_string.c > CMakeFiles/lib.dir/my_string.c.i
 
 src/lib/CMakeFiles/lib.dir/my_string.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lib.dir/my_string.c.s"
-	cd /home/bigfoot/bomberman/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman/src/lib/my_string.c -o CMakeFiles/lib.dir/my_string.c.s
+	cd /home/bigfoot/bomberman_tmp2/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman_tmp2/src/lib/my_string.c -o CMakeFiles/lib.dir/my_string.c.s
 
 src/lib/CMakeFiles/lib.dir/my_string.c.o.requires:
 
@@ -251,16 +251,16 @@ src/lib/CMakeFiles/lib.dir/my_string.c.o.provides.build: src/lib/CMakeFiles/lib.
 
 src/lib/CMakeFiles/lib.dir/my_strlen.c.o: src/lib/CMakeFiles/lib.dir/flags.make
 src/lib/CMakeFiles/lib.dir/my_strlen.c.o: ../src/lib/my_strlen.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object src/lib/CMakeFiles/lib.dir/my_strlen.c.o"
-	cd /home/bigfoot/bomberman/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lib.dir/my_strlen.c.o   -c /home/bigfoot/bomberman/src/lib/my_strlen.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object src/lib/CMakeFiles/lib.dir/my_strlen.c.o"
+	cd /home/bigfoot/bomberman_tmp2/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lib.dir/my_strlen.c.o   -c /home/bigfoot/bomberman_tmp2/src/lib/my_strlen.c
 
 src/lib/CMakeFiles/lib.dir/my_strlen.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lib.dir/my_strlen.c.i"
-	cd /home/bigfoot/bomberman/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman/src/lib/my_strlen.c > CMakeFiles/lib.dir/my_strlen.c.i
+	cd /home/bigfoot/bomberman_tmp2/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bigfoot/bomberman_tmp2/src/lib/my_strlen.c > CMakeFiles/lib.dir/my_strlen.c.i
 
 src/lib/CMakeFiles/lib.dir/my_strlen.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lib.dir/my_strlen.c.s"
-	cd /home/bigfoot/bomberman/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman/src/lib/my_strlen.c -o CMakeFiles/lib.dir/my_strlen.c.s
+	cd /home/bigfoot/bomberman_tmp2/build/src/lib && /usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bigfoot/bomberman_tmp2/src/lib/my_strlen.c -o CMakeFiles/lib.dir/my_strlen.c.s
 
 src/lib/CMakeFiles/lib.dir/my_strlen.c.o.requires:
 
@@ -299,8 +299,8 @@ src/lib/liblib.so: src/lib/CMakeFiles/lib.dir/my_string.c.o
 src/lib/liblib.so: src/lib/CMakeFiles/lib.dir/my_strlen.c.o
 src/lib/liblib.so: src/lib/CMakeFiles/lib.dir/build.make
 src/lib/liblib.so: src/lib/CMakeFiles/lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bigfoot/bomberman/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C shared library liblib.so"
-	cd /home/bigfoot/bomberman/build/src/lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lib.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bigfoot/bomberman_tmp2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C shared library liblib.so"
+	cd /home/bigfoot/bomberman_tmp2/build/src/lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lib.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/lib/CMakeFiles/lib.dir/build: src/lib/liblib.so
@@ -320,10 +320,10 @@ src/lib/CMakeFiles/lib.dir/requires: src/lib/CMakeFiles/lib.dir/my_strlen.c.o.re
 .PHONY : src/lib/CMakeFiles/lib.dir/requires
 
 src/lib/CMakeFiles/lib.dir/clean:
-	cd /home/bigfoot/bomberman/build/src/lib && $(CMAKE_COMMAND) -P CMakeFiles/lib.dir/cmake_clean.cmake
+	cd /home/bigfoot/bomberman_tmp2/build/src/lib && $(CMAKE_COMMAND) -P CMakeFiles/lib.dir/cmake_clean.cmake
 .PHONY : src/lib/CMakeFiles/lib.dir/clean
 
 src/lib/CMakeFiles/lib.dir/depend:
-	cd /home/bigfoot/bomberman/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bigfoot/bomberman /home/bigfoot/bomberman/src/lib /home/bigfoot/bomberman/build /home/bigfoot/bomberman/build/src/lib /home/bigfoot/bomberman/build/src/lib/CMakeFiles/lib.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bigfoot/bomberman_tmp2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bigfoot/bomberman_tmp2 /home/bigfoot/bomberman_tmp2/src/lib /home/bigfoot/bomberman_tmp2/build /home/bigfoot/bomberman_tmp2/build/src/lib /home/bigfoot/bomberman_tmp2/build/src/lib/CMakeFiles/lib.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/lib/CMakeFiles/lib.dir/depend
 

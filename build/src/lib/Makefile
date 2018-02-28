@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bigfoot/bomberman
+CMAKE_SOURCE_DIR = /home/bigfoot/bomberman_tmp2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bigfoot/bomberman/build
+CMAKE_BINARY_DIR = /home/bigfoot/bomberman_tmp2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/bigfoot/bomberman/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/bigfoot/bomberman/build/CMakeFiles /home/bigfoot/bomberman/build/src/lib/CMakeFiles/progress.marks
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/lib/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigfoot/bomberman/build/CMakeFiles 0
+	cd /home/bigfoot/bomberman_tmp2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/bigfoot/bomberman_tmp2/build/CMakeFiles /home/bigfoot/bomberman_tmp2/build/src/lib/CMakeFiles/progress.marks
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/lib/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bigfoot/bomberman_tmp2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/lib/clean
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/lib/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/lib/preinstall
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/lib/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/lib/preinstall
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/lib/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/bigfoot/bomberman/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/bigfoot/bomberman_tmp2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/lib/CMakeFiles/lib.dir/rule:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f CMakeFiles/Makefile2 src/lib/CMakeFiles/lib.dir/rule
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f CMakeFiles/Makefile2 src/lib/CMakeFiles/lib.dir/rule
 .PHONY : src/lib/CMakeFiles/lib.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ lib: src/lib/CMakeFiles/lib.dir/rule
 
 # fast build rule for target.
 lib/fast:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/build
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/build
 .PHONY : lib/fast
 
 my_put_nbr.o: my_put_nbr.c.o
@@ -131,7 +131,7 @@ my_put_nbr.o: my_put_nbr.c.o
 
 # target to build an object file
 my_put_nbr.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_put_nbr.c.o
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_put_nbr.c.o
 .PHONY : my_put_nbr.c.o
 
 my_put_nbr.i: my_put_nbr.c.i
@@ -140,7 +140,7 @@ my_put_nbr.i: my_put_nbr.c.i
 
 # target to preprocess a source file
 my_put_nbr.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_put_nbr.c.i
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_put_nbr.c.i
 .PHONY : my_put_nbr.c.i
 
 my_put_nbr.s: my_put_nbr.c.s
@@ -149,7 +149,7 @@ my_put_nbr.s: my_put_nbr.c.s
 
 # target to generate assembly for a file
 my_put_nbr.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_put_nbr.c.s
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_put_nbr.c.s
 .PHONY : my_put_nbr.c.s
 
 my_putchar.o: my_putchar.c.o
@@ -158,7 +158,7 @@ my_putchar.o: my_putchar.c.o
 
 # target to build an object file
 my_putchar.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_putchar.c.o
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_putchar.c.o
 .PHONY : my_putchar.c.o
 
 my_putchar.i: my_putchar.c.i
@@ -167,7 +167,7 @@ my_putchar.i: my_putchar.c.i
 
 # target to preprocess a source file
 my_putchar.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_putchar.c.i
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_putchar.c.i
 .PHONY : my_putchar.c.i
 
 my_putchar.s: my_putchar.c.s
@@ -176,7 +176,7 @@ my_putchar.s: my_putchar.c.s
 
 # target to generate assembly for a file
 my_putchar.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_putchar.c.s
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_putchar.c.s
 .PHONY : my_putchar.c.s
 
 my_putstr.o: my_putstr.c.o
@@ -185,7 +185,7 @@ my_putstr.o: my_putstr.c.o
 
 # target to build an object file
 my_putstr.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_putstr.c.o
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_putstr.c.o
 .PHONY : my_putstr.c.o
 
 my_putstr.i: my_putstr.c.i
@@ -194,7 +194,7 @@ my_putstr.i: my_putstr.c.i
 
 # target to preprocess a source file
 my_putstr.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_putstr.c.i
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_putstr.c.i
 .PHONY : my_putstr.c.i
 
 my_putstr.s: my_putstr.c.s
@@ -203,7 +203,7 @@ my_putstr.s: my_putstr.c.s
 
 # target to generate assembly for a file
 my_putstr.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_putstr.c.s
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_putstr.c.s
 .PHONY : my_putstr.c.s
 
 my_rand.o: my_rand.c.o
@@ -212,7 +212,7 @@ my_rand.o: my_rand.c.o
 
 # target to build an object file
 my_rand.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_rand.c.o
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_rand.c.o
 .PHONY : my_rand.c.o
 
 my_rand.i: my_rand.c.i
@@ -221,7 +221,7 @@ my_rand.i: my_rand.c.i
 
 # target to preprocess a source file
 my_rand.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_rand.c.i
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_rand.c.i
 .PHONY : my_rand.c.i
 
 my_rand.s: my_rand.c.s
@@ -230,7 +230,7 @@ my_rand.s: my_rand.c.s
 
 # target to generate assembly for a file
 my_rand.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_rand.c.s
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_rand.c.s
 .PHONY : my_rand.c.s
 
 my_strcat.o: my_strcat.c.o
@@ -239,7 +239,7 @@ my_strcat.o: my_strcat.c.o
 
 # target to build an object file
 my_strcat.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_strcat.c.o
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_strcat.c.o
 .PHONY : my_strcat.c.o
 
 my_strcat.i: my_strcat.c.i
@@ -248,7 +248,7 @@ my_strcat.i: my_strcat.c.i
 
 # target to preprocess a source file
 my_strcat.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_strcat.c.i
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_strcat.c.i
 .PHONY : my_strcat.c.i
 
 my_strcat.s: my_strcat.c.s
@@ -257,7 +257,7 @@ my_strcat.s: my_strcat.c.s
 
 # target to generate assembly for a file
 my_strcat.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_strcat.c.s
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_strcat.c.s
 .PHONY : my_strcat.c.s
 
 my_strcmp.o: my_strcmp.c.o
@@ -266,7 +266,7 @@ my_strcmp.o: my_strcmp.c.o
 
 # target to build an object file
 my_strcmp.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_strcmp.c.o
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_strcmp.c.o
 .PHONY : my_strcmp.c.o
 
 my_strcmp.i: my_strcmp.c.i
@@ -275,7 +275,7 @@ my_strcmp.i: my_strcmp.c.i
 
 # target to preprocess a source file
 my_strcmp.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_strcmp.c.i
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_strcmp.c.i
 .PHONY : my_strcmp.c.i
 
 my_strcmp.s: my_strcmp.c.s
@@ -284,7 +284,7 @@ my_strcmp.s: my_strcmp.c.s
 
 # target to generate assembly for a file
 my_strcmp.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_strcmp.c.s
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_strcmp.c.s
 .PHONY : my_strcmp.c.s
 
 my_strdup.o: my_strdup.c.o
@@ -293,7 +293,7 @@ my_strdup.o: my_strdup.c.o
 
 # target to build an object file
 my_strdup.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_strdup.c.o
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_strdup.c.o
 .PHONY : my_strdup.c.o
 
 my_strdup.i: my_strdup.c.i
@@ -302,7 +302,7 @@ my_strdup.i: my_strdup.c.i
 
 # target to preprocess a source file
 my_strdup.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_strdup.c.i
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_strdup.c.i
 .PHONY : my_strdup.c.i
 
 my_strdup.s: my_strdup.c.s
@@ -311,7 +311,7 @@ my_strdup.s: my_strdup.c.s
 
 # target to generate assembly for a file
 my_strdup.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_strdup.c.s
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_strdup.c.s
 .PHONY : my_strdup.c.s
 
 my_string.o: my_string.c.o
@@ -320,7 +320,7 @@ my_string.o: my_string.c.o
 
 # target to build an object file
 my_string.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_string.c.o
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_string.c.o
 .PHONY : my_string.c.o
 
 my_string.i: my_string.c.i
@@ -329,7 +329,7 @@ my_string.i: my_string.c.i
 
 # target to preprocess a source file
 my_string.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_string.c.i
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_string.c.i
 .PHONY : my_string.c.i
 
 my_string.s: my_string.c.s
@@ -338,7 +338,7 @@ my_string.s: my_string.c.s
 
 # target to generate assembly for a file
 my_string.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_string.c.s
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_string.c.s
 .PHONY : my_string.c.s
 
 my_strlen.o: my_strlen.c.o
@@ -347,7 +347,7 @@ my_strlen.o: my_strlen.c.o
 
 # target to build an object file
 my_strlen.c.o:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_strlen.c.o
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_strlen.c.o
 .PHONY : my_strlen.c.o
 
 my_strlen.i: my_strlen.c.i
@@ -356,7 +356,7 @@ my_strlen.i: my_strlen.c.i
 
 # target to preprocess a source file
 my_strlen.c.i:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_strlen.c.i
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_strlen.c.i
 .PHONY : my_strlen.c.i
 
 my_strlen.s: my_strlen.c.s
@@ -365,7 +365,7 @@ my_strlen.s: my_strlen.c.s
 
 # target to generate assembly for a file
 my_strlen.c.s:
-	cd /home/bigfoot/bomberman/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_strlen.c.s
+	cd /home/bigfoot/bomberman_tmp2/build && $(MAKE) -f src/lib/CMakeFiles/lib.dir/build.make src/lib/CMakeFiles/lib.dir/my_strlen.c.s
 .PHONY : my_strlen.c.s
 
 # Help Target
@@ -415,6 +415,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/bigfoot/bomberman/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/bigfoot/bomberman_tmp2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

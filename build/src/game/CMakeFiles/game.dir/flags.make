@@ -6,5 +6,5 @@ C_FLAGS = -Wall -Werror -Wextra -g -g -fPIC
 
 C_DEFINES = -Dgame_EXPORTS
 
-C_INCLUDES = -I/home/bigfoot/bomberman/src/include -I/usr/include/SDL2 -I/usr/include/SDL 
+C_INCLUDES = -I/home/bigfoot/bomberman_tmp2/src/include -I/home/bigfoot/bomberman_tmp2/src/kernel -I/home/bigfoot/bomberman_tmp2/src/network -I/home/bigfoot/bomberman_tmp2/src/ai -I/usr/include/SDL -I/usr/include/SDL2 
 

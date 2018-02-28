@@ -1,19 +1,19 @@
-#include "headers.h"
+#include "ai_bomb.h"
 
 // ajoute la bombe dans la liste des objects bombe et autres
 
-void initBomb(t_etat *etat, t_pions *player)
+void bomb_init(state_t *state, piece_t *player)
 {
-	t_pions *tmp;
+	piece_t *tmp;
 
 	if (player->bomb > 0)
 	{
-		tmp = addItemPions(etat, player->mappos); // creer un object bombe
+		tmp = add_pieces(state, player->map_pos); // creer un object bombe
 		tmp->proprio = player->id;
-		tmp->active = 1;
+		tmp->is_activ = 1;
 		tmp->degat = 5;
-		tmp->etat_requete = 1;
-		tmp->requete_1 = 2;
+		tmp->request_state = 1;
+		tmp->request_1 = 2;
 		// ici la vie de la bomb IMPORTANT
 		tmp->life = 10;
 		player->bomb--;
@@ -21,12 +21,12 @@ void initBomb(t_etat *etat, t_pions *player)
 }
 //la mets sur la carte
 
-void etatBomb(t_etat *etat, t_pions *pions)
+void bomb_state(state_t *state, piece_t *pieces)
 {
-	t_pions *tmp;
+	piece_t *tmp;
 	int tempsBombe;
 
-	tmp = pions;
+	tmp = pieces;
 	if (tmp->life >= 10 && tmp->life < 80)
 	{
 		tmp->life++;
@@ -36,16 +36,16 @@ void etatBomb(t_etat *etat, t_pions *pions)
 			tempsBombe = 1;
 		else if (tmp->life > 40 && 80 > tmp->life)
 			tempsBombe = 2;
-		else if (tmp->life > 80)
+		else
 			tempsBombe = 3;
-		etat->dataMap->bmmap[tmp->mappos.x][tmp->mappos.y] = tempsBombe;
+		state->map_info->penalty_bonus_map[tmp->map_pos.x][tmp->map_pos.y] = tempsBombe;
 	}
 	else if (tmp->life >= 80)// devient explosion
 	{
-		pions->requete_1 = 0;
-		pions->requete_2 = 0;
-		pions->etat_requete = 0;
-		etat->dataMap->bmmap[tmp->mappos.x][tmp->mappos.y] = 40; // numero faire exploser bomb
-		// deleteListChevron(pions);  // detruit la bomb
+		pieces->request_1 = 0;
+		pieces->request_2 = 0;
+		pieces->request_state = 0;
+		state->map_info->penalty_bonus_map[tmp->map_pos.x][tmp->map_pos.y] = 40; // numero faire exploser bomb
+		// delete_list_chevron(pieces);  // detruit la bomb
 	}
 }

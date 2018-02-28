@@ -1,26 +1,26 @@
-#include "headers.h"
+#include "network.h"
 
 // doit avoir l'adresse du serveur
 
-void tcpthreadClient(t_control *control)
+void tcp_thread_client(control_t *control)
 {
-    pthread_t p_thread;
+	pthread_t p_thread;
 
-    if (pthread_create(&p_thread, NULL, tcpClient, (void*) control) < 0)
-    {
-        perror("could not create thread");
-        return;
-    }
+	if (pthread_create(&p_thread, NULL, tcp_client, (void*) control) < 0)
+	{
+		perror("could not create thread");
+		return;
+	}
 }
 
-void tcpthreadServer(void *tmp)
+void tcp_thread_server(void *tmp)
 {
-    pthread_t p_thread;
+	pthread_t p_thread;
 
-    if (pthread_create(&p_thread, NULL, tcpServer, (void*) tmp) < 0)
-    {
-        perror("could not create thread");
-        return;
-    }
-    SDL_Delay(100);
+	if (pthread_create(&p_thread, NULL, tcp_server, (void*) tmp) < 0)
+	{
+		perror("could not create thread");
+		return;
+	}
+	SDL_Delay(100);
 }

@@ -9,9 +9,10 @@ add_library(lib SHARED
 	my_string.c
 	my_strlen.c)
 
+target_include_directories(lib PUBLIC ${CMAKE_SOURCE_DIR}/src/include/)
 
 get_directory_property(SDL_HEADERS DIRECTORY ${CMAKE_SOURCE_DIR} DEFINITION SDL_HEADERS)
 get_directory_property(SDL_LIB DIRECTORY ${CMAKE_SOURCE_DIR} DEFINITION SDL_LIB)
 
-target_include_directories(lib PUBLIC ${CMAKE_SOURCE_DIR}/src/include ${SDL_HEADERS})
+target_include_directories(lib PUBLIC ${CMAKE_SOURCE_DIR}/src/include/ ${SDL_HEADERS})
 target_link_libraries(lib ${SDL_LIB})

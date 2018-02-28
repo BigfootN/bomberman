@@ -37,14 +37,19 @@ void encart_clair(control_t* control)
 	else if (control->write_loop == 1)
 		SDL_SetRenderDrawColor(control->main_renderer, 210, 210, 150, 255);
 	SDL_RenderFillRect(control->main_renderer, &position);
-	write_text_51(control);
+	write_text(control);
 	SDL_RenderPresent(control->main_renderer);
+}
+
+void write_text(control_t* control)
+{
+	SDL_Rect renderQuad = {200, 298, strlen(control->network->server_addr) * 25, 60};
+	write_str(control, renderQuad, control->network->server_addr);
 }
 
 /*
  *  cree un encart blanc pour couvrir le win
  */
-
 void create_panel_white(control_t *control)
 {
 	SDL_Rect SrcR;
@@ -70,7 +75,6 @@ void create_panel(control_t *control)
 }
 
 // du haut de la win
-
 void create_banner(control_t *control)
 {
 	SDL_Rect SrcR;
@@ -79,54 +83,38 @@ void create_banner(control_t *control)
 	SrcR.h = 100;
 	SrcR.y = 0;
 	SrcR.x = 0;
-	SDL_Texture* logo = SDL_CreateTextureFromSurface(control->main_renderer, control->sprites->dbandeau);
-	SDL_RenderCopy(control->main_renderer, logo, &(control->sprites->clogo->img), &SrcR);
+	SDL_Texture* logo = SDL_CreateTextureFromSurface(control->main_renderer, control->sprites->banner_surf);
+	SDL_RenderCopy(control->main_renderer, logo, &(control->sprites->logo_coord->img), &SrcR);
 	SDL_DestroyTexture(logo);
 }
 
-void write_string(control_t *control, SDL_Rect renderQuad, char* string)
+void write_str(control_t *control, SDL_Rect renderQuad, char* string)
 {
-	SDL_Color couleurNoire = {0, 0, 0, 255};
-	TTF_Font *police = NULL;
+	SDL_Color colorNoire = {0, 0, 0, 255};
+	TTF_Font *font = NULL;
 
 	TTF_Init();
-	police = TTF_OpenFont("roboto/Roboto-Black.ttf", 24);
-	SDL_Surface* textSurface = TTF_RenderText_Solid(police, string, couleurNoire);
+	font = TTF_OpenFont("roboto/Roboto-Black.ttf", 24);
+	SDL_Surface* textSurface = TTF_RenderText_Solid(font, string, colorNoire);
 	SDL_Texture* text = SDL_CreateTextureFromSurface(control->main_renderer, textSurface);
 	SDL_FreeSurface(textSurface);
 	SDL_RenderCopy(control->main_renderer, text, NULL, &renderQuad);
 	SDL_DestroyTexture(text);
-	TTF_CloseFont(police);
-	TTF_Quit();
-}
-
-void write_text_51(control_t* control, SDL_Rect renderQuad, char *string)
-{
-	SDL_Color couleurNoire = {255, 255, 255, 255};
-	TTF_Font *police = NULL;
-
-	TTF_Init();
-	police = TTF_OpenFont("roboto/Roboto-Black.ttf", 24);
-	SDL_Surface* textSurface = TTF_RenderText_Blended(police, string, couleurNoire);
-	SDL_Texture* text = SDL_CreateTextureFromSurface(control->main_renderer, textSurface);
-	SDL_FreeSurface(textSurface);
-	SDL_RenderCopy(control->main_renderer, text, NULL, &renderQuad);
-	SDL_DestroyTexture(text);
-	TTF_CloseFont(police);
+	TTF_CloseFont(font);
 	TTF_Quit();
 }
 
 void display_button(control_t* control, SDL_Rect posdest)
 {
-	SDL_Texture* pTexture = SDL_CreateTextureFromSurface(control->main_renderer, control->sprites->dmenu);
-	SDL_RenderCopy(control->main_renderer, pTexture, &(control->sprites->cmenu[4].img), &posdest);
+	SDL_Texture* pTexture = SDL_CreateTextureFromSurface(control->main_renderer, control->sprites->menu_surf);
+	SDL_RenderCopy(control->main_renderer, pTexture, &(control->sprites->menu_coord[4].img), &posdest);
 	SDL_DestroyTexture(pTexture);
 }
 
 void display_background_button(control_t* control, SDL_Rect posdest)
 {
-	SDL_Texture* pTexture = SDL_CreateTextureFromSurface(control->main_renderer, control->sprites->dmenu);
-	SDL_RenderCopy(control->main_renderer, pTexture, &(control->sprites->cmenu[18].img), &posdest);
+	SDL_Texture* pTexture = SDL_CreateTextureFromSurface(control->main_renderer, control->sprites->menu_surf);
+	SDL_RenderCopy(control->main_renderer, pTexture, &(control->sprites->menu_coord[18].img), &posdest);
 	SDL_DestroyTexture(pTexture);
 }
 
@@ -139,15 +127,15 @@ void create_panel_wait(control_t *control)
 	SrcR.y = 100;
 	SrcR.x = 220;
 
-	SDL_Texture* pTexture = SDL_CreateTextureFromSurface(control->main_renderer, control->sprites->dattente);
-	SDL_RenderCopy(control->main_renderer, pTexture, &(control->sprites->cattente->img), &SrcR);
+	SDL_Texture* pTexture = SDL_CreateTextureFromSurface(control->main_renderer, control->sprites->wait_surf);
+	SDL_RenderCopy(control->main_renderer, pTexture, &(control->sprites->wait_coord->img), &SrcR);
 	SDL_DestroyTexture(pTexture);
 }
 
-int dbl_click(int cur_click_ticks, int last_click_ticks)
+int dbl_click(int CurrentClickTicks, int LastClickTicks)
 {
-	cur_click_ticks = SDL_GetTicks();
-	if (cur_click_ticks - last_click_ticks < 200)
+	CurrentClickTicks = SDL_GetTicks();
+	if (CurrentClickTicks - LastClickTicks < 200)
 		return 1;
 	return SDL_GetTicks();
 }

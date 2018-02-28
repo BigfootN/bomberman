@@ -1,43 +1,43 @@
-#include "headers.h"
+#include "ai_map.h"
 
-int serializeMap(t_etat *etat)
+int serialize_map(state_t *state)
 {
-    int row;
-    int col;
-    int decor;
-    int bm;
-    int action;
+	int row;
+	int col;
+	int decor;
+	int bm;
+	int action;
 
-    // if ((etat->msg = (t_svrSd*) malloc(sizeof (t_svrSd))) != NULL)
-    // {
-    etat->msg->pos[0] = etat->dataMap->pos.x;
-    etat->msg->pos[1] = etat->dataMap->pos.y;
-    row = 0;
-    while (row < etat->dataMap->pos.x)
-    {
-        col = 0;
-        while (col < etat->dataMap->pos.y)
-        {
-            decor = etat->dataMap->realmap[row][col]; // code des murs et autres
-            action = etat->dataMap->mapaction[row][col];
-            bm = etat->dataMap->bmmap[row][col];
+	// if ((state->msg = (server_t*) malloc(sizeof (server_t))) != NULL)
+	// {
+	state->msg->pos[0] = state->map_info->pos.x;
+	state->msg->pos[1] = state->map_info->pos.y;
+	row = 0;
+	while (row < state->map_info->pos.x)
+	{
+		col = 0;
+		while (col < state->map_info->pos.y)
+		{
+			decor = state->map_info->real_map[row][col]; // code des murs et autres
+			action = state->map_info->action_map[row][col];
+			bm = state->map_info->penalty_bonus_map[row][col];
 
-            if (etat->dataMap->wall[decor] != 1)
-            {
-                etat->msg->mapAction[row][col] = action;
-                etat->msg->mapBM[row][col] = bm;
-            }
-            else
-            {
-                etat->msg->mapAction[row][col] = -1;
-                etat->msg->mapBM[row][col] = -1;
-            }
-            etat->msg->mapDecor[row][col] = decor;
-            col++;
-        }
-        row++;
-    }
-    return (1);
-    //}
-    return (0);
+			if (state->map_info->wall[decor] != 1)
+			{
+				state->msg->map_action[row][col] = action;
+				state->msg->map_bitmap[row][col] = bm;
+			}
+			else
+			{
+				state->msg->map_action[row][col] = -1;
+				state->msg->map_bitmap[row][col] = -1;
+			}
+			state->msg->map_scenery[row][col] = decor;
+			col++;
+		}
+		row++;
+	}
+	return (1);
+	//}
+	return (0);
 }

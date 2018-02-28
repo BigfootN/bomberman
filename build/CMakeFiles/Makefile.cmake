@@ -12,7 +12,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.10.2/CMakeSystem.cmake"
   "../src/ai/CMakeLists.txt"
   "../src/game/CMakeLists.txt"
-  "../src/introduction/CMakeLists.txt"
+  "../src/intro/CMakeLists.txt"
   "../src/ipchoice/CMakeLists.txt"
   "../src/kernel/CMakeLists.txt"
   "../src/lib/CMakeLists.txt"
@@ -47,7 +47,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/kernel/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "src/introduction/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/intro/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/ipchoice/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/game/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/score/CMakeFiles/CMakeDirectoryInformation.cmake"
@@ -61,7 +61,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/bomberman.dir/DependInfo.cmake"
   "src/kernel/CMakeFiles/kernel.dir/DependInfo.cmake"
-  "src/introduction/CMakeFiles/introduction.dir/DependInfo.cmake"
+  "src/intro/CMakeFiles/introduction.dir/DependInfo.cmake"
   "src/ipchoice/CMakeFiles/ipchoice.dir/DependInfo.cmake"
   "src/game/CMakeFiles/game.dir/DependInfo.cmake"
   "src/score/CMakeFiles/score.dir/DependInfo.cmake"

@@ -1,4 +1,4 @@
-# Install script for directory: /home/bigfoot/bomberman
+# Install script for directory: /home/bigfoot/bomberman_tmp2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,15 +39,15 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/bigfoot/bomberman/build/src/kernel/cmake_install.cmake")
-  include("/home/bigfoot/bomberman/build/src/introduction/cmake_install.cmake")
-  include("/home/bigfoot/bomberman/build/src/ipchoice/cmake_install.cmake")
-  include("/home/bigfoot/bomberman/build/src/game/cmake_install.cmake")
-  include("/home/bigfoot/bomberman/build/src/score/cmake_install.cmake")
-  include("/home/bigfoot/bomberman/build/src/network/cmake_install.cmake")
-  include("/home/bigfoot/bomberman/build/src/ai/cmake_install.cmake")
-  include("/home/bigfoot/bomberman/build/src/pictures/cmake_install.cmake")
-  include("/home/bigfoot/bomberman/build/src/lib/cmake_install.cmake")
+  include("/home/bigfoot/bomberman_tmp2/build/src/kernel/cmake_install.cmake")
+  include("/home/bigfoot/bomberman_tmp2/build/src/intro/cmake_install.cmake")
+  include("/home/bigfoot/bomberman_tmp2/build/src/ipchoice/cmake_install.cmake")
+  include("/home/bigfoot/bomberman_tmp2/build/src/game/cmake_install.cmake")
+  include("/home/bigfoot/bomberman_tmp2/build/src/score/cmake_install.cmake")
+  include("/home/bigfoot/bomberman_tmp2/build/src/network/cmake_install.cmake")
+  include("/home/bigfoot/bomberman_tmp2/build/src/ai/cmake_install.cmake")
+  include("/home/bigfoot/bomberman_tmp2/build/src/pictures/cmake_install.cmake")
+  include("/home/bigfoot/bomberman_tmp2/build/src/lib/cmake_install.cmake")
 
 endif()
 
@@ -59,5 +59,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/bigfoot/bomberman/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/bigfoot/bomberman_tmp2/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
