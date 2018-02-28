@@ -270,7 +270,6 @@ typedef struct window_s {
 	p_fib pfunc;
 } window_t;
 
-
 int introduction_central(control_t*);
 int ip_choice_ip_central(control_t*);
 int central_game(control_t*);
