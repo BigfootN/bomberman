@@ -23,10 +23,10 @@ int init_sprites(control_t *control)
 
 	indexX = 0;
 	numtile = 0;
-	control->sprites->sprite_surf = IMG_Load("sprites/Game_sprites.png"); // charge l'image dans image_ram en RAM
+	control->sprites->sprite_surf = IMG_Load("../res/sprites/Game_sprites.png"); // charge l'image dans image_ram en RAM
 	if (control->sprites->sprite_surf == NULL)
 	{
-		printf(" Game_sprites.png introuvable !! \n");
+		printf("Game_sprites.png introuvable !! \n");
 		SDL_Quit();
 		return (0);
 	}

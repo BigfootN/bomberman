@@ -21,7 +21,7 @@ else (CMAKE_BUILD_TYPE STREQUAL "DEBUG")
 endif (CMAKE_BUILD_TYPE STREQUAL "DEBUG")
 
 
-pkg_check_modules(SDL sdl2 sdl SDL2_ttf SDL2_image)
+pkg_check_modules(SDL sdl2 SDL2_ttf SDL2_image)
 set(SDL_HEADERS ${SDL_INCLUDE_DIRS})
 set(SDL_LIB ${SDL_LIBRARIES})
 
@@ -33,12 +33,8 @@ add_subdirectory(${CMAKE_SOURCE_DIR}/src/score)
 add_subdirectory(${CMAKE_SOURCE_DIR}/src/network)
 add_subdirectory(${CMAKE_SOURCE_DIR}/src/ai)
 add_subdirectory(${CMAKE_SOURCE_DIR}/src/pictures)
-#add_subdirectory(${CMAKE_SOURCE_DIR}/src/lib)
-#add_subdirectory(${CMAKE_SOURCE_DIR}/src/memory)
 
 message(STATUS ${SDL_INCLUDE_DIRS})
-
-#include_directories(${SDL_INCLUDE_DIRS})
 
 add_executable(bomberman
 	${CMAKE_SOURCE_DIR}/src/bomberman.c
@@ -61,3 +57,5 @@ target_link_libraries(bomberman
 	ai
 	pictures
 	)
+
+INSTALL(${CMAKE_SOURCE_DIR}/res/ DESTINATION /usr/share/bomberman/res)
