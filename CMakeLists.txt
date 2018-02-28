@@ -57,5 +57,3 @@ target_link_libraries(bomberman
 	ai
 	pictures
 	)
-
-INSTALL(${CMAKE_SOURCE_DIR}/res/ DESTINATION /usr/share/bomberman/res)
