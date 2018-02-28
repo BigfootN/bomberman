@@ -276,12 +276,12 @@ typedef struct window_s {
   int central_game(control_t*);
   int scores_central(control_t*);
   */
-static const window_t l_bib[] = {
-	{1, &intro_central},
-	{2, &ip_choice_central},
-	{3, &central_game},
-	{4, &scores_central},
-	{0, NULL}
-};
+/*static const window_t l_bib[] = {
+  {1, &intro_central},
+  {2, &ip_choice_central},
+  {3, &central_game},
+  {4, &scores_central},
+  {0, NULL}
+  };**/
 
 #endif

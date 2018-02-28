@@ -1,5 +1,17 @@
 #include "inits.h"
 #include "sprites.h"
+#include "score_views.h"
+#include "game_views.h"
+#include "intro_views.h"
+#include "choice_ip_views.h"
+
+static const window_t l_bib[] = {
+	{1, &intro_central},
+	{2, &ip_choice_central},
+	{3, &central_game},
+	{4, &scores_central},
+	{0, NULL}
+};
 
 int main()
 {

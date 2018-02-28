@@ -44,6 +44,13 @@ add_executable(bomberman
 	${CMAKE_SOURCE_DIR}/src/bomberman.c
 	)
 
+target_include_directories(bomberman PUBLIC
+	${CMAKE_SOURCE_DIR}/src/score
+	${CMAKE_SOURCE_DIR}/src/game
+	${CMAKE_SOURCE_DIR}/src/intro
+	${CMAKE_SOURCE_DIR}/src/ipchoice
+	)
+
 target_link_libraries(bomberman
 	kernel
 	introduction
