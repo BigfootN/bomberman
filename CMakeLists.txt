@@ -33,7 +33,7 @@ add_subdirectory(${CMAKE_SOURCE_DIR}/src/score)
 add_subdirectory(${CMAKE_SOURCE_DIR}/src/network)
 add_subdirectory(${CMAKE_SOURCE_DIR}/src/ai)
 add_subdirectory(${CMAKE_SOURCE_DIR}/src/pictures)
-add_subdirectory(${CMAKE_SOURCE_DIR}/src/lib)
+#add_subdirectory(${CMAKE_SOURCE_DIR}/src/lib)
 #add_subdirectory(${CMAKE_SOURCE_DIR}/src/memory)
 
 message(STATUS ${SDL_INCLUDE_DIRS})

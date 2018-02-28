@@ -9,8 +9,8 @@
 #include "game_time.h"
 #include "tcp_client.h"
 
-int recv_signal(const int, void*);
 void check_answer_serv(control_t*);
+int recv_signal(const int, void*);
 void start_game(control_t*);
 
 #endif

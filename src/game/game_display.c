@@ -15,7 +15,7 @@ int recv_signal(const int signal, void *ptr)
 	return (0);
 }
 
-void ckeck_answer_serv(control_t* control)
+void check_answer_serv(control_t* control)
 {
 	server_t *requete;
 
