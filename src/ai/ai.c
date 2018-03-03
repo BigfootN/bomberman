@@ -1,14 +1,12 @@
 #include "ai.h"
 #include "file.h"
 
-
 /*
  * initilaise la partie
  */
 
-void *central_ai(void *tmp)
-{
-	state_t *state;
+void* central_ai(void* tmp) {
+	state_t* state;
 	pthread_detach(pthread_self());
 
 	if ((state = (state_t*) malloc(sizeof (state_t))) == NULL)
@@ -24,15 +22,13 @@ void *central_ai(void *tmp)
 /*
  * boucle de la IA
  */
-int ai_loop(state_t *state)
-{
+int ai_loop(state_t* state) {
 	int pause;
 
 	pause = 1;
-	while (pause)
-	{
+	while (pause) {
 		SDL_Delay(100);
-		check_requesplayer_t(state);
+		check_request_player(state);
 		check_all_pieces(state);
 		init_bomb_map(state);
 		check_counter(state);
