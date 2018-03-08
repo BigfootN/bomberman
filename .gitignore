@@ -1,4 +1,5 @@
 build/*
-build/
-/build/*
-compile_commands.json
+		build/
+		/build/*
+		compile_commands.json
+		.idea

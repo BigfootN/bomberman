@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/home/bigfoot/bomberman/server/build/src",
-  "command": "/usr/bin/gcc -Dbmanserver_EXPORTS  -Wall -Werror -Wextra -g -g -fPIC   -o CMakeFiles/bmanserver.dir/server.c.o   -c /home/bigfoot/bomberman/server/src/server.c",
-  "file": "/home/bigfoot/bomberman/server/src/server.c"
-}
-]
