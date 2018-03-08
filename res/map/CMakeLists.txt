@@ -1,0 +1,1 @@
+configure_file(carte1.lvl carte1.lvl COPYONLY)
