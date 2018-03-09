@@ -1,7 +1,7 @@
 CC = gcc
 NAME = bomberman
 SRCDIR1 = 01_main
-SRCDIR2 = 02_kernel
+SRCDIR2 = 02_noyeau
 SRCDIR3 = 03_introduction
 SRCDIR4 = 04_ipchoice
 SRCDIR5 = 05_game
@@ -13,7 +13,7 @@ SRCDIR10 = 06_score
 LIBDIR = tmp
 HEADDIR = 00_headers
 GLLIBS = -lSDL2 -lSDL2_image -lSDL2_ttf -pthread
-CFLAGS =  -I $(HEADDIR) -W -Wall -Wextra -Werror
+CFLAGS =  -pg -I $(HEADDIR) -W -Wall -Wextra -Werror
 
 SRC1 = $(wildcard $(SRCDIR1)/*.c)
 SRC2 = $(wildcard $(SRCDIR2)/*.c)
@@ -41,27 +41,30 @@ all: $(NAME)
 $(NAME): $(OBJ1) $(OBJ2) $(OBJ3) $(OBJ4) $(OBJ5) $(OBJ6) $(OBJ7) $(OBJ8) $(OBJ9) $(OBJ10)
 	$(CC) -o $@ $^ $(CFLAGS) $(GLLIBS)
 $(LIBDIR)/%.o: $(SRCDIR1)/%.c
-	 $(CC) -o $@ -c $< $(CFLAGS)
+	$(CC) -o $@ -c $< $(CFLAGS)
 $(LIBDIR)/%.o: $(SRCDIR2)/%.c
-	 $(CC) -o $@ -c $< $(CFLAGS)
+	$(CC) -o $@ -c $< $(CFLAGS)
 $(LIBDIR)/%.o: $(SRCDIR3)/%.c
-	 $(CC) -o $@ -c $< $(CFLAGS)
+	$(CC) -o $@ -c $< $(CFLAGS)
 $(LIBDIR)/%.o: $(SRCDIR4)/%.c
-	 $(CC) -o $@ -c $< $(CFLAGS)
+	$(CC) -o $@ -c $< $(CFLAGS)
 $(LIBDIR)/%.o: $(SRCDIR5)/%.c
-	 $(CC) -o $@ -c $< $(CFLAGS)
+	$(CC) -o $@ -c $< $(CFLAGS)
 $(LIBDIR)/%.o: $(SRCDIR6)/%.c
-	 $(CC) -o $@ -c $< $(CFLAGS)
+	$(CC) -o $@ -c $< $(CFLAGS)
 $(LIBDIR)/%.o: $(SRCDIR7)/%.c
-	 $(CC) -o $@ -c $< $(CFLAGS)
+	$(CC) -o $@ -c $< $(CFLAGS)
 $(LIBDIR)/%.o: $(SRCDIR8)/%.c
-	 $(CC) -o $@ -c $< $(CFLAGS)
+	$(CC) -o $@ -c $< $(CFLAGS)
 $(LIBDIR)/%.o: $(SRCDIR9)/%.c
-	 $(CC) -o $@ -c $< $(CFLAGS)
+	$(CC) -o $@ -c $< $(CFLAGS)
 $(LIBDIR)/%.o: $(SRCDIR10)/%.c
-	 $(CC) -o $@ -c $< $(CFLAGS)
+	$(CC) -o $@ -c $< $(CFLAGS)
+
 .PHONY: clean fclean
+
 clean:
 	rm $(LIBDIR)/*.o
+
 fclean: clean
 	rm $(BINDIR)/*
