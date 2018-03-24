@@ -2,6 +2,10 @@ cmake_minimum_required(VERSION 3.0)
 project(bomberman C)
 INCLUDE(FindPkgConfig)
 
+IF (CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows")
+	add_definitions (-DIS_WINDOWS)
+ENDIF (CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows")
+
 set(CMAKE_C_FLAGS "-pg -g -Wall -Werror -Wextra")
 
 set(KERNEL_SRC
@@ -76,6 +80,7 @@ set(LIBS_SRC
 	${CMAKE_SOURCE_DIR}/src/21_libs/my_strdup.c
 	${CMAKE_SOURCE_DIR}/src/21_libs/my_string.c
 	${CMAKE_SOURCE_DIR}/src/21_libs/my_strlen.c
+	${CMAKE_SOURCE_DIR}/src/21_libs/threads.c
 	)
 
 add_subdirectory(res/map)
