@@ -40,7 +40,7 @@ void select_data(t_control* control)
 {
     char *tmp;
     tmp = (char*) malloc(sizeof (char*)*16);
-    bzero(tmp, 16);
+    my_bzero(tmp, 16);
 
     tmp = control->network->ip_serveur;
     //control->network->ipserveur = writeData(event, tmp);

@@ -8,6 +8,7 @@ add_library(libs SHARED
 	my_strdup.c
 	my_string.c
 	my_strlen.c
+		my_bzero.c
 	)
 
 target_include_directories(libs PUBLIC

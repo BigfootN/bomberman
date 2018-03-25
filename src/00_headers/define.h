@@ -18,8 +18,8 @@
 #define HEIGHT_TILE 40
 #define WIDTH_TILE 40
 
-#if defined _WIN32_, _WIN64_
-#define REP_SPRITES "res\\/sprites\\/"
+#if defined WIN32, WIN64
+#define REP_SPRITES "res\/sprites\/"
 #define REP_MAP "res\\/map\\/"
 #define REP_TTF "res\\/roboto\\/"
 #elif defined __linux__

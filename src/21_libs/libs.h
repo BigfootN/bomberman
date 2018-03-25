@@ -24,5 +24,7 @@ void my_putstr(const char *str);
 int my_way_rand(int nbre);
 int my_rand(int nbre);
 int my_rand_binaire();
+void	my_bzero(void *s, size_t n);
+void	*my_memset(void *b, int c, size_t len);
 
 #endif //BOMBERMAN_LIBS_H

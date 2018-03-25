@@ -27,8 +27,8 @@ static char *my_putwnbr(int n, int index)
     indexb = 0;
     tmp = (char*) malloc(sizeof (char) * (index + 1));
     number = (char*) malloc(sizeof (char) * (index + 1));
-    bzero(number, index + 1);
-    bzero(tmp, index + 1);
+    my_bzero(number, index + 1);
+    my_bzero(tmp, index + 1);
 
     if (n < 0)
         n = n * (-1);

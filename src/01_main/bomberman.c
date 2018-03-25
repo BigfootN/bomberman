@@ -20,7 +20,7 @@ static const t_window l_bib[] = {
         {0, NULL}
 };
 
-int main()
+int main(int argc, char *argv[])
 {
     int choixpage;
     int index;

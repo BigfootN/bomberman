@@ -23,12 +23,14 @@
 #include <string.h>
 #include <strings.h>
 
-#if defined _WIN32_ || defined _WIN64_
+#if defined WIN32 || defined WIN64
 //pour les sockets
 #include <winsock2.h>
 typedef int socklen_t;
 //pour les threads
 #include <windows.h>
+#include <pthread.h>
+#include <sys/time.h>
 #define psleep(sec) Sleep ((sec) * 1000)
 #elif defined __linux__
 // annexe

@@ -28,7 +28,7 @@ char *create_directory_file(char const *name, int directory) {
 //    int index;
     int total_char;
 
-    total_char = (int) my_strlen(REP_SPRITES) + (int) my_strlen(name) + 1;
+    total_char = (int) my_strlen(REP_SPRITES) + (int) my_strlen(name) + 2;
     if ((name_directory = (char *) malloc(sizeof(char) * total_char)) == NULL)
         return NULL;
 //    index = 0;
@@ -60,7 +60,6 @@ int init_sprites(t_control *control) {
     indexX = 0;
     numtile = 0;
     name_image = create_directory_file("Game_sprites.png", 1);
-
 
     control->sprites->dsprites = IMG_Load(name_image); // charge l'image dans image_ram en RAM
     if (control->sprites->dsprites == NULL) {

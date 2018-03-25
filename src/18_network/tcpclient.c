@@ -41,7 +41,7 @@ int prepare_requet_client(t_control *control, int idclient, int commandService, 
  */
 void *tcp_client(void *tmp)
 {
-    t_svr_sd *requete;
+ /*   t_svr_sd *requete;
     struct sockaddr_in server;
     t_control *control = (t_control*) tmp;
 
@@ -77,6 +77,6 @@ void *tcp_client(void *tmp)
         }
     }
     puts("client reception close\n");
-    pthread_exit(NULL);
+    pthread_exit(NULL);*/
 }
 

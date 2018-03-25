@@ -60,7 +60,7 @@ char * delete_data(t_control* control, SDL_Event event)
     int index;
     char *tmp;
     tmp = (char*) malloc(sizeof (char*)*16);
-    bzero(tmp, 16);
+    my_bzero(tmp, 16);
     // event.key.keysym.scancode == SDLK_BACKSPACE ||
     tmp = control->network->ip_serveur;
     index = my_strlen(tmp);

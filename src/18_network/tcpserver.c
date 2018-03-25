@@ -70,12 +70,12 @@ void *server_receive_from_client(void *tmp)
     if ((requete = (t_clt_sd*) malloc(sizeof (t_clt_sd))) == NULL)
         return (NULL);
 
-    while (stop_server && ((read_size = recv(sock, requete, sizeof (t_clt_sd), 0)) > 0))
+ /*   while (stop_server && ((read_size = recv(sock, requete, sizeof (t_clt_sd), 0)) > 0))
     {
         if (requete->commandservice == 1 && stop_server == 1)
             add_client(etat, requete, sock);
 
-        else if (requete->commandservice == 50) /* deconnect le client */
+        else if (requete->commandservice == 50) // deconnect le client
         {
             stop_server = 0;
             shutdown(sock, 2);
@@ -83,8 +83,8 @@ void *server_receive_from_client(void *tmp)
         }
         else if (stop_server == 1)
             dispatchRequete(etat, requete);
-        pthread_cond_signal(&cv);  /* MODIF AJOUT MUTEXT ET  pthread_cond_signal */
-    }
+        pthread_cond_signal(&cv);  // MODIF AJOUT MUTEXT ET  pthread_cond_signal
+    }*/
     if (read_size == -1)
         perror("recv failed");
     puts("client disconnet\n");
@@ -143,7 +143,7 @@ void *tcp_server(void *tmp)
     int local_compteur;
 
     //crée la socket du serveur
-    etat->sock_server = socket(AF_INET, SOCK_STREAM, 0);
+  /*  etat->sock_server = socket(AF_INET, SOCK_STREAM, 0);
     if (etat->sock_server == -1)
         return (0);
 
@@ -214,5 +214,5 @@ void *tcp_server(void *tmp)
         perror("accept failed");
         return (NULL);
     }
-    pthread_exit(NULL);
+    pthread_exit(NULL);*/
 }
