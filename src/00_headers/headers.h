@@ -19,8 +19,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <dirent.h> // share file
-
-#include <string.h>
 #include <strings.h>
 
 #if defined WIN32 || defined WIN64

@@ -19,11 +19,13 @@ void prepa_counter_player(t_etat *etat, t_player *player)
 {
     if (player->player != NULL && etat->msg != NULL)
     {
-        etat->msg->state_player.score = player->player->score;
-        etat->msg->state_player.bomb = player->player->bomb;
-        etat->msg->state_player.speed = player->player->speed;
-        etat->msg->state_player.life = player->player->life;
+        t_pions *pion;
+        pion = player->player;
+        etat->msg->state_player->score = pion->score;
+        etat->msg->state_player->bomb = pion->bomb;
+        etat->msg->state_player->speed = pion->speed;
+        etat->msg->state_player->life =pion->life;
         if(etat->partie == 5)/* prend en compte si gagant ou perdant */
-          etat->msg->state_player.win = player->player->win;
+          etat->msg->state_player->win = pion->win;
     }
 }

@@ -40,19 +40,18 @@ void create_players_pions(t_etat *etat) {
             mappos.y = 0;
             player->player = (t_pions *) malloc(sizeof(t_pions));
             player->player = add_item_pions(etat, mappos);
-            player->player->speed = 0;
-            //player->player = tmp;
-            /* tmp->bomb = 5;
-             tmp->life = 20;
-             tmp->speed = 1;
-             tmp->score = 0;
-             tmp->active = 1;*/
-            player->player->id = player->id_connexion;
-            player->player->type = 1;
-            player->player->life = 20;
+            t_pions *pions = player->player;
+            pions->speed = 0;
+            pions->id = player->id_connexion;
+            pions->type = 1;
+            pions->life = 20;
+            pions->sens = my_strdup("RIGHT");
             init_gamers(etat, player->player);
-            player->player->active = 1;
+            pions->active = 1;
             player->active = 1;
+            player->etat_requete = 0;
+            player->requete_1 = 0;
+            player->requete_2 = 0;
             send_requete_for_uniq_player(etat, player->socket_player, 1, player->id_connexion);
         }
         player = player->next;
@@ -135,8 +134,9 @@ void update_score_user(t_etat *etat, SDL_Rect posMap) {
     if (userId != 0) {
         while (player != NULL) {
             if (player->player != NULL) {
-                if (player->player->id == userId)
-                    player->player->score += 1;
+                t_pions *pion = player->player;
+                if (pion->id == userId)
+                    pion->score += 1;
             }
             player = player->next;
         }
@@ -156,7 +156,8 @@ int check_requete_player(t_etat *etat) {
 
     while (player != NULL) {
         if (player->player != NULL) {
-            if (player->player->active == 1) {
+            t_pions *pion = player->player;
+            if (pion->active == 1) {
                 tmp = player->player;
                 //speed = tmp->speed;
                 tmp->requete_1 = player->requete_1;

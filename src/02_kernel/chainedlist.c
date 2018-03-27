@@ -19,6 +19,10 @@ t_pions *add_item_pions(t_etat *etat, SDL_Rect mappos)
         return (NULL);
     tmp->id = 0;
     tmp->active = 0;
+    tmp->mappos.x = 0;
+    tmp->mappos.y = 0;
+    tmp->mappos.w = 0;
+    tmp->mappos.h = 0;
     tmp->mappos = mappos;
     tmp->life = 0;
     tmp->bomb = 5;
@@ -64,8 +68,10 @@ t_pions *delete_list_chevron(t_pions *tmp)
         //    free(tmp);
     else if (tmp->next != NULL && tmp->prev != NULL)
     {
-        tmp->prev->next = tmp->next;
-        tmp->next->prev = tmp->prev;
+        if( tmp->prev->next != NULL)
+            tmp->prev->next = tmp->next;
+        if( tmp->next->prev != NULL)
+            tmp->next->prev = tmp->prev;
     }
     if (tmp->prev != NULL)
         return (tmp->prev->next);

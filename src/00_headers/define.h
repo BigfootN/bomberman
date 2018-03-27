@@ -5,6 +5,8 @@
 #ifndef BOMBERMAN_DEFINE_H
 #define BOMBERMAN_DEFINE_H
 
+#define SDL_MAIN_HANDLED
+
 // fenetre principale
 #define WINDOW_WIDTH 840
 #define WINDOW_HEIGHT 640 //473
@@ -18,15 +20,15 @@
 #define HEIGHT_TILE 40
 #define WIDTH_TILE 40
 
-#if defined WIN32, WIN64
+//#if defined WIN32, defined WIN64
 #define REP_SPRITES "res\\sprites\\"
-#define REP_MAP "res\\map\\"
-#define REP_TTF "res\\roboto\\"
-#elif defined __linux__
-#define REP_SPRITES "res/sprites/"
 #define REP_MAP "res/map/"
 #define REP_TTF "res/roboto/"
-#endif
+//#elif defined __linux__
+//#define REP_SPRITES "res/sprites/"
+//#define REP_MAP "res/map/"
+//#define REP_TTF "res/roboto/"
+//#endif
 
 #define SIGNALWHATEVER 45
 

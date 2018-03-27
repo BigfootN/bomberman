@@ -24,6 +24,8 @@ void sprite_panel_introduction(t_control* control)
     SDL_Rect SrcR;
     SrcR.w = WINDOW_WIDTH;
     SrcR.h = WINDOW_HEIGHT - 64;
+    SrcR.x = 0;
+    SrcR.y = 0;
 
     SDL_Texture* logo = SDL_CreateTextureFromSurface(control->main_renderer, control->sprites->dlogo);
     SDL_RenderCopy(control->main_renderer, logo, &(control->sprites->clogo->img), &SrcR);

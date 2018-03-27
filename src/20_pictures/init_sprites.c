@@ -59,7 +59,8 @@ int init_sprites(t_control *control) {
 
     indexX = 0;
     numtile = 0;
-    name_image = create_directory_file("Game_sprites.png", 1);
+    name_image = create_directory_file("Game_sprites.gif", 1);
+
 
     control->sprites->dsprites = IMG_Load(name_image); // charge l'image dans image_ram en RAM
     if (control->sprites->dsprites == NULL) {
@@ -67,6 +68,7 @@ int init_sprites(t_control *control) {
         SDL_Quit();
         return (0);
     }
+
     control->sprites->csprites = (t_coord *) malloc(sizeof(t_coord) * 31);
     while (indexX < 4) {
         indexY = 0;
@@ -90,10 +92,10 @@ int init_menu(t_control *control) {
     int indexX;
     char *name_image;
 
-    name_image = create_directory_file("menu1.png", 1);
+    name_image = create_directory_file("menu1.gif", 1);
     control->sprites->dmenu = IMG_Load(name_image); // charge l'image dans image_ram en RAM
     if (control->sprites->dmenu == NULL) {
-        my_putstr("menu1.png image introuvable !! \n");
+        my_putstr("menu1.gif image introuvable !! \n");
         SDL_Quit();
         return (0);
     }
@@ -149,10 +151,10 @@ int init_menu(t_control *control) {
 int init_bandeau(t_control *control) {
     char *name_image;
 
-    name_image = create_directory_file("SuperBombermanR.jpg", 1);
+    name_image = create_directory_file("SuperBombermanR.gif", 1);
     control->sprites->dlogo = IMG_Load(name_image);
     if (control->sprites->dlogo == NULL) {
-        my_putstr("SuperBombermanR.jpg image introuvable !! \n");
+        my_putstr("SuperBombermanR.gif image introuvable !! \n");
         SDL_Quit();
         return (0);
     }
@@ -167,10 +169,10 @@ int init_bandeau(t_control *control) {
 int init_intro(t_control *control) {
     char *name_image;
 
-    name_image = create_directory_file("banderole.png", 1);
+    name_image = create_directory_file("banderole.gif", 1);
     control->sprites->dbandeau = IMG_Load(name_image);
     if (control->sprites->dbandeau == NULL) {
-        my_putstr("banderole.png image introuvable !! \n");
+        my_putstr("banderole.gif image introuvable !! \n");
         SDL_Quit();
         return (0);
     }
@@ -204,10 +206,10 @@ int init_police(t_control *control) {
 int init_attente(t_control *control) {
     char *name_image;
 
-    name_image = create_directory_file("attente2.png", 1);
+    name_image = create_directory_file("attente2.gif", 1);
     control->sprites->dattente = IMG_Load(name_image);
     if (control->sprites->dattente == NULL) {
-        my_putstr("attente2.png image introuvable !! \n");
+        my_putstr("attente2.gif image introuvable !! \n");
         SDL_Quit();
         return (0);
     }
@@ -222,10 +224,10 @@ int init_attente(t_control *control) {
 int init_panneau_resultat(t_control *control) {
     char *name_image;
 
-    name_image = create_directory_file("panneau_final2.png", 1);
+    name_image = create_directory_file("panneau_final2.gif", 1);
     control->sprites->dresultat = IMG_Load(name_image);
     if (control->sprites->dresultat == NULL) {
-        my_putstr("panneau_final2.png image introuvable !! \n");
+        my_putstr("panneau_final2.gif image introuvable !! \n");
         SDL_Quit();
         return (0);
     }
@@ -244,10 +246,10 @@ int init_panneau_resultat(t_control *control) {
 int init_manche(t_control *control) {
     char *name_image;
 
-    name_image = create_directory_file("waitset.png", 1);
+    name_image = create_directory_file("waitset.gif", 1);
     control->sprites->dwaitset = IMG_Load(name_image);
     if (control->sprites->dwaitset == NULL) {
-        my_putstr("waitset.png image introuvable !! \n");
+        my_putstr("waitset.gif image introuvable !! \n");
         SDL_Quit();
         return (0);
     }

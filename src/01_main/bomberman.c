@@ -26,6 +26,9 @@ int main(int argc, char *argv[])
     int index;
     t_control *control;
 
+    if(argc == 0 && sizeof(*argv) > 0)
+        return 0;
+
     control = init_control(); /* initialise les structures */
     if (((choixpage = central_init_sprites(control))) > 0)  /* mets en memoire les divers parties des elements graphiques du jeux */
     {

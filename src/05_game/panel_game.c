@@ -191,18 +191,18 @@ void write_panel_score(t_control *control, t_svr_sd *requete) {
     int number;
     char buf[255];
 
-    number = requete->state_player.score;
+    number = requete->state_player->score;
     sprintf(buf, "%d", number);
 
     SDL_Rect renderQuad = {(15 * 40) + 100, (int) (32 * 1.8) + 70, (int) my_strlen(buf) * 18, 50};
     write_string(control, renderQuad, buf);
 
-    number = requete->state_player.bomb;
+    number = requete->state_player->bomb;
     sprintf(buf, "%d", number);
     SDL_Rect renderQuad2 = {(15 * 40) + 100, (int) (32 * 1.8) + 180, (int) my_strlen(buf) * 18, 50};
     write_string(control, renderQuad2, buf);
 
-    number = requete->state_player.speed;
+    number = requete->state_player->speed;
     sprintf(buf, "%d", number);
     SDL_Rect renderQuad3 = {(15 * 40) + 100, (int) (32 * 1.8) + 290, (int) my_strlen(buf) * 18, 50};
     write_string(control, renderQuad3, buf);
@@ -216,11 +216,11 @@ void create_panel_result(t_control *control, t_svr_sd *requete) {
     position.y = 200;
     position.x = 220;
 
-    if (requete->state_player.win > 0) {
+    if (requete->state_player->win > 0) {
         SDL_Texture *pTexture = SDL_CreateTextureFromSurface(control->main_renderer, control->sprites->dresultat);
         SDL_RenderCopy(control->main_renderer, pTexture, &(control->sprites->cresultat[2].img), &position);
         SDL_DestroyTexture(pTexture);
-    } else if (requete->state_player.win <= 0) {
+    } else if (requete->state_player->win <= 0) {
         SDL_Texture *pTexture = SDL_CreateTextureFromSurface(control->main_renderer, control->sprites->dresultat);
         SDL_RenderCopy(control->main_renderer, pTexture, &(control->sprites->cresultat[1].img), &position);
         SDL_DestroyTexture(pTexture);

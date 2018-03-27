@@ -18,7 +18,7 @@ typedef struct {
     int mousex, mousey;
     int mousexrel, mouseyrel;
     char mousebuttons[8];
-    char quit;
+    int quit;
 } Input;
 
 typedef struct s_coord {
@@ -33,7 +33,11 @@ typedef struct s_network {
     // permet de connaitre quel user vous êtes
     int id_client;
     // enregistre la soccket de connexion avec le server pour pouvoir envoyer des données
+#if defined WIN32 || defined WIN64
+    SOCKET socket_client;
+#elif defined __linux__
     int socket_client;
+#endif
 } t_network;
 
 // pour envoyer a chaque joueur leur etat
@@ -58,7 +62,7 @@ typedef struct s_send_players {
 /* structure d'envoi reseau */
 typedef struct s_svr_sd {
     int idclient; /* TOUJOURS METTRE L'ID CLIENT */
-    t_send_players state_player; // pour le temps et les divers compteurs
+    t_send_players *state_player; // pour le temps et les divers compteurs
     int pos[4];// 3 FIN PARTIE
     int win_user[5];
     int map_old[20][20]; // map complete envoyée avec les numeros desprites a afficher
@@ -67,7 +71,6 @@ typedef struct s_svr_sd {
     int map_bm[20][20]; // map complete envoyée avec les numeros desprites a afficher
     int command_service; // permet de donner un ordre reseau arret attente etc...
     int reponse;
-    // timer
     time_t depart_time; // donne le temps max du set (temps réel de l'application OBSOLETE)
     time_t end_time; // l'heure de fin de partie avec le temps impartie intégré exemple 15h00 + 00h05 = 15h05 fin de partie important pour la synchro
     int set_start; // depart du set de la partie, déclenche chez les joueurs le timer

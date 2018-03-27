@@ -32,8 +32,10 @@ void chrono_session(t_control *control) {
     int seconde2;
 
     if (control->receive_map != NULL) {
-        if ((chrono_set == 0 || chrono_set <  control->receive_map->depart_time) && control->receive_map->depart_time != 0) {
-            chrono_set = control->receive_map->depart_time; /* le temp d'arrivée */
+       // time_t data = control->receive_map->depart_time;
+        if ((chrono_set == 0 || chrono_set < control->receive_map->depart_time )) // && control->receive_map->depart_time != 0
+        {
+           // chrono_set = control->receive_map->depart_time; /* le temp d'arrivée */
         } else if (chrono_set != 0) {
             {
                 /* au temps moins celui qui est actuel donne les minutes plus les secondes restantes */
@@ -56,40 +58,6 @@ void chrono_session(t_control *control) {
                     control->receive_map->depart_time = 0; /* remet à zero */
                 }
             }
-        }
-    }
-}
-
-/* obolete */
-void display_time(t_control *control) {
-    time_t arrivee;
-    if (control->receive_map->depart_time > 0) {
-        time(&arrivee);
-        if (difftime(arrivee, control->receive_map->depart_time) > 240) {
-
-        } else {
-            int change;
-            int pminute;
-            int pseconde;
-            int minute1;
-            int minute2;
-            int seconde1;
-            int seconde2;
-
-            change = arrivee - control->receive_map->depart_time;
-            if (change > 0) {
-                pminute = convert(change, 60, 1); // 3 minutes si inferieur 0 minutes
-                pseconde = convert(change % 60, 60, 2);
-
-                minute1 = convert(pminute, 10, 1);
-                minute2 = convert(pminute % 10, 10, 2);
-
-                seconde1 = convert(pseconde, 10, 1);
-                seconde2 = convert(pseconde % 10, 10, 2);
-
-                display_counter(control, minute1, minute2, seconde1, seconde2);
-            }
-
         }
     }
 }

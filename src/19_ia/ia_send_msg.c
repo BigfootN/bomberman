@@ -24,7 +24,7 @@ void send_email(t_etat *etat) {
     etat->msg->pos[2] = etat->partie;
 
     while (player != NULL) {
-        if (player->socket_player >= 0) {
+        if (player->socket_player >= 0 && player->active != 5) {// si le joueur est actif et non en mode creation
             /* résultat des victoires de chaque users */
             index = 0;
             while(index < 5)
@@ -32,18 +32,20 @@ void send_email(t_etat *etat) {
                 etat->msg->win_user[index] = etat->winusers[index];
                 index++;
             }
-
             etat->socket_send = player->socket_player;
             etat->msg->idclient = player->id_connexion;
             if (etat->tdepart != 0)/* envoi le depart de la partie */
                 etat->msg->depart_time = etat->tdepart;
-            prepa_counter_player(etat, player);
-            etat->msg->pos[3] = 0; /* signale que l'user est en vie */
-            if (player->active == 0 || player->player->active == 0)
-                etat->msg->pos[3] = 1; /* signale que l'user est éliminé */
-            if (pthread_create(&p_thread, NULL, server_to_client, (void *) etat) < 0) {
-                perror("could not create thread");
-                return;
+            if (player->active != 5)
+            {
+                prepa_counter_player(etat, player);
+                etat->msg->pos[3] = 0; /* signale que l'user est en vie */
+                if (player->active == 0)
+                    etat->msg->pos[3] = 1; /* signale que l'user est éliminé */
+                if (pthread_create(&p_thread, NULL, server_to_client, (void *) etat) < 0) {
+                    perror("could not create thread");
+                    return;
+                }
             }
         }
         SDL_Delay(5);

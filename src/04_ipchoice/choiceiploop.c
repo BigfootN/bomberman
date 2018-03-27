@@ -53,7 +53,6 @@ void events_loop_ip_choice(t_control *control, int *menu_select)
     SDL_Event event;
     SDL_StartTextInput();
     int current_click_ticks = 0, last_click_ticks = 0;
-    //SDL_EnableUNICODE(1);
     memset(&in, 0, sizeof (in)); // Instanciation d'une structure Input, et initialisation : tous les champs à 0.
     SDL_StartTextInput();
 
@@ -73,20 +72,16 @@ void events_loop_ip_choice(t_control *control, int *menu_select)
                 break;
             case SDL_TEXTINPUT:
                 if (control->write_loop == 1)
-                    //strcat(text, event.text.text);
                     select_data(control);
                 break;
             case SDL_KEYDOWN:
                 if (control->write_loop == 1)
                     delete_data(control, event);
-                //    selectData(control, event);
                 break;
             case SDL_MOUSEBUTTONDOWN:
                 last_click_ticks = dbl_click(current_click_ticks, last_click_ticks);
                 if (last_click_ticks == 1)
                 {
-                    //printf(" le nom empl souris x %d\n", event.motion.x);
-                    //printf(" le nom empl souris y %d\n", event.motion.y);
                     if (event.button.button == SDL_BUTTON_LEFT)
                         if ((*menu_select = choice_menu_choice_ip(control, event)) != -1)
                             return;

@@ -48,8 +48,6 @@ typedef struct s_pions {
     int type;
     // id
     int id;
-    // Emplacement reel
-    //SDL_Rect realpos;
     // Emplacement carte
     SDL_Rect mappos;
     // sens pour les monstres
@@ -60,8 +58,6 @@ typedef struct s_pions {
     int speed;
     // degat bomb
     int degat;
-    // emplacement dans la liste du joueur pour eviter de chercher
-    //t_player *elist;
     // fin de partie
     int win;
     int bomb;
@@ -102,8 +98,11 @@ typedef struct s_etat {
     // heure de demarrage
     time_t tdepart;
     //time_t tcourant;
-    // socket serveur
+#if defined WIN32 || defined WIN64
+    SOCKET sock_server; // adresse socket du client coté serveur
+#elif defined __linux__
     int sock_server; // adresse socket du client coté serveur
+#endif
     int sock_tmp; // adresse socket du client coté serveur
     char *ip_adress; // adresse du server
     // chrono du jeux

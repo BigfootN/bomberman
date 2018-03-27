@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.0)
 project(bomberman C)
 #INCLUDE(FindPkgConfig)
-
+#INCLUDE(FindSDL REQUIRED)
 #set(CMAKE_C_FLAGS "-pg -g -Wall -Werror -Wextra")
 
 set(KERNEL_SRC
@@ -100,10 +100,7 @@ add_executable(bomberman
         ${LIBS_SRC}
         )
 
-target_link_libraries(bomberman mingw32 SDL2main SDL2 SDL2_image SDL2_ttf
-        #${SDL2_LIBRARIES}
-        #${CMAKE_THREAD_LIBS_INIT}
-        )
+target_link_libraries(bomberman mingw32 SDL2main SDL2 SDL2_image SDL2_ttf wsock32 ws2_32)
 
 target_include_directories(bomberman PUBLIC
         ${SDL2_INCLUDE_DIRS}
