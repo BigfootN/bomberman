@@ -74,6 +74,7 @@ typedef struct s_svr_sd {
     time_t depart_time; // donne le temps max du set (temps réel de l'application OBSOLETE)
     time_t end_time; // l'heure de fin de partie avec le temps impartie intégré exemple 15h00 + 00h05 = 15h05 fin de partie important pour la synchro
     int set_start; // depart du set de la partie, déclenche chez les joueurs le timer
+    int etat_party_chrono; /* permet de savoir si le chrono est partie ou non */
 } t_svr_sd;
 
 /* structure d'envoi reseau */

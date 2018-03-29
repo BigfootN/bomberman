@@ -49,17 +49,18 @@ void *loop_ia_pion(void *tmp) {
             int delay = check_counter(etat);
             if (delay == 1)
                 central_initpartie(etat);/* à la fin de chaque set */
-        }
-        if (player_exist(etat)) {
-            if (etat->partie == 5) /* fin de partie */
-            {
-                select_win(etat);
-                pause = 0;
-            }
-            if (serialize_map(etat))
-                central_send(etat);
 
-        }
+            if (player_exist(etat)) {
+                if (etat->partie == 5) /* fin de partie */
+                {
+                    select_win(etat);
+                    pause = 0;
+                }
+                if (serialize_map(etat))
+                    central_send(etat);
+
+            }
+        }/* modifié */
         SDL_Delay(100);
     }
     pthread_exit(NULL);

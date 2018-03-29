@@ -9,9 +9,19 @@
  */
 void *client_send_to_server(void *tmp) {
     pthread_detach(pthread_self());
+    t_clt_sd *requete;
     t_control *control = (t_control *) tmp;
+
+    if((requete = (t_clt_sd *) malloc(sizeof(t_clt_sd))) == NULL)
+        return (NULL);
+    char *table;
+    if((table = (char *) malloc(sizeof(char) * 2000)) == NULL)
+        return (NULL);
+
+    table = "helllo";
    // write(control->network->socket_client, control->msg, (sizeof(t_clt_sd)));
-    send(control->network->socket_client, (char*)&control->msg, sizeof(control->msg), 0);
+    send(control->network->socket_client, (char*)&control->msg, sizeof(requete), 0);
+   // send(control->network->socket_client, table, sizeof(table), 0);
     pthread_exit((void *) tmp);
 }
 
@@ -40,14 +50,33 @@ int prepare_requet_client(t_control *control, int idclient, int commandService, 
  * reception client tcp
  */
 void *tcp_client(void *tmp) {
+
     t_svr_sd *requete;
     struct sockaddr_in server;
     t_control *control = (t_control *) tmp;
 
-    requete = (t_svr_sd *) malloc(sizeof(t_svr_sd));
+#if defined WIN32 || defined WIN64
+    WSADATA wsa;
+    printf("initialise winsock...");
+    if (WSAStartup(MAKEWORD(2,2), &wsa) != 0)
+        printf("failed. error Code : %d", WSAGetLastError());
+    //Create a socket
+    if ((control->network->socket_client = socket(AF_INET, SOCK_STREAM, 0)) == INVALID_SOCKET) {
+        printf("Could not create socket : %d", WSAGetLastError());
+    }
+#elif defined __linux__
+    control->network->socket_client = 0;
     control->network->socket_client = socket(AF_INET, SOCK_STREAM, 0);
     if (control->network->socket_client == -1)
+    {
+        printf("failed. error ");
         return (0);
+    }
+#endif
+    printf("Socket created.\n");
+
+    if((requete = (t_svr_sd *) malloc(sizeof(t_svr_sd))) == NULL)
+        return (NULL);
 
     server.sin_addr.s_addr = inet_addr(control->network->ip_serveur);
     server.sin_family = AF_INET;
@@ -59,12 +88,10 @@ void *tcp_client(void *tmp) {
     }
     control->etat_send = 1;
     prepare_requet_client(control, 0, 1, 0, 0);
-
-    char *buffer = (char *)malloc(sizeof(t_svr_sd));
-    int sin_size = sizeof(buffer);
+  // char *buffer = (char *)malloc(sizeof(t_svr_sd));
 
     while (control->etat_send) {
-        if (recv(control->network->socket_client, (char*)&requete, sin_size, 0) < 0) {
+        if (recv(control->network->socket_client, (char*)&requete, sizeof(requete), 0) < 0) {
             puts("recv failed\n");
             control->etat_send = 0;
             break;

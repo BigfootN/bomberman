@@ -38,6 +38,8 @@ void create_players_pions(t_etat *etat) {
         if (player->active == 5) {
             mappos.x = 0;
             mappos.y = 0;
+            mappos.w = 0;
+            mappos.h = 0;
             player->player = (t_pions *) malloc(sizeof(t_pions));
             player->player = add_item_pions(etat, mappos);
             t_pions *pions = player->player;
@@ -69,10 +71,8 @@ int check_all_pions(t_etat *etat) {
                     if (pion->requete_1 == 2) // bombe
                         etat_bomb(etat, pion);
                     else if (pion->requete_1 == 3) // deplacement monstre
-                    {
                         if (pion->type >= 27 && pion->type <= 30)
                             ia_monster(etat, pion);
-                    }
                 }
             }
         }

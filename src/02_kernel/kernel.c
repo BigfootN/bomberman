@@ -93,15 +93,17 @@ void write_string(t_control *control, SDL_Rect renderquad, char* string)
     SDL_Color couleurNoire = {0, 0, 0, 255};
     TTF_Font *police = NULL;
 
-    TTF_Init();
-    police = TTF_OpenFont(create_directory_file("Roboto-Black.ttf", 3), 24);
-    SDL_Surface* textSurface = TTF_RenderText_Solid(police, string, couleurNoire);
-    SDL_Texture* text = SDL_CreateTextureFromSurface(control->main_renderer, textSurface);
-    SDL_FreeSurface(textSurface);
-    SDL_RenderCopy(control->main_renderer, text, NULL, &renderquad);
-    SDL_DestroyTexture(text);
-    TTF_CloseFont(police);
-    TTF_Quit();
+    if(string != "") {/* si il existe une string à inscrire EVITE LES PLANTAGES */
+        TTF_Init();
+        police = TTF_OpenFont(create_directory_file("Roboto-Black.ttf", 3), 24);
+        SDL_Surface *textSurface = TTF_RenderText_Solid(police, string, couleurNoire);
+        SDL_Texture *text = SDL_CreateTextureFromSurface(control->main_renderer, textSurface);
+        SDL_FreeSurface(textSurface);
+        SDL_RenderCopy(control->main_renderer, text, NULL, &renderquad);
+        SDL_DestroyTexture(text);
+        TTF_CloseFont(police);
+        TTF_Quit();
+    }
 }
 
 void write_text_51(t_control* control, SDL_Rect renderQuad, char *string)

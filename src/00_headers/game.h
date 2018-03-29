@@ -78,16 +78,13 @@ typedef struct s_clmap {
     char *title; // titre de la carte
     // map complete
     int **realmap; // le decor
-    int **map_old; // le decor
+    int **map_old; // l'ancien état decor
     int **map_user_castdown; // a qui appartient la bomb ou autres joyeusetés déposées
-    // map bonus malus
     int **bmmap; // les bonus malus et monstres en attente
-    // map deplacement
     int **mapaction; // les deplacements des players zombies et explosions
     const char *Mapname; // le nom de la map
     const char *tilesname; // le nom des sprites
     SDL_Rect pos;
-    //SDL_Rect taille;
     int *wall;
 } t_clmap;
 
@@ -97,18 +94,15 @@ typedef struct s_etat {
     int flage_stop;
     // heure de demarrage
     time_t tdepart;
-    //time_t tcourant;
 #if defined WIN32 || defined WIN64
     SOCKET sock_server; // adresse socket du client coté serveur
+    SOCKET sock_tmp; // adresse socket du client coté serveur
 #elif defined __linux__
     int sock_server; // adresse socket du client coté serveur
-#endif
     int sock_tmp; // adresse socket du client coté serveur
+#endif
+
     char *ip_adress; // adresse du server
-    // chrono du jeux
-    //int ptime;
-    // etat jeux
-    //int etat_jeux;
     // listes des joueurs pour envoyer les données
     int nbre_players;
     t_player *lastplayer; // premier emplacement
@@ -127,10 +121,9 @@ typedef struct s_etat {
     t_svr_sd *msg;
     // control la partie pour le depart et l'interuption
     int partie;
-    // timer
-    //time_t depart_time;
     // set en crours
     int set;
+    int etat_party_chrono; /* permet de savoir si le chrono est partie ou non */
 } t_etat;
 
 // structure map client
@@ -146,7 +139,5 @@ typedef struct s_etat_clt {
     // map de reception
     int **nitMap;
 } t_etat_clt;
-
-
 
 #endif //BOMBERMAN_GAME_H

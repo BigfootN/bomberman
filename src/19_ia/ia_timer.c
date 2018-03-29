@@ -20,6 +20,7 @@ int difference(t_etat *etat) {
         }
        else if(etat->tdepart <= time(NULL) && set_party == 0) {
             etat->partie = 5;/* determine la fin */
+            etat->etat_party_chrono  = 0;
             return (2);
         }
     }
@@ -34,4 +35,5 @@ void send_time(t_etat *etat, int delaychrono) {
     delaychrono = 0;
     seconds = time(NULL);
     etat->tdepart = (seconds + ((delaychrono * 60) + 15)); // second = minute/60
+    etat->etat_party_chrono  = 1;
 }

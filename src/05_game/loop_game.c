@@ -47,19 +47,11 @@ void game_loop(t_control *control, int *menu_select)
 
     memset(&in, 0, sizeof (in));
 
-//    //ckeck_answer_srv(control);
-//    pthread_t p_thread;
-//    if (pthread_create (&p_thread, NULL, ckeck_answer_srv, (void*) control) < 0)
-//    {
-//        perror("could not create thread");
-//        return;
-//    }
-//    SDL_Delay(100);
-
     while (!in.key[SDLK_ESCAPE] && !in.quit)
     {
         ckeck_answer_srv(control);
-        chrono_session(control);
+        if(control->receive_map->etat_party_chrono == 1)
+            chrono_session(control);
         if (SDL_PollEvent(&event))
         {
             switch (event.type)

@@ -14,7 +14,6 @@ void central_initpartie(t_etat *etat) {
 
     /* calcul les gagant du set */
 
-
     /* selectionne une partie */
     clean_bm_monsters(etat);
     party_choice(etat);
@@ -50,25 +49,25 @@ void cleanplayers(t_etat *etat) {
 
     mappos.x = 0;
     mappos.y = 0;
+    mappos.h = 0;
+    mappos.w = 0;
+
     etat2 = etat;
     players = etat2->players;
-    //  players->active = 0;
-    pions = players->player;
-
-    /* detruit les montres */
-    /*free(etat->last_pions);
-   */
-
     pions = etat->last_pions;
+
     while (pions != NULL) {
         t_pions *state;
         state = pions->prev;
-        delete_list_chevron(pions);
+        if(pions != etat->last_pions)
+            delete_list_chevron(pions);
+        free(pions);
         pions = state;
-        free(state);
+        state = NULL;
     }
+    pions = NULL;
     etat->last_pions = NULL;
-   // flage_stop = 0; /* flage d'arret */
+    etat->pion = NULL;
 
     while (players != NULL) {
         if (players->socket_player > 0) {
@@ -83,7 +82,7 @@ void cleanplayers(t_etat *etat) {
             players->player->active = 1;
             players->active = 1;
         }
-        if (players->next == NULL && players != NULL)/* permet de prendre le dernier pions enregistré */
+        if (players->next == NULL)/* permet de prendre le dernier pions enregistré */
             etat->last_pions = players->player;
         players = players->next;
     }
@@ -187,5 +186,4 @@ void update_user_win(t_etat *etat, int user_id)
             pion->win = 1;
         pion = pion->next;
     }
-
 }

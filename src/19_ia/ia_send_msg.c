@@ -40,12 +40,14 @@ void send_email(t_etat *etat) {
             {
                 prepa_counter_player(etat, player);
                 etat->msg->pos[3] = 0; /* signale que l'user est en vie */
+                etat->msg->etat_party_chrono = etat->etat_party_chrono; /* dis que le chrono est pret */
                 if (player->active == 0)
                     etat->msg->pos[3] = 1; /* signale que l'user est éliminé */
                 if (pthread_create(&p_thread, NULL, server_to_client, (void *) etat) < 0) {
                     perror("could not create thread");
                     return;
                 }
+
             }
         }
         SDL_Delay(5);

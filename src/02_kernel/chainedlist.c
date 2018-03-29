@@ -18,6 +18,9 @@ t_pions *add_item_pions(t_etat *etat, SDL_Rect mappos)
     if ((tmp = (t_pions*) malloc(sizeof (t_pions))) == NULL)
         return (NULL);
     tmp->id = 0;
+    tmp->type = 0;
+    tmp->degat = 0;
+    tmp->win = 0;
     tmp->active = 0;
     tmp->mappos.x = 0;
     tmp->mappos.y = 0;
@@ -32,6 +35,10 @@ t_pions *add_item_pions(t_etat *etat, SDL_Rect mappos)
     tmp->proprio = 0;
     tmp->next = NULL;
     tmp->prev = NULL;
+    tmp->etat_requete = 0;
+    tmp->requete_1 = 0;
+    tmp->requete_2 = 0;
+    tmp->sens = my_strdup("RIGHT");/* pour la ia monstre */
     if (etat->last_pions == NULL && etat->pion == NULL)
     {
         etat->last_pions = tmp;
@@ -68,14 +75,24 @@ t_pions *delete_list_chevron(t_pions *tmp)
         //    free(tmp);
     else if (tmp->next != NULL && tmp->prev != NULL)
     {
-        if( tmp->prev->next != NULL)
+        t_pions * pion = tmp->prev;
+        if(pion->next != NULL)
+            pion->next = tmp->next;
+        pion = tmp->next;
+        if(pion->prev != NULL)
+            pion->prev = tmp->prev;
+       /* if( tmp->prev->next != NULL)
             tmp->prev->next = tmp->next;
         if( tmp->next->prev != NULL)
-            tmp->next->prev = tmp->prev;
+            tmp->next->prev = tmp->prev;*/
     }
-    if (tmp->prev != NULL)
-        return (tmp->prev->next);
-    else
+    if (tmp->prev != NULL) {
+        t_pions *pion = tmp->prev;
+        if(pion->next != NULL)
+            return (pion->next);
+        else
+            return (NULL);
+    }else
         return (NULL);
 }
 
