@@ -20,15 +20,15 @@
 #define HEIGHT_TILE 40
 #define WIDTH_TILE 40
 
-//#if defined WIN32, defined WIN64
+#if defined WIN32 | defined WIN64
 #define REP_SPRITES "res\\sprites\\"
+#define REP_MAP "res\\map\\"
+#define REP_TTF "res\\roboto\\"
+#elif defined __linux__
+#define REP_SPRITES "res/sprites/"
 #define REP_MAP "res/map/"
 #define REP_TTF "res/roboto/"
-//#elif defined __linux__
-//#define REP_SPRITES "res/sprites/"
-//#define REP_MAP "res/map/"
-//#define REP_TTF "res/roboto/"
-//#endif
+#endif
 
 #define SIGNALWHATEVER 45
 
