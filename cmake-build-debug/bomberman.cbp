@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="bomberman"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\res\;CMake Files\res\maps\;CMake Files\res\fonts\;CMake Files\res\pictures\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="bomberman">
+				<Option output="/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/bomberman" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/HEADER_FILES"/>
+					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/INTERFACE"/>
+					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/00_headers"/>
+					<Add directory="/usr/include/SDL2"/>
+					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/01_main"/>
+					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/02_kernel"/>
+					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/03_introduction"/>
+					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/04_ipchoice"/>
+					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/04_prepa_game"/>
+					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/05_game"/>
+					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/06_scores"/>
+					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/18_network"/>
+					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/19_ia"/>
+					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/20_pictures"/>
+					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/21_libs"/>
+					<Add directory="/usr/include/c++/4.9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.9"/>
+					<Add directory="/usr/include/c++/4.9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 bomberman"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="bomberman/fast">
+				<Option output="/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/bomberman" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/HEADER_FILES"/>
+					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/INTERFACE"/>
+					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/00_headers"/>
+					<Add directory="/usr/include/SDL2"/>
+					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/01_main"/>
+					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/02_kernel"/>
+					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/03_introduction"/>
+					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/04_ipchoice"/>
+					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/04_prepa_game"/>
+					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/05_game"/>
+					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/06_scores"/>
+					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/18_network"/>
+					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/19_ia"/>
+					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/20_pictures"/>
+					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/21_libs"/>
+					<Add directory="/usr/include/c++/4.9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.9"/>
+					<Add directory="/usr/include/c++/4.9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 bomberman/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/01_main/bomberman.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/01_main/bomberman.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/02_kernel/chainedlist.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/02_kernel/chainedlist.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/02_kernel/inits.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/02_kernel/inits.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/02_kernel/kernel.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/02_kernel/kernel.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/03_introduction/introloop.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/03_introduction/introloop.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/03_introduction/introviews.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/03_introduction/introviews.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/04_ipchoice/choiceiploop.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/04_ipchoice/choiceiploop.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/04_ipchoice/choiceipwindow.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/04_ipchoice/choiceipwindow.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/04_ipchoice/choicepviews.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/04_ipchoice/choicepviews.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/04_prepa_game/display_prepagame.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/04_prepa_game/display_prepagame.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/04_prepa_game/loop_prepagame.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/04_prepa_game/loop_prepagame.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/04_prepa_game/write_prepa_game.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/04_prepa_game/write_prepa_game.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/05_game/display_game.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/05_game/display_game.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/05_game/loop_game.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/05_game/loop_game.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/05_game/panel_game.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/05_game/panel_game.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/05_game/time_game.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/05_game/time_game.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/05_game/views_game.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/05_game/views_game.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/18_network/network.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/18_network/network.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/18_network/network_player.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/18_network/network_player.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/18_network/tcp_client.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/18_network/tcp_client.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/18_network/tcp_server.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/18_network/tcp_server.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_bolus_malus.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_bolus_malus.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_bomb.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_bomb.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_counter.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_counter.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_dead.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_dead.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_explosion.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_explosion.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_map.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_map.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_monster.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_monster.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_party.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_party.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_pions.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_pions.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_send_msg.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_send_msg.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_timer.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_timer.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/20_pictures/annexe_directory.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/20_pictures/annexe_directory.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/20_pictures/init_pictures.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/20_pictures/init_pictures.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/20_pictures/map.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/20_pictures/map.h">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_bzero.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_put_nbr.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_putchar.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_putstr.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_rand.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_strcat.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_strcmp.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_strdup.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_string.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_strlen.c">
+			<Option target="bomberman"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/res/maps/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\res\maps\"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/res/fonts/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\res\fonts\"/>
+		</Unit>
+		<Unit filename="/home/marc/CLionProjects/bomberman_cross_1/res/pictures/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\res\pictures\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -8,7 +8,7 @@
 ** Last update Sat Dec 10 22:54:55 2016 BORRAS Pierre-Marc
 */
 
-#include "bomberman.h"
+#include "headers.h"
 
 int	my_strcmp(const char *s1, const char *s2)
 {

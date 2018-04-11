@@ -2,11 +2,14 @@
 // Created by marc on 01/03/18.
 //
 
-#include "bomberman.h"
+#include "headers.h"
 
 int introduction_central(t_control *control)
 {
     int menu_select = 0;
+
+    /* init par default control */
+    reinit_control(control);
 
     window_init(control);
     create_panel(control);
@@ -24,6 +27,8 @@ void sprite_panel_introduction(t_control* control)
     SDL_Rect SrcR;
     SrcR.w = WINDOW_WIDTH;
     SrcR.h = WINDOW_HEIGHT - 64;
+    SrcR.x = 0;
+    SrcR.y = 0;
 
     SDL_Texture* logo = SDL_CreateTextureFromSurface(control->main_renderer, control->sprites->dlogo);
     SDL_RenderCopy(control->main_renderer, logo, &(control->sprites->clogo->img), &SrcR);

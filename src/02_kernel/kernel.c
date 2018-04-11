@@ -2,7 +2,7 @@
 // Created by marc on 01/03/18.
 //
 
-#include "bomberman.h"
+#include "headers.h"
 
 /*
  *  init la fenetre et le renderer
@@ -10,7 +10,8 @@
 
 void window_init(t_control *control)
 {
-    if (SDL_Init(SDL_INIT_VIDEO) < 0)
+    if (SDL_Init(SDL_INIT_EVERYTHING) < 0)
+//    if (SDL_Init(SDL_INIT_VIDEO) < 0)
     {
         SDL_Quit();
         return;
@@ -20,10 +21,16 @@ void window_init(t_control *control)
         control->fenetre = SDL_CreateWindow("Bomberman",
                                             SDL_WINDOWPOS_CENTERED,
                                             SDL_WINDOWPOS_CENTERED,
-                                            WINDOW_WIDTH, WINDOW_HEIGHT,
+                                            WINDOW_WIDTH,
+                                            WINDOW_HEIGHT,
                                             SDL_WINDOW_SHOWN);
-    control->main_renderer = SDL_CreateRenderer(control->fenetre, -1, SDL_RENDERER_ACCELERATED);
+    if (control->fenetre != NULL)
+        control->main_renderer = SDL_CreateRenderer(
+                control->fenetre,
+                -1,
+                SDL_RENDERER_ACCELERATED);
 }
+
 
 /*
  * encart d'inscription
@@ -92,15 +99,19 @@ void write_string(t_control *control, SDL_Rect renderquad, char* string)
 {
     SDL_Color couleurNoire = {0, 0, 0, 255};
     TTF_Font *police = NULL;
+    char * name;
 
     TTF_Init();
-    police = TTF_OpenFont(create_directory_file("Roboto-Black.ttf", 3), 24);
+    name = create_directory_file("Roboto-Black.ttf", 3);
+    police = TTF_OpenFont(name, 24);
     SDL_Surface* textSurface = TTF_RenderText_Solid(police, string, couleurNoire);
     SDL_Texture* text = SDL_CreateTextureFromSurface(control->main_renderer, textSurface);
     SDL_FreeSurface(textSurface);
     SDL_RenderCopy(control->main_renderer, text, NULL, &renderquad);
     SDL_DestroyTexture(text);
     TTF_CloseFont(police);
+    police = NULL;
+    free(name);
     TTF_Quit();
 }
 
@@ -108,17 +119,19 @@ void write_text_51(t_control* control, SDL_Rect renderQuad, char *string)
 {
     SDL_Color couleurNoire = {255, 255, 255, 255};
     TTF_Font *police = NULL;
+    char * name;
 
     TTF_Init();
-    //police = TTF_OpenFont("roboto/Roboto-Black.ttf", 24);
-    //create_directory_file("Roboto-Black.ttf", 3);
-    police = TTF_OpenFont(create_directory_file("Roboto-Black.ttf", 3), 24);
+    name = create_directory_file("Roboto-Black.ttf", 3);
+    police = TTF_OpenFont(name, 24);
     SDL_Surface* textSurface = TTF_RenderText_Blended(police, string, couleurNoire);
     SDL_Texture* text = SDL_CreateTextureFromSurface(control->main_renderer, textSurface);
     SDL_FreeSurface(textSurface);
     SDL_RenderCopy(control->main_renderer, text, NULL, &renderQuad);
     SDL_DestroyTexture(text);
     TTF_CloseFont(police);
+    police = NULL;
+    free(name);
     TTF_Quit();
 }
 
@@ -167,7 +180,13 @@ void create_panel_waitset(t_control *control)
 int dbl_click(int current_click_ticks, int last_click_ticks)
 {
     current_click_ticks = SDL_GetTicks();
-    if (current_click_ticks - last_click_ticks < 200)
+    if (current_click_ticks - last_click_ticks < 400)
         return 1;
     return SDL_GetTicks();
+}
+
+void write_text(t_control* control)
+{
+    SDL_Rect render_quad = {200, 298, (int)my_strlen(control->ip_serveur) * 25, 60};
+    write_string(control, render_quad, control->ip_serveur);
 }

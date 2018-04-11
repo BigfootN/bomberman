@@ -2,18 +2,17 @@
 // Created by marc on 08/03/18.
 //
 
-#include "bomberman.h"
+#include "headers.h"
 
 void central_initpartie(t_etat *etat) {
 
     /* arrete le jeux le temps de remettre tout en ordre */
     etat->partie = 0;
+    etat->send_message = 0;
+    SDL_Delay(1000);
     /* initialise le speed */
-    waitspeed = 0;
-    //set_party = 0;
-
-    /* calcul les gagant du set */
-
+    //waitspeed = 0;
+    etat->nbreset--;
 
     /* selectionne une partie */
     clean_bm_monsters(etat);
@@ -21,9 +20,22 @@ void central_initpartie(t_etat *etat) {
     select_user_win(etat);
     cleanplayers(etat);
 
-    /* permet de mettre le nombre de minutes pour chaque set */
-    send_time(etat, 0);//  1 = 1 minute
-    etat->partie = 1; /*fait repartir le jeux */
+    SDL_Delay(1000);
+    if (etat->nbreset > 0)
+        /* permet de mettre le nombre de minutes pour chaque set */
+        send_time(etat, etat->minutesgame);//  1 = 1 minute
+    else /* fin de partie */
+    {
+        etat->minutesgame = 0;
+        select_win(etat);
+        etat->etat_party_chrono = 0;
+        etat->partie = 5;/* determine la fin */
+    }
+    SDL_Delay(1000);
+    if (etat->partie != 5) {
+        etat->partie = 1; /*fait repartir le jeux */
+    }
+    etat->send_message = 1;
 }
 
 /* recupere la carte */
@@ -32,60 +44,47 @@ void party_choice(t_etat *etat) {
     random = my_rand(3);
 
     if (random <= 1)
-        gestion_data(etat, "carte1.lvl");
+        gestion_map(etat, "carte1.lvl");
     else if (random == 2)
-        gestion_data(etat, "carte2.lvl");
+        gestion_map(etat, "carte2.lvl");
     else if (random == 3)
-        gestion_data(etat, "carte3.lvl");
+        gestion_map(etat, "carte3.lvl");
 }
 
 /* reinitialise les joueurs */
 void cleanplayers(t_etat *etat) {
-    t_player *players;
-    t_etat *etat2;
-    t_pions *pions;
-//    t_pions *listpions;
-    SDL_Rect mappos;
-    //int flage_stop;
+    t_pions *pion;
 
-    mappos.x = 0;
-    mappos.y = 0;
-    etat2 = etat;
-    players = etat2->players;
-    //  players->active = 0;
-    pions = players->player;
-
-    /* detruit les montres */
-    /*free(etat->last_pions);
-   */
-
-    pions = etat->last_pions;
-    while (pions != NULL) {
+    pion = etat->last_pions;
+    while (pion != NULL) {
         t_pions *state;
-        state = pions->prev;
-        delete_list_chevron(pions);
-        pions = state;
-        free(state);
+        state = pion->prev;
+
+        if (pion->type < 23 || pion->type > 26) {
+            delete_pion(etat, pion);
+            //delete_one_pion(etat, pion->id);
+        }
+        pion = state;
+        // free(state);
     }
     etat->last_pions = NULL;
-   // flage_stop = 0; /* flage d'arret */
 
-    while (players != NULL) {
-        if (players->socket_player > 0) {
+    pion = etat->pion;
+    while (pion != NULL) {
+        if (pion->id_connexion >= 1 && pion->id_connexion <= 4) {
             // on cree le joueur dans la liste des pions
-            players->player = (t_pions *) malloc(sizeof(t_pions));
-            players->player = add_item_pions(etat, mappos);/* ajoute l'user dans la liste des pions */
-
-            players->player->id = players->id_connexion;
-            players->player->type = 1;
-            players->player->life = 20;
-            init_gamers(etat, players->player); /* reinitialise le joueur avec ses données pour démarrer */
-            players->player->active = 1;
-            players->active = 1;
+            pion->active = 0;
+            init_pion(pion);
+            pion->id = pion->id_connexion;
+            pion->type = 1;
+            pion->life = 20;
+            pion->bomb = 5;
+            init_gamers(etat, pion); /* reinitialise le joueur avec ses données pour démarrer */
+            pion->active = 1;
         }
-        if (players->next == NULL && players != NULL)/* permet de prendre le dernier pions enregistré */
-            etat->last_pions = players->player;
-        players = players->next;
+        if (pion->next == NULL)/* permet de prendre le dernier pions enregistré */
+            etat->last_pions = pion;
+        pion = pion->next;
     }
 }
 
@@ -117,7 +116,7 @@ void clean_bm_monsters(t_etat *etat) {
 
 /* selection du vainqueur du set */
 void select_user_win(t_etat *etat) {
- //   t_player *players;
+    //   t_player *players;
     t_pions *pions;
     int win;
     int tab[4];
@@ -149,42 +148,54 @@ void select_user_win(t_etat *etat) {
         index++;
     }
 }
+/* mets les vainqueurs du jeux */
+void select_win(t_etat *etat) {
 
-void select_win(t_etat *etat)
-{
+    t_pions *pion;
     /* determine qui est gangant ou perdant */
     int index = 0;
     int win = 0;
-    int user_win = -1;
+   // int user_win = -1;
 
-    while(index < 4)
-    {
-        if(etat->winusers[index] > win && win > 0) /* prend le vainqueur */
+    while (index < 4) {
+        if (etat->winusers[index] > win && etat->winusers[index] > 0) /* prend le vainqueur */
         {
             win = etat->winusers[index];
-            user_win = index;
+            // user_win = index;
         }
-        else if(etat->winusers[index] > win && win > 0) /* si plusieurs vainqueurs */
-        {
-            win = etat->winusers[index];
-            update_user_win(etat,user_win);
-            user_win = index;
-        }
+// else if (etat->winusers[index] > win && win > 0) /* si plusieurs vainqueurs */
+//        {
+//            win = etat->winusers[index];
+//            update_user_win(etat, user_win);
+//            user_win = index;
+//        }
         index++;
     }
-    if (user_win >= 0) /* pour le dernier */
-        update_user_win(etat,user_win);
+
+    if (win <= 0)
+        return;
+
+    pion = etat->pion;
+    while (pion != NULL) {
+        if (pion->id < 4) {
+            if (etat->winusers[pion->id - 1] == win)
+                pion->winner = 1;
+        }
+        pion = pion->next;
+    }
+
+//    if (user_win >= 0) /* pour le dernier */
+//        update_user_win(etat, user_win);
 }
+
 /* selectionne les vainqueurs */
-void update_user_win(t_etat *etat, int user_id)
-{
+void update_user_win(t_etat *etat, int user_id) {
     t_pions *pion;
 
     pion = etat->pion;
-    while(pion != NULL)
-    {
-        if(pion->id == user_id - 1)
-            pion->win = 1;
+    while (pion != NULL) {
+        if (pion->id == user_id + 1)
+            pion->winner = 1;
         pion = pion->next;
     }
 

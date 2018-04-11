@@ -8,13 +8,13 @@
 ** Last update Fri Nov 11 09:14:02 2016 BORRAS Pierre-Marc
 */
 
-#include "bomberman.h"
+#include "headers.h"
 
 char	*my_strcat(char *dest, const char *src)
 {
   int	index;
 
-  index = my_strlen(dest);
+  index = (int)my_strlen(dest);
   while (*src != '\0')
     {
       *(dest + index) = *src;

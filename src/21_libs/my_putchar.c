@@ -1,4 +1,4 @@
-#include "bomberman.h"
+#include "headers.h"
 
 void my_putchar(char c)
 {

@@ -2,7 +2,7 @@
 // Created by marc on 01/03/18.
 //
 
-#include "bomberman.h"
+#include "headers.h"
 
 int central_game(t_control *control)
 {
@@ -14,20 +14,25 @@ int central_game(t_control *control)
     /* menu des partie du jeux */
     menu_select = 0;
     /* rénitialise le numéro de socket du joueur */
-    control->network->id_client = -1;
+    control->id_client = -1;
     /* affiche un panneau d'attente */
     display_screen_wait(control);
     /* */
     SDL_RenderPresent(control->main_renderer);
     /* lance la ia lors que le serveur est pret */
-    if (control->network->srv_or_clt == 1)
-        thread_ia();
+    control->master = 0;
+    if (control->srv_or_clt == 1){
+        control->master = 1;
+        thread_ia(control);
+    }
     /* attend pour demarrer le client */
     SDL_Delay(500);
     /* demarre la socket du client*/
     tcp_thread_client(control);
     /* lance la boucle des commandes du client */
     game_loop(control, &menu_select);
+    /* attend pour demarrer le client */
+    SDL_Delay(500);
     /* fin de partie détruit l'interface cliente */
     SDL_DestroyRenderer(control->main_renderer);
     /* return avec la sélection choisie dans la boucle */
@@ -94,6 +99,33 @@ void screen_wait_end_set(t_control *control)
     create_panel_waitset(control);
 }
 
+/*
+ * la party est déjà commencée
+ */
+
+void screen_party_start(t_control *control)
+{
+    create_panel(control);
+    button_game(control);
+    create_panel_game(control);
+    create_compteur(control);
+    create_party_start(control);
+}
+
+/*
+ * le nombre d'utlisateurs est déjà présent
+ */
+
+void screen_max_users(t_control *control)
+{
+    create_panel(control);
+    button_game(control);
+    create_panel_game(control);
+    create_compteur(control);
+    create_max_users(control);
+}
+
+
 void display_screen_game(t_control *control)
 {
    // create_panel(control);
@@ -114,11 +146,11 @@ void screen_result(t_control *control,  t_svr_sd *requete)
     //create_compteur(control);
 }
 
-void thread_ia()
+void thread_ia(t_control *control)
 {
     pthread_t p_thread;
 
-    if (pthread_create(&p_thread, NULL, central_ia, NULL) < 0)
+    if (pthread_create(&p_thread, NULL, central_ia, (void*)control) < 0)
     {
         perror("could not create thread");
         return;
@@ -133,14 +165,14 @@ void button_game(t_control* control)
                      control->sprites->cmenu[4].img.h};
     display_button(control, dest);
     dest.x = 350;
-    if (control->network->srv_or_clt == 1)
+    if (control->srv_or_clt == 1)
         display_button(control, dest);
     dest.x = 550;
     display_button(control, dest);
 
     SDL_Rect renderQuad = {160, WINDOW_HEIGHT - 61, (int)my_strlen("Return") * 18, 50};
     write_text_51(control, renderQuad, "Return");
-    if (control->network->srv_or_clt == 1)
+    if (control->srv_or_clt == 1)
     {
         renderQuad.x = 370;
         renderQuad.w = (int)my_strlen("Start") * 18;

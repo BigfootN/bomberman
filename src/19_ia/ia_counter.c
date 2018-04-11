@@ -2,7 +2,7 @@
 // Created by marc on 01/03/18.
 //
 
-#include "bomberman.h"
+#include "headers.h"
 
 int check_counter(t_etat *etat)
 {
@@ -15,15 +15,24 @@ int check_counter(t_etat *etat)
         return (0);
 }
 
-void prepa_counter_player(t_etat *etat, t_player *player)
+// 0 ptime
+// 1 score
+// 2 life
+// 3 sort
+// 4 speed
+// 5 bomb
+// 6 win
+
+void prepa_counter_player(t_etat *etat, t_pions *pion)
 {
-    if (player->player != NULL && etat->msg != NULL)
+    if (pion != NULL && etat->msg != NULL)
     {
-        etat->msg->state_player.score = player->player->score;
-        etat->msg->state_player.bomb = player->player->bomb;
-        etat->msg->state_player.speed = player->player->speed;
-        etat->msg->state_player.life = player->player->life;
+        etat->msg->stat_user[1] = pion->score;
+        etat->msg->stat_user[5] = pion->bomb;
+        etat->msg->stat_user[4] = pion->speed;
+        etat->msg->stat_user[2] = pion->life;
+        etat->msg->stat_user[6] = pion->win;
         if(etat->partie == 5)/* prend en compte si gagant ou perdant */
-          etat->msg->state_player.win = player->player->win;
+          etat->msg->stat_user[7] = pion->winner;
     }
 }

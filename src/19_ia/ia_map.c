@@ -2,7 +2,7 @@
 // Created by marc on 01/03/18.
 //
 
-#include "bomberman.h"
+#include "headers.h"
 
 int serialize_map(t_etat *etat)
 {

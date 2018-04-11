@@ -2,7 +2,7 @@
 // Created by marc on 01/03/18.
 //
 
-#include "bomberman.h"
+#include "headers.h"
 
 int create_bonus_malus()
 {
@@ -28,28 +28,10 @@ int create_bonus_malus()
         choice = 4;
     else if (nb_monster == 8)
         choice = 30;
+    else if (nb_monster == 9)
+        choice = 31;
     else
         choice = -1; // sinon rien pas de BM
-
-    /* if (nbreMonstre == 0)
-         choice = 8;
-     else if (nbreMonstre == 1)
-         choice = 6;
-     else if (nbreMonstre == 2)
-         choice = 5;
-     else if (nbreMonstre == 3)
-         choice = 7;
-     else
-         choice = -1;
-    if (nbreMonstre == 0)
-        choice = 28;
-    else if (nbreMonstre == 1)
-        choice = 30;
-    else if (nbreMonstre == 2)
-        choice = 29;
-    else if (nbreMonstre == 3)
-        choice = 27;*/
-
 
     return (choice);
 }

@@ -2,7 +2,7 @@
 // Created by marc on 01/03/18.
 //
 
-#include "bomberman.h"
+#include "headers.h"
 
 void ia_monster(t_etat *etat, t_pions *tmp) {
     int **tab;
@@ -14,7 +14,7 @@ void ia_monster(t_etat *etat, t_pions *tmp) {
         tab = prepa_grid_bonus_malus(etat, tmp->mappos);
         if (monster_check_user(etat, tmp, tab))/* si pas de gamer present on passe avec la ia */
             monster_choice(etat, tmp, tab);
-        printf("sens du monstre %s\n", tmp->sens);
+      //  printf("sens du monstre %s\n", tmp->sens);
     }
 }
 
@@ -47,7 +47,7 @@ void delete_monster(t_etat *etat, int numberMonster, SDL_Rect position) {
                     etat->data_map->bmmap[tmp->mappos.x][tmp->mappos.y] = -1;
                     etat->data_map->mapaction[tmp->mappos.x][tmp->mappos.y] = -1;
                     // detruit le monstre
-                    delete_list_chevron(tmp);
+                    delete_pion(etat ,tmp);
                     return;
                 }
             }

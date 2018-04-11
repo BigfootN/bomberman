@@ -5,7 +5,7 @@
 #ifndef BOMBERMAN_IA_COUNTER_H
 #define BOMBERMAN_IA_COUNTER_H
 
-void prepa_counter_player(t_etat *etat, t_player *player);
+void prepa_counter_player(t_etat *etat, t_pions *pion);
 int check_counter(t_etat *etat);
 
 #endif //BOMBERMAN_IA_COUNTER_H

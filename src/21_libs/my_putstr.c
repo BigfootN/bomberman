@@ -8,7 +8,7 @@
 ** Last update Sat Dec 10 22:54:32 2016 BORRAS Pierre-Marc
 */
 
-#include "bomberman.h"
+#include "headers.h"
 
 void	my_putstr(const char *str)
 {

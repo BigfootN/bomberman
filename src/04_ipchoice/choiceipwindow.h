@@ -6,9 +6,9 @@
 #define BOMBERMAN_CHOICEIPWINDOW_H
 
 void create_etiquettes(t_control *control);
-void write_text(t_control* control);
+//void write_text(t_control* control);
 int my_choice_number(int c);
-char * delete_data(t_control* control, SDL_Event event);
-char *write_data(SDL_Event event, char *tmp);
+void delete_data(t_control* control, SDL_Event event);
+char *write_data(char *event, char *tmp);
 
 #endif //BOMBERMAN_CHOICEIPWINDOW_H

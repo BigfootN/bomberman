@@ -1,11 +1,11 @@
-#include "bomberman.h"
+#include "headers.h"
 
 char *my_strdup(const char *s1)
 {
     char *tab;
     int total;
 
-    total = my_strlen(s1);
+    total = (int)my_strlen(s1);
     tab = (char*) malloc(sizeof (char) * (total + 1));
     if (tab == NULL)
         return (NULL);

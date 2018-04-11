@@ -2,7 +2,7 @@
 // Created by marc on 01/03/18.
 //
 
-#include "bomberman.h"
+#include "headers.h"
 
 void prepa_bomb_map(t_etat *etat) {
     int indexX;
@@ -23,7 +23,7 @@ void prepa_bomb_map(t_etat *etat) {
                 posMap.x = indexX;
                 posMap.y = indexY;
                 tab = prepa_grid_fire(etat, posMap);
-                __print_explosion(tab);
+                //__print_explosion(tab);
                 /* soustrait pour avoir le numero du proprio */
                 etat->data_map->map_user_castdown[indexX][indexY] = tuile - 100;
                 display_fire(etat, position, tab);
@@ -81,9 +81,12 @@ void explosion_clean(t_etat *etat, int row, int col) {
                             //t_pions *addItemPions(t_etat *etat, int type, SDL_Rect realpos,   SDL_Rect mappos)
                             position.x = indexX;
                             position.y = indexY;
+                            /* incrente ici le compteur principal pour donner un id au bm */
+                            etat->nbre_pions++;
                             // pour la suppression chercher aussi les emplacements x y lorsque un est trouvé
-                            t_pions *pion = add_item_pions(etat, position);
+                            t_pions *pion = add_pions(etat, position);
                             pion->active = 1;
+                            pion->id =  etat->nbre_pions;
                             pion->life = 5;
                             pion->etat_requete = 1;
                             if (sort >= 27 && sort <= 30)

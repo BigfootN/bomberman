@@ -1,4 +1,4 @@
-#include "bomberman.h"
+#include "headers.h"
 
 /* 
  * permet de choisir la route (1-4) dans les routes dispo

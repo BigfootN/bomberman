@@ -18,4 +18,6 @@ void create_panel_wait(t_control *control);
 int dbl_click(int CurrentClickTicks, int Lastclickticks);
 void create_panel_waitset(t_control *control);
 
+void write_text(t_control* control);
+
 #endif //KERNEL_H

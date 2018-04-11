@@ -1,11 +1,13 @@
 //
-// Created by marc on 02/03/18.
+// Created by marc on 05/04/18.
 //
 
 #ifndef BOMBERMAN_HEADERS_H
 #define BOMBERMAN_HEADERS_H
 
-// SDL2
+/*
+ * SDL2
+ */
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_thread.h>
 #include <SDL2/SDL_timer.h>
@@ -14,21 +16,27 @@
 #include <SDL2/SDL_render.h>
 #include <SDL2/SDL_events.h>
 #include <SDL2/SDL_ttf.h>
-// annexe
+
+/*
+ * annexe
+*/
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <dirent.h> // share file
+#include <dirent.h>
 
 #include <string.h>
 #include <strings.h>
 
-#if defined _WIN32_ || defined _WIN64_
+#if defined WIN32 || defined WIN64
 //pour les sockets
 #include <winsock2.h>
 typedef int socklen_t;
 //pour les threads
+#include <pthread.h>
 #include <windows.h>
+#include <sys/time.h>
+#pragma comment(lib,"ws2_32.lib")
 #define psleep(sec) Sleep ((sec) * 1000)
 #elif defined __linux__
 // annexe
@@ -48,46 +56,67 @@ typedef int socklen_t;
 #include <errno.h>
 #endif
 
-/* 00_headers */
+
+/*
+ * 00_headers
+ */
 #include "define.h"
 #include "structures.h"
 #include "game.h"
 
-/* 01_main */
+/*
+ *  01_main
+ */
 #include "bomberman.h"
 
-/* 02_kernel */
-#include "kernel.h"
-#include "chainedlist.h"
+/*
+ * 02_kernel
+ */
 #include "inits.h"
+#include "chainedlist.h"
+#include "kernel.h"
 
-/* 03_introduction */
+/*
+ * 03_introduction
+ */
 #include "introloop.h"
 #include "introviews.h"
 
-/* 04_ipchoice */
+/*
+ * 04_ipchoice
+ */
 #include "choiceiploop.h"
 #include "choiceipwindow.h"
 #include "choicepviews.h"
 
-/* 05_game */
+
+/*
+ * 04_ prepa_game
+ */
+#include "display_prepagame.h"
+#include "write_prepa_game.h"
+#include "loop_prepagame.h"
+
+/*
+ * 05_game
+ */
 #include "display_game.h"
 #include "loop_game.h"
 #include "panel_game.h"
 #include "time_game.h"
 #include "views_game.h"
 
-/* 06_scores */
-#include "scrviews.h"
-#include "srcloop.h"
-
-/* 18_network */
+/*
+ * 18_network
+ */
+#include "tcp_client.h"
+#include "tcp_server.h"
 #include "network_player.h"
 #include "network.h"
-#include "tcpclient.h"
-#include "tcpserver.h"
 
-/* 19_ia */
+/*
+ * 19_ia
+ */
 #include "ia.h"
 #include "ia_bolus_malus.h"
 #include "ia_bomb.h"
@@ -101,12 +130,32 @@ typedef int socklen_t;
 #include "ia_timer.h"
 #include "ia_party.h"
 
-/* 20_pictures */
-#include "file.h"
-#include "init_sprites.h"
-#include "searchdirectory.h"
-
-/* 21_libs */
+/*
+ * 20_pictures
+ */
+#include "annexe_directory.h"
+#include "map.h"
+#include "init_pictures.h"
+/*
+ * 21_libs
+ */
 #include "libs.h"
+
+/* pointeur de function pour le menu des differents panneaux */
+typedef int (*p_fib)(t_control *);
+
+typedef struct s_window {
+    int number;
+    p_fib pfunc;
+} t_window;
+
+static const t_window l_bib[] = {
+        {1, &introduction_central},
+        {2, &ip_choice_central},
+        {5, &prepa_game_central},
+        {3, &central_game},
+//        {4, &scores_central},
+        {0, NULL}
+};
 
 #endif //BOMBERMAN_HEADERS_H

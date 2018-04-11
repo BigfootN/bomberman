@@ -2,7 +2,7 @@
 // Created by marc on 01/03/18.
 //
 
-#include "bomberman.h"
+#include "headers.h"
 
 void create_panel_game(t_control *control) {
     SDL_Rect position;
@@ -55,7 +55,7 @@ void display_counter(t_control *control, int minute1, int minute2, int seconde1,
     SDL_DestroyTexture(p_texture);
     SDL_RenderPresent(control->main_renderer);
 }
-
+/* les résultats des joueurs dans l'entete */
 void display_counter_header(t_control *control, int *tabl)
 {
     SDL_Rect dimension = {(WINDOW_WIDTH / 5) + 70, 15, (int) (8 * 1.8), (int) (14 * 1.8)};
@@ -82,41 +82,7 @@ void create_area_bonus(t_control *control) {
     SDL_RenderCopy(control->main_renderer, p_texture, &(control->sprites->cmenu[17].img), &dimension);
     SDL_DestroyTexture(p_texture);
 }
-/* obsolete */
-void display_map_old(t_control *control, t_svr_sd *requete) {
-    int row;
-    int col;
-    int tuile;
-    int bm;
-    int action;
-
-    col = 0;
-    row = 0;
-    if (requete->pos[0] == 0 && requete->pos[1] == 0)
-        return;
-    while (row < requete->pos[0]) {
-        col = 0;
-        while (col < requete->pos[1]) {
-            tuile = requete->map_decor[row][col];
-            SDL_Rect dimension = {(col * WIDTH_TILE) + 10, (row * HEIGHT_TILE) + (int) (32 * 1.8) + 10, WIDTH_TILE,
-                                  HEIGHT_TILE};
-            SDL_Texture *p_texture = SDL_CreateTextureFromSurface(control->main_renderer, control->sprites->dsprites);
-            if (tuile >= 0)
-                SDL_RenderCopy(control->main_renderer, p_texture, &(control->sprites->csprites[tuile].img), &dimension);
-            bm = requete->map_bm[row][col];
-            if (bm >= 0)
-                SDL_RenderCopy(control->main_renderer, p_texture, &(control->sprites->csprites[bm].img), &dimension);
-            action = requete->map_action[row][col];
-            if (action >= 0)
-                SDL_RenderCopy(control->main_renderer, p_texture, &(control->sprites->csprites[action].img),
-                               &dimension);
-            SDL_DestroyTexture(p_texture);
-            col++;
-        }
-        row++;
-    }
-}
-
+/*nettoie les carte*/
 void clean_map(t_control *control, t_svr_sd *requete)
 {
     int row;
@@ -191,18 +157,18 @@ void write_panel_score(t_control *control, t_svr_sd *requete) {
     int number;
     char buf[255];
 
-    number = requete->state_player.score;
+    number = requete->stat_user[1]; /* score */
     sprintf(buf, "%d", number);
 
     SDL_Rect renderQuad = {(15 * 40) + 100, (int) (32 * 1.8) + 70, (int) my_strlen(buf) * 18, 50};
     write_string(control, renderQuad, buf);
 
-    number = requete->state_player.bomb;
+    number = requete->stat_user[5]; //bomb;
     sprintf(buf, "%d", number);
     SDL_Rect renderQuad2 = {(15 * 40) + 100, (int) (32 * 1.8) + 180, (int) my_strlen(buf) * 18, 50};
     write_string(control, renderQuad2, buf);
 
-    number = requete->state_player.speed;
+    number = requete->stat_user[2]; //life;
     sprintf(buf, "%d", number);
     SDL_Rect renderQuad3 = {(15 * 40) + 100, (int) (32 * 1.8) + 290, (int) my_strlen(buf) * 18, 50};
     write_string(control, renderQuad3, buf);
@@ -216,13 +182,41 @@ void create_panel_result(t_control *control, t_svr_sd *requete) {
     position.y = 200;
     position.x = 220;
 
-    if (requete->state_player.win > 0) {
+    if (requete->stat_user[7] > 0) { //win
         SDL_Texture *pTexture = SDL_CreateTextureFromSurface(control->main_renderer, control->sprites->dresultat);
         SDL_RenderCopy(control->main_renderer, pTexture, &(control->sprites->cresultat[2].img), &position);
         SDL_DestroyTexture(pTexture);
-    } else if (requete->state_player.win <= 0) {
+    } else if (requete->stat_user[7] <= 0) { //win
         SDL_Texture *pTexture = SDL_CreateTextureFromSurface(control->main_renderer, control->sprites->dresultat);
         SDL_RenderCopy(control->main_renderer, pTexture, &(control->sprites->cresultat[1].img), &position);
         SDL_DestroyTexture(pTexture);
     }
+}
+
+void create_party_start(t_control *control)
+{
+    SDL_Rect srcr;
+
+    srcr.w = (int)(320 * 1.2);
+    srcr.h = (int)(162 * 1.2);
+    srcr.y = 200;
+    srcr.x = 220;
+
+    SDL_Texture* ptexture = SDL_CreateTextureFromSurface(control->main_renderer, control->sprites->dpartystart);
+    SDL_RenderCopy(control->main_renderer, ptexture, &(control->sprites->cpartystart->img), &srcr);
+    SDL_DestroyTexture(ptexture);
+}
+
+void create_max_users(t_control *control)
+{
+    SDL_Rect srcr;
+
+    srcr.w = (int)(320 * 1.2);
+    srcr.h = (int)(162 * 1.2);
+    srcr.y = 200;
+    srcr.x = 220;
+
+    SDL_Texture* ptexture = SDL_CreateTextureFromSurface(control->main_renderer, control->sprites->dmaxusers);
+    SDL_RenderCopy(control->main_renderer, ptexture, &(control->sprites->cmaxusers->img), &srcr);
+    SDL_DestroyTexture(ptexture);
 }
