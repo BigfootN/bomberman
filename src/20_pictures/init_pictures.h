@@ -18,5 +18,6 @@ int init_aides_ipserver(t_control *control);
 int init_aides_prepa_game(t_control *control);
 int init_users_max(t_control *control);
 int init_partie_start(t_control *control);
+int init_version(t_control *control);
 
 #endif //BOMBERMAN_INIT_PICTURES_H

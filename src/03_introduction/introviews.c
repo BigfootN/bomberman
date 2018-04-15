@@ -14,6 +14,7 @@ int introduction_central(t_control *control)
     window_init(control);
     create_panel(control);
     sprite_panel_introduction(control);
+    write_version(control);
     SDL_RenderPresent(control->main_renderer);
 
     events_loop_introduction(control, &menu_select);

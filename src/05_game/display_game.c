@@ -46,6 +46,12 @@ void ckeck_answer_srv(t_control *control) {
             screen_max_users(control); /* message d'attente de fin de set */
             SDL_RenderPresent(control->main_renderer); /* rafraichit l'image */
         }
+        else if (requete->command_service == 8) { /* trop de client  */
+            requete->etat_party_chrono = 0;
+            requete->depart_time = 0;
+            screen_version(control); /* message d'attente de fin de set */
+            SDL_RenderPresent(control->main_renderer); /* rafraichit l'image */
+        }
         control->mesg_en_bale = 0; /* désactive pour éviter d'inscrir des données non transmises */
     }
     SDL_Delay(5);

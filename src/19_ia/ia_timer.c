@@ -33,6 +33,7 @@ void send_time(t_etat *etat, int delaychrono) {
     /* prend le temps en seconde */
     time_t seconds;
 
+
     //delaychrono = 0;
     seconds = time(NULL);
     etat->tdepart = (seconds + ((delaychrono * 60))); // second = minute/60
