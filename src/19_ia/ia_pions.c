@@ -238,7 +238,7 @@ int collision_bm(t_etat *etat, t_pions *player, int dx, int dy) {
         } else if (bm == 6)
             player->bomb += 4;
         else if (bm == 7)
-            player->speed = 2;
+            player->speed = 12;
         else if (bm == 31)
             player->life += 3;
         else if (bm == 8) {

@@ -1,4 +1,4 @@
-# Install script for directory: /home/marc/Documents/bomberman/res/maps
+# Install script for directory: /home/marc/CLionProjects/bomberman_cross_1/res/maps
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -25,10 +25,12 @@ int prepare_requet_client(t_control *control, int idclient, int commandService, 
         return (0);
 
     /* pour le speed */
-    if(control->receive_map->stat_user[4] > 1)
-        SDL_Delay(100);
+    if(control->receive_map->stat_user[4] >= 1){
+        control->receive_map->stat_user[4]-= 1;
+        SDL_Delay(50);
+    }
     else
-        SDL_Delay(200);
+        SDL_Delay(150);
 
     control->msg->idclient = idclient;
     control->msg->commandservice = commandService;
