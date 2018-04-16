@@ -17,6 +17,6 @@ void display_counter_header(t_control *control, int *tabl);
 void end_game(t_control *control);
 void screen_party_start(t_control *control);
 void screen_max_users(t_control *control);
-void screen_version(t_control *control);
+
 
 #endif //BOMBERMAN_VIEWS_GAME_H

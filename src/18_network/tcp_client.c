@@ -8,8 +8,12 @@
  *  envoi au serveur les données
  */
 void *client_send_to_server(void *tmp) {
+//    t_clt_sd *requete;
     pthread_detach(pthread_self());
     t_control *control = (t_control *) tmp;
+
+//    if ((requete = (t_clt_sd *) malloc(sizeof(t_clt_sd))) == NULL)
+//        return (NULL);
 
     send(control->socket_client, (char *) control->msg, sizeof(t_clt_sd), 0);
     pthread_exit((void *) tmp);
@@ -24,19 +28,10 @@ int prepare_requet_client(t_control *control, int idclient, int commandService, 
     if (control->etat_send == 0)
         return (0);
 
-    /* pour le speed */
-    if(control->receive_map->stat_user[4] >= 1){
-        control->receive_map->stat_user[4]-= 1;
-        SDL_Delay(50);
-    }
-    else
-        SDL_Delay(150);
-
     control->msg->idclient = idclient;
     control->msg->commandservice = commandService;
     control->msg->requete_1 = requete_1;
     control->msg->requete_2 = requete_2;
-
 
     if (pthread_create(&p_thread, NULL, client_send_to_server, (void *) control) < 0) {
         perror("could not create thread");

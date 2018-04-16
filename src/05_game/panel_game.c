@@ -153,13 +153,6 @@ void display_map(t_control *control, t_svr_sd *requete) {
     }
 }
 
-void write_version(t_control *control)
-{
-    SDL_Rect renderQuad3 = {WINDOW_WIDTH - 70, WINDOW_HEIGHT -20, 11 * 5, 15};
-    write_string(control, renderQuad3, VERSION);
-    SDL_RenderPresent(control->main_renderer);
-}
-
 void write_panel_score(t_control *control, t_svr_sd *requete) {
     int number;
     char buf[255];
@@ -225,19 +218,5 @@ void create_max_users(t_control *control)
 
     SDL_Texture* ptexture = SDL_CreateTextureFromSurface(control->main_renderer, control->sprites->dmaxusers);
     SDL_RenderCopy(control->main_renderer, ptexture, &(control->sprites->cmaxusers->img), &srcr);
-    SDL_DestroyTexture(ptexture);
-}
-
-void create_version(t_control *control)
-{
-    SDL_Rect srcr;
-
-    srcr.w = (int)(320 * 1.2);
-    srcr.h = (int)(162 * 1.2);
-    srcr.y = 200;
-    srcr.x = 220;
-
-    SDL_Texture* ptexture = SDL_CreateTextureFromSurface(control->main_renderer, control->sprites->dversion);
-    SDL_RenderCopy(control->main_renderer, ptexture, &(control->sprites->cversion->img), &srcr);
     SDL_DestroyTexture(ptexture);
 }

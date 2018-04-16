@@ -14,10 +14,6 @@ int serialize_map(t_etat *etat)
 
     etat->msg->pos[0] = etat->data_map->pos.x;
     etat->msg->pos[1] = etat->data_map->pos.y;
-
-    if ( etat->msg->pos[0] == 0 && etat->msg->pos[1] == 0)
-        return (-1);
-
     row = 0;
     while (row < etat->data_map->pos.x)
     {

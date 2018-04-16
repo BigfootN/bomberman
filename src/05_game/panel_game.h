@@ -16,7 +16,5 @@ void create_panel_game(t_control *control);
 void clean_map(t_control *control, t_svr_sd *requete);
 void create_party_start(t_control *control);
 void create_max_users(t_control *control);
-void create_version(t_control *control);
-void write_version(t_control *control);
 
 #endif //BOMBERMAN_PANEL_GAME_H

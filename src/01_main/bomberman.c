@@ -22,6 +22,11 @@ int main(int argc, char *argv[]) {
 
     /* mets en memoire les divers parties des elements graphiques du jeux */
     if (((choixpage = central_init_sprites(control))) > 0) {
+        if(choixpage == 0)
+        {
+            puts("problème avec les ressources");
+            return(1);
+        }
 
         index = 0;
         control->srv_or_clt = 1;

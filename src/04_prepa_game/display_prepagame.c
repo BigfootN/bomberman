@@ -17,7 +17,6 @@ int prepa_game_central(t_control *control) {
 //    encart_white(control);
     //create_panel_aide_prepa_game(control);
     button_action_prepa_game(control);
-    write_version(control);
     SDL_RenderPresent(control->main_renderer);
 
     events_loop_prepa_game(control, &menu_select);

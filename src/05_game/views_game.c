@@ -17,7 +17,6 @@ int central_game(t_control *control)
     control->id_client = -1;
     /* affiche un panneau d'attente */
     display_screen_wait(control);
-    write_version(control);
     /* */
     SDL_RenderPresent(control->main_renderer);
     /* lance la ia lors que le serveur est pret */
@@ -125,16 +124,6 @@ void screen_max_users(t_control *control)
     create_compteur(control);
     create_max_users(control);
 }
-
-void screen_version(t_control *control)
-{
-    create_panel(control);
-    button_game(control);
-    create_panel_game(control);
-    create_compteur(control);
-    create_version(control);
-}
-
 
 
 void display_screen_game(t_control *control)

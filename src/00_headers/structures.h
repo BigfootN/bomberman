@@ -36,7 +36,6 @@ typedef struct s_clt_sd {
     int requete_2;
     int set; // le set en cours
     int commandservice; // permet de donner un ordre reseau arret attente etc...
-    char version[11];
 } t_clt_sd;
 
 /* structure d'envoi reseau */
@@ -91,8 +90,6 @@ typedef struct s_surface {
     SDL_Surface *dpartystart;
     t_coord *cmaxusers;
     SDL_Surface *dmaxusers;
-    t_coord *cversion;
-    SDL_Surface *dversion;
 
 } t_surface;
 

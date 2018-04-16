@@ -61,7 +61,6 @@ void events_loop_ip_choice(t_control *control, int *menu_select) {
         switch (event.type) {
             case SDL_QUIT:
                 in.quit = 1;
-                break;
             case SDL_MOUSEMOTION:
                 in.mousex = event.motion.x;
                 in.mousey = event.motion.y;

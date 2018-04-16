@@ -79,9 +79,8 @@ int server_receive_from_client(void *tmp) {
     while (((read_size = recv(sock, (char *) requete, sizeof(t_clt_sd), 0)) > 0)) {
         requete = (t_clt_sd *) requete;
         etat = (t_etat *) tmp;
-        /* ajoute le client a la partie */
         if (requete->commandservice == 1 && etat->partie == 0) {
-            if (add_client(etat, requete, sock) == -1) { /* si trop de clients envoi au dernier un message */
+            if(add_client(etat, requete, sock) == -1) { /* si trop de clients envoi audernier un message */
                 /* envoi message 7 pour dire trop de clients */
                 send_requete_for_uniq_player(etat, sock, 7, 0);
 #if defined WIN32 || defined WIN64
@@ -90,21 +89,8 @@ int server_receive_from_client(void *tmp) {
 #elif defined __linux__
                 shutdown(sock, 2);
 #endif
-            } else {
+            }else{
                 stop_client = 1;
-                /* verification de la version */
-                if (my_strcmp(requete->version, VERSION) != 0) {
-                    /* enlever le joueur qui sort */
-                    delete_player_deconnect(etat, sock);
-                    /* envoi message 8 pour dire que la version est differente */
-                    send_requete_for_uniq_player(etat, sock, 8, 0);
-#if defined WIN32 || defined WIN64
-                    closesocket(sock);
-                    WSACleanup();
-#elif defined __linux__
-                    shutdown(sock, 2);
-#endif
-                }
             }
         } else if (requete->commandservice == 50) { /* deconnect le client et le server */
             /* enlever le joueur qui sort */
@@ -132,7 +118,7 @@ int server_receive_from_client(void *tmp) {
             /* enlever le joueur qui sort */
             delete_player_deconnect(etat, sock);
             /* envoi message 6 pour dire la partie est déjà engagée */
-            send_requete_for_uniq_player(etat, sock, 6, 0);
+            send_requete_for_uniq_player(etat, sock,6, 0);
 #if defined WIN32 || defined WIN64
             closesocket(sock);
             WSACleanup();
@@ -149,11 +135,12 @@ int server_receive_from_client(void *tmp) {
 
 #if defined __linux__
     if (read_size == -1)
-        perror("recv failed");
+      perror("recv failed");
     close(sock);
 #endif
 
     puts("client disconnet\n");
+    // pthread_exit(NULL);
     return (1);
 }
 
@@ -209,7 +196,7 @@ int tcp_server(void *tmp) {
     printf("Socket created.\n");
 #elif defined __linux__
     int client_sock;
-    int max_sd;
+  int max_sd;
     //crée la socket du serveur
     etat->sock_server = socket(AF_INET, SOCK_STREAM, 0);
     if (etat->sock_server == -1)
@@ -265,7 +252,7 @@ int tcp_server(void *tmp) {
         if (FD_ISSET(etat->sock_server, &readfds)) {
             if ((client_sock = accept(etat->sock_server, (struct sockaddr *) &client, (socklen_t *) &c))) {
                 etat->sock_tmp = client_sock;
-                if ((SDL_CreateThread(server_receive_from_client, "server_receive_from_client", (void *) etat)) == NULL) {
+                if ((SDL_CreateThread(server_receive_from_client, "server_receive_from_client", (void *) etat)) < 0) {
                     printf("\nSDL_CreateThread failed: %s\n", SDL_GetError());
                     opt = 0;
                 }
