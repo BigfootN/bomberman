@@ -4,7 +4,7 @@
 
 #include "headers.h"
 
-t_control *reinit_control(t_control *control)
+void reinit_control(t_control *control)
 {
     int indeRow = 0;
     int indCol = 0;
@@ -78,6 +78,7 @@ t_control *init_control() {
         return NULL;
     if ((control->ip_serveur = (char *) malloc(sizeof(char) * 17)) == NULL)
         return NULL;
+
     my_bzero(control->ip_serveur, 17);
     control->main_renderer = NULL;
     control->fenetre = NULL;
@@ -104,6 +105,7 @@ t_control *init_control() {
     control->msg->idclient = 0;
     control->msg->idclient = 0;
     control->msg->set = 0;
+    strcpy(control->msg->version, VERSION);
 
     control->receive_map->idclient = 0;
     control->receive_map->etat_party_chrono = 0;
@@ -138,6 +140,7 @@ t_control *init_control() {
 
     control->receive_map->reponse = 0;
     control->receive_map->set_start = 0;
+
 
     indCol = 0;
     while (indCol < 8) {
@@ -214,7 +217,6 @@ t_etat *init_etat() {
         }
         indrow++;
     }
-
     etat->etat_party_chrono = 0;
     etat->nbreset = 0;
     etat->minutesgame = 0;

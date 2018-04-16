@@ -20,9 +20,10 @@ int central_init_sprites(t_control *control) {
                                                 if (init_aides_prepa_game(control))
                                                     if (init_partie_start(control))
                                                         if (init_users_max(control))
-                                                            return (1);
+                                                            if (init_version(control))
+                                                                return (1);
             }
-    return (5); /* indique qu'il y as eu probleme pour trouver les ou la ressource(s) */
+    return (0); /* indique qu'il y as eu probleme pour trouver les ou la ressource(s) */
 }
 
 // 31 sprites
@@ -329,6 +330,27 @@ int init_users_max(t_control *control) {
     return (1);
 }
 
+int init_version(t_control *control) {
+    char *name_image;
+
+    name_image = create_directory_file("version.gif", 1);
+    control->sprites->cversion = (t_coord *) malloc(sizeof(t_coord));
+    control->sprites->dversion = IMG_Load(name_image);
+    if (control->sprites->dversion == NULL) {
+        my_putstr("version.gif image introuvable !! \n");
+        free(name_image);
+        SDL_Quit();
+        return (0);
+    }
+    free(name_image);
+
+    control->sprites->cversion->img.w = 286;
+    control->sprites->cversion->img.h = 90;
+    control->sprites->cversion->img.x = 0;
+    control->sprites->cversion->img.y = 0;
+    return (1);
+}
+
 void delete_sprites(t_control *control) {
     SDL_FreeSurface(control->sprites->dsprites);
     SDL_FreeSurface(control->sprites->dmenu);
@@ -341,6 +363,7 @@ void delete_sprites(t_control *control) {
     SDL_FreeSurface(control->sprites->dprepagame);
     SDL_FreeSurface(control->sprites->dpartystart);
     SDL_FreeSurface(control->sprites->dmaxusers);
+    SDL_FreeSurface(control->sprites->dversion);
     free(control->sprites->csprites);
     free(control->sprites->cmenu);
     free(control->sprites->clogo);
@@ -352,4 +375,5 @@ void delete_sprites(t_control *control) {
     free(control->sprites->cprepagame);
     free(control->sprites->cpartystart);
     free(control->sprites->cmaxusers);
+    free(control->sprites->cversion);
 }

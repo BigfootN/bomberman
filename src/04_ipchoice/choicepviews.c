@@ -16,6 +16,7 @@ int ip_choice_central(t_control* control)
     encart_white(control);
     create_panel_aide_ip(control);
     button_action_choice_partie(control);
+    write_version(control);
     SDL_RenderPresent(control->main_renderer);
 
     events_loop_ip_choice(control, &menu_select);

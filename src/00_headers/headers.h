@@ -154,7 +154,6 @@ static const t_window l_bib[] = {
         {2, &ip_choice_central},
         {5, &prepa_game_central},
         {3, &central_game},
-//        {4, &scores_central},
         {0, NULL}
 };
 

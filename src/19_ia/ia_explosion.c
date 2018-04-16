@@ -78,7 +78,6 @@ void explosion_clean(t_etat *etat, int row, int col) {
                         if ((sort >= 27 && sort <= 30))
                         {
                             etat->data_map->mapaction[indexX][indexY] = sort;
-                            //t_pions *addItemPions(t_etat *etat, int type, SDL_Rect realpos,   SDL_Rect mappos)
                             position.x = indexX;
                             position.y = indexY;
                             /* incrente ici le compteur principal pour donner un id au bm */

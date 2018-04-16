@@ -30,16 +30,10 @@ void __check_list_pions(t_etat *etat) {
  */
 void create_players_pions(t_etat *etat) {
     t_pions *pion;
-    SDL_Rect mappos;
 
     pion = etat->pion;
     while (pion != NULL) {
         if (pion->active == 5) {
-            mappos.x = 0;
-            mappos.y = 0;
-            mappos.w = 0;
-            mappos.h = 0;
-            // pion = add_pions(etat, mappos);
             init_pion(pion);
             pion->speed = 0;
             pion->type = 1;
@@ -244,7 +238,7 @@ int collision_bm(t_etat *etat, t_pions *player, int dx, int dy) {
         } else if (bm == 6)
             player->bomb += 4;
         else if (bm == 7)
-            player->speed = 2;
+            player->speed = 12;
         else if (bm == 31)
             player->life += 3;
         else if (bm == 8) {
@@ -303,10 +297,6 @@ int collision_bm(t_etat *etat, t_pions *player, int dx, int dy) {
         return (1);
     }
     return 0;
-}
-
-int collision_joueur(t_etat *etat, t_pions *player, int dx, int dy) {
-
 }
 
 void move_pions(t_etat *etat, t_pions *pion, int type, int value) {

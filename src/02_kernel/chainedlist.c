@@ -61,7 +61,7 @@ t_pions *add_pions(t_etat *etat, SDL_Rect mappos) {
     tmp->winner = 0;
     /*  si joueur */
     tmp->bomb = 0;
-    tmp->score = 1;
+    tmp->score = 0;
     /* requete si joueur */
     tmp->etat_requete = 0;
     tmp->requete_1 = 0;

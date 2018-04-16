@@ -54,7 +54,6 @@
 					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/04_ipchoice"/>
 					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/04_prepa_game"/>
 					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/05_game"/>
-					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/06_scores"/>
 					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/18_network"/>
 					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/19_ia"/>
 					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/20_pictures"/>
@@ -92,7 +91,6 @@
 					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/04_ipchoice"/>
 					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/04_prepa_game"/>
 					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/05_game"/>
-					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/06_scores"/>
 					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/18_network"/>
 					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/19_ia"/>
 					<Add directory="/home/marc/CLionProjects/bomberman_cross_1/src/20_pictures"/>

@@ -33,8 +33,8 @@ void chrono_session(t_control *control) {
 
     if (control->receive_map != NULL) {
         //time_t data = control->receive_map->depart_time;
-        if ((chrono_set == 0 ||
-             (chrono_set < control->receive_map->depart_time) && control->receive_map->depart_time != 0)) {
+        if (chrono_set == 0 ||
+             (chrono_set < control->receive_map->depart_time && control->receive_map->depart_time != 0)) {
             chrono_set = (long) control->receive_map->depart_time; /* le temp d'arrivée */
         } else if (chrono_set != 0) {
             {

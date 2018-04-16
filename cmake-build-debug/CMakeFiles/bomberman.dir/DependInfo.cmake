@@ -65,7 +65,6 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../src/04_ipchoice"
   "../src/04_prepa_game"
   "../src/05_game"
-  "../src/06_scores"
   "../src/18_network"
   "../src/19_ia"
   "../src/20_pictures"
