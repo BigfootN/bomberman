@@ -4,7 +4,7 @@
 
 #include "headers.h"
 
-t_control *reinit_control(t_control *control)
+void reinit_control(t_control *control)
 {
     int indeRow = 0;
     int indCol = 0;

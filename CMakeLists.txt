@@ -3,7 +3,8 @@ project(bomberman)
 if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
     INCLUDE(FindPkgConfig)
 endif (CMAKE_SYSTEM_NAME STREQUAL "Linux")
-#set(CMAKE_C_STANDARD 11)
+
+set(CMAKE_C_FLAGS "-pg -g -Wall -Werror -Wextra")
 
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR})
 
@@ -91,12 +92,7 @@ add_subdirectory(res/pictures)
 
 if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
     find_package(Threads)
-    #find_package(SDL2TTF REQUIRED)
-    #find_package(SDL2_image REQUIRED)
     pkg_check_modules(SDL2 REQUIRED sdl2 SDL2_image SDL2_ttf)
-    #pkg_check_modules(SDL2 REQUIRED sdl2)
-    #pkg_check_modules(SDL2_IMG REQUIRED SDL2_image)
-    #pkg_check_modules(SDL2_TTF REQUIRED SDL2_ttf)
 endif (CMAKE_SYSTEM_NAME STREQUAL "Linux")
 
 add_executable(bomberman

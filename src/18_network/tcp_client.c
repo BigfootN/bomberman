@@ -8,12 +8,8 @@
  *  envoi au serveur les données
  */
 void *client_send_to_server(void *tmp) {
-//    t_clt_sd *requete;
     pthread_detach(pthread_self());
     t_control *control = (t_control *) tmp;
-
-//    if ((requete = (t_clt_sd *) malloc(sizeof(t_clt_sd))) == NULL)
-//        return (NULL);
 
     send(control->socket_client, (char *) control->msg, sizeof(t_clt_sd), 0);
     pthread_exit((void *) tmp);

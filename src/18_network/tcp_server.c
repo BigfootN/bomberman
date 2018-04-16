@@ -265,7 +265,7 @@ int tcp_server(void *tmp) {
         if (FD_ISSET(etat->sock_server, &readfds)) {
             if ((client_sock = accept(etat->sock_server, (struct sockaddr *) &client, (socklen_t *) &c))) {
                 etat->sock_tmp = client_sock;
-                if ((SDL_CreateThread(server_receive_from_client, "server_receive_from_client", (void *) etat)) < 0) {
+                if ((SDL_CreateThread(server_receive_from_client, "server_receive_from_client", (void *) etat)) == NULL) {
                     printf("\nSDL_CreateThread failed: %s\n", SDL_GetError());
                     opt = 0;
                 }

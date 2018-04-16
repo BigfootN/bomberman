@@ -11,8 +11,6 @@ int serialize_map(t_etat *etat)
     int decor;
     int bm;
     int action;
-    int maxrows;
-    int maxcols;
 
     etat->msg->pos[0] = etat->data_map->pos.x;
     etat->msg->pos[1] = etat->data_map->pos.y;

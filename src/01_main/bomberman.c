@@ -34,9 +34,6 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    if(choixpage == 0)
-        puts("problème avec les ressources");
-
     delete_sprites(control);
     delete_control(control);
 

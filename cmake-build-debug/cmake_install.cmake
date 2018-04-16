@@ -1,4 +1,4 @@
-# Install script for directory: /home/marc/CLionProjects/bomberman_cross_1
+# Install script for directory: /home/marc/Documents/bomberman
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,9 +39,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/res/maps/cmake_install.cmake")
-  include("/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/res/fonts/cmake_install.cmake")
-  include("/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/res/pictures/cmake_install.cmake")
+  include("/home/marc/Documents/bomberman/cmake-build-debug/res/maps/cmake_install.cmake")
+  include("/home/marc/Documents/bomberman/cmake-build-debug/res/fonts/cmake_install.cmake")
+  include("/home/marc/Documents/bomberman/cmake-build-debug/res/pictures/cmake_install.cmake")
 
 endif()
 
@@ -53,5 +53,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/marc/Documents/bomberman/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
