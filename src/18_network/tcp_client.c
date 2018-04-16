@@ -28,10 +28,17 @@ int prepare_requet_client(t_control *control, int idclient, int commandService, 
     if (control->etat_send == 0)
         return (0);
 
+    /* pour le speed */
+    if(control->receive_map->stat_user[4] > 1)
+        SDL_Delay(100);
+    else
+        SDL_Delay(200);
+
     control->msg->idclient = idclient;
     control->msg->commandservice = commandService;
     control->msg->requete_1 = requete_1;
     control->msg->requete_2 = requete_2;
+
 
     if (pthread_create(&p_thread, NULL, client_send_to_server, (void *) control) < 0) {
         perror("could not create thread");

@@ -23,7 +23,7 @@ int central_init_sprites(t_control *control) {
                                                             if (init_version(control))
                                                                 return (1);
             }
-    return (5); /* indique qu'il y as eu probleme pour trouver les ou la ressource(s) */
+    return (0); /* indique qu'il y as eu probleme pour trouver les ou la ressource(s) */
 }
 
 // 31 sprites

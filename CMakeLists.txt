@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.9)
+cmake_minimum_required(VERSION 3.10)
 project(bomberman)
 if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
     INCLUDE(FindPkgConfig)
@@ -133,7 +133,6 @@ target_include_directories(bomberman PUBLIC
         ${CMAKE_SOURCE_DIR}/src/04_ipchoice
         ${CMAKE_SOURCE_DIR}/src/04_prepa_game
         ${CMAKE_SOURCE_DIR}/src/05_game
-        ${CMAKE_SOURCE_DIR}/src/06_scores
         ${CMAKE_SOURCE_DIR}/src/18_network
         ${CMAKE_SOURCE_DIR}/src/19_ia
         ${CMAKE_SOURCE_DIR}/src/20_pictures

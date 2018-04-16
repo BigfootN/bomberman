@@ -10,7 +10,6 @@ target_include_directories(introduction PUBLIC
         ${CMAKE_SOURCE_DIR}/src/03_introduction
         ${CMAKE_SOURCE_DIR}/src/04_ipchoice
         ${CMAKE_SOURCE_DIR}/src/05_game
-        ${CMAKE_SOURCE_DIR}/src/06_scores
         ${CMAKE_SOURCE_DIR}/src/18_network
         ${CMAKE_SOURCE_DIR}/src/19_ia
         ${CMAKE_SOURCE_DIR}/src/20_pictures
