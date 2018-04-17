@@ -28,7 +28,6 @@ void init_bomb(t_etat *etat, t_pions *pion) {
 }
 
 //la mets sur la carte
-
 void etat_bomb(t_etat *etat, t_pions *pion) {
     t_pions *tmp;
     int temps_bombe;
@@ -51,11 +50,4 @@ void etat_bomb(t_etat *etat, t_pions *pion) {
         }
         etat->data_map->bmmap[tmp->mappos.x][tmp->mappos.y] = temps_bombe;
     }
-//    else if (tmp->life >= 45)// devient explosion
-//    {
-//        pion->requete_1 = 0;
-//        pion->requete_2 = 0;
-//        pion->etat_requete = 0;
-//        etat->data_map->bmmap[tmp->mappos.x][tmp->mappos.y] = 100 + pion->proprio; // numero faire exploser bomb
-//    }
 }

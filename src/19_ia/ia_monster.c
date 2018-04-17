@@ -363,8 +363,6 @@ int **prepa_grid_bonus_malus(t_etat *etat, SDL_Rect position) {
         index++;
     }
 
-    //__printf(tab);
-
     answer = 0;
     index = position.x;
     // haut
@@ -380,9 +378,7 @@ int **prepa_grid_bonus_malus(t_etat *etat, SDL_Rect position) {
             tab[(index + 2) - position.x][2] = check_item_detect(answer, pion);
         }
         index--;
-    }
-
-   // __printf(tab);
+    };
 
     answer = 0;
     index = position.y;
@@ -401,8 +397,6 @@ int **prepa_grid_bonus_malus(t_etat *etat, SDL_Rect position) {
         index++;
     }
 
-   // __printf(tab);
-
     answer = 0;
     index = position.y;
     // vers la gauche
@@ -418,8 +412,6 @@ int **prepa_grid_bonus_malus(t_etat *etat, SDL_Rect position) {
         }
         index--;
     }
-
-    //__printf(tab);
 
     return (tab);
 }

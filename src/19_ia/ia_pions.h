@@ -20,5 +20,6 @@ void delete_players(t_etat *etat);
 void delete_pions(t_etat *etat);
 void send_end_party(t_etat *etat);
 void update_score_user(t_etat *etat, SDL_Rect posMap);
+t_pions *wanted_pion_pos(t_etat *etat,int x, int y);
 
 #endif //BOMBERMAN_IA_PIONS_H

@@ -111,6 +111,20 @@ void dead_pion(t_etat *etat, t_pions *tmp) {
     // detruit la bomb
     delete_pion(etat, tmp);
 }
+/* recherche le pion par sa position*/
+t_pions *wanted_pion_pos(t_etat *etat,int x, int y)
+{
+    t_pions *pion;
+    pion = etat->pion;
+
+        while (pion != NULL) {
+            if (pion->mappos.x == x && pion->mappos.y == y)
+                return (pion);
+            pion = pion->next;
+        }
+    return (NULL);
+}
+
 
 // incremente nouveau
 void update_score_user(t_etat *etat, SDL_Rect posMap) {

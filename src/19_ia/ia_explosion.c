@@ -31,7 +31,7 @@ void prepa_bomb_map(t_etat *etat) {
                 etat->data_map->map_user_castdown[indexX][indexY] = -1;
             } else if (tuile >= 41 && tuile <= 50)// temps explosion
             {
-                etat->data_map->bmmap[indexX][indexY] += 1; /* on detruit definitevement l'explosion*/
+                etat->data_map->bmmap[indexX][indexY] += 1; /* on detruit definitevement l'explosion */
                 if (etat->data_map->bmmap[indexX][indexY] >= 50) {
                     etat->data_map->bmmap[indexX][indexY] = -1;
                     explosion_clean(etat, indexX, indexY);
@@ -181,11 +181,13 @@ void display_fire(t_etat *etat, SDL_Rect lposition, int **tab) {
                                (tab[indexX][indexY] >= 0 && tab[indexX][indexY] <= 8)) /* monstre ou bm */
                     {
                         update_score_user(etat, lposition);/* incremente le score */
-                        int monstre = etat->data_map->mapaction[row][col]; // supprimer immediatement
+                        //int monstre = etat->data_map->mapaction[row][col]; // supprimer immediatement
                         etat->data_map->mapaction[row][col] = flag; /* on mets l'explosion */
-                        desactive_players(etat, monstre); /* supprime immediatement du jeux */
+                       // desactive_players(etat, monstre); /* supprime immediatement du jeux */
+                        t_pions *pion = wanted_pion_pos(etat, row, col);
+                        if(pion != NULL)
+                            dead_pion(etat, pion);
                     }
-
                 }
                 //printf("%d", control->dataMap->hidebonus[row][col]);
             }
