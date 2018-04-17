@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/marc/clion-2018.1/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/annexe/logiciels/clion-2018.1/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/marc/clion-2018.1/bin/cmake/bin/cmake -E remove -f
+RM = /home/annexe/logiciels/clion-2018.1/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/marc/CLionProjects/bomberman_cross_1
+CMAKE_SOURCE_DIR = /home/marc/CLionProjects/git/bomberman
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug
+CMAKE_BINARY_DIR = /home/marc/CLionProjects/git/bomberman/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/bomberman.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/bomberman.dir/flags.make
 
 CMakeFiles/bomberman.dir/src/01_main/bomberman.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/01_main/bomberman.c.o: ../src/01_main/bomberman.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/bomberman.dir/src/01_main/bomberman.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/01_main/bomberman.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/01_main/bomberman.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/bomberman.dir/src/01_main/bomberman.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/01_main/bomberman.c.o   -c /home/marc/CLionProjects/git/bomberman/src/01_main/bomberman.c
 
 CMakeFiles/bomberman.dir/src/01_main/bomberman.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/01_main/bomberman.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/01_main/bomberman.c > CMakeFiles/bomberman.dir/src/01_main/bomberman.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/01_main/bomberman.c > CMakeFiles/bomberman.dir/src/01_main/bomberman.c.i
 
 CMakeFiles/bomberman.dir/src/01_main/bomberman.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/01_main/bomberman.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/01_main/bomberman.c -o CMakeFiles/bomberman.dir/src/01_main/bomberman.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/01_main/bomberman.c -o CMakeFiles/bomberman.dir/src/01_main/bomberman.c.s
 
 CMakeFiles/bomberman.dir/src/01_main/bomberman.c.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/bomberman.dir/src/01_main/bomberman.c.o.provides.build: CMakeFiles/bo
 
 CMakeFiles/bomberman.dir/src/02_kernel/inits.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/02_kernel/inits.c.o: ../src/02_kernel/inits.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/bomberman.dir/src/02_kernel/inits.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/02_kernel/inits.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/02_kernel/inits.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/bomberman.dir/src/02_kernel/inits.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/02_kernel/inits.c.o   -c /home/marc/CLionProjects/git/bomberman/src/02_kernel/inits.c
 
 CMakeFiles/bomberman.dir/src/02_kernel/inits.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/02_kernel/inits.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/02_kernel/inits.c > CMakeFiles/bomberman.dir/src/02_kernel/inits.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/02_kernel/inits.c > CMakeFiles/bomberman.dir/src/02_kernel/inits.c.i
 
 CMakeFiles/bomberman.dir/src/02_kernel/inits.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/02_kernel/inits.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/02_kernel/inits.c -o CMakeFiles/bomberman.dir/src/02_kernel/inits.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/02_kernel/inits.c -o CMakeFiles/bomberman.dir/src/02_kernel/inits.c.s
 
 CMakeFiles/bomberman.dir/src/02_kernel/inits.c.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/bomberman.dir/src/02_kernel/inits.c.o.provides.build: CMakeFiles/bomb
 
 CMakeFiles/bomberman.dir/src/02_kernel/chainedlist.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/02_kernel/chainedlist.c.o: ../src/02_kernel/chainedlist.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/bomberman.dir/src/02_kernel/chainedlist.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/02_kernel/chainedlist.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/02_kernel/chainedlist.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/bomberman.dir/src/02_kernel/chainedlist.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/02_kernel/chainedlist.c.o   -c /home/marc/CLionProjects/git/bomberman/src/02_kernel/chainedlist.c
 
 CMakeFiles/bomberman.dir/src/02_kernel/chainedlist.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/02_kernel/chainedlist.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/02_kernel/chainedlist.c > CMakeFiles/bomberman.dir/src/02_kernel/chainedlist.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/02_kernel/chainedlist.c > CMakeFiles/bomberman.dir/src/02_kernel/chainedlist.c.i
 
 CMakeFiles/bomberman.dir/src/02_kernel/chainedlist.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/02_kernel/chainedlist.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/02_kernel/chainedlist.c -o CMakeFiles/bomberman.dir/src/02_kernel/chainedlist.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/02_kernel/chainedlist.c -o CMakeFiles/bomberman.dir/src/02_kernel/chainedlist.c.s
 
 CMakeFiles/bomberman.dir/src/02_kernel/chainedlist.c.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/bomberman.dir/src/02_kernel/chainedlist.c.o.provides.build: CMakeFile
 
 CMakeFiles/bomberman.dir/src/02_kernel/kernel.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/02_kernel/kernel.c.o: ../src/02_kernel/kernel.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/bomberman.dir/src/02_kernel/kernel.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/02_kernel/kernel.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/02_kernel/kernel.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/bomberman.dir/src/02_kernel/kernel.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/02_kernel/kernel.c.o   -c /home/marc/CLionProjects/git/bomberman/src/02_kernel/kernel.c
 
 CMakeFiles/bomberman.dir/src/02_kernel/kernel.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/02_kernel/kernel.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/02_kernel/kernel.c > CMakeFiles/bomberman.dir/src/02_kernel/kernel.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/02_kernel/kernel.c > CMakeFiles/bomberman.dir/src/02_kernel/kernel.c.i
 
 CMakeFiles/bomberman.dir/src/02_kernel/kernel.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/02_kernel/kernel.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/02_kernel/kernel.c -o CMakeFiles/bomberman.dir/src/02_kernel/kernel.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/02_kernel/kernel.c -o CMakeFiles/bomberman.dir/src/02_kernel/kernel.c.s
 
 CMakeFiles/bomberman.dir/src/02_kernel/kernel.c.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/bomberman.dir/src/02_kernel/kernel.c.o.provides.build: CMakeFiles/bom
 
 CMakeFiles/bomberman.dir/src/03_introduction/introloop.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/03_introduction/introloop.c.o: ../src/03_introduction/introloop.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/bomberman.dir/src/03_introduction/introloop.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/03_introduction/introloop.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/03_introduction/introloop.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/bomberman.dir/src/03_introduction/introloop.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/03_introduction/introloop.c.o   -c /home/marc/CLionProjects/git/bomberman/src/03_introduction/introloop.c
 
 CMakeFiles/bomberman.dir/src/03_introduction/introloop.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/03_introduction/introloop.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/03_introduction/introloop.c > CMakeFiles/bomberman.dir/src/03_introduction/introloop.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/03_introduction/introloop.c > CMakeFiles/bomberman.dir/src/03_introduction/introloop.c.i
 
 CMakeFiles/bomberman.dir/src/03_introduction/introloop.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/03_introduction/introloop.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/03_introduction/introloop.c -o CMakeFiles/bomberman.dir/src/03_introduction/introloop.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/03_introduction/introloop.c -o CMakeFiles/bomberman.dir/src/03_introduction/introloop.c.s
 
 CMakeFiles/bomberman.dir/src/03_introduction/introloop.c.o.requires:
 
@@ -179,16 +179,16 @@ CMakeFiles/bomberman.dir/src/03_introduction/introloop.c.o.provides.build: CMake
 
 CMakeFiles/bomberman.dir/src/03_introduction/introviews.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/03_introduction/introviews.c.o: ../src/03_introduction/introviews.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/bomberman.dir/src/03_introduction/introviews.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/03_introduction/introviews.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/03_introduction/introviews.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/bomberman.dir/src/03_introduction/introviews.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/03_introduction/introviews.c.o   -c /home/marc/CLionProjects/git/bomberman/src/03_introduction/introviews.c
 
 CMakeFiles/bomberman.dir/src/03_introduction/introviews.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/03_introduction/introviews.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/03_introduction/introviews.c > CMakeFiles/bomberman.dir/src/03_introduction/introviews.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/03_introduction/introviews.c > CMakeFiles/bomberman.dir/src/03_introduction/introviews.c.i
 
 CMakeFiles/bomberman.dir/src/03_introduction/introviews.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/03_introduction/introviews.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/03_introduction/introviews.c -o CMakeFiles/bomberman.dir/src/03_introduction/introviews.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/03_introduction/introviews.c -o CMakeFiles/bomberman.dir/src/03_introduction/introviews.c.s
 
 CMakeFiles/bomberman.dir/src/03_introduction/introviews.c.o.requires:
 
@@ -203,16 +203,16 @@ CMakeFiles/bomberman.dir/src/03_introduction/introviews.c.o.provides.build: CMak
 
 CMakeFiles/bomberman.dir/src/04_ipchoice/choiceiploop.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/04_ipchoice/choiceiploop.c.o: ../src/04_ipchoice/choiceiploop.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/bomberman.dir/src/04_ipchoice/choiceiploop.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/04_ipchoice/choiceiploop.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/04_ipchoice/choiceiploop.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/bomberman.dir/src/04_ipchoice/choiceiploop.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/04_ipchoice/choiceiploop.c.o   -c /home/marc/CLionProjects/git/bomberman/src/04_ipchoice/choiceiploop.c
 
 CMakeFiles/bomberman.dir/src/04_ipchoice/choiceiploop.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/04_ipchoice/choiceiploop.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/04_ipchoice/choiceiploop.c > CMakeFiles/bomberman.dir/src/04_ipchoice/choiceiploop.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/04_ipchoice/choiceiploop.c > CMakeFiles/bomberman.dir/src/04_ipchoice/choiceiploop.c.i
 
 CMakeFiles/bomberman.dir/src/04_ipchoice/choiceiploop.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/04_ipchoice/choiceiploop.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/04_ipchoice/choiceiploop.c -o CMakeFiles/bomberman.dir/src/04_ipchoice/choiceiploop.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/04_ipchoice/choiceiploop.c -o CMakeFiles/bomberman.dir/src/04_ipchoice/choiceiploop.c.s
 
 CMakeFiles/bomberman.dir/src/04_ipchoice/choiceiploop.c.o.requires:
 
@@ -227,16 +227,16 @@ CMakeFiles/bomberman.dir/src/04_ipchoice/choiceiploop.c.o.provides.build: CMakeF
 
 CMakeFiles/bomberman.dir/src/04_ipchoice/choiceipwindow.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/04_ipchoice/choiceipwindow.c.o: ../src/04_ipchoice/choiceipwindow.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/bomberman.dir/src/04_ipchoice/choiceipwindow.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/04_ipchoice/choiceipwindow.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/04_ipchoice/choiceipwindow.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/bomberman.dir/src/04_ipchoice/choiceipwindow.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/04_ipchoice/choiceipwindow.c.o   -c /home/marc/CLionProjects/git/bomberman/src/04_ipchoice/choiceipwindow.c
 
 CMakeFiles/bomberman.dir/src/04_ipchoice/choiceipwindow.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/04_ipchoice/choiceipwindow.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/04_ipchoice/choiceipwindow.c > CMakeFiles/bomberman.dir/src/04_ipchoice/choiceipwindow.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/04_ipchoice/choiceipwindow.c > CMakeFiles/bomberman.dir/src/04_ipchoice/choiceipwindow.c.i
 
 CMakeFiles/bomberman.dir/src/04_ipchoice/choiceipwindow.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/04_ipchoice/choiceipwindow.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/04_ipchoice/choiceipwindow.c -o CMakeFiles/bomberman.dir/src/04_ipchoice/choiceipwindow.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/04_ipchoice/choiceipwindow.c -o CMakeFiles/bomberman.dir/src/04_ipchoice/choiceipwindow.c.s
 
 CMakeFiles/bomberman.dir/src/04_ipchoice/choiceipwindow.c.o.requires:
 
@@ -251,16 +251,16 @@ CMakeFiles/bomberman.dir/src/04_ipchoice/choiceipwindow.c.o.provides.build: CMak
 
 CMakeFiles/bomberman.dir/src/04_ipchoice/choicepviews.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/04_ipchoice/choicepviews.c.o: ../src/04_ipchoice/choicepviews.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/bomberman.dir/src/04_ipchoice/choicepviews.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/04_ipchoice/choicepviews.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/04_ipchoice/choicepviews.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/bomberman.dir/src/04_ipchoice/choicepviews.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/04_ipchoice/choicepviews.c.o   -c /home/marc/CLionProjects/git/bomberman/src/04_ipchoice/choicepviews.c
 
 CMakeFiles/bomberman.dir/src/04_ipchoice/choicepviews.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/04_ipchoice/choicepviews.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/04_ipchoice/choicepviews.c > CMakeFiles/bomberman.dir/src/04_ipchoice/choicepviews.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/04_ipchoice/choicepviews.c > CMakeFiles/bomberman.dir/src/04_ipchoice/choicepviews.c.i
 
 CMakeFiles/bomberman.dir/src/04_ipchoice/choicepviews.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/04_ipchoice/choicepviews.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/04_ipchoice/choicepviews.c -o CMakeFiles/bomberman.dir/src/04_ipchoice/choicepviews.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/04_ipchoice/choicepviews.c -o CMakeFiles/bomberman.dir/src/04_ipchoice/choicepviews.c.s
 
 CMakeFiles/bomberman.dir/src/04_ipchoice/choicepviews.c.o.requires:
 
@@ -275,16 +275,16 @@ CMakeFiles/bomberman.dir/src/04_ipchoice/choicepviews.c.o.provides.build: CMakeF
 
 CMakeFiles/bomberman.dir/src/04_prepa_game/display_prepagame.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/04_prepa_game/display_prepagame.c.o: ../src/04_prepa_game/display_prepagame.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/bomberman.dir/src/04_prepa_game/display_prepagame.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/04_prepa_game/display_prepagame.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/04_prepa_game/display_prepagame.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/bomberman.dir/src/04_prepa_game/display_prepagame.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/04_prepa_game/display_prepagame.c.o   -c /home/marc/CLionProjects/git/bomberman/src/04_prepa_game/display_prepagame.c
 
 CMakeFiles/bomberman.dir/src/04_prepa_game/display_prepagame.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/04_prepa_game/display_prepagame.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/04_prepa_game/display_prepagame.c > CMakeFiles/bomberman.dir/src/04_prepa_game/display_prepagame.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/04_prepa_game/display_prepagame.c > CMakeFiles/bomberman.dir/src/04_prepa_game/display_prepagame.c.i
 
 CMakeFiles/bomberman.dir/src/04_prepa_game/display_prepagame.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/04_prepa_game/display_prepagame.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/04_prepa_game/display_prepagame.c -o CMakeFiles/bomberman.dir/src/04_prepa_game/display_prepagame.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/04_prepa_game/display_prepagame.c -o CMakeFiles/bomberman.dir/src/04_prepa_game/display_prepagame.c.s
 
 CMakeFiles/bomberman.dir/src/04_prepa_game/display_prepagame.c.o.requires:
 
@@ -299,16 +299,16 @@ CMakeFiles/bomberman.dir/src/04_prepa_game/display_prepagame.c.o.provides.build:
 
 CMakeFiles/bomberman.dir/src/04_prepa_game/loop_prepagame.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/04_prepa_game/loop_prepagame.c.o: ../src/04_prepa_game/loop_prepagame.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/bomberman.dir/src/04_prepa_game/loop_prepagame.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/04_prepa_game/loop_prepagame.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/04_prepa_game/loop_prepagame.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/bomberman.dir/src/04_prepa_game/loop_prepagame.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/04_prepa_game/loop_prepagame.c.o   -c /home/marc/CLionProjects/git/bomberman/src/04_prepa_game/loop_prepagame.c
 
 CMakeFiles/bomberman.dir/src/04_prepa_game/loop_prepagame.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/04_prepa_game/loop_prepagame.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/04_prepa_game/loop_prepagame.c > CMakeFiles/bomberman.dir/src/04_prepa_game/loop_prepagame.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/04_prepa_game/loop_prepagame.c > CMakeFiles/bomberman.dir/src/04_prepa_game/loop_prepagame.c.i
 
 CMakeFiles/bomberman.dir/src/04_prepa_game/loop_prepagame.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/04_prepa_game/loop_prepagame.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/04_prepa_game/loop_prepagame.c -o CMakeFiles/bomberman.dir/src/04_prepa_game/loop_prepagame.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/04_prepa_game/loop_prepagame.c -o CMakeFiles/bomberman.dir/src/04_prepa_game/loop_prepagame.c.s
 
 CMakeFiles/bomberman.dir/src/04_prepa_game/loop_prepagame.c.o.requires:
 
@@ -323,16 +323,16 @@ CMakeFiles/bomberman.dir/src/04_prepa_game/loop_prepagame.c.o.provides.build: CM
 
 CMakeFiles/bomberman.dir/src/04_prepa_game/write_prepa_game.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/04_prepa_game/write_prepa_game.c.o: ../src/04_prepa_game/write_prepa_game.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/bomberman.dir/src/04_prepa_game/write_prepa_game.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/04_prepa_game/write_prepa_game.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/04_prepa_game/write_prepa_game.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/bomberman.dir/src/04_prepa_game/write_prepa_game.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/04_prepa_game/write_prepa_game.c.o   -c /home/marc/CLionProjects/git/bomberman/src/04_prepa_game/write_prepa_game.c
 
 CMakeFiles/bomberman.dir/src/04_prepa_game/write_prepa_game.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/04_prepa_game/write_prepa_game.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/04_prepa_game/write_prepa_game.c > CMakeFiles/bomberman.dir/src/04_prepa_game/write_prepa_game.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/04_prepa_game/write_prepa_game.c > CMakeFiles/bomberman.dir/src/04_prepa_game/write_prepa_game.c.i
 
 CMakeFiles/bomberman.dir/src/04_prepa_game/write_prepa_game.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/04_prepa_game/write_prepa_game.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/04_prepa_game/write_prepa_game.c -o CMakeFiles/bomberman.dir/src/04_prepa_game/write_prepa_game.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/04_prepa_game/write_prepa_game.c -o CMakeFiles/bomberman.dir/src/04_prepa_game/write_prepa_game.c.s
 
 CMakeFiles/bomberman.dir/src/04_prepa_game/write_prepa_game.c.o.requires:
 
@@ -347,16 +347,16 @@ CMakeFiles/bomberman.dir/src/04_prepa_game/write_prepa_game.c.o.provides.build: 
 
 CMakeFiles/bomberman.dir/src/05_game/display_game.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/05_game/display_game.c.o: ../src/05_game/display_game.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/bomberman.dir/src/05_game/display_game.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/05_game/display_game.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/05_game/display_game.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/bomberman.dir/src/05_game/display_game.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/05_game/display_game.c.o   -c /home/marc/CLionProjects/git/bomberman/src/05_game/display_game.c
 
 CMakeFiles/bomberman.dir/src/05_game/display_game.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/05_game/display_game.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/05_game/display_game.c > CMakeFiles/bomberman.dir/src/05_game/display_game.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/05_game/display_game.c > CMakeFiles/bomberman.dir/src/05_game/display_game.c.i
 
 CMakeFiles/bomberman.dir/src/05_game/display_game.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/05_game/display_game.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/05_game/display_game.c -o CMakeFiles/bomberman.dir/src/05_game/display_game.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/05_game/display_game.c -o CMakeFiles/bomberman.dir/src/05_game/display_game.c.s
 
 CMakeFiles/bomberman.dir/src/05_game/display_game.c.o.requires:
 
@@ -371,16 +371,16 @@ CMakeFiles/bomberman.dir/src/05_game/display_game.c.o.provides.build: CMakeFiles
 
 CMakeFiles/bomberman.dir/src/05_game/loop_game.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/05_game/loop_game.c.o: ../src/05_game/loop_game.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/bomberman.dir/src/05_game/loop_game.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/05_game/loop_game.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/05_game/loop_game.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/bomberman.dir/src/05_game/loop_game.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/05_game/loop_game.c.o   -c /home/marc/CLionProjects/git/bomberman/src/05_game/loop_game.c
 
 CMakeFiles/bomberman.dir/src/05_game/loop_game.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/05_game/loop_game.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/05_game/loop_game.c > CMakeFiles/bomberman.dir/src/05_game/loop_game.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/05_game/loop_game.c > CMakeFiles/bomberman.dir/src/05_game/loop_game.c.i
 
 CMakeFiles/bomberman.dir/src/05_game/loop_game.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/05_game/loop_game.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/05_game/loop_game.c -o CMakeFiles/bomberman.dir/src/05_game/loop_game.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/05_game/loop_game.c -o CMakeFiles/bomberman.dir/src/05_game/loop_game.c.s
 
 CMakeFiles/bomberman.dir/src/05_game/loop_game.c.o.requires:
 
@@ -395,16 +395,16 @@ CMakeFiles/bomberman.dir/src/05_game/loop_game.c.o.provides.build: CMakeFiles/bo
 
 CMakeFiles/bomberman.dir/src/05_game/panel_game.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/05_game/panel_game.c.o: ../src/05_game/panel_game.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/bomberman.dir/src/05_game/panel_game.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/05_game/panel_game.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/05_game/panel_game.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/bomberman.dir/src/05_game/panel_game.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/05_game/panel_game.c.o   -c /home/marc/CLionProjects/git/bomberman/src/05_game/panel_game.c
 
 CMakeFiles/bomberman.dir/src/05_game/panel_game.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/05_game/panel_game.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/05_game/panel_game.c > CMakeFiles/bomberman.dir/src/05_game/panel_game.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/05_game/panel_game.c > CMakeFiles/bomberman.dir/src/05_game/panel_game.c.i
 
 CMakeFiles/bomberman.dir/src/05_game/panel_game.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/05_game/panel_game.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/05_game/panel_game.c -o CMakeFiles/bomberman.dir/src/05_game/panel_game.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/05_game/panel_game.c -o CMakeFiles/bomberman.dir/src/05_game/panel_game.c.s
 
 CMakeFiles/bomberman.dir/src/05_game/panel_game.c.o.requires:
 
@@ -419,16 +419,16 @@ CMakeFiles/bomberman.dir/src/05_game/panel_game.c.o.provides.build: CMakeFiles/b
 
 CMakeFiles/bomberman.dir/src/05_game/time_game.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/05_game/time_game.c.o: ../src/05_game/time_game.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/bomberman.dir/src/05_game/time_game.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/05_game/time_game.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/05_game/time_game.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/bomberman.dir/src/05_game/time_game.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/05_game/time_game.c.o   -c /home/marc/CLionProjects/git/bomberman/src/05_game/time_game.c
 
 CMakeFiles/bomberman.dir/src/05_game/time_game.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/05_game/time_game.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/05_game/time_game.c > CMakeFiles/bomberman.dir/src/05_game/time_game.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/05_game/time_game.c > CMakeFiles/bomberman.dir/src/05_game/time_game.c.i
 
 CMakeFiles/bomberman.dir/src/05_game/time_game.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/05_game/time_game.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/05_game/time_game.c -o CMakeFiles/bomberman.dir/src/05_game/time_game.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/05_game/time_game.c -o CMakeFiles/bomberman.dir/src/05_game/time_game.c.s
 
 CMakeFiles/bomberman.dir/src/05_game/time_game.c.o.requires:
 
@@ -443,16 +443,16 @@ CMakeFiles/bomberman.dir/src/05_game/time_game.c.o.provides.build: CMakeFiles/bo
 
 CMakeFiles/bomberman.dir/src/05_game/views_game.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/05_game/views_game.c.o: ../src/05_game/views_game.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/bomberman.dir/src/05_game/views_game.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/05_game/views_game.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/05_game/views_game.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/bomberman.dir/src/05_game/views_game.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/05_game/views_game.c.o   -c /home/marc/CLionProjects/git/bomberman/src/05_game/views_game.c
 
 CMakeFiles/bomberman.dir/src/05_game/views_game.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/05_game/views_game.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/05_game/views_game.c > CMakeFiles/bomberman.dir/src/05_game/views_game.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/05_game/views_game.c > CMakeFiles/bomberman.dir/src/05_game/views_game.c.i
 
 CMakeFiles/bomberman.dir/src/05_game/views_game.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/05_game/views_game.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/05_game/views_game.c -o CMakeFiles/bomberman.dir/src/05_game/views_game.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/05_game/views_game.c -o CMakeFiles/bomberman.dir/src/05_game/views_game.c.s
 
 CMakeFiles/bomberman.dir/src/05_game/views_game.c.o.requires:
 
@@ -467,16 +467,16 @@ CMakeFiles/bomberman.dir/src/05_game/views_game.c.o.provides.build: CMakeFiles/b
 
 CMakeFiles/bomberman.dir/src/18_network/tcp_client.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/18_network/tcp_client.c.o: ../src/18_network/tcp_client.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/bomberman.dir/src/18_network/tcp_client.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/18_network/tcp_client.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/18_network/tcp_client.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/bomberman.dir/src/18_network/tcp_client.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/18_network/tcp_client.c.o   -c /home/marc/CLionProjects/git/bomberman/src/18_network/tcp_client.c
 
 CMakeFiles/bomberman.dir/src/18_network/tcp_client.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/18_network/tcp_client.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/18_network/tcp_client.c > CMakeFiles/bomberman.dir/src/18_network/tcp_client.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/18_network/tcp_client.c > CMakeFiles/bomberman.dir/src/18_network/tcp_client.c.i
 
 CMakeFiles/bomberman.dir/src/18_network/tcp_client.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/18_network/tcp_client.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/18_network/tcp_client.c -o CMakeFiles/bomberman.dir/src/18_network/tcp_client.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/18_network/tcp_client.c -o CMakeFiles/bomberman.dir/src/18_network/tcp_client.c.s
 
 CMakeFiles/bomberman.dir/src/18_network/tcp_client.c.o.requires:
 
@@ -491,16 +491,16 @@ CMakeFiles/bomberman.dir/src/18_network/tcp_client.c.o.provides.build: CMakeFile
 
 CMakeFiles/bomberman.dir/src/18_network/tcp_server.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/18_network/tcp_server.c.o: ../src/18_network/tcp_server.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/bomberman.dir/src/18_network/tcp_server.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/18_network/tcp_server.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/18_network/tcp_server.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/bomberman.dir/src/18_network/tcp_server.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/18_network/tcp_server.c.o   -c /home/marc/CLionProjects/git/bomberman/src/18_network/tcp_server.c
 
 CMakeFiles/bomberman.dir/src/18_network/tcp_server.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/18_network/tcp_server.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/18_network/tcp_server.c > CMakeFiles/bomberman.dir/src/18_network/tcp_server.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/18_network/tcp_server.c > CMakeFiles/bomberman.dir/src/18_network/tcp_server.c.i
 
 CMakeFiles/bomberman.dir/src/18_network/tcp_server.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/18_network/tcp_server.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/18_network/tcp_server.c -o CMakeFiles/bomberman.dir/src/18_network/tcp_server.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/18_network/tcp_server.c -o CMakeFiles/bomberman.dir/src/18_network/tcp_server.c.s
 
 CMakeFiles/bomberman.dir/src/18_network/tcp_server.c.o.requires:
 
@@ -515,16 +515,16 @@ CMakeFiles/bomberman.dir/src/18_network/tcp_server.c.o.provides.build: CMakeFile
 
 CMakeFiles/bomberman.dir/src/18_network/network.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/18_network/network.c.o: ../src/18_network/network.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/bomberman.dir/src/18_network/network.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/18_network/network.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/18_network/network.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/bomberman.dir/src/18_network/network.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/18_network/network.c.o   -c /home/marc/CLionProjects/git/bomberman/src/18_network/network.c
 
 CMakeFiles/bomberman.dir/src/18_network/network.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/18_network/network.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/18_network/network.c > CMakeFiles/bomberman.dir/src/18_network/network.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/18_network/network.c > CMakeFiles/bomberman.dir/src/18_network/network.c.i
 
 CMakeFiles/bomberman.dir/src/18_network/network.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/18_network/network.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/18_network/network.c -o CMakeFiles/bomberman.dir/src/18_network/network.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/18_network/network.c -o CMakeFiles/bomberman.dir/src/18_network/network.c.s
 
 CMakeFiles/bomberman.dir/src/18_network/network.c.o.requires:
 
@@ -539,16 +539,16 @@ CMakeFiles/bomberman.dir/src/18_network/network.c.o.provides.build: CMakeFiles/b
 
 CMakeFiles/bomberman.dir/src/18_network/network_player.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/18_network/network_player.c.o: ../src/18_network/network_player.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/bomberman.dir/src/18_network/network_player.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/18_network/network_player.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/18_network/network_player.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/bomberman.dir/src/18_network/network_player.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/18_network/network_player.c.o   -c /home/marc/CLionProjects/git/bomberman/src/18_network/network_player.c
 
 CMakeFiles/bomberman.dir/src/18_network/network_player.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/18_network/network_player.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/18_network/network_player.c > CMakeFiles/bomberman.dir/src/18_network/network_player.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/18_network/network_player.c > CMakeFiles/bomberman.dir/src/18_network/network_player.c.i
 
 CMakeFiles/bomberman.dir/src/18_network/network_player.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/18_network/network_player.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/18_network/network_player.c -o CMakeFiles/bomberman.dir/src/18_network/network_player.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/18_network/network_player.c -o CMakeFiles/bomberman.dir/src/18_network/network_player.c.s
 
 CMakeFiles/bomberman.dir/src/18_network/network_player.c.o.requires:
 
@@ -563,16 +563,16 @@ CMakeFiles/bomberman.dir/src/18_network/network_player.c.o.provides.build: CMake
 
 CMakeFiles/bomberman.dir/src/19_ia/ia.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/19_ia/ia.c.o: ../src/19_ia/ia.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/bomberman.dir/src/19_ia/ia.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/19_ia/ia.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/bomberman.dir/src/19_ia/ia.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/19_ia/ia.c.o   -c /home/marc/CLionProjects/git/bomberman/src/19_ia/ia.c
 
 CMakeFiles/bomberman.dir/src/19_ia/ia.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/19_ia/ia.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia.c > CMakeFiles/bomberman.dir/src/19_ia/ia.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/19_ia/ia.c > CMakeFiles/bomberman.dir/src/19_ia/ia.c.i
 
 CMakeFiles/bomberman.dir/src/19_ia/ia.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/19_ia/ia.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia.c -o CMakeFiles/bomberman.dir/src/19_ia/ia.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/19_ia/ia.c -o CMakeFiles/bomberman.dir/src/19_ia/ia.c.s
 
 CMakeFiles/bomberman.dir/src/19_ia/ia.c.o.requires:
 
@@ -587,16 +587,16 @@ CMakeFiles/bomberman.dir/src/19_ia/ia.c.o.provides.build: CMakeFiles/bomberman.d
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_bolus_malus.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/19_ia/ia_bolus_malus.c.o: ../src/19_ia/ia_bolus_malus.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/bomberman.dir/src/19_ia/ia_bolus_malus.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/19_ia/ia_bolus_malus.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_bolus_malus.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/bomberman.dir/src/19_ia/ia_bolus_malus.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/19_ia/ia_bolus_malus.c.o   -c /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_bolus_malus.c
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_bolus_malus.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/19_ia/ia_bolus_malus.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_bolus_malus.c > CMakeFiles/bomberman.dir/src/19_ia/ia_bolus_malus.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_bolus_malus.c > CMakeFiles/bomberman.dir/src/19_ia/ia_bolus_malus.c.i
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_bolus_malus.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/19_ia/ia_bolus_malus.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_bolus_malus.c -o CMakeFiles/bomberman.dir/src/19_ia/ia_bolus_malus.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_bolus_malus.c -o CMakeFiles/bomberman.dir/src/19_ia/ia_bolus_malus.c.s
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_bolus_malus.c.o.requires:
 
@@ -611,16 +611,16 @@ CMakeFiles/bomberman.dir/src/19_ia/ia_bolus_malus.c.o.provides.build: CMakeFiles
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_bomb.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/19_ia/ia_bomb.c.o: ../src/19_ia/ia_bomb.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/bomberman.dir/src/19_ia/ia_bomb.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/19_ia/ia_bomb.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_bomb.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/bomberman.dir/src/19_ia/ia_bomb.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/19_ia/ia_bomb.c.o   -c /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_bomb.c
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_bomb.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/19_ia/ia_bomb.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_bomb.c > CMakeFiles/bomberman.dir/src/19_ia/ia_bomb.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_bomb.c > CMakeFiles/bomberman.dir/src/19_ia/ia_bomb.c.i
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_bomb.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/19_ia/ia_bomb.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_bomb.c -o CMakeFiles/bomberman.dir/src/19_ia/ia_bomb.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_bomb.c -o CMakeFiles/bomberman.dir/src/19_ia/ia_bomb.c.s
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_bomb.c.o.requires:
 
@@ -635,16 +635,16 @@ CMakeFiles/bomberman.dir/src/19_ia/ia_bomb.c.o.provides.build: CMakeFiles/bomber
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_counter.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/19_ia/ia_counter.c.o: ../src/19_ia/ia_counter.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/bomberman.dir/src/19_ia/ia_counter.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/19_ia/ia_counter.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_counter.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/bomberman.dir/src/19_ia/ia_counter.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/19_ia/ia_counter.c.o   -c /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_counter.c
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_counter.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/19_ia/ia_counter.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_counter.c > CMakeFiles/bomberman.dir/src/19_ia/ia_counter.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_counter.c > CMakeFiles/bomberman.dir/src/19_ia/ia_counter.c.i
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_counter.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/19_ia/ia_counter.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_counter.c -o CMakeFiles/bomberman.dir/src/19_ia/ia_counter.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_counter.c -o CMakeFiles/bomberman.dir/src/19_ia/ia_counter.c.s
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_counter.c.o.requires:
 
@@ -659,16 +659,16 @@ CMakeFiles/bomberman.dir/src/19_ia/ia_counter.c.o.provides.build: CMakeFiles/bom
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_dead.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/19_ia/ia_dead.c.o: ../src/19_ia/ia_dead.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/bomberman.dir/src/19_ia/ia_dead.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/19_ia/ia_dead.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_dead.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/bomberman.dir/src/19_ia/ia_dead.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/19_ia/ia_dead.c.o   -c /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_dead.c
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_dead.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/19_ia/ia_dead.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_dead.c > CMakeFiles/bomberman.dir/src/19_ia/ia_dead.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_dead.c > CMakeFiles/bomberman.dir/src/19_ia/ia_dead.c.i
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_dead.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/19_ia/ia_dead.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_dead.c -o CMakeFiles/bomberman.dir/src/19_ia/ia_dead.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_dead.c -o CMakeFiles/bomberman.dir/src/19_ia/ia_dead.c.s
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_dead.c.o.requires:
 
@@ -683,16 +683,16 @@ CMakeFiles/bomberman.dir/src/19_ia/ia_dead.c.o.provides.build: CMakeFiles/bomber
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_explosion.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/19_ia/ia_explosion.c.o: ../src/19_ia/ia_explosion.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/bomberman.dir/src/19_ia/ia_explosion.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/19_ia/ia_explosion.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_explosion.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/bomberman.dir/src/19_ia/ia_explosion.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/19_ia/ia_explosion.c.o   -c /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_explosion.c
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_explosion.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/19_ia/ia_explosion.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_explosion.c > CMakeFiles/bomberman.dir/src/19_ia/ia_explosion.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_explosion.c > CMakeFiles/bomberman.dir/src/19_ia/ia_explosion.c.i
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_explosion.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/19_ia/ia_explosion.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_explosion.c -o CMakeFiles/bomberman.dir/src/19_ia/ia_explosion.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_explosion.c -o CMakeFiles/bomberman.dir/src/19_ia/ia_explosion.c.s
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_explosion.c.o.requires:
 
@@ -707,16 +707,16 @@ CMakeFiles/bomberman.dir/src/19_ia/ia_explosion.c.o.provides.build: CMakeFiles/b
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_map.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/19_ia/ia_map.c.o: ../src/19_ia/ia_map.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/bomberman.dir/src/19_ia/ia_map.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/19_ia/ia_map.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_map.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/bomberman.dir/src/19_ia/ia_map.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/19_ia/ia_map.c.o   -c /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_map.c
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_map.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/19_ia/ia_map.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_map.c > CMakeFiles/bomberman.dir/src/19_ia/ia_map.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_map.c > CMakeFiles/bomberman.dir/src/19_ia/ia_map.c.i
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_map.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/19_ia/ia_map.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_map.c -o CMakeFiles/bomberman.dir/src/19_ia/ia_map.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_map.c -o CMakeFiles/bomberman.dir/src/19_ia/ia_map.c.s
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_map.c.o.requires:
 
@@ -731,16 +731,16 @@ CMakeFiles/bomberman.dir/src/19_ia/ia_map.c.o.provides.build: CMakeFiles/bomberm
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_monster.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/19_ia/ia_monster.c.o: ../src/19_ia/ia_monster.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/bomberman.dir/src/19_ia/ia_monster.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/19_ia/ia_monster.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_monster.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/bomberman.dir/src/19_ia/ia_monster.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/19_ia/ia_monster.c.o   -c /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_monster.c
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_monster.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/19_ia/ia_monster.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_monster.c > CMakeFiles/bomberman.dir/src/19_ia/ia_monster.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_monster.c > CMakeFiles/bomberman.dir/src/19_ia/ia_monster.c.i
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_monster.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/19_ia/ia_monster.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_monster.c -o CMakeFiles/bomberman.dir/src/19_ia/ia_monster.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_monster.c -o CMakeFiles/bomberman.dir/src/19_ia/ia_monster.c.s
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_monster.c.o.requires:
 
@@ -755,16 +755,16 @@ CMakeFiles/bomberman.dir/src/19_ia/ia_monster.c.o.provides.build: CMakeFiles/bom
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_pions.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/19_ia/ia_pions.c.o: ../src/19_ia/ia_pions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/bomberman.dir/src/19_ia/ia_pions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/19_ia/ia_pions.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_pions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/bomberman.dir/src/19_ia/ia_pions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/19_ia/ia_pions.c.o   -c /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_pions.c
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_pions.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/19_ia/ia_pions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_pions.c > CMakeFiles/bomberman.dir/src/19_ia/ia_pions.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_pions.c > CMakeFiles/bomberman.dir/src/19_ia/ia_pions.c.i
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_pions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/19_ia/ia_pions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_pions.c -o CMakeFiles/bomberman.dir/src/19_ia/ia_pions.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_pions.c -o CMakeFiles/bomberman.dir/src/19_ia/ia_pions.c.s
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_pions.c.o.requires:
 
@@ -779,16 +779,16 @@ CMakeFiles/bomberman.dir/src/19_ia/ia_pions.c.o.provides.build: CMakeFiles/bombe
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_send_msg.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/19_ia/ia_send_msg.c.o: ../src/19_ia/ia_send_msg.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/bomberman.dir/src/19_ia/ia_send_msg.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/19_ia/ia_send_msg.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_send_msg.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/bomberman.dir/src/19_ia/ia_send_msg.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/19_ia/ia_send_msg.c.o   -c /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_send_msg.c
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_send_msg.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/19_ia/ia_send_msg.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_send_msg.c > CMakeFiles/bomberman.dir/src/19_ia/ia_send_msg.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_send_msg.c > CMakeFiles/bomberman.dir/src/19_ia/ia_send_msg.c.i
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_send_msg.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/19_ia/ia_send_msg.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_send_msg.c -o CMakeFiles/bomberman.dir/src/19_ia/ia_send_msg.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_send_msg.c -o CMakeFiles/bomberman.dir/src/19_ia/ia_send_msg.c.s
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_send_msg.c.o.requires:
 
@@ -803,16 +803,16 @@ CMakeFiles/bomberman.dir/src/19_ia/ia_send_msg.c.o.provides.build: CMakeFiles/bo
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_timer.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/19_ia/ia_timer.c.o: ../src/19_ia/ia_timer.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/bomberman.dir/src/19_ia/ia_timer.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/19_ia/ia_timer.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_timer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/bomberman.dir/src/19_ia/ia_timer.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/19_ia/ia_timer.c.o   -c /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_timer.c
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_timer.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/19_ia/ia_timer.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_timer.c > CMakeFiles/bomberman.dir/src/19_ia/ia_timer.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_timer.c > CMakeFiles/bomberman.dir/src/19_ia/ia_timer.c.i
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_timer.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/19_ia/ia_timer.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_timer.c -o CMakeFiles/bomberman.dir/src/19_ia/ia_timer.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_timer.c -o CMakeFiles/bomberman.dir/src/19_ia/ia_timer.c.s
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_timer.c.o.requires:
 
@@ -827,16 +827,16 @@ CMakeFiles/bomberman.dir/src/19_ia/ia_timer.c.o.provides.build: CMakeFiles/bombe
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_party.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/19_ia/ia_party.c.o: ../src/19_ia/ia_party.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/bomberman.dir/src/19_ia/ia_party.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/19_ia/ia_party.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_party.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/bomberman.dir/src/19_ia/ia_party.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/19_ia/ia_party.c.o   -c /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_party.c
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_party.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/19_ia/ia_party.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_party.c > CMakeFiles/bomberman.dir/src/19_ia/ia_party.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_party.c > CMakeFiles/bomberman.dir/src/19_ia/ia_party.c.i
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_party.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/19_ia/ia_party.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_party.c -o CMakeFiles/bomberman.dir/src/19_ia/ia_party.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_party.c -o CMakeFiles/bomberman.dir/src/19_ia/ia_party.c.s
 
 CMakeFiles/bomberman.dir/src/19_ia/ia_party.c.o.requires:
 
@@ -851,16 +851,16 @@ CMakeFiles/bomberman.dir/src/19_ia/ia_party.c.o.provides.build: CMakeFiles/bombe
 
 CMakeFiles/bomberman.dir/src/21_libs/my_bzero.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/21_libs/my_bzero.c.o: ../src/21_libs/my_bzero.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/bomberman.dir/src/21_libs/my_bzero.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/21_libs/my_bzero.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_bzero.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/bomberman.dir/src/21_libs/my_bzero.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/21_libs/my_bzero.c.o   -c /home/marc/CLionProjects/git/bomberman/src/21_libs/my_bzero.c
 
 CMakeFiles/bomberman.dir/src/21_libs/my_bzero.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/21_libs/my_bzero.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_bzero.c > CMakeFiles/bomberman.dir/src/21_libs/my_bzero.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/21_libs/my_bzero.c > CMakeFiles/bomberman.dir/src/21_libs/my_bzero.c.i
 
 CMakeFiles/bomberman.dir/src/21_libs/my_bzero.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/21_libs/my_bzero.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_bzero.c -o CMakeFiles/bomberman.dir/src/21_libs/my_bzero.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/21_libs/my_bzero.c -o CMakeFiles/bomberman.dir/src/21_libs/my_bzero.c.s
 
 CMakeFiles/bomberman.dir/src/21_libs/my_bzero.c.o.requires:
 
@@ -875,16 +875,16 @@ CMakeFiles/bomberman.dir/src/21_libs/my_bzero.c.o.provides.build: CMakeFiles/bom
 
 CMakeFiles/bomberman.dir/src/21_libs/my_put_nbr.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/21_libs/my_put_nbr.c.o: ../src/21_libs/my_put_nbr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/bomberman.dir/src/21_libs/my_put_nbr.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/21_libs/my_put_nbr.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_put_nbr.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/bomberman.dir/src/21_libs/my_put_nbr.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/21_libs/my_put_nbr.c.o   -c /home/marc/CLionProjects/git/bomberman/src/21_libs/my_put_nbr.c
 
 CMakeFiles/bomberman.dir/src/21_libs/my_put_nbr.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/21_libs/my_put_nbr.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_put_nbr.c > CMakeFiles/bomberman.dir/src/21_libs/my_put_nbr.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/21_libs/my_put_nbr.c > CMakeFiles/bomberman.dir/src/21_libs/my_put_nbr.c.i
 
 CMakeFiles/bomberman.dir/src/21_libs/my_put_nbr.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/21_libs/my_put_nbr.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_put_nbr.c -o CMakeFiles/bomberman.dir/src/21_libs/my_put_nbr.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/21_libs/my_put_nbr.c -o CMakeFiles/bomberman.dir/src/21_libs/my_put_nbr.c.s
 
 CMakeFiles/bomberman.dir/src/21_libs/my_put_nbr.c.o.requires:
 
@@ -899,16 +899,16 @@ CMakeFiles/bomberman.dir/src/21_libs/my_put_nbr.c.o.provides.build: CMakeFiles/b
 
 CMakeFiles/bomberman.dir/src/21_libs/my_putchar.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/21_libs/my_putchar.c.o: ../src/21_libs/my_putchar.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/bomberman.dir/src/21_libs/my_putchar.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/21_libs/my_putchar.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_putchar.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/bomberman.dir/src/21_libs/my_putchar.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/21_libs/my_putchar.c.o   -c /home/marc/CLionProjects/git/bomberman/src/21_libs/my_putchar.c
 
 CMakeFiles/bomberman.dir/src/21_libs/my_putchar.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/21_libs/my_putchar.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_putchar.c > CMakeFiles/bomberman.dir/src/21_libs/my_putchar.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/21_libs/my_putchar.c > CMakeFiles/bomberman.dir/src/21_libs/my_putchar.c.i
 
 CMakeFiles/bomberman.dir/src/21_libs/my_putchar.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/21_libs/my_putchar.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_putchar.c -o CMakeFiles/bomberman.dir/src/21_libs/my_putchar.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/21_libs/my_putchar.c -o CMakeFiles/bomberman.dir/src/21_libs/my_putchar.c.s
 
 CMakeFiles/bomberman.dir/src/21_libs/my_putchar.c.o.requires:
 
@@ -923,16 +923,16 @@ CMakeFiles/bomberman.dir/src/21_libs/my_putchar.c.o.provides.build: CMakeFiles/b
 
 CMakeFiles/bomberman.dir/src/21_libs/my_putstr.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/21_libs/my_putstr.c.o: ../src/21_libs/my_putstr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/bomberman.dir/src/21_libs/my_putstr.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/21_libs/my_putstr.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_putstr.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/bomberman.dir/src/21_libs/my_putstr.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/21_libs/my_putstr.c.o   -c /home/marc/CLionProjects/git/bomberman/src/21_libs/my_putstr.c
 
 CMakeFiles/bomberman.dir/src/21_libs/my_putstr.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/21_libs/my_putstr.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_putstr.c > CMakeFiles/bomberman.dir/src/21_libs/my_putstr.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/21_libs/my_putstr.c > CMakeFiles/bomberman.dir/src/21_libs/my_putstr.c.i
 
 CMakeFiles/bomberman.dir/src/21_libs/my_putstr.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/21_libs/my_putstr.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_putstr.c -o CMakeFiles/bomberman.dir/src/21_libs/my_putstr.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/21_libs/my_putstr.c -o CMakeFiles/bomberman.dir/src/21_libs/my_putstr.c.s
 
 CMakeFiles/bomberman.dir/src/21_libs/my_putstr.c.o.requires:
 
@@ -947,16 +947,16 @@ CMakeFiles/bomberman.dir/src/21_libs/my_putstr.c.o.provides.build: CMakeFiles/bo
 
 CMakeFiles/bomberman.dir/src/21_libs/my_rand.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/21_libs/my_rand.c.o: ../src/21_libs/my_rand.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/bomberman.dir/src/21_libs/my_rand.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/21_libs/my_rand.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_rand.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/bomberman.dir/src/21_libs/my_rand.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/21_libs/my_rand.c.o   -c /home/marc/CLionProjects/git/bomberman/src/21_libs/my_rand.c
 
 CMakeFiles/bomberman.dir/src/21_libs/my_rand.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/21_libs/my_rand.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_rand.c > CMakeFiles/bomberman.dir/src/21_libs/my_rand.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/21_libs/my_rand.c > CMakeFiles/bomberman.dir/src/21_libs/my_rand.c.i
 
 CMakeFiles/bomberman.dir/src/21_libs/my_rand.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/21_libs/my_rand.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_rand.c -o CMakeFiles/bomberman.dir/src/21_libs/my_rand.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/21_libs/my_rand.c -o CMakeFiles/bomberman.dir/src/21_libs/my_rand.c.s
 
 CMakeFiles/bomberman.dir/src/21_libs/my_rand.c.o.requires:
 
@@ -971,16 +971,16 @@ CMakeFiles/bomberman.dir/src/21_libs/my_rand.c.o.provides.build: CMakeFiles/bomb
 
 CMakeFiles/bomberman.dir/src/21_libs/my_strcat.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/21_libs/my_strcat.c.o: ../src/21_libs/my_strcat.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/bomberman.dir/src/21_libs/my_strcat.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/21_libs/my_strcat.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_strcat.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/bomberman.dir/src/21_libs/my_strcat.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/21_libs/my_strcat.c.o   -c /home/marc/CLionProjects/git/bomberman/src/21_libs/my_strcat.c
 
 CMakeFiles/bomberman.dir/src/21_libs/my_strcat.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/21_libs/my_strcat.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_strcat.c > CMakeFiles/bomberman.dir/src/21_libs/my_strcat.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/21_libs/my_strcat.c > CMakeFiles/bomberman.dir/src/21_libs/my_strcat.c.i
 
 CMakeFiles/bomberman.dir/src/21_libs/my_strcat.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/21_libs/my_strcat.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_strcat.c -o CMakeFiles/bomberman.dir/src/21_libs/my_strcat.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/21_libs/my_strcat.c -o CMakeFiles/bomberman.dir/src/21_libs/my_strcat.c.s
 
 CMakeFiles/bomberman.dir/src/21_libs/my_strcat.c.o.requires:
 
@@ -995,16 +995,16 @@ CMakeFiles/bomberman.dir/src/21_libs/my_strcat.c.o.provides.build: CMakeFiles/bo
 
 CMakeFiles/bomberman.dir/src/21_libs/my_strcmp.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/21_libs/my_strcmp.c.o: ../src/21_libs/my_strcmp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/bomberman.dir/src/21_libs/my_strcmp.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/21_libs/my_strcmp.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_strcmp.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/bomberman.dir/src/21_libs/my_strcmp.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/21_libs/my_strcmp.c.o   -c /home/marc/CLionProjects/git/bomberman/src/21_libs/my_strcmp.c
 
 CMakeFiles/bomberman.dir/src/21_libs/my_strcmp.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/21_libs/my_strcmp.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_strcmp.c > CMakeFiles/bomberman.dir/src/21_libs/my_strcmp.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/21_libs/my_strcmp.c > CMakeFiles/bomberman.dir/src/21_libs/my_strcmp.c.i
 
 CMakeFiles/bomberman.dir/src/21_libs/my_strcmp.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/21_libs/my_strcmp.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_strcmp.c -o CMakeFiles/bomberman.dir/src/21_libs/my_strcmp.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/21_libs/my_strcmp.c -o CMakeFiles/bomberman.dir/src/21_libs/my_strcmp.c.s
 
 CMakeFiles/bomberman.dir/src/21_libs/my_strcmp.c.o.requires:
 
@@ -1019,16 +1019,16 @@ CMakeFiles/bomberman.dir/src/21_libs/my_strcmp.c.o.provides.build: CMakeFiles/bo
 
 CMakeFiles/bomberman.dir/src/21_libs/my_strdup.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/21_libs/my_strdup.c.o: ../src/21_libs/my_strdup.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/bomberman.dir/src/21_libs/my_strdup.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/21_libs/my_strdup.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_strdup.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/bomberman.dir/src/21_libs/my_strdup.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/21_libs/my_strdup.c.o   -c /home/marc/CLionProjects/git/bomberman/src/21_libs/my_strdup.c
 
 CMakeFiles/bomberman.dir/src/21_libs/my_strdup.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/21_libs/my_strdup.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_strdup.c > CMakeFiles/bomberman.dir/src/21_libs/my_strdup.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/21_libs/my_strdup.c > CMakeFiles/bomberman.dir/src/21_libs/my_strdup.c.i
 
 CMakeFiles/bomberman.dir/src/21_libs/my_strdup.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/21_libs/my_strdup.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_strdup.c -o CMakeFiles/bomberman.dir/src/21_libs/my_strdup.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/21_libs/my_strdup.c -o CMakeFiles/bomberman.dir/src/21_libs/my_strdup.c.s
 
 CMakeFiles/bomberman.dir/src/21_libs/my_strdup.c.o.requires:
 
@@ -1043,16 +1043,16 @@ CMakeFiles/bomberman.dir/src/21_libs/my_strdup.c.o.provides.build: CMakeFiles/bo
 
 CMakeFiles/bomberman.dir/src/21_libs/my_string.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/21_libs/my_string.c.o: ../src/21_libs/my_string.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/bomberman.dir/src/21_libs/my_string.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/21_libs/my_string.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_string.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/bomberman.dir/src/21_libs/my_string.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/21_libs/my_string.c.o   -c /home/marc/CLionProjects/git/bomberman/src/21_libs/my_string.c
 
 CMakeFiles/bomberman.dir/src/21_libs/my_string.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/21_libs/my_string.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_string.c > CMakeFiles/bomberman.dir/src/21_libs/my_string.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/21_libs/my_string.c > CMakeFiles/bomberman.dir/src/21_libs/my_string.c.i
 
 CMakeFiles/bomberman.dir/src/21_libs/my_string.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/21_libs/my_string.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_string.c -o CMakeFiles/bomberman.dir/src/21_libs/my_string.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/21_libs/my_string.c -o CMakeFiles/bomberman.dir/src/21_libs/my_string.c.s
 
 CMakeFiles/bomberman.dir/src/21_libs/my_string.c.o.requires:
 
@@ -1067,16 +1067,16 @@ CMakeFiles/bomberman.dir/src/21_libs/my_string.c.o.provides.build: CMakeFiles/bo
 
 CMakeFiles/bomberman.dir/src/21_libs/my_strlen.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/21_libs/my_strlen.c.o: ../src/21_libs/my_strlen.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/bomberman.dir/src/21_libs/my_strlen.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/21_libs/my_strlen.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_strlen.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/bomberman.dir/src/21_libs/my_strlen.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/21_libs/my_strlen.c.o   -c /home/marc/CLionProjects/git/bomberman/src/21_libs/my_strlen.c
 
 CMakeFiles/bomberman.dir/src/21_libs/my_strlen.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/21_libs/my_strlen.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_strlen.c > CMakeFiles/bomberman.dir/src/21_libs/my_strlen.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/21_libs/my_strlen.c > CMakeFiles/bomberman.dir/src/21_libs/my_strlen.c.i
 
 CMakeFiles/bomberman.dir/src/21_libs/my_strlen.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/21_libs/my_strlen.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_strlen.c -o CMakeFiles/bomberman.dir/src/21_libs/my_strlen.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/21_libs/my_strlen.c -o CMakeFiles/bomberman.dir/src/21_libs/my_strlen.c.s
 
 CMakeFiles/bomberman.dir/src/21_libs/my_strlen.c.o.requires:
 
@@ -1091,16 +1091,16 @@ CMakeFiles/bomberman.dir/src/21_libs/my_strlen.c.o.provides.build: CMakeFiles/bo
 
 CMakeFiles/bomberman.dir/src/20_pictures/map.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/20_pictures/map.c.o: ../src/20_pictures/map.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/bomberman.dir/src/20_pictures/map.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/20_pictures/map.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/20_pictures/map.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/bomberman.dir/src/20_pictures/map.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/20_pictures/map.c.o   -c /home/marc/CLionProjects/git/bomberman/src/20_pictures/map.c
 
 CMakeFiles/bomberman.dir/src/20_pictures/map.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/20_pictures/map.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/20_pictures/map.c > CMakeFiles/bomberman.dir/src/20_pictures/map.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/20_pictures/map.c > CMakeFiles/bomberman.dir/src/20_pictures/map.c.i
 
 CMakeFiles/bomberman.dir/src/20_pictures/map.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/20_pictures/map.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/20_pictures/map.c -o CMakeFiles/bomberman.dir/src/20_pictures/map.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/20_pictures/map.c -o CMakeFiles/bomberman.dir/src/20_pictures/map.c.s
 
 CMakeFiles/bomberman.dir/src/20_pictures/map.c.o.requires:
 
@@ -1115,16 +1115,16 @@ CMakeFiles/bomberman.dir/src/20_pictures/map.c.o.provides.build: CMakeFiles/bomb
 
 CMakeFiles/bomberman.dir/src/20_pictures/annexe_directory.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/20_pictures/annexe_directory.c.o: ../src/20_pictures/annexe_directory.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/bomberman.dir/src/20_pictures/annexe_directory.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/20_pictures/annexe_directory.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/20_pictures/annexe_directory.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/bomberman.dir/src/20_pictures/annexe_directory.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/20_pictures/annexe_directory.c.o   -c /home/marc/CLionProjects/git/bomberman/src/20_pictures/annexe_directory.c
 
 CMakeFiles/bomberman.dir/src/20_pictures/annexe_directory.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/20_pictures/annexe_directory.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/20_pictures/annexe_directory.c > CMakeFiles/bomberman.dir/src/20_pictures/annexe_directory.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/20_pictures/annexe_directory.c > CMakeFiles/bomberman.dir/src/20_pictures/annexe_directory.c.i
 
 CMakeFiles/bomberman.dir/src/20_pictures/annexe_directory.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/20_pictures/annexe_directory.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/20_pictures/annexe_directory.c -o CMakeFiles/bomberman.dir/src/20_pictures/annexe_directory.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/20_pictures/annexe_directory.c -o CMakeFiles/bomberman.dir/src/20_pictures/annexe_directory.c.s
 
 CMakeFiles/bomberman.dir/src/20_pictures/annexe_directory.c.o.requires:
 
@@ -1139,16 +1139,16 @@ CMakeFiles/bomberman.dir/src/20_pictures/annexe_directory.c.o.provides.build: CM
 
 CMakeFiles/bomberman.dir/src/20_pictures/init_pictures.c.o: CMakeFiles/bomberman.dir/flags.make
 CMakeFiles/bomberman.dir/src/20_pictures/init_pictures.c.o: ../src/20_pictures/init_pictures.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/bomberman.dir/src/20_pictures/init_pictures.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/20_pictures/init_pictures.c.o   -c /home/marc/CLionProjects/bomberman_cross_1/src/20_pictures/init_pictures.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/bomberman.dir/src/20_pictures/init_pictures.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bomberman.dir/src/20_pictures/init_pictures.c.o   -c /home/marc/CLionProjects/git/bomberman/src/20_pictures/init_pictures.c
 
 CMakeFiles/bomberman.dir/src/20_pictures/init_pictures.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bomberman.dir/src/20_pictures/init_pictures.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/bomberman_cross_1/src/20_pictures/init_pictures.c > CMakeFiles/bomberman.dir/src/20_pictures/init_pictures.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marc/CLionProjects/git/bomberman/src/20_pictures/init_pictures.c > CMakeFiles/bomberman.dir/src/20_pictures/init_pictures.c.i
 
 CMakeFiles/bomberman.dir/src/20_pictures/init_pictures.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bomberman.dir/src/20_pictures/init_pictures.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/bomberman_cross_1/src/20_pictures/init_pictures.c -o CMakeFiles/bomberman.dir/src/20_pictures/init_pictures.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marc/CLionProjects/git/bomberman/src/20_pictures/init_pictures.c -o CMakeFiles/bomberman.dir/src/20_pictures/init_pictures.c.s
 
 CMakeFiles/bomberman.dir/src/20_pictures/init_pictures.c.o.requires:
 
@@ -1261,7 +1261,7 @@ bomberman: CMakeFiles/bomberman.dir/src/20_pictures/annexe_directory.c.o
 bomberman: CMakeFiles/bomberman.dir/src/20_pictures/init_pictures.c.o
 bomberman: CMakeFiles/bomberman.dir/build.make
 bomberman: CMakeFiles/bomberman.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Linking C executable bomberman"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Linking C executable bomberman"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/bomberman.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -1323,6 +1323,6 @@ CMakeFiles/bomberman.dir/clean:
 .PHONY : CMakeFiles/bomberman.dir/clean
 
 CMakeFiles/bomberman.dir/depend:
-	cd /home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/marc/CLionProjects/bomberman_cross_1 /home/marc/CLionProjects/bomberman_cross_1 /home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug /home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug /home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug/CMakeFiles/bomberman.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/marc/CLionProjects/git/bomberman/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/marc/CLionProjects/git/bomberman /home/marc/CLionProjects/git/bomberman /home/marc/CLionProjects/git/bomberman/cmake-build-debug /home/marc/CLionProjects/git/bomberman/cmake-build-debug /home/marc/CLionProjects/git/bomberman/cmake-build-debug/CMakeFiles/bomberman.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/bomberman.dir/depend
 

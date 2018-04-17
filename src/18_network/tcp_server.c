@@ -65,14 +65,16 @@ int server_receive_from_client(void *tmp) {
 #if defined WIN32 || defined WIN64
     SOCKET sock;
     sock = (SOCKET) etat->sock_tmp;
+    if (sock == INVALID_SOCKET)
+        return (1);
 #elif defined __linux__
     int sock;
     sock = etat->sock_tmp;
+     if (sock == -1)
+        return (1);
 #endif
     puts("client connet\n");
 
-    if (sock == -1)
-        return (1);
     if ((requete = (t_clt_sd *) malloc(sizeof(t_clt_sd))) == NULL)
         return (1);
 
@@ -181,6 +183,9 @@ void *server_to_client(void *tmp) {
         my_putstr("serveur envoi vide\n");
     send(etat->socket_send, (char *) etat->msg, sizeof(t_svr_sd), 0);
     pthread_exit(NULL);
+#if defined WIN32 || defined WIN64
+    return (NULL);
+#endif
 }
 
 int tcp_server(void *tmp) {
@@ -276,12 +281,15 @@ int tcp_server(void *tmp) {
 #if defined WIN32 || defined WIN64
     closesocket(etat->sock_server);
     WSACleanup();
+    if (client_sock == INVALID_SOCKET)
+        perror("accept failed : ");
 #elif defined __linux__
     close(etat->sock_server);
+      if (client_sock < 0)
+        perror("accept failed : ");
 #endif
 
-    if (client_sock < 0)
-        perror("accept failed : ");
+
     puts("server disconnet\n");
     return (1);
 }

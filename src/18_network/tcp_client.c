@@ -13,6 +13,9 @@ void *client_send_to_server(void *tmp) {
 
     send(control->socket_client, (char *) control->msg, sizeof(t_clt_sd), 0);
     pthread_exit((void *) tmp);
+#if defined WIN32 || defined WIN64
+    return (NULL);
+#endif
 }
 
 /*
@@ -30,7 +33,7 @@ int prepare_requet_client(t_control *control, int idclient, int commandService, 
         SDL_Delay(50);
     }
     else
-        SDL_Delay(150);
+        SDL_Delay(100);
 
     control->msg->idclient = idclient;
     control->msg->commandservice = commandService;

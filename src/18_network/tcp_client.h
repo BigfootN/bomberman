@@ -7,6 +7,7 @@
 
 int prepare_requet_client(t_control *control, int idclient, int commandService, int requete_1, int requete_2);
 int tcp_client(void *tmp);
+void *client_send_to_server(void *tmp);
 //void *tcp_client(void *tmp);
 
 #endif //BOMBERMAN_TCP_CLIENT_H

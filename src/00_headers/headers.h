@@ -36,7 +36,7 @@ typedef int socklen_t;
 #include <pthread.h>
 #include <windows.h>
 #include <sys/time.h>
-#pragma comment(lib,"ws2_32.lib")
+//#pragma comment(lib,"ws2_32.lib")
 #define psleep(sec) Sleep ((sec) * 1000)
 #elif defined __linux__
 // annexe

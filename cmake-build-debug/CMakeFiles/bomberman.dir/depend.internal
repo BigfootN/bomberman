@@ -43,7 +43,7 @@ CMakeFiles/bomberman.dir/src/01_main/bomberman.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/01_main/bomberman.c
+ /home/marc/CLionProjects/git/bomberman/src/01_main/bomberman.c
 CMakeFiles/bomberman.dir/src/02_kernel/chainedlist.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -86,7 +86,7 @@ CMakeFiles/bomberman.dir/src/02_kernel/chainedlist.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/02_kernel/chainedlist.c
+ /home/marc/CLionProjects/git/bomberman/src/02_kernel/chainedlist.c
 CMakeFiles/bomberman.dir/src/02_kernel/inits.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -129,7 +129,7 @@ CMakeFiles/bomberman.dir/src/02_kernel/inits.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/02_kernel/inits.c
+ /home/marc/CLionProjects/git/bomberman/src/02_kernel/inits.c
 CMakeFiles/bomberman.dir/src/02_kernel/kernel.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -172,7 +172,7 @@ CMakeFiles/bomberman.dir/src/02_kernel/kernel.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/02_kernel/kernel.c
+ /home/marc/CLionProjects/git/bomberman/src/02_kernel/kernel.c
 CMakeFiles/bomberman.dir/src/03_introduction/introloop.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -215,7 +215,7 @@ CMakeFiles/bomberman.dir/src/03_introduction/introloop.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/03_introduction/introloop.c
+ /home/marc/CLionProjects/git/bomberman/src/03_introduction/introloop.c
 CMakeFiles/bomberman.dir/src/03_introduction/introviews.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -258,7 +258,7 @@ CMakeFiles/bomberman.dir/src/03_introduction/introviews.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/03_introduction/introviews.c
+ /home/marc/CLionProjects/git/bomberman/src/03_introduction/introviews.c
 CMakeFiles/bomberman.dir/src/04_ipchoice/choiceiploop.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -301,7 +301,7 @@ CMakeFiles/bomberman.dir/src/04_ipchoice/choiceiploop.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/04_ipchoice/choiceiploop.c
+ /home/marc/CLionProjects/git/bomberman/src/04_ipchoice/choiceiploop.c
 CMakeFiles/bomberman.dir/src/04_ipchoice/choiceipwindow.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -344,7 +344,7 @@ CMakeFiles/bomberman.dir/src/04_ipchoice/choiceipwindow.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/04_ipchoice/choiceipwindow.c
+ /home/marc/CLionProjects/git/bomberman/src/04_ipchoice/choiceipwindow.c
 CMakeFiles/bomberman.dir/src/04_ipchoice/choicepviews.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -387,7 +387,7 @@ CMakeFiles/bomberman.dir/src/04_ipchoice/choicepviews.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/04_ipchoice/choicepviews.c
+ /home/marc/CLionProjects/git/bomberman/src/04_ipchoice/choicepviews.c
 CMakeFiles/bomberman.dir/src/04_prepa_game/display_prepagame.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -430,7 +430,7 @@ CMakeFiles/bomberman.dir/src/04_prepa_game/display_prepagame.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/04_prepa_game/display_prepagame.c
+ /home/marc/CLionProjects/git/bomberman/src/04_prepa_game/display_prepagame.c
 CMakeFiles/bomberman.dir/src/04_prepa_game/loop_prepagame.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -473,7 +473,7 @@ CMakeFiles/bomberman.dir/src/04_prepa_game/loop_prepagame.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/04_prepa_game/loop_prepagame.c
+ /home/marc/CLionProjects/git/bomberman/src/04_prepa_game/loop_prepagame.c
 CMakeFiles/bomberman.dir/src/04_prepa_game/write_prepa_game.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -516,7 +516,7 @@ CMakeFiles/bomberman.dir/src/04_prepa_game/write_prepa_game.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/04_prepa_game/write_prepa_game.c
+ /home/marc/CLionProjects/git/bomberman/src/04_prepa_game/write_prepa_game.c
 CMakeFiles/bomberman.dir/src/05_game/display_game.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -559,7 +559,7 @@ CMakeFiles/bomberman.dir/src/05_game/display_game.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/05_game/display_game.c
+ /home/marc/CLionProjects/git/bomberman/src/05_game/display_game.c
 CMakeFiles/bomberman.dir/src/05_game/loop_game.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -602,7 +602,7 @@ CMakeFiles/bomberman.dir/src/05_game/loop_game.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/05_game/loop_game.c
+ /home/marc/CLionProjects/git/bomberman/src/05_game/loop_game.c
 CMakeFiles/bomberman.dir/src/05_game/panel_game.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -645,7 +645,7 @@ CMakeFiles/bomberman.dir/src/05_game/panel_game.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/05_game/panel_game.c
+ /home/marc/CLionProjects/git/bomberman/src/05_game/panel_game.c
 CMakeFiles/bomberman.dir/src/05_game/time_game.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -688,7 +688,7 @@ CMakeFiles/bomberman.dir/src/05_game/time_game.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/05_game/time_game.c
+ /home/marc/CLionProjects/git/bomberman/src/05_game/time_game.c
 CMakeFiles/bomberman.dir/src/05_game/views_game.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -731,7 +731,7 @@ CMakeFiles/bomberman.dir/src/05_game/views_game.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/05_game/views_game.c
+ /home/marc/CLionProjects/git/bomberman/src/05_game/views_game.c
 CMakeFiles/bomberman.dir/src/18_network/network.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -774,7 +774,7 @@ CMakeFiles/bomberman.dir/src/18_network/network.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/18_network/network.c
+ /home/marc/CLionProjects/git/bomberman/src/18_network/network.c
 CMakeFiles/bomberman.dir/src/18_network/network_player.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -817,7 +817,7 @@ CMakeFiles/bomberman.dir/src/18_network/network_player.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/18_network/network_player.c
+ /home/marc/CLionProjects/git/bomberman/src/18_network/network_player.c
 CMakeFiles/bomberman.dir/src/18_network/tcp_client.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -860,7 +860,7 @@ CMakeFiles/bomberman.dir/src/18_network/tcp_client.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/18_network/tcp_client.c
+ /home/marc/CLionProjects/git/bomberman/src/18_network/tcp_client.c
 CMakeFiles/bomberman.dir/src/18_network/tcp_server.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -903,7 +903,7 @@ CMakeFiles/bomberman.dir/src/18_network/tcp_server.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/18_network/tcp_server.c
+ /home/marc/CLionProjects/git/bomberman/src/18_network/tcp_server.c
 CMakeFiles/bomberman.dir/src/19_ia/ia.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -946,7 +946,7 @@ CMakeFiles/bomberman.dir/src/19_ia/ia.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia.c
+ /home/marc/CLionProjects/git/bomberman/src/19_ia/ia.c
 CMakeFiles/bomberman.dir/src/19_ia/ia_bolus_malus.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -989,7 +989,7 @@ CMakeFiles/bomberman.dir/src/19_ia/ia_bolus_malus.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_bolus_malus.c
+ /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_bolus_malus.c
 CMakeFiles/bomberman.dir/src/19_ia/ia_bomb.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -1032,7 +1032,7 @@ CMakeFiles/bomberman.dir/src/19_ia/ia_bomb.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_bomb.c
+ /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_bomb.c
 CMakeFiles/bomberman.dir/src/19_ia/ia_counter.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -1075,7 +1075,7 @@ CMakeFiles/bomberman.dir/src/19_ia/ia_counter.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_counter.c
+ /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_counter.c
 CMakeFiles/bomberman.dir/src/19_ia/ia_dead.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -1118,7 +1118,7 @@ CMakeFiles/bomberman.dir/src/19_ia/ia_dead.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_dead.c
+ /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_dead.c
 CMakeFiles/bomberman.dir/src/19_ia/ia_explosion.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -1161,7 +1161,7 @@ CMakeFiles/bomberman.dir/src/19_ia/ia_explosion.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_explosion.c
+ /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_explosion.c
 CMakeFiles/bomberman.dir/src/19_ia/ia_map.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -1204,7 +1204,7 @@ CMakeFiles/bomberman.dir/src/19_ia/ia_map.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_map.c
+ /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_map.c
 CMakeFiles/bomberman.dir/src/19_ia/ia_monster.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -1247,7 +1247,7 @@ CMakeFiles/bomberman.dir/src/19_ia/ia_monster.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_monster.c
+ /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_monster.c
 CMakeFiles/bomberman.dir/src/19_ia/ia_party.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -1290,7 +1290,7 @@ CMakeFiles/bomberman.dir/src/19_ia/ia_party.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_party.c
+ /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_party.c
 CMakeFiles/bomberman.dir/src/19_ia/ia_pions.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -1333,7 +1333,7 @@ CMakeFiles/bomberman.dir/src/19_ia/ia_pions.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_pions.c
+ /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_pions.c
 CMakeFiles/bomberman.dir/src/19_ia/ia_send_msg.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -1376,7 +1376,7 @@ CMakeFiles/bomberman.dir/src/19_ia/ia_send_msg.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_send_msg.c
+ /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_send_msg.c
 CMakeFiles/bomberman.dir/src/19_ia/ia_timer.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -1419,7 +1419,7 @@ CMakeFiles/bomberman.dir/src/19_ia/ia_timer.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/19_ia/ia_timer.c
+ /home/marc/CLionProjects/git/bomberman/src/19_ia/ia_timer.c
 CMakeFiles/bomberman.dir/src/20_pictures/annexe_directory.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -1462,7 +1462,7 @@ CMakeFiles/bomberman.dir/src/20_pictures/annexe_directory.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/20_pictures/annexe_directory.c
+ /home/marc/CLionProjects/git/bomberman/src/20_pictures/annexe_directory.c
 CMakeFiles/bomberman.dir/src/20_pictures/init_pictures.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -1505,7 +1505,7 @@ CMakeFiles/bomberman.dir/src/20_pictures/init_pictures.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/20_pictures/init_pictures.c
+ /home/marc/CLionProjects/git/bomberman/src/20_pictures/init_pictures.c
 CMakeFiles/bomberman.dir/src/20_pictures/map.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -1548,7 +1548,7 @@ CMakeFiles/bomberman.dir/src/20_pictures/map.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/20_pictures/map.c
+ /home/marc/CLionProjects/git/bomberman/src/20_pictures/map.c
 CMakeFiles/bomberman.dir/src/21_libs/my_bzero.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -1591,7 +1591,7 @@ CMakeFiles/bomberman.dir/src/21_libs/my_bzero.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_bzero.c
+ /home/marc/CLionProjects/git/bomberman/src/21_libs/my_bzero.c
 CMakeFiles/bomberman.dir/src/21_libs/my_put_nbr.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -1634,7 +1634,7 @@ CMakeFiles/bomberman.dir/src/21_libs/my_put_nbr.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_put_nbr.c
+ /home/marc/CLionProjects/git/bomberman/src/21_libs/my_put_nbr.c
 CMakeFiles/bomberman.dir/src/21_libs/my_putchar.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -1677,7 +1677,7 @@ CMakeFiles/bomberman.dir/src/21_libs/my_putchar.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_putchar.c
+ /home/marc/CLionProjects/git/bomberman/src/21_libs/my_putchar.c
 CMakeFiles/bomberman.dir/src/21_libs/my_putstr.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -1720,7 +1720,7 @@ CMakeFiles/bomberman.dir/src/21_libs/my_putstr.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_putstr.c
+ /home/marc/CLionProjects/git/bomberman/src/21_libs/my_putstr.c
 CMakeFiles/bomberman.dir/src/21_libs/my_rand.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -1763,7 +1763,7 @@ CMakeFiles/bomberman.dir/src/21_libs/my_rand.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_rand.c
+ /home/marc/CLionProjects/git/bomberman/src/21_libs/my_rand.c
 CMakeFiles/bomberman.dir/src/21_libs/my_strcat.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -1806,7 +1806,7 @@ CMakeFiles/bomberman.dir/src/21_libs/my_strcat.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_strcat.c
+ /home/marc/CLionProjects/git/bomberman/src/21_libs/my_strcat.c
 CMakeFiles/bomberman.dir/src/21_libs/my_strcmp.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -1849,7 +1849,7 @@ CMakeFiles/bomberman.dir/src/21_libs/my_strcmp.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_strcmp.c
+ /home/marc/CLionProjects/git/bomberman/src/21_libs/my_strcmp.c
 CMakeFiles/bomberman.dir/src/21_libs/my_strdup.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -1892,7 +1892,7 @@ CMakeFiles/bomberman.dir/src/21_libs/my_strdup.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_strdup.c
+ /home/marc/CLionProjects/git/bomberman/src/21_libs/my_strdup.c
 CMakeFiles/bomberman.dir/src/21_libs/my_string.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -1935,7 +1935,7 @@ CMakeFiles/bomberman.dir/src/21_libs/my_string.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_string.c
+ /home/marc/CLionProjects/git/bomberman/src/21_libs/my_string.c
 CMakeFiles/bomberman.dir/src/21_libs/my_strlen.c.o
  ../src/00_headers/define.h
  ../src/00_headers/game.h
@@ -1978,4 +1978,4 @@ CMakeFiles/bomberman.dir/src/21_libs/my_strlen.c.o
  ../src/20_pictures/init_pictures.h
  ../src/20_pictures/map.h
  ../src/21_libs/libs.h
- /home/marc/CLionProjects/bomberman_cross_1/src/21_libs/my_strlen.c
+ /home/marc/CLionProjects/git/bomberman/src/21_libs/my_strlen.c

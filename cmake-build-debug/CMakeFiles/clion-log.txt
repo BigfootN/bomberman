@@ -1,4 +1,4 @@
-/home/marc/clion-2018.1/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/marc/CLionProjects/bomberman_cross_1
+/home/annexe/logiciels/clion-2018.1/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/marc/CLionProjects/git/bomberman
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/marc/CLionProjects/bomberman_cross_1/cmake-build-debug
+-- Build files have been written to: /home/marc/CLionProjects/git/bomberman/cmake-build-debug

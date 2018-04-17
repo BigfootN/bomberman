@@ -6,7 +6,7 @@
 #define BOMBERMAN_DEFINE_H
 
 /* version du produit */
-#define VERSION "0.0.2"
+#define VERSION "0.0.4"
 
 /* fenetre principale */
 #define WINDOW_WIDTH 840

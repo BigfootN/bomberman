@@ -23,17 +23,6 @@ int area_button(t_control *control, SDL_Event event) {
         event.button.button == SDL_BUTTON_LEFT) {
         if (event.motion.x >= 150 && event.motion.x <= 300) {
             return close_connexion(control);
-//            if (control->etat_send == 0) /* si la connexion à été interrompu on reviens au menu principal */
-//                return (1);
-//            if (control->etat_send == 1 && control->master == 0)
-//                prepare_requet_client(control, control->id_client, 12, 12, 0);/*clos connexion client */
-//            if (control->srv_or_clt == 1 && control->master == 1) {
-//                prepare_requet_client(control, control->id_client, 50, 0, 0); /* clos connexion serveur et client */
-//                control->etat_send = 0;
-//                return (1);
-//            }
-//            control->etat_send = 0;
-//            return (2);
         } else if (event.motion.x >= 350 && event.motion.x <= 500 && control->srv_or_clt == 1) {
             if (control->etat_send == 1 && control->master == 1)
                 start_game(control);

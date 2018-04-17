@@ -23,6 +23,9 @@ void *central_ia(void *tmp) {
     delete_etat(etat);
 
     pthread_exit((void *) tmp);
+#if defined WIN32 || defined WIN64
+    return (NULL);
+#endif
 }
 
 /*
@@ -55,6 +58,9 @@ void *loop_ia_pion(void *tmp) {
         SDL_Delay(100);
     }
     pthread_exit(NULL);
+#if defined WIN32 || defined WIN64
+    return (NULL);
+#endif
 }
 
 /*
