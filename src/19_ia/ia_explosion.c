@@ -189,11 +189,9 @@ void display_fire(t_etat *etat, SDL_Rect lposition, int **tab) {
                             dead_pion(etat, pion);
                     }
                 }
-                //printf("%d", control->dataMap->hidebonus[row][col]);
             }
             indexY++;
         }
-        //printf("\n");
         indexX++;
     }
 }

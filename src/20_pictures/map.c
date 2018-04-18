@@ -47,8 +47,8 @@ int gestion_map(t_etat *etat, char *name)
             return (1);
         }
         fclose(fp);
+        free(list);
     }
-    free(list);
     return (0);
 }
 

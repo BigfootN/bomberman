@@ -22,9 +22,15 @@
 #define WIDTH_TILE 40
 
 /* le chemin des ressources */
+#if defined WIN32 || defined WIN64
 #define REP_SPRITES "res/pictures/"
 #define REP_MAP "res/maps/"
 #define REP_TTF "res/fonts/"
+#elif defined __linux__
+#define REP_SPRITES "/usr/bin/res/pictures/"
+#define REP_MAP "/usr/bin/res/maps/"
+#define REP_TTF "/usr/bin/res/fonts/"
+#endif
 
 /* les manches et le nombre de minutes pour chaque manche */
 #define STEP 3
